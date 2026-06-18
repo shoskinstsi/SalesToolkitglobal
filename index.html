@@ -1147,7 +1147,8 @@ Then enable GitHub Pages from Settings > Pages > Deploy from branch > main > /ro
   .home-region-dashboard-header{display:flex;align-items:flex-start;justify-content:space-between;gap:18px;position:relative;z-index:1;margin-bottom:18px}
   .home-region-dashboard-header h2{margin:0 0 8px;color:#0b1f35;font-size:26px}
   .home-region-dashboard-header p{margin:0;color:#667085;line-height:1.55;max-width:900px}
-  .home-region-dashboard-button{background:var(--ctm-navy);color:#fff;text-decoration:none;border-radius:999px;padding:11px 15px;font-weight:900;white-space:nowrap;cursor:pointer}
+  .home-region-dashboard-button{background:var(--ctm-navy);color:#fff!important;text-decoration:none;border-radius:999px;padding:11px 15px;font-weight:900;white-space:nowrap;cursor:pointer}
+  .home-region-dashboard-button:visited,.home-region-dashboard-button:hover,.home-region-dashboard-button:active,.home-region-dashboard-button:focus{color:#fff!important}
   .region-dashboard-overview{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:18px 0;position:relative;z-index:1}
   .region-dashboard-card-mini{background:#f8fafc;border:1px solid var(--line);border-radius:18px;padding:18px;border-top:7px solid var(--ctm-teal);text-decoration:none;color:var(--ink);display:block;cursor:pointer;transition:.15s ease;position:relative}
   .region-dashboard-card-mini:nth-child(2){border-top-color:var(--ctm-green)}
@@ -5594,7 +5595,7 @@ Then enable GitHub Pages from Settings > Pages > Deploy from branch > main > /ro
 <h2>Regional Dashboard Summary</h2>
 <p>Each region has a dedicated pipeline view, but this global summary gives leadership one place to compare volume, risk, weighted value, and near-term close activity.</p>
 </div>
-<a class="home-region-dashboard-button" data-target="regions" href="#view-regions">Open Regional Hubs</a>
+<a class="home-region-dashboard-button" data-target="regions" href="#view-regions" style="color:#fff!important">Open Regional Hubs</a>
 </div>
 <div class="region-dashboard-overview">
 <a aria-label="Open North America Sales Agent Dashboard" class="region-dashboard-card-mini" data-target="north-america-sales-agent-dashboard" href="#view-north-america-sales-agent-dashboard"><h3>North America</h3><p>High-volume pipeline with current emphasis on proposal follow-up and negotiation readiness.</p><div class="region-dashboard-metric-row"><span class="region-dashboard-metric">22 Open</span><span class="region-dashboard-metric">$1.8M</span><span class="region-dashboard-metric">6 Close Stage</span></div><span class="region-dashboard-link-label">Open North America Dashboard →</span></a>
