@@ -1,11 +1,10 @@
 <!DOCTYPE html>
+
 <!--
 GitHub Pages Ready File
 Upload this file as index.html to the root of your GitHub repository.
 Then enable GitHub Pages from Settings > Pages > Deploy from branch > main > /root.
 -->
-
-
 <html lang="en">
 <head>
 <meta charset="utf-8"/>
@@ -27,7 +26,6 @@ Then enable GitHub Pages from Settings > Pages > Deploy from branch > main > /ro
   .shared-banner{background:#000;color:#fff;padding:8px 18px 14px;position:relative;font-size:15px}
   .shared-banner strong{display:block;font-size:17px;margin-bottom:2px}
   .shared-banner a{color:#fff;text-decoration:underline}
-  .edit-pill{position:absolute;right:18px;top:8px;background:#fff;color:#111!important;border-radius:22px;padding:10px 18px;font-weight:700;text-decoration:none!important}
 
   .site-header{
     background:#fff;border-bottom:1px solid var(--line);padding:20px 7vw;
@@ -162,7 +160,7 @@ Then enable GitHub Pages from Settings > Pages > Deploy from branch > main > /ro
 
   @media(max-width:1300px){.bid-section-grid,.pipeline-board{grid-template-columns:repeat(2,1fr)}}
   @media(max-width:1200px){.step-grid,.tile-grid,.quick-row,.dashboard-summary{grid-template-columns:repeat(2,1fr)}.site-header{grid-template-columns:1fr}}
-  @media(max-width:720px){main{padding:24px 18px}.site-header{padding:20px 18px}.step-grid,.tile-grid,.three-grid,.quick-row,.bid-section-grid,.dashboard-summary,.pipeline-board,.questionnaire,.debrief-field-list{grid-template-columns:1fr}.hero{padding:34px 26px}h1{font-size:31px}.edit-pill{position:static;display:inline-block;margin-top:8px}.dashboard-table{display:block;overflow-x:auto;white-space:nowrap}}
+  @media(max-width:720px){main{padding:24px 18px}.site-header{padding:20px 18px}.step-grid,.tile-grid,.three-grid,.quick-row,.bid-section-grid,.dashboard-summary,.pipeline-board,.questionnaire,.debrief-field-list{grid-template-columns:1fr}.hero{padding:34px 26px}h1{font-size:31px}.dashboard-table{display:block;overflow-x:auto;white-space:nowrap}}
 
   .rating-row{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-top:14px}
   .rating{background:#f8fafc;border:1px solid var(--line);border-radius:12px;padding:12px;text-align:center;font-weight:800;color:#344054}
@@ -2617,7 +2615,6 @@ Then enable GitHub Pages from Settings > Pages > Deploy from branch > main > /ro
 <div class="shared-banner">
 <strong>CTM Global Sales Toolkit Mockup</strong>
     You’re viewing user-generated content that may be unverified or unsafe. <a href="#">Report</a>
-<a class="edit-pill" href="#">Edit with ChatGPT</a>
 </div>
 <header class="site-header clean-top-header">
 <div class="brand">
@@ -2673,17 +2670,17 @@ Then enable GitHub Pages from Settings > Pages > Deploy from branch > main > /ro
 </details>
 </nav>
 </header>
-<section class="global-page-search" aria-label="Toolkit search">
-  <div class="global-page-search-inner">
-    <div class="global-search-label">Search Toolkit</div>
-    <section class="toolkit-search-wrap compact-global-search">
-      <div class="toolkit-search-row">
-        <input aria-label="Search the Toolkit" autocomplete="off" class="toolkit-search-input" id="toolkitSearchInput" name="toolkitSearch" placeholder="Search: bid, training, CRM, ANZ, templates, legal" type="search"/>
-        <button class="toolkit-search-button" id="toolkitSearchButton" type="button">Search</button>
-      </div>
-      <div class="toolkit-search-results" id="toolkitSearchResults"></div>
-    </section>
-  </div>
+<section aria-label="Toolkit search" class="global-page-search">
+<div class="global-page-search-inner">
+<div class="global-search-label">Search Toolkit</div>
+<section class="toolkit-search-wrap compact-global-search">
+<div class="toolkit-search-row">
+<input aria-label="Search the Toolkit" autocomplete="off" class="toolkit-search-input" id="toolkitSearchInput" name="toolkitSearch" placeholder="Search: bid, training, CRM, ANZ, templates, legal" type="search"/>
+<button class="toolkit-search-button" id="toolkitSearchButton" type="button">Search</button>
+</div>
+<div class="toolkit-search-results" id="toolkitSearchResults"></div>
+</section>
+</div>
 </section>
 <main>
 <section class="view active" id="view-home">
@@ -2994,7 +2991,7 @@ Then enable GitHub Pages from Settings > Pages > Deploy from branch > main > /ro
 <p>Open a regional hub. Each region now matches the Home page section format and includes the same information structure, the global 8 sales stages, regional dashboard, templates, training, and Win/Loss Debrief template.</p>
 <span class="owner">Page owner: Global Sales Enablement</span>
 </section>
-<section class="simple-region-intro"><h2>Choose a Region</h2><p>Each region opens into the same Home page experience so users can quickly find Start Here, Overview, Help & Contacts, Sales Stages, Sales Agent Dashboard, Bid Toolkit, Templates, Customer Proof, Win/Loss, Partner Agency, and Training.</p></section>
+<section class="simple-region-intro"><h2>Choose a Region</h2><p>Each region opens into the same Home page experience so users can quickly find Start Here, Overview, Help &amp; Contacts, Sales Stages, Sales Agent Dashboard, Bid Toolkit, Templates, Customer Proof, Win/Loss, Partner Agency, and Training.</p></section>
 <section class="simple-region-grid">
 <a class="simple-region-card" data-target="north-america-home" href="#view-north-america-home"><div class="simple-region-top"><div><h3>North America</h3><p>Regional sales hub with Home page matching sections, global 8 sales stages, and Win/Loss Debrief template.</p></div><span class="simple-region-arrow">→</span></div><div class="simple-region-links"><span class="simple-region-pill">Sales Stages</span><span class="simple-region-pill">Dashboard</span><span class="simple-region-pill">Win/Loss Debrief</span></div></a>
 <a class="simple-region-card" data-target="anz-home" href="#view-anz-home"><div class="simple-region-top"><div><h3>ANZ</h3><p>Regional sales hub with Home page matching sections, global 8 sales stages, and Win/Loss Debrief template.</p></div><span class="simple-region-arrow">→</span></div><div class="simple-region-links"><span class="simple-region-pill">Sales Stages</span><span class="simple-region-pill">Dashboard</span><span class="simple-region-pill">Win/Loss Debrief</span></div></a>
@@ -3043,7 +3040,7 @@ Then enable GitHub Pages from Settings > Pages > Deploy from branch > main > /ro
 <p>Regional priorities, market focus, ownership guidance, active initiatives, and operating expectations.</p>
 <span class="home-card-action">Open section</span>
 </a><a class="home-exec-card regional-section-card" data-target="north-america-contacts" href="#view-north-america-contacts">
-<h3>Help & Contacts</h3>
+<h3>Help &amp; Contacts</h3>
 <p>Regional leadership, sales support, pricing, legal, security, implementation, and escalation paths.</p>
 <span class="home-card-action">Open section</span>
 </a><a class="home-exec-card regional-section-card" data-target="north-america-sales-stages" href="#view-north-america-sales-stages">
@@ -3059,7 +3056,7 @@ Then enable GitHub Pages from Settings > Pages > Deploy from branch > main > /ro
 <p>Bid/no-bid guidance, executive briefing, finance review, proposal planning, and submission support.</p>
 <span class="home-card-action">Open section</span>
 </a><a class="home-exec-card regional-section-card" data-target="north-america-templates" href="#view-north-america-templates">
-<h3>Templates & Guides</h3>
+<h3>Templates &amp; Guides</h3>
 <p>Approved sales plans, briefings, checklists, client-facing resources, and CRM guides.</p>
 <span class="home-card-action">Open section</span>
 </a><a class="home-exec-card regional-section-card" data-target="north-america-customer-proof" href="#view-north-america-customer-proof">
@@ -3133,7 +3130,7 @@ Then enable GitHub Pages from Settings > Pages > Deploy from branch > main > /ro
 <p>Regional priorities, market focus, ownership guidance, active initiatives, and operating expectations.</p>
 <span class="home-card-action">Open section</span>
 </a><a class="home-exec-card regional-section-card" data-target="anz-contacts" href="#view-anz-contacts">
-<h3>Help & Contacts</h3>
+<h3>Help &amp; Contacts</h3>
 <p>Regional leadership, sales support, pricing, legal, security, implementation, and escalation paths.</p>
 <span class="home-card-action">Open section</span>
 </a><a class="home-exec-card regional-section-card" data-target="anz-sales-stages" href="#view-anz-sales-stages">
@@ -3149,7 +3146,7 @@ Then enable GitHub Pages from Settings > Pages > Deploy from branch > main > /ro
 <p>Bid/no-bid guidance, executive briefing, finance review, proposal planning, and submission support.</p>
 <span class="home-card-action">Open section</span>
 </a><a class="home-exec-card regional-section-card" data-target="anz-templates" href="#view-anz-templates">
-<h3>Templates & Guides</h3>
+<h3>Templates &amp; Guides</h3>
 <p>Approved sales plans, briefings, checklists, client-facing resources, and CRM guides.</p>
 <span class="home-card-action">Open section</span>
 </a><a class="home-exec-card regional-section-card" data-target="anz-customer-proof" href="#view-anz-customer-proof">
@@ -3223,7 +3220,7 @@ Then enable GitHub Pages from Settings > Pages > Deploy from branch > main > /ro
 <p>Regional priorities, market focus, ownership guidance, active initiatives, and operating expectations.</p>
 <span class="home-card-action">Open section</span>
 </a><a class="home-exec-card regional-section-card" data-target="asia-contacts" href="#view-asia-contacts">
-<h3>Help & Contacts</h3>
+<h3>Help &amp; Contacts</h3>
 <p>Regional leadership, sales support, pricing, legal, security, implementation, and escalation paths.</p>
 <span class="home-card-action">Open section</span>
 </a><a class="home-exec-card regional-section-card" data-target="asia-sales-stages" href="#view-asia-sales-stages">
@@ -3239,7 +3236,7 @@ Then enable GitHub Pages from Settings > Pages > Deploy from branch > main > /ro
 <p>Bid/no-bid guidance, executive briefing, finance review, proposal planning, and submission support.</p>
 <span class="home-card-action">Open section</span>
 </a><a class="home-exec-card regional-section-card" data-target="asia-templates" href="#view-asia-templates">
-<h3>Templates & Guides</h3>
+<h3>Templates &amp; Guides</h3>
 <p>Approved sales plans, briefings, checklists, client-facing resources, and CRM guides.</p>
 <span class="home-card-action">Open section</span>
 </a><a class="home-exec-card regional-section-card" data-target="asia-customer-proof" href="#view-asia-customer-proof">
@@ -3313,7 +3310,7 @@ Then enable GitHub Pages from Settings > Pages > Deploy from branch > main > /ro
 <p>Regional priorities, market focus, ownership guidance, active initiatives, and operating expectations.</p>
 <span class="home-card-action">Open section</span>
 </a><a class="home-exec-card regional-section-card" data-target="emea-contacts" href="#view-emea-contacts">
-<h3>Help & Contacts</h3>
+<h3>Help &amp; Contacts</h3>
 <p>Regional leadership, sales support, pricing, legal, security, implementation, and escalation paths.</p>
 <span class="home-card-action">Open section</span>
 </a><a class="home-exec-card regional-section-card" data-target="emea-sales-stages" href="#view-emea-sales-stages">
@@ -3329,7 +3326,7 @@ Then enable GitHub Pages from Settings > Pages > Deploy from branch > main > /ro
 <p>Bid/no-bid guidance, executive briefing, finance review, proposal planning, and submission support.</p>
 <span class="home-card-action">Open section</span>
 </a><a class="home-exec-card regional-section-card" data-target="emea-templates" href="#view-emea-templates">
-<h3>Templates & Guides</h3>
+<h3>Templates &amp; Guides</h3>
 <p>Approved sales plans, briefings, checklists, client-facing resources, and CRM guides.</p>
 <span class="home-card-action">Open section</span>
 </a><a class="home-exec-card regional-section-card" data-target="emea-customer-proof" href="#view-emea-customer-proof">
@@ -3403,7 +3400,7 @@ Then enable GitHub Pages from Settings > Pages > Deploy from branch > main > /ro
 <p>Regional priorities, market focus, ownership guidance, active initiatives, and operating expectations.</p>
 <span class="home-card-action">Open section</span>
 </a><a class="home-exec-card regional-section-card" data-target="north-america-contacts" href="#view-north-america-contacts">
-<h3>Help & Contacts</h3>
+<h3>Help &amp; Contacts</h3>
 <p>Regional leadership, sales support, pricing, legal, security, implementation, and escalation paths.</p>
 <span class="home-card-action">Open section</span>
 </a><a class="home-exec-card regional-section-card" data-target="north-america-sales-stages" href="#view-north-america-sales-stages">
@@ -3419,7 +3416,7 @@ Then enable GitHub Pages from Settings > Pages > Deploy from branch > main > /ro
 <p>Bid/no-bid guidance, executive briefing, finance review, proposal planning, and submission support.</p>
 <span class="home-card-action">Open section</span>
 </a><a class="home-exec-card regional-section-card" data-target="north-america-templates" href="#view-north-america-templates">
-<h3>Templates & Guides</h3>
+<h3>Templates &amp; Guides</h3>
 <p>Approved sales plans, briefings, checklists, client-facing resources, and CRM guides.</p>
 <span class="home-card-action">Open section</span>
 </a><a class="home-exec-card regional-section-card" data-target="north-america-customer-proof" href="#view-north-america-customer-proof">
@@ -3501,8 +3498,8 @@ Then enable GitHub Pages from Settings > Pages > Deploy from branch > main > /ro
 <a class="backtop" data-target="north-america" href="#view-north-america">Back to North America Hub ↑</a>
 </section><section class="view" id="view-north-america-contacts">
 <section class="hero regional-section-hero">
-<div class="eyebrow">Help & Contacts</div>
-<h1>North America - Help & Contacts</h1>
+<div class="eyebrow">Help &amp; Contacts</div>
+<h1>North America - Help &amp; Contacts</h1>
 <p>Regional help paths and escalation contacts aligned to the Home page format.</p>
 <span class="owner">Page owner: North America Regional Sales / Sales Enablement</span>
 </section>
@@ -3550,8 +3547,8 @@ Then enable GitHub Pages from Settings > Pages > Deploy from branch > main > /ro
 <a class="backtop" data-target="north-america" href="#view-north-america">Back to North America Hub ↑</a>
 </section><section class="view" id="view-north-america-templates">
 <section class="hero regional-section-hero">
-<div class="eyebrow">Templates & Guides</div>
-<h1>North America - Templates & Guides</h1>
+<div class="eyebrow">Templates &amp; Guides</div>
+<h1>North America - Templates &amp; Guides</h1>
 <p>Approved templates and practical guides aligned to the Home page format.</p>
 <span class="owner">Page owner: North America Regional Sales / Sales Enablement</span>
 </section>
@@ -3583,19 +3580,163 @@ Then enable GitHub Pages from Settings > Pages > Deploy from branch > main > /ro
 </section><div class="debrief-note-box">Use the Win/Loss Debrief after Stage 8 - Closed Won/Loss and review analysis trends during regional pipeline reviews.</div></section>
 <a class="backtop" data-target="north-america" href="#view-north-america">Back to North America Hub ↑</a>
 </section><section class="view" id="view-north-america-win-loss-debrief">
-<section class="hero regional-section-hero">
-<div class="eyebrow">Win / Loss Debrief</div>
-<h1>North America - Win/Loss Debrief Template</h1>
-<p>Capture opportunity details, closing questionnaire responses, supplier choice, proposal feedback, lessons learned, and follow-up actions.</p>
+<section class="hero">
+<div class="eyebrow">North America Closing Feedback</div>
+<h1>North America Win/Loss Debrief</h1>
+<p>Use this North America template after each pursuit to capture client decision drivers, competitor/supplier selection, proposal feedback, lessons learned, and follow-up actions for future opportunities.</p>
 <span class="owner">Page owner: North America Regional Sales / Sales Enablement</span>
 </section>
-<section class="content-card"><h2>Win/Loss Debrief Template</h2><p>Use this template after each pursuit to capture the outcome, client decision drivers, selected supplier, proposal feedback, lessons learned, and follow-up actions. This can be built as a Microsoft Form or SharePoint List for consistent regional reporting.</p></section>
-<section class="content-card"><h2>1. Opportunity Details</h2><div class="field-grid"><div class="template-field"><b>Account / Prospect Name</b><input class="fillable-input" type="text" placeholder="Click to type..." /></div><div class="template-field"><b>Region</b><select class="fillable-select"><option>North America</option><option>North America</option><option>ANZ</option><option>Asia</option><option>EMEA</option></select></div><div class="template-field"><b>Sales Agent / Opportunity Owner</b><input class="fillable-input" type="text" placeholder="Click to type..." /></div><div class="template-field"><b>Sales Stage at Close</b><select class="fillable-select"><option>Stage 8 - Closed Won/Loss</option><option>Closed - Won</option><option>Closed - Lost</option><option>No Decision</option><option>Delayed</option></select></div><div class="template-field"><b>Opportunity Value</b><input class="fillable-input" type="text" placeholder="Click to type..." /></div><div class="template-field"><b>Decision Date</b><input class="fillable-input" type="text" placeholder="Click to type..." /></div><div class="template-field"><b>Outcome</b><select class="fillable-select"><option value="">Select outcome...</option><option>Won</option><option>Lost</option><option>No Decision</option><option>Delayed</option></select></div><div class="template-field"><b>Client Segment / Vertical</b><input class="fillable-input" type="text" placeholder="Click to type..." /></div><div class="template-field"><b>Current Supplier / Incumbent</b><input class="fillable-input" type="text" placeholder="Click to type..." /></div></div></section>
-<section class="content-card closing-questionnaire-card"><div class="closing-questionnaire-header"><h2>2. Closing Questionnaire</h2><p>Use this guided debrief to capture why the client made their final decision, how CTM performed, and what should be improved before the next pursuit.</p><div class="closing-chip-row"><span class="closing-chip">Client Decision</span><span class="closing-chip">Supplier Selected</span><span class="closing-chip">Proposal Quality</span><span class="closing-chip">Next Actions</span></div></div><div class="closing-questionnaire-grid"><div class="closing-questionnaire-panel"><div class="closing-panel-kicker">Decision &amp; Selection</div><h3>Understand the final decision</h3><p class="panel-intro">Capture the decision story in a consistent format for trend reporting and competitor insights.</p><div class="question-step-list"><div class="question-step"><span class="question-num">01</span><div><b>Why did you choose CTM?</b><p>Document the strongest reasons CTM was selected, including service, technology, relationship, pricing, global alignment, implementation confidence, or overall value.</p><textarea class="fillable-textarea" placeholder="Type response here..."></textarea></div></div><div class="question-step"><span class="question-num">02</span><div><b>Which supplier did you choose?</b><p>Record the selected supplier or competitor so the team can compare future positioning and update competitor insights.</p><textarea class="fillable-textarea" placeholder="Enter selected supplier / competitor..."></textarea></div></div><div class="question-step"><span class="question-num">03</span><div><b>What were the top factors that influenced the final decision?</b><p>Capture pricing, service, technology, relationship, risk, incumbent, implementation, contract, or timing factors.</p><textarea class="fillable-textarea" placeholder="Type response here..."></textarea></div></div><div class="question-step"><span class="question-num">04</span><div><b>What could CTM have done differently?</b><p>Document gaps, objections, timing issues, content needs, or relationship opportunities.</p><textarea class="fillable-textarea" placeholder="Type response here..."></textarea></div></div></div></div><div class="closing-questionnaire-panel"><div class="closing-panel-kicker">Proposal &amp; Pursuit Quality</div><h3>Improve future proposals</h3><p class="panel-intro">Turn feedback into practical improvements for proposal content, sales coaching, and pursuit planning.</p><div class="question-step-list"><div class="question-step"><span class="question-num">05</span><div><b>How well was the proposal prepared?</b><p>Rate quality, completeness, clarity, alignment to client needs, and response timing.</p><textarea class="fillable-textarea" placeholder="Enter rating notes and comments..."></textarea></div></div><div class="question-step"><span class="question-num">06</span><div><b>Did the proposal address the client’s key priorities?</b><p>Capture what resonated, what was missing, and where additional proof points were needed.</p><textarea class="fillable-textarea" placeholder="Type response here..."></textarea></div></div><div class="question-step"><span class="question-num">07</span><div><b>How effective were CTM’s differentiators?</b><p>Note proof points, technology, service model, implementation, reporting, or global alignment feedback.</p><textarea class="fillable-textarea" placeholder="Type response here..."></textarea></div></div><div class="question-step"><span class="question-num">08</span><div><b>What follow-up is needed?</b><p>Document CRM updates, battlecard changes, competitor profile updates, and lessons learned sharing.</p><textarea class="fillable-textarea" placeholder="Enter owner, action, and target date..."></textarea></div></div></div></div></div><div class="feedback-capture-strip"><div class="feedback-capture-item"><b>Required Field</b><select class="fillable-select"><option value="">Select...</option><option>Won</option><option>Lost</option><option>No Decision</option><option>Delayed</option></select></div><div class="feedback-capture-item"><b>Required Field</b><input class="fillable-input" type="text" placeholder="Type supplier / competitor..." /></div><div class="feedback-capture-item"><b>Required Field</b><select class="fillable-select"><option value="">Rate proposal...</option><option>1 - Needs Improvement</option><option>2 - Fair</option><option>3 - Good</option><option>4 - Very Good</option><option>5 - Excellent</option></select><input class="fillable-input" type="text" placeholder="Comments..." /></div><div class="feedback-capture-item"><b>Required Field</b><input class="fillable-input" type="text" placeholder="Owner / next action date..." /></div></div></section>
-<section class="content-card"><h2>3. Proposal Quality Rating</h2><p>Use a simple 1–5 score for consistent reporting.</p><div class="rating-row"><div class="rating">1<br/>Poor</div><div class="rating">2<br/>Needs Work</div><div class="rating">3<br/>Meets Need</div><div class="rating">4<br/>Strong</div><label class="rating"><input type="radio" name="proposal-rating" value="5"/>5<br/>Excellent</label></div></section>
-<section class="content-card"><h2>4. Reason Won / Lost</h2><div class="checklist"><div class="check">Service model / account management</div><div class="check">Technology and traveler experience</div><div class="check">Pricing / commercial value</div><div class="check">Global or regional alignment</div><div class="check">Implementation confidence</div><div class="check">Incumbent relationship</div><div class="check">Proposal quality or response timing</div><div class="check">Competitor differentiator</div></div></section>
-<section class="content-card"><h2>5. Follow-Up Actions</h2><table class="dashboard-table"><thead><tr><th>Action Item</th><th>Owner</th><th>Due Date</th><th>Status</th></tr></thead><tbody><tr><td>Update CRM notes and opportunity outcome.</td><td></td><td></td><td>Not Started</td></tr><tr><td>Update competitor profile or battlecard if needed.</td><td></td><td></td><td>Not Started</td></tr><tr><td>Share lessons learned with Sales Enablement and regional leadership.</td><td></td><td></td><td>Not Started</td></tr><tr><td>Add approved proof point or proposal improvement to template library.</td><td></td><td></td><td>Not Started</td></tr></tbody></table></section>
-<a class="backtop" data-target="north-america" href="#view-north-america">Back to North America Hub ↑</a>
+<section class="content-card">
+<h2>1. Opportunity Details</h2>
+<p>Capture the core opportunity information so debriefs can be filtered by account, region, owner, stage, and outcome.</p>
+<div class="field-grid">
+<div class="template-field"><b>Account / Prospect Name</b><input class="fillable-input" placeholder="Click to type..." type="text"/></div>
+<div class="template-field"><b>Region</b><select class="fillable-select"><option value="">Select region...</option><option selected="selected">North America</option><option>ANZ</option><option>Asia</option><option>EMEA</option></select></div>
+<div class="template-field"><b>Sales Agent / Opportunity Owner</b><input class="fillable-input" placeholder="Click to type..." type="text"/></div>
+<div class="template-field"><b>Opportunity Stage</b><select class="fillable-select"><option value="">Select stage...</option><option>Stage 1 - Identify</option><option>Stage 2 - Qualify</option><option>Stage 3 - Discovery</option><option>Stage 4 - Solution</option><option>Stage 5 - Proposal</option><option>Stage 6 - Negotiation</option><option>Stage 7 - Commit</option><option>Stage 8 - Closed Won/Loss</option></select></div>
+<div class="template-field"><b>Opportunity Value</b><input class="fillable-input" placeholder="Click to type..." type="text"/></div>
+<div class="template-field"><b>Decision Date</b><input class="fillable-input" placeholder="Click to type..." type="text"/></div>
+<div class="template-field"><b>Outcome</b><select class="fillable-select"><option value="">Select outcome...</option><option>Won</option><option>Lost</option><option>No Decision</option><option>Delayed</option></select></div>
+<div class="template-field"><b>Client Segment / Vertical</b><input class="fillable-input" placeholder="Click to type..." type="text"/></div>
+<div class="template-field"><b>Current Supplier / Incumbent</b><input class="fillable-input" placeholder="Click to type..." type="text"/></div>
+</div>
+</section>
+<section class="content-card closing-questionnaire-card">
+<div class="closing-questionnaire-header">
+<h2>2. Closing Questionnaire</h2>
+<p>Use this section as a guided client debrief. Recommended setup: Microsoft Form or SharePoint List with required fields for account, region, sales agent, outcome, selected supplier, and decision date.</p>
+<div class="closing-chip-row"><span class="closing-chip">Decision Drivers</span><span class="closing-chip">Supplier / Competitor</span><span class="closing-chip">Proposal Quality</span><span class="closing-chip">Actionable Lessons</span></div>
+</div>
+<div class="closing-questionnaire-grid three-up">
+<div class="closing-questionnaire-panel">
+<div class="closing-panel-kicker">Decision &amp; Selection</div>
+<h3>Understand why the client made their final decision</h3>
+<p class="panel-intro">Capture the decision story so Sales, Marketing, and Leadership can identify trends by region, segment, competitor, and opportunity type.</p>
+<div class="question-step-list">
+<div class="question-step"><span class="question-num">01</span><div><b>Why did you choose CTM?</b><p>Document the strongest reasons CTM was selected, including service, technology, relationship, pricing, global alignment, implementation confidence, or overall value.</p><textarea class="fillable-textarea" placeholder="Type response here..."></textarea></div></div>
+<div class="question-step"><span class="question-num">02</span><div><b>Which supplier or competitor did you choose?</b><p>Record whether CTM was selected or identify the selected supplier / competitor for future comparison and competitive tracking.</p><textarea class="fillable-textarea" placeholder="Enter selected supplier / competitor..."></textarea></div></div>
+<div class="question-step"><span class="question-num">03</span><div><b>What were the top factors that influenced the final decision?</b><p>Capture the primary decision drivers, buying committee priorities, must-have requirements, and any deal-breakers.</p><textarea class="fillable-textarea" placeholder="Type response here..."></textarea></div></div>
+</div>
+</div>
+<div class="closing-questionnaire-panel">
+<div class="closing-panel-kicker">Strengths &amp; Gaps</div>
+<h3>Identify what worked and what should improve</h3>
+<p class="panel-intro">Use specific examples so the feedback can turn into coaching, stronger proof points, and better pursuit planning.</p>
+<div class="question-step-list">
+<div class="question-step"><span class="question-num">04</span><div><b>Was there anything CTM did especially well?</b><p>Highlight strengths, differentiators, team actions, proposal elements, presentations, or relationship points that helped the pursuit.</p><textarea class="fillable-textarea" placeholder="Type response here..."></textarea></div></div>
+<div class="question-step"><span class="question-num">05</span><div><b>Was there anything CTM could have done differently?</b><p>Identify improvement opportunities, missed expectations, timing issues, unclear messaging, gaps, or additional support needed for future pursuits.</p><textarea class="fillable-textarea" placeholder="Type response here..."></textarea></div></div>
+<div class="question-step"><span class="question-num">06</span><div><b>What follow-up is needed?</b><p>Document CRM updates, battlecard changes, competitor profile updates, coaching needs, and leadership follow-up.</p><textarea class="fillable-textarea" placeholder="Enter owner, action, and target date..."></textarea></div></div>
+</div>
+</div>
+<div class="closing-questionnaire-panel">
+<div class="closing-panel-kicker">Proposal &amp; Presentation</div>
+<h3>Review the quality and clarity of CTM’s response</h3>
+<p class="panel-intro">Understand whether the proposal and presentation clearly addressed the client’s needs and supported the final decision.</p>
+<div class="question-step-list">
+<div class="question-step"><span class="question-num">07</span><div><b>How well was the proposal prepared?</b><p>Rate quality, accuracy, organization, professionalism, completeness, and readiness of the final response.</p><textarea class="fillable-textarea" placeholder="Enter rating notes and comments..."></textarea></div></div>
+<div class="question-step"><span class="question-num">08</span><div><b>Did the proposal clearly address business needs and priorities?</b><p>Confirm whether CTM connected the solution to client goals, pain points, regional needs, and decision criteria.</p><textarea class="fillable-textarea" placeholder="Type response here..."></textarea></div></div>
+<div class="question-step"><span class="question-num">09</span><div><b>Was pricing, service model, and value proposition clear?</b><p>Assess whether the commercial model, support structure, implementation approach, and value story were easy to understand.</p><textarea class="fillable-textarea" placeholder="Type response here..."></textarea></div></div>
+<div class="question-step"><span class="question-num">10</span><div><b>Were there gaps in the proposal or presentation?</b><p>Document missing information, unclear sections, unanswered questions, weak proof points, or topics that required additional follow-up.</p><textarea class="fillable-textarea" placeholder="Type response here..."></textarea></div></div>
+</div>
+</div>
+</div>
+<div class="feedback-capture-strip"><div class="feedback-capture-item"><b>Required Field</b><select class="fillable-select"><option value="">Select outcome...</option><option>Won</option><option>Lost</option><option>No Decision</option><option>Delayed</option></select><input class="fillable-input" placeholder="Close reason..." type="text"/></div><div class="feedback-capture-item"><b>Required Field</b><input class="fillable-input" placeholder="Type supplier / competitor..." type="text"/></div><div class="feedback-capture-item"><b>Required Field</b><select class="fillable-select"><option value="">Select score...</option><option>1 - Needs Improvement</option><option>2 - Fair</option><option>3 - Good</option><option>4 - Very Good</option><option>5 - Excellent</option></select></div><div class="feedback-capture-item"><b>Required Field</b><input class="fillable-input" placeholder="Lessons learned / next action..." type="text"/></div></div>
+<div class="debrief-form-actions"><button class="debrief-print-button" onclick="window.print()" type="button">Print / Save Debrief</button><button class="debrief-reset-button" onclick="clearDebriefAnswers(this)" type="button">Erase Answers</button><span class="debrief-clear-note">Use Erase Answers to clear the typed responses and start a new debrief.</span></div><div class="closing-note-modern">Tip: Ask for specific examples whenever possible. Specific feedback is easier to turn into proposal improvements, battlecard updates, coaching, and pursuit planning actions.</div>
+</section>
+<section class="content-card">
+<h2>3. Proposal &amp; Presentation Rating</h2>
+<p>Use the scale below to score the overall proposal and presentation experience. Add notes so the rating is actionable for future pursuits.</p>
+<div class="rating-row">
+<label class="rating"><input name="proposal-rating" type="radio" value="1"/>1<br/>Needs Improvement</label>
+<label class="rating"><input name="proposal-rating" type="radio" value="2"/>2<br/>Fair</label>
+<label class="rating"><input name="proposal-rating" type="radio" value="3"/>3<br/>Good</label>
+<label class="rating"><input name="proposal-rating" type="radio" value="4"/>4<br/>Very Good</label>
+<label class="rating"><input name="proposal-rating" type="radio" value="5"/>5<br/>Excellent</label>
+</div>
+<div class="debrief-field-list">
+<div class="debrief-field"><b>Proposal Strengths:</b> What was clear, compelling, well organized, or client-focused?</div>
+<div class="debrief-field"><b>Presentation Strengths:</b> What landed well with the client or buying committee?</div>
+<div class="debrief-field"><b>Proposal Gaps:</b> What information, proof points, pricing detail, or service model clarity was missing?</div>
+<div class="debrief-field"><b>Improvement Actions:</b> What should be changed before the next pursuit?</div>
+</div>
+</section>
+<section class="content-card">
+<h2>4. Decision Drivers</h2>
+<p>Select all that apply and add notes for context.</p>
+<div class="checklist">
+<div class="check">Service model / support structure</div>
+<div class="check">Technology platform / innovation</div>
+<div class="check">Pricing / commercial value</div>
+<div class="check">Global alignment / regional coverage</div>
+<div class="check">Relationship / executive sponsorship</div>
+<div class="check">Implementation confidence</div>
+<div class="check">Incumbent advantage</div>
+<div class="check">Client timing / budget / no decision</div>
+<div class="check">Proposal quality / response alignment</div>
+<div class="check">Other</div>
+</div>
+</section>
+<section class="content-card">
+<h2>5. Competitor / Supplier Feedback</h2>
+<table aria-label="Competitor and supplier feedback" class="dashboard-table">
+<thead>
+<tr>
+<th>Supplier / Competitor</th>
+<th>Known Strengths</th>
+<th>Known Weaknesses</th>
+<th>Client Feedback / Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr><td> </td><td></td><td></td><td></td></tr>
+<tr><td> </td><td></td><td></td><td></td></tr>
+<tr><td> </td><td></td><td></td><td></td></tr>
+</tbody>
+</table>
+</section>
+<section class="content-card">
+<h2>6. Lessons Learned</h2>
+<div class="debrief-field-list">
+<div class="debrief-field"><b>What worked well?</b> Capture pursuit strengths, differentiators, and successful positioning.</div>
+<div class="debrief-field"><b>What should change next time?</b> Capture process, proposal, pricing, or messaging improvements.</div>
+<div class="debrief-field"><b>What proof points or battlecards are needed?</b> Identify missing references, metrics, examples, or competitive guidance.</div>
+<div class="debrief-field"><b>What should be updated in CRM?</b> Document outcome, next step, reason won/lost, and follow-up ownership.</div>
+</div>
+</section>
+<section class="content-card">
+<h2>7. Follow-Up Actions</h2>
+<table aria-label="Win loss follow-up actions" class="dashboard-table">
+<thead>
+<tr>
+<th>Action Item</th>
+<th>Owner</th>
+<th>Due Date</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr><td>Update CRM notes and opportunity outcome.</td><td></td><td></td><td>Not Started</td></tr>
+<tr><td>Update competitor profile or battlecard if needed.</td><td></td><td></td><td>Not Started</td></tr>
+<tr><td>Share lessons learned with Sales Enablement / Sales Support.</td><td></td><td></td><td>Not Started</td></tr>
+<tr><td>Identify nurture or retain-and-grow follow-up plan.</td><td></td><td></td><td>Not Started</td></tr>
+</tbody>
+</table>
+</section>
+<section class="content-card">
+<h2>8. Suggested SharePoint Metadata</h2>
+<div class="debrief-field-list">
+<div class="debrief-field"><b>Account:</b> Client or prospect name</div>
+<div class="debrief-field"><b>Outcome:</b> Won, Lost, No Decision, Delayed</div>
+<div class="debrief-field"><b>Sales Agent:</b> Opportunity owner</div>
+<div class="debrief-field"><b>Region:</b> North America, EMEA, ANZ, Asia</div>
+<div class="debrief-field"><b>Supplier Chosen:</b> CTM or competitor selected</div>
+<div class="debrief-field"><b>Proposal Rating:</b> Excellent, Good, Needs Improvement</div>
+<div class="debrief-field"><b>Reason Won/Lost:</b> Service, technology, price, relationship, global fit, timing, incumbent, or other</div>
+<div class="debrief-field"><b>Follow-Up Action:</b> Owner, due date, and next improvement step</div>
+</div>
+<p>Recommended SharePoint setup: Build this as a Microsoft Form or SharePoint List with required fields for Account, Region, Outcome, Supplier Chosen, Proposal Rating, Reason Won/Lost, Sales Agent, Follow-Up Owner, and Due Date.</p>
+<a class="backtop" data-target="north-america-win-loss" href="#view-north-america-win-loss">Back to North America Win / Loss ↑</a>
+</section>
 </section><section class="view" id="view-north-america-win-loss-analysis">
 <section class="hero regional-section-hero">
 <div class="eyebrow">Win / Loss Analysis</div>
@@ -3775,7 +3916,7 @@ Then enable GitHub Pages from Settings > Pages > Deploy from branch > main > /ro
 <p>Regional priorities, market focus, ownership guidance, active initiatives, and operating expectations.</p>
 <span class="home-card-action">Open section</span>
 </a><a class="home-exec-card regional-section-card" data-target="anz-contacts" href="#view-anz-contacts">
-<h3>Help & Contacts</h3>
+<h3>Help &amp; Contacts</h3>
 <p>Regional leadership, sales support, pricing, legal, security, implementation, and escalation paths.</p>
 <span class="home-card-action">Open section</span>
 </a><a class="home-exec-card regional-section-card" data-target="anz-sales-stages" href="#view-anz-sales-stages">
@@ -3791,7 +3932,7 @@ Then enable GitHub Pages from Settings > Pages > Deploy from branch > main > /ro
 <p>Bid/no-bid guidance, executive briefing, finance review, proposal planning, and submission support.</p>
 <span class="home-card-action">Open section</span>
 </a><a class="home-exec-card regional-section-card" data-target="anz-templates" href="#view-anz-templates">
-<h3>Templates & Guides</h3>
+<h3>Templates &amp; Guides</h3>
 <p>Approved sales plans, briefings, checklists, client-facing resources, and CRM guides.</p>
 <span class="home-card-action">Open section</span>
 </a><a class="home-exec-card regional-section-card" data-target="anz-customer-proof" href="#view-anz-customer-proof">
@@ -3873,8 +4014,8 @@ Then enable GitHub Pages from Settings > Pages > Deploy from branch > main > /ro
 <a class="backtop" data-target="anz" href="#view-anz">Back to ANZ Hub ↑</a>
 </section><section class="view" id="view-anz-contacts">
 <section class="hero regional-section-hero">
-<div class="eyebrow">Help & Contacts</div>
-<h1>ANZ - Help & Contacts</h1>
+<div class="eyebrow">Help &amp; Contacts</div>
+<h1>ANZ - Help &amp; Contacts</h1>
 <p>Regional help paths and escalation contacts aligned to the Home page format.</p>
 <span class="owner">Page owner: ANZ Regional Sales / Sales Enablement</span>
 </section>
@@ -3922,8 +4063,8 @@ Then enable GitHub Pages from Settings > Pages > Deploy from branch > main > /ro
 <a class="backtop" data-target="anz" href="#view-anz">Back to ANZ Hub ↑</a>
 </section><section class="view" id="view-anz-templates">
 <section class="hero regional-section-hero">
-<div class="eyebrow">Templates & Guides</div>
-<h1>ANZ - Templates & Guides</h1>
+<div class="eyebrow">Templates &amp; Guides</div>
+<h1>ANZ - Templates &amp; Guides</h1>
 <p>Approved templates and practical guides aligned to the Home page format.</p>
 <span class="owner">Page owner: ANZ Regional Sales / Sales Enablement</span>
 </section>
@@ -3955,19 +4096,163 @@ Then enable GitHub Pages from Settings > Pages > Deploy from branch > main > /ro
 </section><div class="debrief-note-box">Use the Win/Loss Debrief after Stage 8 - Closed Won/Loss and review analysis trends during regional pipeline reviews.</div></section>
 <a class="backtop" data-target="anz" href="#view-anz">Back to ANZ Hub ↑</a>
 </section><section class="view" id="view-anz-win-loss-debrief">
-<section class="hero regional-section-hero">
-<div class="eyebrow">Win / Loss Debrief</div>
-<h1>ANZ - Win/Loss Debrief Template</h1>
-<p>Capture opportunity details, closing questionnaire responses, supplier choice, proposal feedback, lessons learned, and follow-up actions.</p>
+<section class="hero">
+<div class="eyebrow">ANZ Closing Feedback</div>
+<h1>ANZ Win/Loss Debrief</h1>
+<p>Use this ANZ template after each pursuit to capture client decision drivers, competitor/supplier selection, proposal feedback, lessons learned, and follow-up actions for future opportunities.</p>
 <span class="owner">Page owner: ANZ Regional Sales / Sales Enablement</span>
 </section>
-<section class="content-card"><h2>Win/Loss Debrief Template</h2><p>Use this template after each pursuit to capture the outcome, client decision drivers, selected supplier, proposal feedback, lessons learned, and follow-up actions. This can be built as a Microsoft Form or SharePoint List for consistent regional reporting.</p></section>
-<section class="content-card"><h2>1. Opportunity Details</h2><div class="field-grid"><div class="template-field"><b>Account / Prospect Name</b><input class="fillable-input" type="text" placeholder="Click to type..." /></div><div class="template-field"><b>Region</b><select class="fillable-select"><option>ANZ</option><option>North America</option><option>ANZ</option><option>Asia</option><option>EMEA</option></select></div><div class="template-field"><b>Sales Agent / Opportunity Owner</b><input class="fillable-input" type="text" placeholder="Click to type..." /></div><div class="template-field"><b>Sales Stage at Close</b><select class="fillable-select"><option>Stage 8 - Closed Won/Loss</option><option>Closed - Won</option><option>Closed - Lost</option><option>No Decision</option><option>Delayed</option></select></div><div class="template-field"><b>Opportunity Value</b><input class="fillable-input" type="text" placeholder="Click to type..." /></div><div class="template-field"><b>Decision Date</b><input class="fillable-input" type="text" placeholder="Click to type..." /></div><div class="template-field"><b>Outcome</b><select class="fillable-select"><option value="">Select outcome...</option><option>Won</option><option>Lost</option><option>No Decision</option><option>Delayed</option></select></div><div class="template-field"><b>Client Segment / Vertical</b><input class="fillable-input" type="text" placeholder="Click to type..." /></div><div class="template-field"><b>Current Supplier / Incumbent</b><input class="fillable-input" type="text" placeholder="Click to type..." /></div></div></section>
-<section class="content-card closing-questionnaire-card"><div class="closing-questionnaire-header"><h2>2. Closing Questionnaire</h2><p>Use this guided debrief to capture why the client made their final decision, how CTM performed, and what should be improved before the next pursuit.</p><div class="closing-chip-row"><span class="closing-chip">Client Decision</span><span class="closing-chip">Supplier Selected</span><span class="closing-chip">Proposal Quality</span><span class="closing-chip">Next Actions</span></div></div><div class="closing-questionnaire-grid"><div class="closing-questionnaire-panel"><div class="closing-panel-kicker">Decision &amp; Selection</div><h3>Understand the final decision</h3><p class="panel-intro">Capture the decision story in a consistent format for trend reporting and competitor insights.</p><div class="question-step-list"><div class="question-step"><span class="question-num">01</span><div><b>Why did you choose CTM?</b><p>Document the strongest reasons CTM was selected, including service, technology, relationship, pricing, global alignment, implementation confidence, or overall value.</p><textarea class="fillable-textarea" placeholder="Type response here..."></textarea></div></div><div class="question-step"><span class="question-num">02</span><div><b>Which supplier did you choose?</b><p>Record the selected supplier or competitor so the team can compare future positioning and update competitor insights.</p><textarea class="fillable-textarea" placeholder="Enter selected supplier / competitor..."></textarea></div></div><div class="question-step"><span class="question-num">03</span><div><b>What were the top factors that influenced the final decision?</b><p>Capture pricing, service, technology, relationship, risk, incumbent, implementation, contract, or timing factors.</p><textarea class="fillable-textarea" placeholder="Type response here..."></textarea></div></div><div class="question-step"><span class="question-num">04</span><div><b>What could CTM have done differently?</b><p>Document gaps, objections, timing issues, content needs, or relationship opportunities.</p><textarea class="fillable-textarea" placeholder="Type response here..."></textarea></div></div></div></div><div class="closing-questionnaire-panel"><div class="closing-panel-kicker">Proposal &amp; Pursuit Quality</div><h3>Improve future proposals</h3><p class="panel-intro">Turn feedback into practical improvements for proposal content, sales coaching, and pursuit planning.</p><div class="question-step-list"><div class="question-step"><span class="question-num">05</span><div><b>How well was the proposal prepared?</b><p>Rate quality, completeness, clarity, alignment to client needs, and response timing.</p><textarea class="fillable-textarea" placeholder="Enter rating notes and comments..."></textarea></div></div><div class="question-step"><span class="question-num">06</span><div><b>Did the proposal address the client’s key priorities?</b><p>Capture what resonated, what was missing, and where additional proof points were needed.</p><textarea class="fillable-textarea" placeholder="Type response here..."></textarea></div></div><div class="question-step"><span class="question-num">07</span><div><b>How effective were CTM’s differentiators?</b><p>Note proof points, technology, service model, implementation, reporting, or global alignment feedback.</p><textarea class="fillable-textarea" placeholder="Type response here..."></textarea></div></div><div class="question-step"><span class="question-num">08</span><div><b>What follow-up is needed?</b><p>Document CRM updates, battlecard changes, competitor profile updates, and lessons learned sharing.</p><textarea class="fillable-textarea" placeholder="Enter owner, action, and target date..."></textarea></div></div></div></div></div><div class="feedback-capture-strip"><div class="feedback-capture-item"><b>Required Field</b><select class="fillable-select"><option value="">Select...</option><option>Won</option><option>Lost</option><option>No Decision</option><option>Delayed</option></select></div><div class="feedback-capture-item"><b>Required Field</b><input class="fillable-input" type="text" placeholder="Type supplier / competitor..." /></div><div class="feedback-capture-item"><b>Required Field</b><select class="fillable-select"><option value="">Rate proposal...</option><option>1 - Needs Improvement</option><option>2 - Fair</option><option>3 - Good</option><option>4 - Very Good</option><option>5 - Excellent</option></select><input class="fillable-input" type="text" placeholder="Comments..." /></div><div class="feedback-capture-item"><b>Required Field</b><input class="fillable-input" type="text" placeholder="Owner / next action date..." /></div></div></section>
-<section class="content-card"><h2>3. Proposal Quality Rating</h2><p>Use a simple 1–5 score for consistent reporting.</p><div class="rating-row"><div class="rating">1<br/>Poor</div><div class="rating">2<br/>Needs Work</div><div class="rating">3<br/>Meets Need</div><div class="rating">4<br/>Strong</div><label class="rating"><input type="radio" name="proposal-rating" value="5"/>5<br/>Excellent</label></div></section>
-<section class="content-card"><h2>4. Reason Won / Lost</h2><div class="checklist"><div class="check">Service model / account management</div><div class="check">Technology and traveler experience</div><div class="check">Pricing / commercial value</div><div class="check">Global or regional alignment</div><div class="check">Implementation confidence</div><div class="check">Incumbent relationship</div><div class="check">Proposal quality or response timing</div><div class="check">Competitor differentiator</div></div></section>
-<section class="content-card"><h2>5. Follow-Up Actions</h2><table class="dashboard-table"><thead><tr><th>Action Item</th><th>Owner</th><th>Due Date</th><th>Status</th></tr></thead><tbody><tr><td>Update CRM notes and opportunity outcome.</td><td></td><td></td><td>Not Started</td></tr><tr><td>Update competitor profile or battlecard if needed.</td><td></td><td></td><td>Not Started</td></tr><tr><td>Share lessons learned with Sales Enablement and regional leadership.</td><td></td><td></td><td>Not Started</td></tr><tr><td>Add approved proof point or proposal improvement to template library.</td><td></td><td></td><td>Not Started</td></tr></tbody></table></section>
-<a class="backtop" data-target="anz" href="#view-anz">Back to ANZ Hub ↑</a>
+<section class="content-card">
+<h2>1. Opportunity Details</h2>
+<p>Capture the core opportunity information so debriefs can be filtered by account, region, owner, stage, and outcome.</p>
+<div class="field-grid">
+<div class="template-field"><b>Account / Prospect Name</b><input class="fillable-input" placeholder="Click to type..." type="text"/></div>
+<div class="template-field"><b>Region</b><select class="fillable-select"><option value="">Select region...</option><option>North America</option><option selected="selected">ANZ</option><option>Asia</option><option>EMEA</option></select></div>
+<div class="template-field"><b>Sales Agent / Opportunity Owner</b><input class="fillable-input" placeholder="Click to type..." type="text"/></div>
+<div class="template-field"><b>Opportunity Stage</b><select class="fillable-select"><option value="">Select stage...</option><option>Stage 1 - Identify</option><option>Stage 2 - Qualify</option><option>Stage 3 - Discovery</option><option>Stage 4 - Solution</option><option>Stage 5 - Proposal</option><option>Stage 6 - Negotiation</option><option>Stage 7 - Commit</option><option>Stage 8 - Closed Won/Loss</option></select></div>
+<div class="template-field"><b>Opportunity Value</b><input class="fillable-input" placeholder="Click to type..." type="text"/></div>
+<div class="template-field"><b>Decision Date</b><input class="fillable-input" placeholder="Click to type..." type="text"/></div>
+<div class="template-field"><b>Outcome</b><select class="fillable-select"><option value="">Select outcome...</option><option>Won</option><option>Lost</option><option>No Decision</option><option>Delayed</option></select></div>
+<div class="template-field"><b>Client Segment / Vertical</b><input class="fillable-input" placeholder="Click to type..." type="text"/></div>
+<div class="template-field"><b>Current Supplier / Incumbent</b><input class="fillable-input" placeholder="Click to type..." type="text"/></div>
+</div>
+</section>
+<section class="content-card closing-questionnaire-card">
+<div class="closing-questionnaire-header">
+<h2>2. Closing Questionnaire</h2>
+<p>Use this section as a guided client debrief. Recommended setup: Microsoft Form or SharePoint List with required fields for account, region, sales agent, outcome, selected supplier, and decision date.</p>
+<div class="closing-chip-row"><span class="closing-chip">Decision Drivers</span><span class="closing-chip">Supplier / Competitor</span><span class="closing-chip">Proposal Quality</span><span class="closing-chip">Actionable Lessons</span></div>
+</div>
+<div class="closing-questionnaire-grid three-up">
+<div class="closing-questionnaire-panel">
+<div class="closing-panel-kicker">Decision &amp; Selection</div>
+<h3>Understand why the client made their final decision</h3>
+<p class="panel-intro">Capture the decision story so Sales, Marketing, and Leadership can identify trends by region, segment, competitor, and opportunity type.</p>
+<div class="question-step-list">
+<div class="question-step"><span class="question-num">01</span><div><b>Why did you choose CTM?</b><p>Document the strongest reasons CTM was selected, including service, technology, relationship, pricing, global alignment, implementation confidence, or overall value.</p><textarea class="fillable-textarea" placeholder="Type response here..."></textarea></div></div>
+<div class="question-step"><span class="question-num">02</span><div><b>Which supplier or competitor did you choose?</b><p>Record whether CTM was selected or identify the selected supplier / competitor for future comparison and competitive tracking.</p><textarea class="fillable-textarea" placeholder="Enter selected supplier / competitor..."></textarea></div></div>
+<div class="question-step"><span class="question-num">03</span><div><b>What were the top factors that influenced the final decision?</b><p>Capture the primary decision drivers, buying committee priorities, must-have requirements, and any deal-breakers.</p><textarea class="fillable-textarea" placeholder="Type response here..."></textarea></div></div>
+</div>
+</div>
+<div class="closing-questionnaire-panel">
+<div class="closing-panel-kicker">Strengths &amp; Gaps</div>
+<h3>Identify what worked and what should improve</h3>
+<p class="panel-intro">Use specific examples so the feedback can turn into coaching, stronger proof points, and better pursuit planning.</p>
+<div class="question-step-list">
+<div class="question-step"><span class="question-num">04</span><div><b>Was there anything CTM did especially well?</b><p>Highlight strengths, differentiators, team actions, proposal elements, presentations, or relationship points that helped the pursuit.</p><textarea class="fillable-textarea" placeholder="Type response here..."></textarea></div></div>
+<div class="question-step"><span class="question-num">05</span><div><b>Was there anything CTM could have done differently?</b><p>Identify improvement opportunities, missed expectations, timing issues, unclear messaging, gaps, or additional support needed for future pursuits.</p><textarea class="fillable-textarea" placeholder="Type response here..."></textarea></div></div>
+<div class="question-step"><span class="question-num">06</span><div><b>What follow-up is needed?</b><p>Document CRM updates, battlecard changes, competitor profile updates, coaching needs, and leadership follow-up.</p><textarea class="fillable-textarea" placeholder="Enter owner, action, and target date..."></textarea></div></div>
+</div>
+</div>
+<div class="closing-questionnaire-panel">
+<div class="closing-panel-kicker">Proposal &amp; Presentation</div>
+<h3>Review the quality and clarity of CTM’s response</h3>
+<p class="panel-intro">Understand whether the proposal and presentation clearly addressed the client’s needs and supported the final decision.</p>
+<div class="question-step-list">
+<div class="question-step"><span class="question-num">07</span><div><b>How well was the proposal prepared?</b><p>Rate quality, accuracy, organization, professionalism, completeness, and readiness of the final response.</p><textarea class="fillable-textarea" placeholder="Enter rating notes and comments..."></textarea></div></div>
+<div class="question-step"><span class="question-num">08</span><div><b>Did the proposal clearly address business needs and priorities?</b><p>Confirm whether CTM connected the solution to client goals, pain points, regional needs, and decision criteria.</p><textarea class="fillable-textarea" placeholder="Type response here..."></textarea></div></div>
+<div class="question-step"><span class="question-num">09</span><div><b>Was pricing, service model, and value proposition clear?</b><p>Assess whether the commercial model, support structure, implementation approach, and value story were easy to understand.</p><textarea class="fillable-textarea" placeholder="Type response here..."></textarea></div></div>
+<div class="question-step"><span class="question-num">10</span><div><b>Were there gaps in the proposal or presentation?</b><p>Document missing information, unclear sections, unanswered questions, weak proof points, or topics that required additional follow-up.</p><textarea class="fillable-textarea" placeholder="Type response here..."></textarea></div></div>
+</div>
+</div>
+</div>
+<div class="feedback-capture-strip"><div class="feedback-capture-item"><b>Required Field</b><select class="fillable-select"><option value="">Select outcome...</option><option>Won</option><option>Lost</option><option>No Decision</option><option>Delayed</option></select><input class="fillable-input" placeholder="Close reason..." type="text"/></div><div class="feedback-capture-item"><b>Required Field</b><input class="fillable-input" placeholder="Type supplier / competitor..." type="text"/></div><div class="feedback-capture-item"><b>Required Field</b><select class="fillable-select"><option value="">Select score...</option><option>1 - Needs Improvement</option><option>2 - Fair</option><option>3 - Good</option><option>4 - Very Good</option><option>5 - Excellent</option></select></div><div class="feedback-capture-item"><b>Required Field</b><input class="fillable-input" placeholder="Lessons learned / next action..." type="text"/></div></div>
+<div class="debrief-form-actions"><button class="debrief-print-button" onclick="window.print()" type="button">Print / Save Debrief</button><button class="debrief-reset-button" onclick="clearDebriefAnswers(this)" type="button">Erase Answers</button><span class="debrief-clear-note">Use Erase Answers to clear the typed responses and start a new debrief.</span></div><div class="closing-note-modern">Tip: Ask for specific examples whenever possible. Specific feedback is easier to turn into proposal improvements, battlecard updates, coaching, and pursuit planning actions.</div>
+</section>
+<section class="content-card">
+<h2>3. Proposal &amp; Presentation Rating</h2>
+<p>Use the scale below to score the overall proposal and presentation experience. Add notes so the rating is actionable for future pursuits.</p>
+<div class="rating-row">
+<label class="rating"><input name="proposal-rating" type="radio" value="1"/>1<br/>Needs Improvement</label>
+<label class="rating"><input name="proposal-rating" type="radio" value="2"/>2<br/>Fair</label>
+<label class="rating"><input name="proposal-rating" type="radio" value="3"/>3<br/>Good</label>
+<label class="rating"><input name="proposal-rating" type="radio" value="4"/>4<br/>Very Good</label>
+<label class="rating"><input name="proposal-rating" type="radio" value="5"/>5<br/>Excellent</label>
+</div>
+<div class="debrief-field-list">
+<div class="debrief-field"><b>Proposal Strengths:</b> What was clear, compelling, well organized, or client-focused?</div>
+<div class="debrief-field"><b>Presentation Strengths:</b> What landed well with the client or buying committee?</div>
+<div class="debrief-field"><b>Proposal Gaps:</b> What information, proof points, pricing detail, or service model clarity was missing?</div>
+<div class="debrief-field"><b>Improvement Actions:</b> What should be changed before the next pursuit?</div>
+</div>
+</section>
+<section class="content-card">
+<h2>4. Decision Drivers</h2>
+<p>Select all that apply and add notes for context.</p>
+<div class="checklist">
+<div class="check">Service model / support structure</div>
+<div class="check">Technology platform / innovation</div>
+<div class="check">Pricing / commercial value</div>
+<div class="check">Global alignment / regional coverage</div>
+<div class="check">Relationship / executive sponsorship</div>
+<div class="check">Implementation confidence</div>
+<div class="check">Incumbent advantage</div>
+<div class="check">Client timing / budget / no decision</div>
+<div class="check">Proposal quality / response alignment</div>
+<div class="check">Other</div>
+</div>
+</section>
+<section class="content-card">
+<h2>5. Competitor / Supplier Feedback</h2>
+<table aria-label="Competitor and supplier feedback" class="dashboard-table">
+<thead>
+<tr>
+<th>Supplier / Competitor</th>
+<th>Known Strengths</th>
+<th>Known Weaknesses</th>
+<th>Client Feedback / Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr><td> </td><td></td><td></td><td></td></tr>
+<tr><td> </td><td></td><td></td><td></td></tr>
+<tr><td> </td><td></td><td></td><td></td></tr>
+</tbody>
+</table>
+</section>
+<section class="content-card">
+<h2>6. Lessons Learned</h2>
+<div class="debrief-field-list">
+<div class="debrief-field"><b>What worked well?</b> Capture pursuit strengths, differentiators, and successful positioning.</div>
+<div class="debrief-field"><b>What should change next time?</b> Capture process, proposal, pricing, or messaging improvements.</div>
+<div class="debrief-field"><b>What proof points or battlecards are needed?</b> Identify missing references, metrics, examples, or competitive guidance.</div>
+<div class="debrief-field"><b>What should be updated in CRM?</b> Document outcome, next step, reason won/lost, and follow-up ownership.</div>
+</div>
+</section>
+<section class="content-card">
+<h2>7. Follow-Up Actions</h2>
+<table aria-label="Win loss follow-up actions" class="dashboard-table">
+<thead>
+<tr>
+<th>Action Item</th>
+<th>Owner</th>
+<th>Due Date</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr><td>Update CRM notes and opportunity outcome.</td><td></td><td></td><td>Not Started</td></tr>
+<tr><td>Update competitor profile or battlecard if needed.</td><td></td><td></td><td>Not Started</td></tr>
+<tr><td>Share lessons learned with Sales Enablement / Sales Support.</td><td></td><td></td><td>Not Started</td></tr>
+<tr><td>Identify nurture or retain-and-grow follow-up plan.</td><td></td><td></td><td>Not Started</td></tr>
+</tbody>
+</table>
+</section>
+<section class="content-card">
+<h2>8. Suggested SharePoint Metadata</h2>
+<div class="debrief-field-list">
+<div class="debrief-field"><b>Account:</b> Client or prospect name</div>
+<div class="debrief-field"><b>Outcome:</b> Won, Lost, No Decision, Delayed</div>
+<div class="debrief-field"><b>Sales Agent:</b> Opportunity owner</div>
+<div class="debrief-field"><b>Region:</b> North America, EMEA, ANZ, Asia</div>
+<div class="debrief-field"><b>Supplier Chosen:</b> CTM or competitor selected</div>
+<div class="debrief-field"><b>Proposal Rating:</b> Excellent, Good, Needs Improvement</div>
+<div class="debrief-field"><b>Reason Won/Lost:</b> Service, technology, price, relationship, global fit, timing, incumbent, or other</div>
+<div class="debrief-field"><b>Follow-Up Action:</b> Owner, due date, and next improvement step</div>
+</div>
+<p>Recommended SharePoint setup: Build this as a Microsoft Form or SharePoint List with required fields for Account, Region, Outcome, Supplier Chosen, Proposal Rating, Reason Won/Lost, Sales Agent, Follow-Up Owner, and Due Date.</p>
+<a class="backtop" data-target="anz-win-loss" href="#view-anz-win-loss">Back to ANZ Win / Loss ↑</a>
+</section>
 </section><section class="view" id="view-anz-win-loss-analysis">
 <section class="hero regional-section-hero">
 <div class="eyebrow">Win / Loss Analysis</div>
@@ -4147,7 +4432,7 @@ Then enable GitHub Pages from Settings > Pages > Deploy from branch > main > /ro
 <p>Regional priorities, market focus, ownership guidance, active initiatives, and operating expectations.</p>
 <span class="home-card-action">Open section</span>
 </a><a class="home-exec-card regional-section-card" data-target="asia-contacts" href="#view-asia-contacts">
-<h3>Help & Contacts</h3>
+<h3>Help &amp; Contacts</h3>
 <p>Regional leadership, sales support, pricing, legal, security, implementation, and escalation paths.</p>
 <span class="home-card-action">Open section</span>
 </a><a class="home-exec-card regional-section-card" data-target="asia-sales-stages" href="#view-asia-sales-stages">
@@ -4163,7 +4448,7 @@ Then enable GitHub Pages from Settings > Pages > Deploy from branch > main > /ro
 <p>Bid/no-bid guidance, executive briefing, finance review, proposal planning, and submission support.</p>
 <span class="home-card-action">Open section</span>
 </a><a class="home-exec-card regional-section-card" data-target="asia-templates" href="#view-asia-templates">
-<h3>Templates & Guides</h3>
+<h3>Templates &amp; Guides</h3>
 <p>Approved sales plans, briefings, checklists, client-facing resources, and CRM guides.</p>
 <span class="home-card-action">Open section</span>
 </a><a class="home-exec-card regional-section-card" data-target="asia-customer-proof" href="#view-asia-customer-proof">
@@ -4245,8 +4530,8 @@ Then enable GitHub Pages from Settings > Pages > Deploy from branch > main > /ro
 <a class="backtop" data-target="asia" href="#view-asia">Back to Asia Hub ↑</a>
 </section><section class="view" id="view-asia-contacts">
 <section class="hero regional-section-hero">
-<div class="eyebrow">Help & Contacts</div>
-<h1>Asia - Help & Contacts</h1>
+<div class="eyebrow">Help &amp; Contacts</div>
+<h1>Asia - Help &amp; Contacts</h1>
 <p>Regional help paths and escalation contacts aligned to the Home page format.</p>
 <span class="owner">Page owner: Asia Regional Sales / Sales Enablement</span>
 </section>
@@ -4294,8 +4579,8 @@ Then enable GitHub Pages from Settings > Pages > Deploy from branch > main > /ro
 <a class="backtop" data-target="asia" href="#view-asia">Back to Asia Hub ↑</a>
 </section><section class="view" id="view-asia-templates">
 <section class="hero regional-section-hero">
-<div class="eyebrow">Templates & Guides</div>
-<h1>Asia - Templates & Guides</h1>
+<div class="eyebrow">Templates &amp; Guides</div>
+<h1>Asia - Templates &amp; Guides</h1>
 <p>Approved templates and practical guides aligned to the Home page format.</p>
 <span class="owner">Page owner: Asia Regional Sales / Sales Enablement</span>
 </section>
@@ -4327,19 +4612,163 @@ Then enable GitHub Pages from Settings > Pages > Deploy from branch > main > /ro
 </section><div class="debrief-note-box">Use the Win/Loss Debrief after Stage 8 - Closed Won/Loss and review analysis trends during regional pipeline reviews.</div></section>
 <a class="backtop" data-target="asia" href="#view-asia">Back to Asia Hub ↑</a>
 </section><section class="view" id="view-asia-win-loss-debrief">
-<section class="hero regional-section-hero">
-<div class="eyebrow">Win / Loss Debrief</div>
-<h1>Asia - Win/Loss Debrief Template</h1>
-<p>Capture opportunity details, closing questionnaire responses, supplier choice, proposal feedback, lessons learned, and follow-up actions.</p>
+<section class="hero">
+<div class="eyebrow">Asia Closing Feedback</div>
+<h1>Asia Win/Loss Debrief</h1>
+<p>Use this Asia template after each pursuit to capture client decision drivers, competitor/supplier selection, proposal feedback, lessons learned, and follow-up actions for future opportunities.</p>
 <span class="owner">Page owner: Asia Regional Sales / Sales Enablement</span>
 </section>
-<section class="content-card"><h2>Win/Loss Debrief Template</h2><p>Use this template after each pursuit to capture the outcome, client decision drivers, selected supplier, proposal feedback, lessons learned, and follow-up actions. This can be built as a Microsoft Form or SharePoint List for consistent regional reporting.</p></section>
-<section class="content-card"><h2>1. Opportunity Details</h2><div class="field-grid"><div class="template-field"><b>Account / Prospect Name</b><input class="fillable-input" type="text" placeholder="Click to type..." /></div><div class="template-field"><b>Region</b><select class="fillable-select"><option>Asia</option><option>North America</option><option>ANZ</option><option>Asia</option><option>EMEA</option></select></div><div class="template-field"><b>Sales Agent / Opportunity Owner</b><input class="fillable-input" type="text" placeholder="Click to type..." /></div><div class="template-field"><b>Sales Stage at Close</b><select class="fillable-select"><option>Stage 8 - Closed Won/Loss</option><option>Closed - Won</option><option>Closed - Lost</option><option>No Decision</option><option>Delayed</option></select></div><div class="template-field"><b>Opportunity Value</b><input class="fillable-input" type="text" placeholder="Click to type..." /></div><div class="template-field"><b>Decision Date</b><input class="fillable-input" type="text" placeholder="Click to type..." /></div><div class="template-field"><b>Outcome</b><select class="fillable-select"><option value="">Select outcome...</option><option>Won</option><option>Lost</option><option>No Decision</option><option>Delayed</option></select></div><div class="template-field"><b>Client Segment / Vertical</b><input class="fillable-input" type="text" placeholder="Click to type..." /></div><div class="template-field"><b>Current Supplier / Incumbent</b><input class="fillable-input" type="text" placeholder="Click to type..." /></div></div></section>
-<section class="content-card closing-questionnaire-card"><div class="closing-questionnaire-header"><h2>2. Closing Questionnaire</h2><p>Use this guided debrief to capture why the client made their final decision, how CTM performed, and what should be improved before the next pursuit.</p><div class="closing-chip-row"><span class="closing-chip">Client Decision</span><span class="closing-chip">Supplier Selected</span><span class="closing-chip">Proposal Quality</span><span class="closing-chip">Next Actions</span></div></div><div class="closing-questionnaire-grid"><div class="closing-questionnaire-panel"><div class="closing-panel-kicker">Decision &amp; Selection</div><h3>Understand the final decision</h3><p class="panel-intro">Capture the decision story in a consistent format for trend reporting and competitor insights.</p><div class="question-step-list"><div class="question-step"><span class="question-num">01</span><div><b>Why did you choose CTM?</b><p>Document the strongest reasons CTM was selected, including service, technology, relationship, pricing, global alignment, implementation confidence, or overall value.</p><textarea class="fillable-textarea" placeholder="Type response here..."></textarea></div></div><div class="question-step"><span class="question-num">02</span><div><b>Which supplier did you choose?</b><p>Record the selected supplier or competitor so the team can compare future positioning and update competitor insights.</p><textarea class="fillable-textarea" placeholder="Enter selected supplier / competitor..."></textarea></div></div><div class="question-step"><span class="question-num">03</span><div><b>What were the top factors that influenced the final decision?</b><p>Capture pricing, service, technology, relationship, risk, incumbent, implementation, contract, or timing factors.</p><textarea class="fillable-textarea" placeholder="Type response here..."></textarea></div></div><div class="question-step"><span class="question-num">04</span><div><b>What could CTM have done differently?</b><p>Document gaps, objections, timing issues, content needs, or relationship opportunities.</p><textarea class="fillable-textarea" placeholder="Type response here..."></textarea></div></div></div></div><div class="closing-questionnaire-panel"><div class="closing-panel-kicker">Proposal &amp; Pursuit Quality</div><h3>Improve future proposals</h3><p class="panel-intro">Turn feedback into practical improvements for proposal content, sales coaching, and pursuit planning.</p><div class="question-step-list"><div class="question-step"><span class="question-num">05</span><div><b>How well was the proposal prepared?</b><p>Rate quality, completeness, clarity, alignment to client needs, and response timing.</p><textarea class="fillable-textarea" placeholder="Enter rating notes and comments..."></textarea></div></div><div class="question-step"><span class="question-num">06</span><div><b>Did the proposal address the client’s key priorities?</b><p>Capture what resonated, what was missing, and where additional proof points were needed.</p><textarea class="fillable-textarea" placeholder="Type response here..."></textarea></div></div><div class="question-step"><span class="question-num">07</span><div><b>How effective were CTM’s differentiators?</b><p>Note proof points, technology, service model, implementation, reporting, or global alignment feedback.</p><textarea class="fillable-textarea" placeholder="Type response here..."></textarea></div></div><div class="question-step"><span class="question-num">08</span><div><b>What follow-up is needed?</b><p>Document CRM updates, battlecard changes, competitor profile updates, and lessons learned sharing.</p><textarea class="fillable-textarea" placeholder="Enter owner, action, and target date..."></textarea></div></div></div></div></div><div class="feedback-capture-strip"><div class="feedback-capture-item"><b>Required Field</b><select class="fillable-select"><option value="">Select...</option><option>Won</option><option>Lost</option><option>No Decision</option><option>Delayed</option></select></div><div class="feedback-capture-item"><b>Required Field</b><input class="fillable-input" type="text" placeholder="Type supplier / competitor..." /></div><div class="feedback-capture-item"><b>Required Field</b><select class="fillable-select"><option value="">Rate proposal...</option><option>1 - Needs Improvement</option><option>2 - Fair</option><option>3 - Good</option><option>4 - Very Good</option><option>5 - Excellent</option></select><input class="fillable-input" type="text" placeholder="Comments..." /></div><div class="feedback-capture-item"><b>Required Field</b><input class="fillable-input" type="text" placeholder="Owner / next action date..." /></div></div></section>
-<section class="content-card"><h2>3. Proposal Quality Rating</h2><p>Use a simple 1–5 score for consistent reporting.</p><div class="rating-row"><div class="rating">1<br/>Poor</div><div class="rating">2<br/>Needs Work</div><div class="rating">3<br/>Meets Need</div><div class="rating">4<br/>Strong</div><label class="rating"><input type="radio" name="proposal-rating" value="5"/>5<br/>Excellent</label></div></section>
-<section class="content-card"><h2>4. Reason Won / Lost</h2><div class="checklist"><div class="check">Service model / account management</div><div class="check">Technology and traveler experience</div><div class="check">Pricing / commercial value</div><div class="check">Global or regional alignment</div><div class="check">Implementation confidence</div><div class="check">Incumbent relationship</div><div class="check">Proposal quality or response timing</div><div class="check">Competitor differentiator</div></div></section>
-<section class="content-card"><h2>5. Follow-Up Actions</h2><table class="dashboard-table"><thead><tr><th>Action Item</th><th>Owner</th><th>Due Date</th><th>Status</th></tr></thead><tbody><tr><td>Update CRM notes and opportunity outcome.</td><td></td><td></td><td>Not Started</td></tr><tr><td>Update competitor profile or battlecard if needed.</td><td></td><td></td><td>Not Started</td></tr><tr><td>Share lessons learned with Sales Enablement and regional leadership.</td><td></td><td></td><td>Not Started</td></tr><tr><td>Add approved proof point or proposal improvement to template library.</td><td></td><td></td><td>Not Started</td></tr></tbody></table></section>
-<a class="backtop" data-target="asia" href="#view-asia">Back to Asia Hub ↑</a>
+<section class="content-card">
+<h2>1. Opportunity Details</h2>
+<p>Capture the core opportunity information so debriefs can be filtered by account, region, owner, stage, and outcome.</p>
+<div class="field-grid">
+<div class="template-field"><b>Account / Prospect Name</b><input class="fillable-input" placeholder="Click to type..." type="text"/></div>
+<div class="template-field"><b>Region</b><select class="fillable-select"><option value="">Select region...</option><option>North America</option><option>ANZ</option><option selected="selected">Asia</option><option>EMEA</option></select></div>
+<div class="template-field"><b>Sales Agent / Opportunity Owner</b><input class="fillable-input" placeholder="Click to type..." type="text"/></div>
+<div class="template-field"><b>Opportunity Stage</b><select class="fillable-select"><option value="">Select stage...</option><option>Stage 1 - Identify</option><option>Stage 2 - Qualify</option><option>Stage 3 - Discovery</option><option>Stage 4 - Solution</option><option>Stage 5 - Proposal</option><option>Stage 6 - Negotiation</option><option>Stage 7 - Commit</option><option>Stage 8 - Closed Won/Loss</option></select></div>
+<div class="template-field"><b>Opportunity Value</b><input class="fillable-input" placeholder="Click to type..." type="text"/></div>
+<div class="template-field"><b>Decision Date</b><input class="fillable-input" placeholder="Click to type..." type="text"/></div>
+<div class="template-field"><b>Outcome</b><select class="fillable-select"><option value="">Select outcome...</option><option>Won</option><option>Lost</option><option>No Decision</option><option>Delayed</option></select></div>
+<div class="template-field"><b>Client Segment / Vertical</b><input class="fillable-input" placeholder="Click to type..." type="text"/></div>
+<div class="template-field"><b>Current Supplier / Incumbent</b><input class="fillable-input" placeholder="Click to type..." type="text"/></div>
+</div>
+</section>
+<section class="content-card closing-questionnaire-card">
+<div class="closing-questionnaire-header">
+<h2>2. Closing Questionnaire</h2>
+<p>Use this section as a guided client debrief. Recommended setup: Microsoft Form or SharePoint List with required fields for account, region, sales agent, outcome, selected supplier, and decision date.</p>
+<div class="closing-chip-row"><span class="closing-chip">Decision Drivers</span><span class="closing-chip">Supplier / Competitor</span><span class="closing-chip">Proposal Quality</span><span class="closing-chip">Actionable Lessons</span></div>
+</div>
+<div class="closing-questionnaire-grid three-up">
+<div class="closing-questionnaire-panel">
+<div class="closing-panel-kicker">Decision &amp; Selection</div>
+<h3>Understand why the client made their final decision</h3>
+<p class="panel-intro">Capture the decision story so Sales, Marketing, and Leadership can identify trends by region, segment, competitor, and opportunity type.</p>
+<div class="question-step-list">
+<div class="question-step"><span class="question-num">01</span><div><b>Why did you choose CTM?</b><p>Document the strongest reasons CTM was selected, including service, technology, relationship, pricing, global alignment, implementation confidence, or overall value.</p><textarea class="fillable-textarea" placeholder="Type response here..."></textarea></div></div>
+<div class="question-step"><span class="question-num">02</span><div><b>Which supplier or competitor did you choose?</b><p>Record whether CTM was selected or identify the selected supplier / competitor for future comparison and competitive tracking.</p><textarea class="fillable-textarea" placeholder="Enter selected supplier / competitor..."></textarea></div></div>
+<div class="question-step"><span class="question-num">03</span><div><b>What were the top factors that influenced the final decision?</b><p>Capture the primary decision drivers, buying committee priorities, must-have requirements, and any deal-breakers.</p><textarea class="fillable-textarea" placeholder="Type response here..."></textarea></div></div>
+</div>
+</div>
+<div class="closing-questionnaire-panel">
+<div class="closing-panel-kicker">Strengths &amp; Gaps</div>
+<h3>Identify what worked and what should improve</h3>
+<p class="panel-intro">Use specific examples so the feedback can turn into coaching, stronger proof points, and better pursuit planning.</p>
+<div class="question-step-list">
+<div class="question-step"><span class="question-num">04</span><div><b>Was there anything CTM did especially well?</b><p>Highlight strengths, differentiators, team actions, proposal elements, presentations, or relationship points that helped the pursuit.</p><textarea class="fillable-textarea" placeholder="Type response here..."></textarea></div></div>
+<div class="question-step"><span class="question-num">05</span><div><b>Was there anything CTM could have done differently?</b><p>Identify improvement opportunities, missed expectations, timing issues, unclear messaging, gaps, or additional support needed for future pursuits.</p><textarea class="fillable-textarea" placeholder="Type response here..."></textarea></div></div>
+<div class="question-step"><span class="question-num">06</span><div><b>What follow-up is needed?</b><p>Document CRM updates, battlecard changes, competitor profile updates, coaching needs, and leadership follow-up.</p><textarea class="fillable-textarea" placeholder="Enter owner, action, and target date..."></textarea></div></div>
+</div>
+</div>
+<div class="closing-questionnaire-panel">
+<div class="closing-panel-kicker">Proposal &amp; Presentation</div>
+<h3>Review the quality and clarity of CTM’s response</h3>
+<p class="panel-intro">Understand whether the proposal and presentation clearly addressed the client’s needs and supported the final decision.</p>
+<div class="question-step-list">
+<div class="question-step"><span class="question-num">07</span><div><b>How well was the proposal prepared?</b><p>Rate quality, accuracy, organization, professionalism, completeness, and readiness of the final response.</p><textarea class="fillable-textarea" placeholder="Enter rating notes and comments..."></textarea></div></div>
+<div class="question-step"><span class="question-num">08</span><div><b>Did the proposal clearly address business needs and priorities?</b><p>Confirm whether CTM connected the solution to client goals, pain points, regional needs, and decision criteria.</p><textarea class="fillable-textarea" placeholder="Type response here..."></textarea></div></div>
+<div class="question-step"><span class="question-num">09</span><div><b>Was pricing, service model, and value proposition clear?</b><p>Assess whether the commercial model, support structure, implementation approach, and value story were easy to understand.</p><textarea class="fillable-textarea" placeholder="Type response here..."></textarea></div></div>
+<div class="question-step"><span class="question-num">10</span><div><b>Were there gaps in the proposal or presentation?</b><p>Document missing information, unclear sections, unanswered questions, weak proof points, or topics that required additional follow-up.</p><textarea class="fillable-textarea" placeholder="Type response here..."></textarea></div></div>
+</div>
+</div>
+</div>
+<div class="feedback-capture-strip"><div class="feedback-capture-item"><b>Required Field</b><select class="fillable-select"><option value="">Select outcome...</option><option>Won</option><option>Lost</option><option>No Decision</option><option>Delayed</option></select><input class="fillable-input" placeholder="Close reason..." type="text"/></div><div class="feedback-capture-item"><b>Required Field</b><input class="fillable-input" placeholder="Type supplier / competitor..." type="text"/></div><div class="feedback-capture-item"><b>Required Field</b><select class="fillable-select"><option value="">Select score...</option><option>1 - Needs Improvement</option><option>2 - Fair</option><option>3 - Good</option><option>4 - Very Good</option><option>5 - Excellent</option></select></div><div class="feedback-capture-item"><b>Required Field</b><input class="fillable-input" placeholder="Lessons learned / next action..." type="text"/></div></div>
+<div class="debrief-form-actions"><button class="debrief-print-button" onclick="window.print()" type="button">Print / Save Debrief</button><button class="debrief-reset-button" onclick="clearDebriefAnswers(this)" type="button">Erase Answers</button><span class="debrief-clear-note">Use Erase Answers to clear the typed responses and start a new debrief.</span></div><div class="closing-note-modern">Tip: Ask for specific examples whenever possible. Specific feedback is easier to turn into proposal improvements, battlecard updates, coaching, and pursuit planning actions.</div>
+</section>
+<section class="content-card">
+<h2>3. Proposal &amp; Presentation Rating</h2>
+<p>Use the scale below to score the overall proposal and presentation experience. Add notes so the rating is actionable for future pursuits.</p>
+<div class="rating-row">
+<label class="rating"><input name="proposal-rating" type="radio" value="1"/>1<br/>Needs Improvement</label>
+<label class="rating"><input name="proposal-rating" type="radio" value="2"/>2<br/>Fair</label>
+<label class="rating"><input name="proposal-rating" type="radio" value="3"/>3<br/>Good</label>
+<label class="rating"><input name="proposal-rating" type="radio" value="4"/>4<br/>Very Good</label>
+<label class="rating"><input name="proposal-rating" type="radio" value="5"/>5<br/>Excellent</label>
+</div>
+<div class="debrief-field-list">
+<div class="debrief-field"><b>Proposal Strengths:</b> What was clear, compelling, well organized, or client-focused?</div>
+<div class="debrief-field"><b>Presentation Strengths:</b> What landed well with the client or buying committee?</div>
+<div class="debrief-field"><b>Proposal Gaps:</b> What information, proof points, pricing detail, or service model clarity was missing?</div>
+<div class="debrief-field"><b>Improvement Actions:</b> What should be changed before the next pursuit?</div>
+</div>
+</section>
+<section class="content-card">
+<h2>4. Decision Drivers</h2>
+<p>Select all that apply and add notes for context.</p>
+<div class="checklist">
+<div class="check">Service model / support structure</div>
+<div class="check">Technology platform / innovation</div>
+<div class="check">Pricing / commercial value</div>
+<div class="check">Global alignment / regional coverage</div>
+<div class="check">Relationship / executive sponsorship</div>
+<div class="check">Implementation confidence</div>
+<div class="check">Incumbent advantage</div>
+<div class="check">Client timing / budget / no decision</div>
+<div class="check">Proposal quality / response alignment</div>
+<div class="check">Other</div>
+</div>
+</section>
+<section class="content-card">
+<h2>5. Competitor / Supplier Feedback</h2>
+<table aria-label="Competitor and supplier feedback" class="dashboard-table">
+<thead>
+<tr>
+<th>Supplier / Competitor</th>
+<th>Known Strengths</th>
+<th>Known Weaknesses</th>
+<th>Client Feedback / Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr><td> </td><td></td><td></td><td></td></tr>
+<tr><td> </td><td></td><td></td><td></td></tr>
+<tr><td> </td><td></td><td></td><td></td></tr>
+</tbody>
+</table>
+</section>
+<section class="content-card">
+<h2>6. Lessons Learned</h2>
+<div class="debrief-field-list">
+<div class="debrief-field"><b>What worked well?</b> Capture pursuit strengths, differentiators, and successful positioning.</div>
+<div class="debrief-field"><b>What should change next time?</b> Capture process, proposal, pricing, or messaging improvements.</div>
+<div class="debrief-field"><b>What proof points or battlecards are needed?</b> Identify missing references, metrics, examples, or competitive guidance.</div>
+<div class="debrief-field"><b>What should be updated in CRM?</b> Document outcome, next step, reason won/lost, and follow-up ownership.</div>
+</div>
+</section>
+<section class="content-card">
+<h2>7. Follow-Up Actions</h2>
+<table aria-label="Win loss follow-up actions" class="dashboard-table">
+<thead>
+<tr>
+<th>Action Item</th>
+<th>Owner</th>
+<th>Due Date</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr><td>Update CRM notes and opportunity outcome.</td><td></td><td></td><td>Not Started</td></tr>
+<tr><td>Update competitor profile or battlecard if needed.</td><td></td><td></td><td>Not Started</td></tr>
+<tr><td>Share lessons learned with Sales Enablement / Sales Support.</td><td></td><td></td><td>Not Started</td></tr>
+<tr><td>Identify nurture or retain-and-grow follow-up plan.</td><td></td><td></td><td>Not Started</td></tr>
+</tbody>
+</table>
+</section>
+<section class="content-card">
+<h2>8. Suggested SharePoint Metadata</h2>
+<div class="debrief-field-list">
+<div class="debrief-field"><b>Account:</b> Client or prospect name</div>
+<div class="debrief-field"><b>Outcome:</b> Won, Lost, No Decision, Delayed</div>
+<div class="debrief-field"><b>Sales Agent:</b> Opportunity owner</div>
+<div class="debrief-field"><b>Region:</b> North America, EMEA, ANZ, Asia</div>
+<div class="debrief-field"><b>Supplier Chosen:</b> CTM or competitor selected</div>
+<div class="debrief-field"><b>Proposal Rating:</b> Excellent, Good, Needs Improvement</div>
+<div class="debrief-field"><b>Reason Won/Lost:</b> Service, technology, price, relationship, global fit, timing, incumbent, or other</div>
+<div class="debrief-field"><b>Follow-Up Action:</b> Owner, due date, and next improvement step</div>
+</div>
+<p>Recommended SharePoint setup: Build this as a Microsoft Form or SharePoint List with required fields for Account, Region, Outcome, Supplier Chosen, Proposal Rating, Reason Won/Lost, Sales Agent, Follow-Up Owner, and Due Date.</p>
+<a class="backtop" data-target="asia-win-loss" href="#view-asia-win-loss">Back to Asia Win / Loss ↑</a>
+</section>
 </section><section class="view" id="view-asia-win-loss-analysis">
 <section class="hero regional-section-hero">
 <div class="eyebrow">Win / Loss Analysis</div>
@@ -4519,7 +4948,7 @@ Then enable GitHub Pages from Settings > Pages > Deploy from branch > main > /ro
 <p>Regional priorities, market focus, ownership guidance, active initiatives, and operating expectations.</p>
 <span class="home-card-action">Open section</span>
 </a><a class="home-exec-card regional-section-card" data-target="emea-contacts" href="#view-emea-contacts">
-<h3>Help & Contacts</h3>
+<h3>Help &amp; Contacts</h3>
 <p>Regional leadership, sales support, pricing, legal, security, implementation, and escalation paths.</p>
 <span class="home-card-action">Open section</span>
 </a><a class="home-exec-card regional-section-card" data-target="emea-sales-stages" href="#view-emea-sales-stages">
@@ -4535,7 +4964,7 @@ Then enable GitHub Pages from Settings > Pages > Deploy from branch > main > /ro
 <p>Bid/no-bid guidance, executive briefing, finance review, proposal planning, and submission support.</p>
 <span class="home-card-action">Open section</span>
 </a><a class="home-exec-card regional-section-card" data-target="emea-templates" href="#view-emea-templates">
-<h3>Templates & Guides</h3>
+<h3>Templates &amp; Guides</h3>
 <p>Approved sales plans, briefings, checklists, client-facing resources, and CRM guides.</p>
 <span class="home-card-action">Open section</span>
 </a><a class="home-exec-card regional-section-card" data-target="emea-customer-proof" href="#view-emea-customer-proof">
@@ -4617,8 +5046,8 @@ Then enable GitHub Pages from Settings > Pages > Deploy from branch > main > /ro
 <a class="backtop" data-target="emea" href="#view-emea">Back to EMEA Hub ↑</a>
 </section><section class="view" id="view-emea-contacts">
 <section class="hero regional-section-hero">
-<div class="eyebrow">Help & Contacts</div>
-<h1>EMEA - Help & Contacts</h1>
+<div class="eyebrow">Help &amp; Contacts</div>
+<h1>EMEA - Help &amp; Contacts</h1>
 <p>Regional help paths and escalation contacts aligned to the Home page format.</p>
 <span class="owner">Page owner: EMEA Regional Sales / Sales Enablement</span>
 </section>
@@ -4666,8 +5095,8 @@ Then enable GitHub Pages from Settings > Pages > Deploy from branch > main > /ro
 <a class="backtop" data-target="emea" href="#view-emea">Back to EMEA Hub ↑</a>
 </section><section class="view" id="view-emea-templates">
 <section class="hero regional-section-hero">
-<div class="eyebrow">Templates & Guides</div>
-<h1>EMEA - Templates & Guides</h1>
+<div class="eyebrow">Templates &amp; Guides</div>
+<h1>EMEA - Templates &amp; Guides</h1>
 <p>Approved templates and practical guides aligned to the Home page format.</p>
 <span class="owner">Page owner: EMEA Regional Sales / Sales Enablement</span>
 </section>
@@ -4699,19 +5128,163 @@ Then enable GitHub Pages from Settings > Pages > Deploy from branch > main > /ro
 </section><div class="debrief-note-box">Use the Win/Loss Debrief after Stage 8 - Closed Won/Loss and review analysis trends during regional pipeline reviews.</div></section>
 <a class="backtop" data-target="emea" href="#view-emea">Back to EMEA Hub ↑</a>
 </section><section class="view" id="view-emea-win-loss-debrief">
-<section class="hero regional-section-hero">
-<div class="eyebrow">Win / Loss Debrief</div>
-<h1>EMEA - Win/Loss Debrief Template</h1>
-<p>Capture opportunity details, closing questionnaire responses, supplier choice, proposal feedback, lessons learned, and follow-up actions.</p>
+<section class="hero">
+<div class="eyebrow">EMEA Closing Feedback</div>
+<h1>EMEA Win/Loss Debrief</h1>
+<p>Use this EMEA template after each pursuit to capture client decision drivers, competitor/supplier selection, proposal feedback, lessons learned, and follow-up actions for future opportunities.</p>
 <span class="owner">Page owner: EMEA Regional Sales / Sales Enablement</span>
 </section>
-<section class="content-card"><h2>Win/Loss Debrief Template</h2><p>Use this template after each pursuit to capture the outcome, client decision drivers, selected supplier, proposal feedback, lessons learned, and follow-up actions. This can be built as a Microsoft Form or SharePoint List for consistent regional reporting.</p></section>
-<section class="content-card"><h2>1. Opportunity Details</h2><div class="field-grid"><div class="template-field"><b>Account / Prospect Name</b><input class="fillable-input" type="text" placeholder="Click to type..." /></div><div class="template-field"><b>Region</b><select class="fillable-select"><option>EMEA</option><option>North America</option><option>ANZ</option><option>Asia</option><option>EMEA</option></select></div><div class="template-field"><b>Sales Agent / Opportunity Owner</b><input class="fillable-input" type="text" placeholder="Click to type..." /></div><div class="template-field"><b>Sales Stage at Close</b><select class="fillable-select"><option>Stage 8 - Closed Won/Loss</option><option>Closed - Won</option><option>Closed - Lost</option><option>No Decision</option><option>Delayed</option></select></div><div class="template-field"><b>Opportunity Value</b><input class="fillable-input" type="text" placeholder="Click to type..." /></div><div class="template-field"><b>Decision Date</b><input class="fillable-input" type="text" placeholder="Click to type..." /></div><div class="template-field"><b>Outcome</b><select class="fillable-select"><option value="">Select outcome...</option><option>Won</option><option>Lost</option><option>No Decision</option><option>Delayed</option></select></div><div class="template-field"><b>Client Segment / Vertical</b><input class="fillable-input" type="text" placeholder="Click to type..." /></div><div class="template-field"><b>Current Supplier / Incumbent</b><input class="fillable-input" type="text" placeholder="Click to type..." /></div></div></section>
-<section class="content-card closing-questionnaire-card"><div class="closing-questionnaire-header"><h2>2. Closing Questionnaire</h2><p>Use this guided debrief to capture why the client made their final decision, how CTM performed, and what should be improved before the next pursuit.</p><div class="closing-chip-row"><span class="closing-chip">Client Decision</span><span class="closing-chip">Supplier Selected</span><span class="closing-chip">Proposal Quality</span><span class="closing-chip">Next Actions</span></div></div><div class="closing-questionnaire-grid"><div class="closing-questionnaire-panel"><div class="closing-panel-kicker">Decision &amp; Selection</div><h3>Understand the final decision</h3><p class="panel-intro">Capture the decision story in a consistent format for trend reporting and competitor insights.</p><div class="question-step-list"><div class="question-step"><span class="question-num">01</span><div><b>Why did you choose CTM?</b><p>Document the strongest reasons CTM was selected, including service, technology, relationship, pricing, global alignment, implementation confidence, or overall value.</p><textarea class="fillable-textarea" placeholder="Type response here..."></textarea></div></div><div class="question-step"><span class="question-num">02</span><div><b>Which supplier did you choose?</b><p>Record the selected supplier or competitor so the team can compare future positioning and update competitor insights.</p><textarea class="fillable-textarea" placeholder="Enter selected supplier / competitor..."></textarea></div></div><div class="question-step"><span class="question-num">03</span><div><b>What were the top factors that influenced the final decision?</b><p>Capture pricing, service, technology, relationship, risk, incumbent, implementation, contract, or timing factors.</p><textarea class="fillable-textarea" placeholder="Type response here..."></textarea></div></div><div class="question-step"><span class="question-num">04</span><div><b>What could CTM have done differently?</b><p>Document gaps, objections, timing issues, content needs, or relationship opportunities.</p><textarea class="fillable-textarea" placeholder="Type response here..."></textarea></div></div></div></div><div class="closing-questionnaire-panel"><div class="closing-panel-kicker">Proposal &amp; Pursuit Quality</div><h3>Improve future proposals</h3><p class="panel-intro">Turn feedback into practical improvements for proposal content, sales coaching, and pursuit planning.</p><div class="question-step-list"><div class="question-step"><span class="question-num">05</span><div><b>How well was the proposal prepared?</b><p>Rate quality, completeness, clarity, alignment to client needs, and response timing.</p><textarea class="fillable-textarea" placeholder="Enter rating notes and comments..."></textarea></div></div><div class="question-step"><span class="question-num">06</span><div><b>Did the proposal address the client’s key priorities?</b><p>Capture what resonated, what was missing, and where additional proof points were needed.</p><textarea class="fillable-textarea" placeholder="Type response here..."></textarea></div></div><div class="question-step"><span class="question-num">07</span><div><b>How effective were CTM’s differentiators?</b><p>Note proof points, technology, service model, implementation, reporting, or global alignment feedback.</p><textarea class="fillable-textarea" placeholder="Type response here..."></textarea></div></div><div class="question-step"><span class="question-num">08</span><div><b>What follow-up is needed?</b><p>Document CRM updates, battlecard changes, competitor profile updates, and lessons learned sharing.</p><textarea class="fillable-textarea" placeholder="Enter owner, action, and target date..."></textarea></div></div></div></div></div><div class="feedback-capture-strip"><div class="feedback-capture-item"><b>Required Field</b><select class="fillable-select"><option value="">Select...</option><option>Won</option><option>Lost</option><option>No Decision</option><option>Delayed</option></select></div><div class="feedback-capture-item"><b>Required Field</b><input class="fillable-input" type="text" placeholder="Type supplier / competitor..." /></div><div class="feedback-capture-item"><b>Required Field</b><select class="fillable-select"><option value="">Rate proposal...</option><option>1 - Needs Improvement</option><option>2 - Fair</option><option>3 - Good</option><option>4 - Very Good</option><option>5 - Excellent</option></select><input class="fillable-input" type="text" placeholder="Comments..." /></div><div class="feedback-capture-item"><b>Required Field</b><input class="fillable-input" type="text" placeholder="Owner / next action date..." /></div></div></section>
-<section class="content-card"><h2>3. Proposal Quality Rating</h2><p>Use a simple 1–5 score for consistent reporting.</p><div class="rating-row"><div class="rating">1<br/>Poor</div><div class="rating">2<br/>Needs Work</div><div class="rating">3<br/>Meets Need</div><div class="rating">4<br/>Strong</div><label class="rating"><input type="radio" name="proposal-rating" value="5"/>5<br/>Excellent</label></div></section>
-<section class="content-card"><h2>4. Reason Won / Lost</h2><div class="checklist"><div class="check">Service model / account management</div><div class="check">Technology and traveler experience</div><div class="check">Pricing / commercial value</div><div class="check">Global or regional alignment</div><div class="check">Implementation confidence</div><div class="check">Incumbent relationship</div><div class="check">Proposal quality or response timing</div><div class="check">Competitor differentiator</div></div></section>
-<section class="content-card"><h2>5. Follow-Up Actions</h2><table class="dashboard-table"><thead><tr><th>Action Item</th><th>Owner</th><th>Due Date</th><th>Status</th></tr></thead><tbody><tr><td>Update CRM notes and opportunity outcome.</td><td></td><td></td><td>Not Started</td></tr><tr><td>Update competitor profile or battlecard if needed.</td><td></td><td></td><td>Not Started</td></tr><tr><td>Share lessons learned with Sales Enablement and regional leadership.</td><td></td><td></td><td>Not Started</td></tr><tr><td>Add approved proof point or proposal improvement to template library.</td><td></td><td></td><td>Not Started</td></tr></tbody></table></section>
-<a class="backtop" data-target="emea" href="#view-emea">Back to EMEA Hub ↑</a>
+<section class="content-card">
+<h2>1. Opportunity Details</h2>
+<p>Capture the core opportunity information so debriefs can be filtered by account, region, owner, stage, and outcome.</p>
+<div class="field-grid">
+<div class="template-field"><b>Account / Prospect Name</b><input class="fillable-input" placeholder="Click to type..." type="text"/></div>
+<div class="template-field"><b>Region</b><select class="fillable-select"><option value="">Select region...</option><option>North America</option><option>ANZ</option><option>Asia</option><option selected="selected">EMEA</option></select></div>
+<div class="template-field"><b>Sales Agent / Opportunity Owner</b><input class="fillable-input" placeholder="Click to type..." type="text"/></div>
+<div class="template-field"><b>Opportunity Stage</b><select class="fillable-select"><option value="">Select stage...</option><option>Stage 1 - Identify</option><option>Stage 2 - Qualify</option><option>Stage 3 - Discovery</option><option>Stage 4 - Solution</option><option>Stage 5 - Proposal</option><option>Stage 6 - Negotiation</option><option>Stage 7 - Commit</option><option>Stage 8 - Closed Won/Loss</option></select></div>
+<div class="template-field"><b>Opportunity Value</b><input class="fillable-input" placeholder="Click to type..." type="text"/></div>
+<div class="template-field"><b>Decision Date</b><input class="fillable-input" placeholder="Click to type..." type="text"/></div>
+<div class="template-field"><b>Outcome</b><select class="fillable-select"><option value="">Select outcome...</option><option>Won</option><option>Lost</option><option>No Decision</option><option>Delayed</option></select></div>
+<div class="template-field"><b>Client Segment / Vertical</b><input class="fillable-input" placeholder="Click to type..." type="text"/></div>
+<div class="template-field"><b>Current Supplier / Incumbent</b><input class="fillable-input" placeholder="Click to type..." type="text"/></div>
+</div>
+</section>
+<section class="content-card closing-questionnaire-card">
+<div class="closing-questionnaire-header">
+<h2>2. Closing Questionnaire</h2>
+<p>Use this section as a guided client debrief. Recommended setup: Microsoft Form or SharePoint List with required fields for account, region, sales agent, outcome, selected supplier, and decision date.</p>
+<div class="closing-chip-row"><span class="closing-chip">Decision Drivers</span><span class="closing-chip">Supplier / Competitor</span><span class="closing-chip">Proposal Quality</span><span class="closing-chip">Actionable Lessons</span></div>
+</div>
+<div class="closing-questionnaire-grid three-up">
+<div class="closing-questionnaire-panel">
+<div class="closing-panel-kicker">Decision &amp; Selection</div>
+<h3>Understand why the client made their final decision</h3>
+<p class="panel-intro">Capture the decision story so Sales, Marketing, and Leadership can identify trends by region, segment, competitor, and opportunity type.</p>
+<div class="question-step-list">
+<div class="question-step"><span class="question-num">01</span><div><b>Why did you choose CTM?</b><p>Document the strongest reasons CTM was selected, including service, technology, relationship, pricing, global alignment, implementation confidence, or overall value.</p><textarea class="fillable-textarea" placeholder="Type response here..."></textarea></div></div>
+<div class="question-step"><span class="question-num">02</span><div><b>Which supplier or competitor did you choose?</b><p>Record whether CTM was selected or identify the selected supplier / competitor for future comparison and competitive tracking.</p><textarea class="fillable-textarea" placeholder="Enter selected supplier / competitor..."></textarea></div></div>
+<div class="question-step"><span class="question-num">03</span><div><b>What were the top factors that influenced the final decision?</b><p>Capture the primary decision drivers, buying committee priorities, must-have requirements, and any deal-breakers.</p><textarea class="fillable-textarea" placeholder="Type response here..."></textarea></div></div>
+</div>
+</div>
+<div class="closing-questionnaire-panel">
+<div class="closing-panel-kicker">Strengths &amp; Gaps</div>
+<h3>Identify what worked and what should improve</h3>
+<p class="panel-intro">Use specific examples so the feedback can turn into coaching, stronger proof points, and better pursuit planning.</p>
+<div class="question-step-list">
+<div class="question-step"><span class="question-num">04</span><div><b>Was there anything CTM did especially well?</b><p>Highlight strengths, differentiators, team actions, proposal elements, presentations, or relationship points that helped the pursuit.</p><textarea class="fillable-textarea" placeholder="Type response here..."></textarea></div></div>
+<div class="question-step"><span class="question-num">05</span><div><b>Was there anything CTM could have done differently?</b><p>Identify improvement opportunities, missed expectations, timing issues, unclear messaging, gaps, or additional support needed for future pursuits.</p><textarea class="fillable-textarea" placeholder="Type response here..."></textarea></div></div>
+<div class="question-step"><span class="question-num">06</span><div><b>What follow-up is needed?</b><p>Document CRM updates, battlecard changes, competitor profile updates, coaching needs, and leadership follow-up.</p><textarea class="fillable-textarea" placeholder="Enter owner, action, and target date..."></textarea></div></div>
+</div>
+</div>
+<div class="closing-questionnaire-panel">
+<div class="closing-panel-kicker">Proposal &amp; Presentation</div>
+<h3>Review the quality and clarity of CTM’s response</h3>
+<p class="panel-intro">Understand whether the proposal and presentation clearly addressed the client’s needs and supported the final decision.</p>
+<div class="question-step-list">
+<div class="question-step"><span class="question-num">07</span><div><b>How well was the proposal prepared?</b><p>Rate quality, accuracy, organization, professionalism, completeness, and readiness of the final response.</p><textarea class="fillable-textarea" placeholder="Enter rating notes and comments..."></textarea></div></div>
+<div class="question-step"><span class="question-num">08</span><div><b>Did the proposal clearly address business needs and priorities?</b><p>Confirm whether CTM connected the solution to client goals, pain points, regional needs, and decision criteria.</p><textarea class="fillable-textarea" placeholder="Type response here..."></textarea></div></div>
+<div class="question-step"><span class="question-num">09</span><div><b>Was pricing, service model, and value proposition clear?</b><p>Assess whether the commercial model, support structure, implementation approach, and value story were easy to understand.</p><textarea class="fillable-textarea" placeholder="Type response here..."></textarea></div></div>
+<div class="question-step"><span class="question-num">10</span><div><b>Were there gaps in the proposal or presentation?</b><p>Document missing information, unclear sections, unanswered questions, weak proof points, or topics that required additional follow-up.</p><textarea class="fillable-textarea" placeholder="Type response here..."></textarea></div></div>
+</div>
+</div>
+</div>
+<div class="feedback-capture-strip"><div class="feedback-capture-item"><b>Required Field</b><select class="fillable-select"><option value="">Select outcome...</option><option>Won</option><option>Lost</option><option>No Decision</option><option>Delayed</option></select><input class="fillable-input" placeholder="Close reason..." type="text"/></div><div class="feedback-capture-item"><b>Required Field</b><input class="fillable-input" placeholder="Type supplier / competitor..." type="text"/></div><div class="feedback-capture-item"><b>Required Field</b><select class="fillable-select"><option value="">Select score...</option><option>1 - Needs Improvement</option><option>2 - Fair</option><option>3 - Good</option><option>4 - Very Good</option><option>5 - Excellent</option></select></div><div class="feedback-capture-item"><b>Required Field</b><input class="fillable-input" placeholder="Lessons learned / next action..." type="text"/></div></div>
+<div class="debrief-form-actions"><button class="debrief-print-button" onclick="window.print()" type="button">Print / Save Debrief</button><button class="debrief-reset-button" onclick="clearDebriefAnswers(this)" type="button">Erase Answers</button><span class="debrief-clear-note">Use Erase Answers to clear the typed responses and start a new debrief.</span></div><div class="closing-note-modern">Tip: Ask for specific examples whenever possible. Specific feedback is easier to turn into proposal improvements, battlecard updates, coaching, and pursuit planning actions.</div>
+</section>
+<section class="content-card">
+<h2>3. Proposal &amp; Presentation Rating</h2>
+<p>Use the scale below to score the overall proposal and presentation experience. Add notes so the rating is actionable for future pursuits.</p>
+<div class="rating-row">
+<label class="rating"><input name="proposal-rating" type="radio" value="1"/>1<br/>Needs Improvement</label>
+<label class="rating"><input name="proposal-rating" type="radio" value="2"/>2<br/>Fair</label>
+<label class="rating"><input name="proposal-rating" type="radio" value="3"/>3<br/>Good</label>
+<label class="rating"><input name="proposal-rating" type="radio" value="4"/>4<br/>Very Good</label>
+<label class="rating"><input name="proposal-rating" type="radio" value="5"/>5<br/>Excellent</label>
+</div>
+<div class="debrief-field-list">
+<div class="debrief-field"><b>Proposal Strengths:</b> What was clear, compelling, well organized, or client-focused?</div>
+<div class="debrief-field"><b>Presentation Strengths:</b> What landed well with the client or buying committee?</div>
+<div class="debrief-field"><b>Proposal Gaps:</b> What information, proof points, pricing detail, or service model clarity was missing?</div>
+<div class="debrief-field"><b>Improvement Actions:</b> What should be changed before the next pursuit?</div>
+</div>
+</section>
+<section class="content-card">
+<h2>4. Decision Drivers</h2>
+<p>Select all that apply and add notes for context.</p>
+<div class="checklist">
+<div class="check">Service model / support structure</div>
+<div class="check">Technology platform / innovation</div>
+<div class="check">Pricing / commercial value</div>
+<div class="check">Global alignment / regional coverage</div>
+<div class="check">Relationship / executive sponsorship</div>
+<div class="check">Implementation confidence</div>
+<div class="check">Incumbent advantage</div>
+<div class="check">Client timing / budget / no decision</div>
+<div class="check">Proposal quality / response alignment</div>
+<div class="check">Other</div>
+</div>
+</section>
+<section class="content-card">
+<h2>5. Competitor / Supplier Feedback</h2>
+<table aria-label="Competitor and supplier feedback" class="dashboard-table">
+<thead>
+<tr>
+<th>Supplier / Competitor</th>
+<th>Known Strengths</th>
+<th>Known Weaknesses</th>
+<th>Client Feedback / Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr><td> </td><td></td><td></td><td></td></tr>
+<tr><td> </td><td></td><td></td><td></td></tr>
+<tr><td> </td><td></td><td></td><td></td></tr>
+</tbody>
+</table>
+</section>
+<section class="content-card">
+<h2>6. Lessons Learned</h2>
+<div class="debrief-field-list">
+<div class="debrief-field"><b>What worked well?</b> Capture pursuit strengths, differentiators, and successful positioning.</div>
+<div class="debrief-field"><b>What should change next time?</b> Capture process, proposal, pricing, or messaging improvements.</div>
+<div class="debrief-field"><b>What proof points or battlecards are needed?</b> Identify missing references, metrics, examples, or competitive guidance.</div>
+<div class="debrief-field"><b>What should be updated in CRM?</b> Document outcome, next step, reason won/lost, and follow-up ownership.</div>
+</div>
+</section>
+<section class="content-card">
+<h2>7. Follow-Up Actions</h2>
+<table aria-label="Win loss follow-up actions" class="dashboard-table">
+<thead>
+<tr>
+<th>Action Item</th>
+<th>Owner</th>
+<th>Due Date</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr><td>Update CRM notes and opportunity outcome.</td><td></td><td></td><td>Not Started</td></tr>
+<tr><td>Update competitor profile or battlecard if needed.</td><td></td><td></td><td>Not Started</td></tr>
+<tr><td>Share lessons learned with Sales Enablement / Sales Support.</td><td></td><td></td><td>Not Started</td></tr>
+<tr><td>Identify nurture or retain-and-grow follow-up plan.</td><td></td><td></td><td>Not Started</td></tr>
+</tbody>
+</table>
+</section>
+<section class="content-card">
+<h2>8. Suggested SharePoint Metadata</h2>
+<div class="debrief-field-list">
+<div class="debrief-field"><b>Account:</b> Client or prospect name</div>
+<div class="debrief-field"><b>Outcome:</b> Won, Lost, No Decision, Delayed</div>
+<div class="debrief-field"><b>Sales Agent:</b> Opportunity owner</div>
+<div class="debrief-field"><b>Region:</b> North America, EMEA, ANZ, Asia</div>
+<div class="debrief-field"><b>Supplier Chosen:</b> CTM or competitor selected</div>
+<div class="debrief-field"><b>Proposal Rating:</b> Excellent, Good, Needs Improvement</div>
+<div class="debrief-field"><b>Reason Won/Lost:</b> Service, technology, price, relationship, global fit, timing, incumbent, or other</div>
+<div class="debrief-field"><b>Follow-Up Action:</b> Owner, due date, and next improvement step</div>
+</div>
+<p>Recommended SharePoint setup: Build this as a Microsoft Form or SharePoint List with required fields for Account, Region, Outcome, Supplier Chosen, Proposal Rating, Reason Won/Lost, Sales Agent, Follow-Up Owner, and Due Date.</p>
+<a class="backtop" data-target="emea-win-loss" href="#view-emea-win-loss">Back to EMEA Win / Loss ↑</a>
+</section>
 </section><section class="view" id="view-emea-win-loss-analysis">
 <section class="hero regional-section-hero">
 <div class="eyebrow">Win / Loss Analysis</div>
@@ -5257,7 +5830,6 @@ Then enable GitHub Pages from Settings > Pages > Deploy from branch > main > /ro
 </div>
 <div class="training-sub-links"><span class="training-sub-link">How-To Guides</span><span class="training-sub-link">Checklists</span><span class="training-sub-link">Templates</span></div>
 </a>
-
 <a class="training-link-card" data-target="refresher-content" href="#view-refresher-content">
 <div class="training-link-top">
 <div>
@@ -5967,15 +6539,15 @@ Then enable GitHub Pages from Settings > Pages > Deploy from branch > main > /ro
 <h2>1. Opportunity Details</h2>
 <p>Capture the core opportunity information so debriefs can be filtered by account, region, owner, stage, and outcome.</p>
 <div class="field-grid">
-<div class="template-field"><b>Account / Prospect Name</b><input class="fillable-input" type="text" placeholder="Click to type..." /></div>
+<div class="template-field"><b>Account / Prospect Name</b><input class="fillable-input" placeholder="Click to type..." type="text"/></div>
 <div class="template-field"><b>Region</b><select class="fillable-select"><option value="">Select region...</option><option>North America</option><option>ANZ</option><option>Asia</option><option>EMEA</option></select></div>
-<div class="template-field"><b>Sales Agent / Opportunity Owner</b><input class="fillable-input" type="text" placeholder="Click to type..." /></div>
+<div class="template-field"><b>Sales Agent / Opportunity Owner</b><input class="fillable-input" placeholder="Click to type..." type="text"/></div>
 <div class="template-field"><b>Opportunity Stage</b><select class="fillable-select"><option value="">Select stage...</option><option>Stage 1 - Identify</option><option>Stage 2 - Qualify</option><option>Stage 3 - Discovery</option><option>Stage 4 - Solution</option><option>Stage 5 - Proposal</option><option>Stage 6 - Negotiation</option><option>Stage 7 - Commit</option><option>Stage 8 - Closed Won/Loss</option></select></div>
-<div class="template-field"><b>Opportunity Value</b><input class="fillable-input" type="text" placeholder="Click to type..." /></div>
-<div class="template-field"><b>Decision Date</b><input class="fillable-input" type="text" placeholder="Click to type..." /></div>
+<div class="template-field"><b>Opportunity Value</b><input class="fillable-input" placeholder="Click to type..." type="text"/></div>
+<div class="template-field"><b>Decision Date</b><input class="fillable-input" placeholder="Click to type..." type="text"/></div>
 <div class="template-field"><b>Outcome</b><select class="fillable-select"><option value="">Select outcome...</option><option>Won</option><option>Lost</option><option>No Decision</option><option>Delayed</option></select></div>
-<div class="template-field"><b>Client Segment / Vertical</b><input class="fillable-input" type="text" placeholder="Click to type..." /></div>
-<div class="template-field"><b>Current Supplier / Incumbent</b><input class="fillable-input" type="text" placeholder="Click to type..." /></div>
+<div class="template-field"><b>Client Segment / Vertical</b><input class="fillable-input" placeholder="Click to type..." type="text"/></div>
+<div class="template-field"><b>Current Supplier / Incumbent</b><input class="fillable-input" placeholder="Click to type..." type="text"/></div>
 </div>
 </section>
 <section class="content-card closing-questionnaire-card">
@@ -6017,18 +6589,18 @@ Then enable GitHub Pages from Settings > Pages > Deploy from branch > main > /ro
 </div>
 </div>
 </div>
-<div class="feedback-capture-strip"><div class="feedback-capture-item"><b>Required Field</b><select class="fillable-select"><option value="">Select outcome...</option><option>Won</option><option>Lost</option><option>No Decision</option><option>Delayed</option></select><input class="fillable-input" type="text" placeholder="Close reason..." /></div><div class="feedback-capture-item"><b>Required Field</b><input class="fillable-input" type="text" placeholder="Type supplier / competitor..." /></div><div class="feedback-capture-item"><b>Required Field</b><select class="fillable-select"><option value="">Select score...</option><option>1 - Needs Improvement</option><option>2 - Fair</option><option>3 - Good</option><option>4 - Very Good</option><option>5 - Excellent</option></select></div><div class="feedback-capture-item"><b>Required Field</b><input class="fillable-input" type="text" placeholder="Lessons learned / next action..." /></div></div>
-<div class="debrief-form-actions"><button class="debrief-print-button" type="button" onclick="window.print()">Print / Save Debrief</button><button class="debrief-reset-button" type="button" onclick="clearDebriefAnswers(this)">Erase Answers</button><span class="debrief-clear-note">Use Erase Answers to clear the typed responses and start a new debrief.</span></div><div class="closing-note-modern">Tip: Ask for specific examples whenever possible. Specific feedback is easier to turn into proposal improvements, battlecard updates, coaching, and pursuit planning actions.</div>
+<div class="feedback-capture-strip"><div class="feedback-capture-item"><b>Required Field</b><select class="fillable-select"><option value="">Select outcome...</option><option>Won</option><option>Lost</option><option>No Decision</option><option>Delayed</option></select><input class="fillable-input" placeholder="Close reason..." type="text"/></div><div class="feedback-capture-item"><b>Required Field</b><input class="fillable-input" placeholder="Type supplier / competitor..." type="text"/></div><div class="feedback-capture-item"><b>Required Field</b><select class="fillable-select"><option value="">Select score...</option><option>1 - Needs Improvement</option><option>2 - Fair</option><option>3 - Good</option><option>4 - Very Good</option><option>5 - Excellent</option></select></div><div class="feedback-capture-item"><b>Required Field</b><input class="fillable-input" placeholder="Lessons learned / next action..." type="text"/></div></div>
+<div class="debrief-form-actions"><button class="debrief-print-button" onclick="window.print()" type="button">Print / Save Debrief</button><button class="debrief-reset-button" onclick="clearDebriefAnswers(this)" type="button">Erase Answers</button><span class="debrief-clear-note">Use Erase Answers to clear the typed responses and start a new debrief.</span></div><div class="closing-note-modern">Tip: Ask for specific examples whenever possible. Specific feedback is easier to turn into proposal improvements, battlecard updates, coaching, and pursuit planning actions.</div>
 </section>
 <section class="content-card">
 <h2>3. Proposal &amp; Presentation Rating</h2>
 <p>Use the scale below to score the overall proposal and presentation experience. Add notes so the rating is actionable for future pursuits.</p>
 <div class="rating-row">
-<label class="rating"><input type="radio" name="proposal-rating" value="1"/>1<br/>Needs Improvement</label>
-<label class="rating"><input type="radio" name="proposal-rating" value="2"/>2<br/>Fair</label>
-<label class="rating"><input type="radio" name="proposal-rating" value="3"/>3<br/>Good</label>
-<label class="rating"><input type="radio" name="proposal-rating" value="4"/>4<br/>Very Good</label>
-<label class="rating"><input type="radio" name="proposal-rating" value="5"/>5<br/>Excellent</label>
+<label class="rating"><input name="proposal-rating" type="radio" value="1"/>1<br/>Needs Improvement</label>
+<label class="rating"><input name="proposal-rating" type="radio" value="2"/>2<br/>Fair</label>
+<label class="rating"><input name="proposal-rating" type="radio" value="3"/>3<br/>Good</label>
+<label class="rating"><input name="proposal-rating" type="radio" value="4"/>4<br/>Very Good</label>
+<label class="rating"><input name="proposal-rating" type="radio" value="5"/>5<br/>Excellent</label>
 </div>
 <div class="debrief-field-list">
 <div class="debrief-field"><b>Proposal Strengths:</b> What was clear, compelling, well organized, or client-focused?</div>
@@ -7617,7 +8189,6 @@ Then enable GitHub Pages from Settings > Pages > Deploy from branch > main > /ro
 </section>
 </main>
 <footer>CTM Global Sales Toolkit Hub — region Win / Loss tiles now open section-only pages</footer>
-
 <section class="view" id="view-global-tool-win-opportunity-workbook">
 <section class="hero">
 <div class="eyebrow">Global Tools</div>
@@ -8114,7 +8685,6 @@ Then enable GitHub Pages from Settings > Pages > Deploy from branch > main > /ro
   }
 })();
 </script>
-
 <script>
 (function(){
   function clearFields(container){
