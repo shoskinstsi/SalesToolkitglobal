@@ -2660,6 +2660,30 @@ Then enable GitHub Pages from Settings > Pages > Deploy from branch > main > /ro
   .bid-contact-card h3{margin:0 0 10px;color:#0b1f35;font-size:18px}.bid-contact-card p{margin:0 0 8px;color:#475467;line-height:1.45;font-size:14px}.bid-contact-card b{color:#0b1f35}
   @media(max-width:1000px){.global-bid-toolkit-hero-grid,.global-bid-resource-grid,.bid-contact-grid{grid-template-columns:1fr}.raci-table th:first-child,.raci-table td:first-child{position:static}}
 
+
+
+  /* North America Bid Process */
+  .na-bid-process-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:18px}
+  .na-bid-process-card{background:linear-gradient(180deg,#003b49 0%,#063f4d 100%);color:#fff;border:1px solid rgba(255,255,255,.55);border-radius:22px;padding:24px;box-shadow:0 8px 22px rgba(15,23,42,.12);position:relative;overflow:hidden;min-height:330px}
+  .na-bid-process-card:before{content:attr(data-step);position:absolute;top:-36px;left:50%;transform:translateX(-50%);width:92px;height:92px;border-radius:50%;background:#003b49;border:5px solid #fff;box-shadow:0 0 0 8px rgba(0,124,148,.45);display:flex;align-items:center;justify-content:center;font-size:36px;font-weight:900;color:#fff;padding-top:22px}
+  .na-bid-process-card h3{color:#fff;margin:82px 0 14px;text-align:center;font-size:24px}
+  .na-bid-process-card h3:after{content:"";display:block;width:120px;height:1px;background:rgba(255,255,255,.8);margin:10px auto 0}
+  .na-bid-process-card p,.na-bid-process-card li{color:#fff;line-height:1.55;font-size:14px}
+  .na-bid-process-card ul{padding-left:18px;margin:12px 0 0}
+  .na-bid-highlight{background:#0b1f35;color:#fff;border-radius:22px;padding:28px;box-shadow:0 8px 24px rgba(15,23,42,.15);margin-top:18px}
+  .na-bid-highlight h2{margin:0 0 12px;color:#fff;font-size:27px}
+  .na-bid-highlight p,.na-bid-highlight li{color:#fff;line-height:1.65}
+  .na-bid-target{display:inline-flex;align-items:baseline;gap:10px;margin-top:18px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.22);border-radius:18px;padding:14px 18px;color:#fff}
+  .na-bid-target span:first-child{font-size:20px}
+  .na-bid-target strong{font-size:44px;line-height:1;color:#fff}
+  .na-responsibility-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:18px}
+  .na-responsibility-card{background:#003b49;color:#fff;border:1px solid rgba(255,255,255,.55);border-radius:22px;padding:26px;box-shadow:0 8px 22px rgba(15,23,42,.12);min-height:290px}
+  .na-responsibility-card h3{color:#fff;text-align:center;font-size:22px;margin:0 0 18px}
+  .na-responsibility-card h3:after{content:"";display:block;width:130px;height:1px;background:rgba(255,255,255,.8);margin:10px auto 0}
+  .na-responsibility-card li{color:#fff;line-height:1.45;margin-bottom:6px}
+  @media(max-width:1200px){.na-bid-process-grid,.na-responsibility-grid{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:700px){.na-bid-process-grid,.na-responsibility-grid{grid-template-columns:1fr}.na-bid-process-card{min-height:auto}.na-bid-target{display:flex;flex-wrap:wrap}.na-bid-target strong{font-size:34px}}
+
 </style>
 <!-- Updated: All section cards and navigation items now include real clickable section links with hash URLs. -->
 </head>
@@ -3194,6 +3218,7 @@ Then enable GitHub Pages from Settings > Pages > Deploy from branch > main > /ro
 <a class="tile" data-target="partner-agency-contacts" href="#view-partner-agency-contacts"><div class="tile-top"><div class="circle">02</div><div><h3>Partner Contacts</h3><p>Regional partner agency owners, sales contacts, and escalation points.</p></div></div><div class="arrow">›</div></a>
 <a class="tile" data-target="partner-agency-referrals" href="#view-partner-agency-referrals"><div class="tile-top"><div class="circle">03</div><div><h3>Referral Guidance</h3><p>Guidance for referral intake, lead ownership, CRM notes, and follow-up expectations.</p></div></div><div class="arrow">›</div></a>
 <a class="tile" data-target="partner-agency-materials" href="#view-partner-agency-materials"><div class="tile-top"><div class="circle">04</div><div><h3>Partner Materials</h3><p>Approved collateral, templates, talking points, partner decks, and shared pursuit content.</p></div></div><div class="arrow">›</div></a>
+<a class="tile" data-target="partner-agency-bid-resources" href="#view-partner-agency-bid-resources"><div class="tile-top"><div class="circle">05</div><div><h3>Bid Resources</h3><p>Regional sales contacts, APP contacts, pricing, Sales Support, and Sales Engineering resources for partner agency bids.</p></div></div><div class="arrow">›</div></a>
 </section>
 <section class="content-card" style="margin-top:18px">
 <h2>Suggested SharePoint Setup</h2>
@@ -3205,6 +3230,40 @@ Then enable GitHub Pages from Settings > Pages > Deploy from branch > main > /ro
 <section class="view" id="view-partner-agency-contacts"><section class="content-card"><h2>Partner Contacts</h2><p>Use this area for regional partner agency owners, contacts, escalation points, and internal support contacts.</p><a class="backtop" data-target="partner-agency" href="#view-partner-agency">Back to Partner Agency ↑</a></section></section>
 <section class="view" id="view-partner-agency-referrals"><section class="content-card"><h2>Referral Guidance</h2><p>Use this area for referral intake, lead source documentation, CRM expectations, follow-up timing, and ownership guidance.</p><a class="backtop" data-target="partner-agency" href="#view-partner-agency">Back to Partner Agency ↑</a></section></section>
 <section class="view" id="view-partner-agency-materials"><section class="content-card"><h2>Partner Materials</h2><p>Use this area for approved partner agency collateral, templates, decks, talking points, and shared pursuit materials.</p><a class="backtop" data-target="partner-agency" href="#view-partner-agency">Back to Partner Agency ↑</a></section></section>
+<section class="view" id="view-partner-agency-bid-resources">
+<section class="hero">
+<div class="eyebrow">Partner Agency</div>
+<h1>Bid Resources</h1>
+<p>Use this area when a pursuit involves a CTM Partner Agency or regional partner support. It gives teams a quick place to find regional sales contacts, APP contacts, and bid support mailboxes.</p>
+<span class="owner">Page owner: Global Sales / Partner Agency Program</span>
+</section>
+<section class="content-card">
+<h2>Regional Sales Contacts</h2>
+<div class="bid-contact-grid">
+<div class="bid-contact-card"><h3>EMEA</h3><p><b>Julian Mills</b><br/>SVP, Sales Strategy &amp; Transformation</p><p><b>Stuart Birkin</b><br/>General Manager, UK</p></div>
+<div class="bid-contact-card"><h3>APAC</h3><p><b>Wayne Koh</b><br/>GM, Sales &amp; Client Value</p><p><b>Nicky Leung</b><br/>Head of Business Analysis &amp; Solutions</p></div>
+<div class="bid-contact-card"><h3>ANZ</h3><p><b>Peter Wiseman</b><br/>Head of Sales</p></div>
+</div>
+</section>
+<section class="content-card">
+<h2>Agency Partner Program Contacts</h2>
+<div class="bid-contact-grid">
+<div class="bid-contact-card"><p><b>Kaia Kempf</b><br/>Global Head of Partner Network</p></div>
+<div class="bid-contact-card"><p><b>Rafael Gonzalez</b><br/>VP, Agency Partnerships Program</p></div>
+<div class="bid-contact-card"><p><b>Stephen Woodford</b><br/>Executive Director, Global Agency Network - EMEA</p></div>
+</div>
+</section>
+<section class="content-card">
+<h2>Bid Support Mailboxes</h2>
+<div class="global-detail-grid">
+<div class="global-detail-box"><b>Pricing</b>na.pricing_enterprise_strategic@travelctm.com</div>
+<div class="global-detail-box"><b>Sales Support</b>na.salessupport@travelctm.com</div>
+<div class="global-detail-box"><b>Sales Engineering</b>na.engineering@travelctm.com</div>
+</div>
+<div class="global-bid-note">Use these resources when partner agency input, regional alignment, pricing support, or technical solutioning is needed for a bid.</div>
+<a class="backtop" data-target="partner-agency" href="#view-partner-agency">Back to Partner Agency ↑</a>
+</section>
+</section>
 <section class="view" id="view-regions">
 <section class="hero">
 <div class="eyebrow">Regional Toolkit Hubs</div>
@@ -3763,7 +3822,78 @@ Then enable GitHub Pages from Settings > Pages > Deploy from branch > main > /ro
 <p>Guide the team through bid qualification, planning, pricing, proposal preparation, and submission.</p>
 <span class="owner">Page owner: North America Regional Sales / Sales Enablement</span>
 </section>
-<section class="content-card"><h2>Bid Toolkit Purpose</h2><p>Use this section before pursuing or submitting a bid so the team can assess fit, confirm readiness, align owners, and prepare approved materials.</p><div class="bid-process-strip"><span class="bid-step-chip">Review Bid</span><span class="bid-step-chip">Bid / No-Bid</span><span class="bid-step-chip">Executive Briefing</span><span class="bid-step-chip">Finance / D&amp;B</span><span class="bid-step-chip">Proposal Plan</span><span class="bid-step-chip">Submission</span></div></section>
+<section class="content-card"><h2>Bid Toolkit Purpose</h2><p>Use this section before pursuing or submitting a bid so the team can assess fit, confirm readiness, align owners, and prepare approved materials.</p><div class="bid-process-strip"><span class="bid-step-chip">Bid Process</span><span class="bid-step-chip">To Bid / Not to Bid</span><span class="bid-step-chip">Review Bid</span><span class="bid-step-chip">Bid / No-Bid</span><span class="bid-step-chip">Executive Briefing</span><span class="bid-step-chip">Finance / D&amp;B</span><span class="bid-step-chip">Proposal Plan</span><span class="bid-step-chip">Submission</span></div></section>
+<section class="content-card">
+<h2>North America Bid Process</h2>
+<p>Use this Domestic, US-led process to decide whether to pursue the opportunity, align the right owners, finalize pricing, and submit a complete response.</p>
+<div class="na-bid-process-grid">
+<div class="na-bid-process-card" data-step="1.">
+<h3>Bid/No-Bid</h3>
+<p>Assess whether the client aligns with CTM offerings before pursuing a bid. Review the bid, understand client needs, and confirm whether CTM can deliver profitably.</p>
+<ul>
+<li>Complete the WOW with bid/no-bid calculation.</li>
+<li>Distribute bid documents and initial questions to GM, regional sales lead, and Sales Support.</li>
+<li>Schedule the decision call with GM, regional sales lead, Sales Support leads, and SMEs.</li>
+<li>Request Finance to run the D&amp;B report and confirm pass/fail viability.</li>
+</ul>
+</div>
+<div class="na-bid-process-card" data-step="2.">
+<h3>Kickoff</h3>
+<p>Once the bid is approved to proceed, hold a project kickoff with everyone needed to complete the bid components.</p>
+<ul>
+<li>GM, regional leads, Pricing, Sales Support, and CTM M&amp;E if applicable.</li>
+<li>Review WOW inputs and the high-level bid approach.</li>
+<li>Confirm customer overview, relationship status, goals, win strategy, requirements, risks, pricing strategy, and target dates.</li>
+</ul>
+</div>
+<div class="na-bid-process-card" data-step="3.">
+<h3>Pricing</h3>
+<p>Submit cost model components, required sales documents, assumptions, and timelines to the pricing team.</p>
+<ul>
+<li>Allow a 10-day turnaround whenever possible.</li>
+<li>BAS reviews the internal summary and opportunity details.</li>
+<li>Pricing, profitability, and walk-in/walk-out strategy are aligned with EVP/SVP as needed.</li>
+<li>Final pricing is provided to Sales Support for the submission package.</li>
+</ul>
+</div>
+<div class="na-bid-process-card" data-step="4.">
+<h3>Submit</h3>
+<p>Sales Support partners with the sales lead to complete the questionnaire, executive summary if appropriate, and all required attachments.</p>
+<ul>
+<li>Sales lead reviews draft response for accuracy.</li>
+<li>Finalize all response documents, pricing, and references.</li>
+<li>Upload to the portal or send to client by the assigned owner.</li>
+<li>Coordinate post-submission presentations, clarifications, and tech demos.</li>
+</ul>
+</div>
+</div>
+</section>
+<section class="content-card">
+<div class="na-bid-highlight">
+<h2>To bid, or Not to bid</h2>
+<p>Not every client aligns with what CTM offers, so it is critical to assess whether pursuing the bid is worth the time and effort. Once a bid is received, the first step is to read every requirement carefully to understand the client’s needs.</p>
+<p>Next, evaluate overall compatibility by asking:</p>
+<ul>
+<li>Can CTM offer a solution that fits the client’s goals?</li>
+<li>Do we meet the client’s basic requirements?</li>
+<li>Is there an existing relationship with the client?</li>
+<li>Can we fulfill the client’s needs profitably?</li>
+<li>Has Finance confirmed D&amp;B customer viability?</li>
+</ul>
+<p>Complete as much of the WOW as possible and fill in the Go/No-Go tab to support a strategic decision. Then schedule a call with the regional general manager, Sales Support leads, and either the EVP or VP of Sales to determine whether to proceed or decline.</p>
+<div class="na-bid-target"><span>Target:</span><span>within</span><strong>24 hours</strong><span>of receipt</span></div>
+</div>
+</section>
+<section class="content-card">
+<h2>Bid Process Ownership</h2>
+<p>Use this breakdown to keep ownership clear during North America bid planning and response development.</p>
+<div class="na-responsibility-grid">
+<div class="na-responsibility-card"><h3>Salesperson</h3><ul><li>WOW distribution</li><li>Document distribution</li><li>Competitive analysis</li><li>How we win strategy</li><li>Internal configuration</li><li>Unique customizations</li><li>Internal stakeholder communication</li><li>Secure references</li><li>Lead pricing process and version control</li><li>Proofreading and editing</li><li>Bid submission</li><li>Email response</li></ul></div>
+<div class="na-responsibility-card"><h3>Sales Support</h3><ul><li>Questionnaire responses</li><li>Executive summary, if applicable</li><li>Graphics</li><li>Attachments</li><li>Compilation of final files</li><li>Proof pricing, ROI, and savings estimates</li><li>Upload responses to sourcing portal when applicable</li></ul></div>
+<div class="na-responsibility-card"><h3>Pricing</h3><ul><li>Ensure profitability</li><li>Estimated ROI</li><li>Client-provided pricing grid</li><li>Maintain model version control for all pricing submissions</li></ul></div>
+<div class="na-responsibility-card"><h3>Account Management, Technology, Operations</h3><ul><li>Keep us honest</li><li>Answer ancillary questions</li><li>Provide case study support</li><li>Support reference requirements</li></ul></div>
+</div>
+</section>
 <section class="content-card"><h2>What to Include</h2><div class="bid-detail-grid"><div class="bid-detail-box"><b>Bid / No-Bid</b>Assess client fit, requirements, relationship, profitability, timeline, and ability to deliver.</div><div class="bid-detail-box"><b>Executive Briefing</b>Summarize opportunity, decision criteria, risks, financials, solution, and required approvals.</div><div class="bid-detail-box"><b>Finance / D&amp;B</b>Document pass/fail outcome, pricing review, margin expectations, and approval requirements.</div><div class="bid-detail-box"><b>Proposal Planning</b>Assign content owners, proof points, differentiators, timeline, and final review steps.</div><div class="bid-detail-box"><b>Submission Readiness</b>Confirm required forms, legal/security items, attachments, pricing, and final approval.</div><div class="bid-detail-box"><b>Post-Submission</b>Track clarifications, presentation needs, negotiation steps, and win/loss follow-up.</div></div></section>
 <a class="backtop" data-target="north-america" href="#view-north-america">Back to North America Hub ↑</a>
 </section><section class="view" id="view-north-america-templates">
@@ -8588,6 +8718,7 @@ Then enable GitHub Pages from Settings > Pages > Deploy from branch > main > /ro
     {label:"Asia", target:"asia", keywords:"asia region overview contacts templates training bid toolkit customer proof partner agency sales stages win loss"},
     {label:"EMEA", target:"emea", keywords:"emea region overview contacts templates training bid toolkit customer proof partner agency sales stages win loss"},
     {label:"Global Sales", target:"global-sales", keywords:"global sales about ctm value proposition team goals territories strategy cycles"},
+    {label:"Partner Agency Bid Resources", target:"partner-agency-bid-resources", keywords:"partner agency bid resources regional sales contacts app agency partner program pricing sales support sales engineering"},
     {label:"Global Tools", target:"global-tools", keywords:"tools crm proposal reporting dashboards sales enablement technology resource library partner"},
     {label:"Templates", target:"templates", keywords:"templates sales plan deck executive briefing checklist crm guide customer proof"},
     {label:"Global Bid Toolkit", target:"bid-toolkit", keywords:"global bid toolkit bid no bid rfp tender pricing proposal risk legal submission kickoff"},
@@ -8653,7 +8784,7 @@ Then enable GitHub Pages from Settings > Pages > Deploy from branch > main > /ro
     const directPill = document.querySelector('.pill[data-target="' + CSS.escape(target) + '"]');
     if (directPill) return target;
     if (/^(north-america|anz|asia|emea)(-|$)/.test(target)) return 'regions';
-    if (/^(about-ctm|ctm-value-proposition|sales-team|goals-expectations|territories|sales-strategy|sales-cycles|global-fees|global-fees-north-america|global-fees-anz|global-fees-asia|global-fees-emea|global-fees-by-customer|global-fees-by-spend|global-fees-by-date)$/.test(target)) return 'global-sales';
+    if (/^(about-ctm|ctm-value-proposition|sales-team|goals-expectations|territories|sales-strategy|sales-cycles|partner-agency|partner-agency-process|partner-agency-contacts|partner-agency-referrals|partner-agency-materials|partner-agency-bid-resources|global-fees|global-fees-north-america|global-fees-anz|global-fees-asia|global-fees-emea|global-fees-by-customer|global-fees-by-spend|global-fees-by-date)$/.test(target)) return 'global-sales';
     if (/^(crm-tools|reporting-dashboards|sales-enablement-tools|proposal-tools|technology-sales-tools|global-resource-library|partner-tools|reporting-insights|resource-library|crm|partner-agency)$/.test(target)) return 'global-tools';
     if (/^(global-bid-process|global-bid-resources|global-bid-raci|bid-no-bid|executive-briefing|kickoff|pricing-intake|bid-writing-checklist|rfp-intake|risk-review|finance-pricing|proposal-development|final-submission)$/.test(target)) return 'bid-toolkit';
     if (/^(sales-plan-template|sales-toolkit-deck|executive-briefing-template|bid-writing-checklist-template|crm-update-guide-template|customer-proof-hub-template|crm-update-guide)$/.test(target)) return 'templates';
