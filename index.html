@@ -2851,6 +2851,71 @@ Then enable GitHub Pages from Settings > Pages > Deploy from branch > main > /ro
   @media(max-width:1000px){.winloss-outcome-spotlight .field-grid,.winloss-outcome-note{grid-template-columns:1fr}}
 
 
+
+  /* Dropdown link reliability + compact header after section selection */
+  .dropdown-menu a,
+  .dropdown-content a,
+  .nav-dropdown a,
+  .mega-menu a,
+  .global-dropdown a{
+    cursor:pointer;
+    pointer-events:auto;
+    text-decoration:none;
+  }
+
+  body.section-open .shared-banner{
+    padding:4px 18px 6px;
+    font-size:12px;
+  }
+  body.section-open .shared-banner strong{
+    font-size:13px;
+    margin-bottom:0;
+  }
+  body.section-open .site-header{
+    padding:10px 7vw;
+    grid-template-columns:240px 1fr;
+    align-items:center;
+  }
+  body.section-open .ctm-box{
+    width:38px;
+    height:38px;
+    border-radius:10px;
+    font-size:17px;
+  }
+  body.section-open .site-name{
+    font-size:18px;
+    margin-bottom:0;
+  }
+  body.section-open .site-sub{
+    font-size:12px;
+    line-height:1.25;
+  }
+  body.section-open .pill{
+    padding:9px 13px;
+    font-size:14px;
+  }
+  body.section-open .toolkit-search-wrap{
+    padding:12px 7vw;
+    margin-bottom:14px;
+    border-radius:0;
+  }
+  body.section-open .toolkit-search-row{
+    gap:10px;
+  }
+  body.section-open .toolkit-search-input{
+    padding:10px 14px;
+    font-size:14px;
+  }
+  body.section-open .toolkit-search-button{
+    padding:10px 16px;
+  }
+  body.section-open main{
+    padding-top:20px;
+  }
+  @media(max-width:900px){
+    body.section-open .site-header{grid-template-columns:1fr}
+  }
+
 </style>
 <!-- Updated: All section cards and navigation items now include real clickable section links with hash URLs. -->
 </head>
@@ -2887,7 +2952,7 @@ Then enable GitHub Pages from Settings > Pages > Deploy from branch > main > /ro
 <a class="pill" data-target="global-sales" href="#view-global-sales">Global Sales Overview</a>
 <a class="pill" data-target="sales-stages" href="#view-sales-stages">Global Sales Stages</a>
 <a class="pill" data-target="global-fees" href="#view-global-fees">Global Fees</a>
-<a class="pill" data-target="bid-toolkit" href="#view-bid-toolkit">Global Bid Toolkit</a>
+<a class="pill" data-target="global-bid-toolkit" href="#view-global-bid-toolkit">Global Bid Toolkit</a>
 <a class="pill" data-target="win-loss" href="#view-win-loss">Global Win/Loss Debrief</a>
 <a class="pill" data-target="partner-agency" href="#view-partner-agency">Partner Agency</a>
 </div>
@@ -4106,7 +4171,7 @@ Then enable GitHub Pages from Settings > Pages > Deploy from branch > main > /ro
 <a class="bid-card" data-target="north-america-win-loss-analysis" href="#view-north-america-win-loss-analysis"><div class="bid-num">02</div><h3>Win/Loss Analysis</h3><p>Track wins and losses by region, segment, vertical, deal size, sales stage, and reason won or lost.</p></a>
 <a class="bid-card" data-target="north-america-competitor-profiles" href="#view-north-america-competitor-profiles"><div class="bid-num">03</div><h3>Competitor Profiles</h3><p>Document competitor overview, strengths, weaknesses, pricing themes, service positioning, differentiators, and regional presence.</p></a>
 <a class="bid-card" data-target="north-america-battlecards" href="#view-north-america-battlecards"><div class="bid-num">04</div><h3>Battlecards</h3><p>Store approved differentiators, client pain points, talk tracks, proof points, and objection handling.</p></a>
-<a class="bid-card" data-target="north-america-market-updates" href="#view-north-america-market-updates"><div class="bid-num">05</div><h3>Market Updates</h3><p>Share competitor announcements, product updates, industry changes, client trends, and relevant market news.</p></a>
+<a class="bid-card" data-target="north-america-market-product-updates" href="#view-north-america-market-product-updates"><div class="bid-num">05</div><h3>Market / Product Updates</h3><p>Share competitor announcements, product updates, industry changes, client trends, and relevant market news.</p></a>
 </section><div class="debrief-note-box">Use the Win/Loss Debrief after Stage 8 - Closed Won/Loss and review analysis trends during regional pipeline reviews.</div></section>
 <a class="backtop" data-target="north-america" href="#view-north-america">Back to North America Hub ↑</a>
 </section><section class="view" id="view-north-america-win-loss-debrief">
@@ -4296,14 +4361,14 @@ Then enable GitHub Pages from Settings > Pages > Deploy from branch > main > /ro
 <section class="content-card"><h2>Battlecards</h2><p>Approved competitive positioning resources for sales planning, presentations, and final negotiations.</p><ul class="expanded-list"><li>Include CTM differentiators, client pain points, recommended talk tracks, proof points, and objection handling.</li><li>Use battlecards during sales planning, bid/no-bid review, presentations, and final negotiations.</li><li>Store only approved battlecards in the published template library.</li><li>Review after major wins/losses and update when positioning changes.</li></ul></section>
 <section class="content-card"><h2>Owner Fields</h2><div class="template-grid"><div class="template-box"><b>Primary Owner</b><span class="template-line"></span></div><div class="template-box"><b>Backup Owner</b><span class="template-line"></span></div><div class="template-box"><b>Review Date</b><span class="template-line"></span></div><div class="template-box"><b>Approval Status</b><span class="template-line"></span></div><div class="template-box"><b>Audience</b><span class="template-line"></span></div><div class="template-box"><b>Related Links</b><span class="template-line"></span></div></div></section>
 <a class="backtop" data-target="north-america" href="#view-north-america">Back to North America Hub ↑</a>
-</section><section class="view" id="view-north-america-market-updates">
+</section><section class="view" id="view-north-america-market-product-updates">
 <section class="hero regional-section-hero">
 <div class="eyebrow">Win / Loss Workspace</div>
-<h1>North America - Market Updates</h1>
+<h1>North America - Market / Product Updates</h1>
 <p>Share competitor announcements, product updates, travel market changes, client trends, and relevant industry news.</p>
 <span class="owner">Page owner: North America Regional Sales / Sales Enablement</span>
 </section>
-<section class="content-card"><h2>Market Updates</h2><p>Share competitor announcements, product updates, travel market changes, client trends, and relevant industry news.</p><ul class="expanded-list"><li>Summarize the update, source, impact, and recommended action.</li><li>Tag related competitors, regions, verticals, or client segments.</li><li>Link updates to battlecards, profiles, and pursuit positioning where helpful.</li><li>Review updates in sales enablement or pipeline meetings.</li></ul></section>
+<section class="content-card"><h2>Market / Product Updates</h2><p>Share competitor announcements, product updates, travel market changes, client trends, and relevant industry news.</p><ul class="expanded-list"><li>Summarize the update, source, impact, and recommended action.</li><li>Tag related competitors, regions, verticals, or client segments.</li><li>Link updates to battlecards, profiles, and pursuit positioning where helpful.</li><li>Review updates in sales enablement or pipeline meetings.</li></ul></section>
 <section class="content-card"><h2>Owner Fields</h2><div class="template-grid"><div class="template-box"><b>Primary Owner</b><span class="template-line"></span></div><div class="template-box"><b>Backup Owner</b><span class="template-line"></span></div><div class="template-box"><b>Review Date</b><span class="template-line"></span></div><div class="template-box"><b>Approval Status</b><span class="template-line"></span></div><div class="template-box"><b>Audience</b><span class="template-line"></span></div><div class="template-box"><b>Related Links</b><span class="template-line"></span></div></div></section>
 <a class="backtop" data-target="north-america" href="#view-north-america">Back to North America Hub ↑</a>
 </section><section class="view" id="view-north-america-partner-agency">
@@ -4622,7 +4687,7 @@ Then enable GitHub Pages from Settings > Pages > Deploy from branch > main > /ro
 <a class="bid-card" data-target="anz-win-loss-analysis" href="#view-anz-win-loss-analysis"><div class="bid-num">02</div><h3>Win/Loss Analysis</h3><p>Track wins and losses by region, segment, vertical, deal size, sales stage, and reason won or lost.</p></a>
 <a class="bid-card" data-target="anz-competitor-profiles" href="#view-anz-competitor-profiles"><div class="bid-num">03</div><h3>Competitor Profiles</h3><p>Document competitor overview, strengths, weaknesses, pricing themes, service positioning, differentiators, and regional presence.</p></a>
 <a class="bid-card" data-target="anz-battlecards" href="#view-anz-battlecards"><div class="bid-num">04</div><h3>Battlecards</h3><p>Store approved differentiators, client pain points, talk tracks, proof points, and objection handling.</p></a>
-<a class="bid-card" data-target="anz-market-updates" href="#view-anz-market-updates"><div class="bid-num">05</div><h3>Market Updates</h3><p>Share competitor announcements, product updates, industry changes, client trends, and relevant market news.</p></a>
+<a class="bid-card" data-target="anz-market-product-updates" href="#view-anz-market-product-updates"><div class="bid-num">05</div><h3>Market / Product Updates</h3><p>Share competitor announcements, product updates, industry changes, client trends, and relevant market news.</p></a>
 </section><div class="debrief-note-box">Use the Win/Loss Debrief after Stage 8 - Closed Won/Loss and review analysis trends during regional pipeline reviews.</div></section>
 <a class="backtop" data-target="anz" href="#view-anz">Back to ANZ Hub ↑</a>
 </section><section class="view" id="view-anz-win-loss-debrief">
@@ -4812,14 +4877,14 @@ Then enable GitHub Pages from Settings > Pages > Deploy from branch > main > /ro
 <section class="content-card"><h2>Battlecards</h2><p>Approved competitive positioning resources for sales planning, presentations, and final negotiations.</p><ul class="expanded-list"><li>Include CTM differentiators, client pain points, recommended talk tracks, proof points, and objection handling.</li><li>Use battlecards during sales planning, bid/no-bid review, presentations, and final negotiations.</li><li>Store only approved battlecards in the published template library.</li><li>Review after major wins/losses and update when positioning changes.</li></ul></section>
 <section class="content-card"><h2>Owner Fields</h2><div class="template-grid"><div class="template-box"><b>Primary Owner</b><span class="template-line"></span></div><div class="template-box"><b>Backup Owner</b><span class="template-line"></span></div><div class="template-box"><b>Review Date</b><span class="template-line"></span></div><div class="template-box"><b>Approval Status</b><span class="template-line"></span></div><div class="template-box"><b>Audience</b><span class="template-line"></span></div><div class="template-box"><b>Related Links</b><span class="template-line"></span></div></div></section>
 <a class="backtop" data-target="anz" href="#view-anz">Back to ANZ Hub ↑</a>
-</section><section class="view" id="view-anz-market-updates">
+</section><section class="view" id="view-anz-market-product-updates">
 <section class="hero regional-section-hero">
 <div class="eyebrow">Win / Loss Workspace</div>
-<h1>ANZ - Market Updates</h1>
+<h1>ANZ - Market / Product Updates</h1>
 <p>Share competitor announcements, product updates, travel market changes, client trends, and relevant industry news.</p>
 <span class="owner">Page owner: ANZ Regional Sales / Sales Enablement</span>
 </section>
-<section class="content-card"><h2>Market Updates</h2><p>Share competitor announcements, product updates, travel market changes, client trends, and relevant industry news.</p><ul class="expanded-list"><li>Summarize the update, source, impact, and recommended action.</li><li>Tag related competitors, regions, verticals, or client segments.</li><li>Link updates to battlecards, profiles, and pursuit positioning where helpful.</li><li>Review updates in sales enablement or pipeline meetings.</li></ul></section>
+<section class="content-card"><h2>Market / Product Updates</h2><p>Share competitor announcements, product updates, travel market changes, client trends, and relevant industry news.</p><ul class="expanded-list"><li>Summarize the update, source, impact, and recommended action.</li><li>Tag related competitors, regions, verticals, or client segments.</li><li>Link updates to battlecards, profiles, and pursuit positioning where helpful.</li><li>Review updates in sales enablement or pipeline meetings.</li></ul></section>
 <section class="content-card"><h2>Owner Fields</h2><div class="template-grid"><div class="template-box"><b>Primary Owner</b><span class="template-line"></span></div><div class="template-box"><b>Backup Owner</b><span class="template-line"></span></div><div class="template-box"><b>Review Date</b><span class="template-line"></span></div><div class="template-box"><b>Approval Status</b><span class="template-line"></span></div><div class="template-box"><b>Audience</b><span class="template-line"></span></div><div class="template-box"><b>Related Links</b><span class="template-line"></span></div></div></section>
 <a class="backtop" data-target="anz" href="#view-anz">Back to ANZ Hub ↑</a>
 </section><section class="view" id="view-anz-partner-agency">
@@ -5138,7 +5203,7 @@ Then enable GitHub Pages from Settings > Pages > Deploy from branch > main > /ro
 <a class="bid-card" data-target="asia-win-loss-analysis" href="#view-asia-win-loss-analysis"><div class="bid-num">02</div><h3>Win/Loss Analysis</h3><p>Track wins and losses by region, segment, vertical, deal size, sales stage, and reason won or lost.</p></a>
 <a class="bid-card" data-target="asia-competitor-profiles" href="#view-asia-competitor-profiles"><div class="bid-num">03</div><h3>Competitor Profiles</h3><p>Document competitor overview, strengths, weaknesses, pricing themes, service positioning, differentiators, and regional presence.</p></a>
 <a class="bid-card" data-target="asia-battlecards" href="#view-asia-battlecards"><div class="bid-num">04</div><h3>Battlecards</h3><p>Store approved differentiators, client pain points, talk tracks, proof points, and objection handling.</p></a>
-<a class="bid-card" data-target="asia-market-updates" href="#view-asia-market-updates"><div class="bid-num">05</div><h3>Market Updates</h3><p>Share competitor announcements, product updates, industry changes, client trends, and relevant market news.</p></a>
+<a class="bid-card" data-target="asia-market-product-updates" href="#view-asia-market-product-updates"><div class="bid-num">05</div><h3>Market / Product Updates</h3><p>Share competitor announcements, product updates, industry changes, client trends, and relevant market news.</p></a>
 </section><div class="debrief-note-box">Use the Win/Loss Debrief after Stage 8 - Closed Won/Loss and review analysis trends during regional pipeline reviews.</div></section>
 <a class="backtop" data-target="asia" href="#view-asia">Back to Asia Hub ↑</a>
 </section><section class="view" id="view-asia-win-loss-debrief">
@@ -5328,14 +5393,14 @@ Then enable GitHub Pages from Settings > Pages > Deploy from branch > main > /ro
 <section class="content-card"><h2>Battlecards</h2><p>Approved competitive positioning resources for sales planning, presentations, and final negotiations.</p><ul class="expanded-list"><li>Include CTM differentiators, client pain points, recommended talk tracks, proof points, and objection handling.</li><li>Use battlecards during sales planning, bid/no-bid review, presentations, and final negotiations.</li><li>Store only approved battlecards in the published template library.</li><li>Review after major wins/losses and update when positioning changes.</li></ul></section>
 <section class="content-card"><h2>Owner Fields</h2><div class="template-grid"><div class="template-box"><b>Primary Owner</b><span class="template-line"></span></div><div class="template-box"><b>Backup Owner</b><span class="template-line"></span></div><div class="template-box"><b>Review Date</b><span class="template-line"></span></div><div class="template-box"><b>Approval Status</b><span class="template-line"></span></div><div class="template-box"><b>Audience</b><span class="template-line"></span></div><div class="template-box"><b>Related Links</b><span class="template-line"></span></div></div></section>
 <a class="backtop" data-target="asia" href="#view-asia">Back to Asia Hub ↑</a>
-</section><section class="view" id="view-asia-market-updates">
+</section><section class="view" id="view-asia-market-product-updates">
 <section class="hero regional-section-hero">
 <div class="eyebrow">Win / Loss Workspace</div>
-<h1>Asia - Market Updates</h1>
+<h1>Asia - Market / Product Updates</h1>
 <p>Share competitor announcements, product updates, travel market changes, client trends, and relevant industry news.</p>
 <span class="owner">Page owner: Asia Regional Sales / Sales Enablement</span>
 </section>
-<section class="content-card"><h2>Market Updates</h2><p>Share competitor announcements, product updates, travel market changes, client trends, and relevant industry news.</p><ul class="expanded-list"><li>Summarize the update, source, impact, and recommended action.</li><li>Tag related competitors, regions, verticals, or client segments.</li><li>Link updates to battlecards, profiles, and pursuit positioning where helpful.</li><li>Review updates in sales enablement or pipeline meetings.</li></ul></section>
+<section class="content-card"><h2>Market / Product Updates</h2><p>Share competitor announcements, product updates, travel market changes, client trends, and relevant industry news.</p><ul class="expanded-list"><li>Summarize the update, source, impact, and recommended action.</li><li>Tag related competitors, regions, verticals, or client segments.</li><li>Link updates to battlecards, profiles, and pursuit positioning where helpful.</li><li>Review updates in sales enablement or pipeline meetings.</li></ul></section>
 <section class="content-card"><h2>Owner Fields</h2><div class="template-grid"><div class="template-box"><b>Primary Owner</b><span class="template-line"></span></div><div class="template-box"><b>Backup Owner</b><span class="template-line"></span></div><div class="template-box"><b>Review Date</b><span class="template-line"></span></div><div class="template-box"><b>Approval Status</b><span class="template-line"></span></div><div class="template-box"><b>Audience</b><span class="template-line"></span></div><div class="template-box"><b>Related Links</b><span class="template-line"></span></div></div></section>
 <a class="backtop" data-target="asia" href="#view-asia">Back to Asia Hub ↑</a>
 </section><section class="view" id="view-asia-partner-agency">
@@ -5654,7 +5719,7 @@ Then enable GitHub Pages from Settings > Pages > Deploy from branch > main > /ro
 <a class="bid-card" data-target="emea-win-loss-analysis" href="#view-emea-win-loss-analysis"><div class="bid-num">02</div><h3>Win/Loss Analysis</h3><p>Track wins and losses by region, segment, vertical, deal size, sales stage, and reason won or lost.</p></a>
 <a class="bid-card" data-target="emea-competitor-profiles" href="#view-emea-competitor-profiles"><div class="bid-num">03</div><h3>Competitor Profiles</h3><p>Document competitor overview, strengths, weaknesses, pricing themes, service positioning, differentiators, and regional presence.</p></a>
 <a class="bid-card" data-target="emea-battlecards" href="#view-emea-battlecards"><div class="bid-num">04</div><h3>Battlecards</h3><p>Store approved differentiators, client pain points, talk tracks, proof points, and objection handling.</p></a>
-<a class="bid-card" data-target="emea-market-updates" href="#view-emea-market-updates"><div class="bid-num">05</div><h3>Market Updates</h3><p>Share competitor announcements, product updates, industry changes, client trends, and relevant market news.</p></a>
+<a class="bid-card" data-target="emea-market-product-updates" href="#view-emea-market-product-updates"><div class="bid-num">05</div><h3>Market / Product Updates</h3><p>Share competitor announcements, product updates, industry changes, client trends, and relevant market news.</p></a>
 </section><div class="debrief-note-box">Use the Win/Loss Debrief after Stage 8 - Closed Won/Loss and review analysis trends during regional pipeline reviews.</div></section>
 <a class="backtop" data-target="emea" href="#view-emea">Back to EMEA Hub ↑</a>
 </section><section class="view" id="view-emea-win-loss-debrief">
@@ -5844,14 +5909,14 @@ Then enable GitHub Pages from Settings > Pages > Deploy from branch > main > /ro
 <section class="content-card"><h2>Battlecards</h2><p>Approved competitive positioning resources for sales planning, presentations, and final negotiations.</p><ul class="expanded-list"><li>Include CTM differentiators, client pain points, recommended talk tracks, proof points, and objection handling.</li><li>Use battlecards during sales planning, bid/no-bid review, presentations, and final negotiations.</li><li>Store only approved battlecards in the published template library.</li><li>Review after major wins/losses and update when positioning changes.</li></ul></section>
 <section class="content-card"><h2>Owner Fields</h2><div class="template-grid"><div class="template-box"><b>Primary Owner</b><span class="template-line"></span></div><div class="template-box"><b>Backup Owner</b><span class="template-line"></span></div><div class="template-box"><b>Review Date</b><span class="template-line"></span></div><div class="template-box"><b>Approval Status</b><span class="template-line"></span></div><div class="template-box"><b>Audience</b><span class="template-line"></span></div><div class="template-box"><b>Related Links</b><span class="template-line"></span></div></div></section>
 <a class="backtop" data-target="emea" href="#view-emea">Back to EMEA Hub ↑</a>
-</section><section class="view" id="view-emea-market-updates">
+</section><section class="view" id="view-emea-market-product-updates">
 <section class="hero regional-section-hero">
 <div class="eyebrow">Win / Loss Workspace</div>
-<h1>EMEA - Market Updates</h1>
+<h1>EMEA - Market / Product Updates</h1>
 <p>Share competitor announcements, product updates, travel market changes, client trends, and relevant industry news.</p>
 <span class="owner">Page owner: EMEA Regional Sales / Sales Enablement</span>
 </section>
-<section class="content-card"><h2>Market Updates</h2><p>Share competitor announcements, product updates, travel market changes, client trends, and relevant industry news.</p><ul class="expanded-list"><li>Summarize the update, source, impact, and recommended action.</li><li>Tag related competitors, regions, verticals, or client segments.</li><li>Link updates to battlecards, profiles, and pursuit positioning where helpful.</li><li>Review updates in sales enablement or pipeline meetings.</li></ul></section>
+<section class="content-card"><h2>Market / Product Updates</h2><p>Share competitor announcements, product updates, travel market changes, client trends, and relevant industry news.</p><ul class="expanded-list"><li>Summarize the update, source, impact, and recommended action.</li><li>Tag related competitors, regions, verticals, or client segments.</li><li>Link updates to battlecards, profiles, and pursuit positioning where helpful.</li><li>Review updates in sales enablement or pipeline meetings.</li></ul></section>
 <section class="content-card"><h2>Owner Fields</h2><div class="template-grid"><div class="template-box"><b>Primary Owner</b><span class="template-line"></span></div><div class="template-box"><b>Backup Owner</b><span class="template-line"></span></div><div class="template-box"><b>Review Date</b><span class="template-line"></span></div><div class="template-box"><b>Approval Status</b><span class="template-line"></span></div><div class="template-box"><b>Audience</b><span class="template-line"></span></div><div class="template-box"><b>Related Links</b><span class="template-line"></span></div></div></section>
 <a class="backtop" data-target="emea" href="#view-emea">Back to EMEA Hub ↑</a>
 </section><section class="view" id="view-emea-partner-agency">
@@ -6204,7 +6269,7 @@ Then enable GitHub Pages from Settings > Pages > Deploy from branch > main > /ro
 <a class="bid-card" data-target="win-loss-analysis" href="#view-win-loss-analysis"><div class="bid-num">02</div><h3>Win/Loss Analysis</h3><p>Track wins and losses by region, segment, vertical, and deal size. Capture why CTM won or lost and use debrief notes to improve future pursuits.</p></a>
 <a class="bid-card" data-target="competitor-profiles" href="#view-competitor-profiles"><div class="bid-num">03</div><h3>Competitor Profiles</h3><p>Use the competitor profile template to document overview, strengths, weaknesses, pricing, service positioning, differentiators, and regional presence.</p></a>
 <a class="bid-card" data-target="battlecards" href="#view-battlecards"><div class="bid-num">04</div><h3>Battlecards</h3><p>Store approved differentiators, client pain points, talk tracks, proof points, and objection-handling guidance for active pursuits.</p></a>
-<a class="bid-card" data-target="market-updates" href="#view-market-updates"><div class="bid-num">05</div><h3>Market Updates</h3><p>Share competitor announcements, product updates, client trends, travel market changes, and relevant industry news.</p></a>
+<a class="bid-card" data-target="market-product-updates" href="#view-market-product-updates"><div class="bid-num">05</div><h3>Market / Product Updates</h3><p>Share competitor announcements, product updates, client trends, travel market changes, and relevant industry news.</p></a>
 </section>
 <section class="content-card" style="margin-top:18px">
 <h2>Suggested Web Parts</h2>
@@ -7215,9 +7280,9 @@ Then enable GitHub Pages from Settings > Pages > Deploy from branch > main > /ro
 <a class="backtop" data-target="win-loss" href="#view-win-loss">Back to Win / Loss ↑</a>
 </section>
 </section>
-<section class="view" id="view-market-updates">
+<section class="view" id="view-market-product-updates">
 <section class="content-card">
-<h2>Market Updates</h2>
+<h2>Market / Product Updates</h2>
 <p><b>Purpose:</b> Keep the sales team informed on industry, competitor, technology, and market changes that may impact pursuit strategy.</p>
 <ul class="expanded-list">
 <li>Share new competitor announcements, product updates, client trends, travel market changes, and relevant industry news.</li>
@@ -8791,7 +8856,7 @@ Then enable GitHub Pages from Settings > Pages > Deploy from branch > main > /ro
     if (/^(sales-plan-template|sales-toolkit-deck|executive-briefing-template|bid-writing-checklist-template|crm-update-guide-template|customer-proof-hub-template|crm-update-guide)$/.test(target)) return 'templates';
     if (/^(new-hire-onboarding|thirty-sixty-ninety|recorded-training|job-aids|refresher-content|onboarding-)/.test(target)) return 'training';
     if (/^(north-america|anz|asia|emea)-training/.test(target)) return 'regions';
-    if (/^(win-loss-analysis|competitor-profiles|battlecards|market-updates|win-loss-debrief)$/.test(target)) return 'win-loss';
+    if (/^(win-loss-analysis|competitor-profiles|battlecards|market-product-updates|win-loss-debrief)$/.test(target)) return 'win-loss';
     if (/^(retain-grow|crm|growth)$/.test(target)) return 'customer-proof-hub';
     if (/contact$/.test(target) || target === 'help-contacts') return 'help-contacts';
     return '';
@@ -8958,7 +9023,7 @@ Then enable GitHub Pages from Settings > Pages > Deploy from branch > main > /ro
     if (/^(sales-plan-template|sales-toolkit-deck|executive-briefing-template|bid-writing-checklist-template|crm-update-guide-template|customer-proof-hub-template|crm-update-guide)$/.test(target)) return 'templates';
     if (/^(new-hire-onboarding|thirty-sixty-ninety|recorded-training|job-aids|refresher-content|onboarding-)/.test(target)) return 'training';
     if (/^(north-america|anz|asia|emea)-training/.test(target)) return 'regions';
-    if (/^(win-loss-analysis|competitor-profiles|battlecards|market-updates|win-loss-debrief)$/.test(target)) return 'win-loss';
+    if (/^(win-loss-analysis|competitor-profiles|battlecards|market-product-updates|win-loss-debrief)$/.test(target)) return 'win-loss';
     if (/^(retain-grow|crm|growth)$/.test(target)) return 'customer-proof-hub';
     if (/contact$/.test(target) || target === 'help-contacts') return 'help-contacts';
     return '';
@@ -9155,5 +9220,148 @@ Then enable GitHub Pages from Settings > Pages > Deploy from branch > main > /ro
   }
 })();
 </script>
+
+<script>
+(function(){
+  function resolveTarget(link){
+    var target = link.getAttribute('data-target');
+    if(target){ return target; }
+    var href = link.getAttribute('href') || '';
+    if(href.indexOf('#view-') === 0){ return href.replace('#view-',''); }
+    return '';
+  }
+
+  function closeDropdowns(){
+    document.querySelectorAll('.dropdown-menu,.dropdown-content,.nav-dropdown,.mega-menu,.global-dropdown').forEach(function(menu){
+      menu.style.display = '';
+      menu.classList.remove('open','show','active');
+    });
+  }
+
+  function activateToolkitSection(target){
+    if(!target){ return false; }
+
+    var view = document.getElementById('view-' + target);
+    if(!view){ return false; }
+
+    document.querySelectorAll('.view').forEach(function(section){
+      section.classList.remove('active');
+      section.style.display = 'none';
+    });
+
+    view.classList.add('active');
+    view.style.display = 'block';
+
+    document.querySelectorAll('[data-target]').forEach(function(item){
+      item.classList.toggle('active', item.getAttribute('data-target') === target);
+    });
+
+    document.body.classList.toggle('section-open', target !== 'home');
+    closeDropdowns();
+
+    if(history.pushState){
+      history.pushState(null, '', '#view-' + target);
+    } else {
+      location.hash = 'view-' + target;
+    }
+
+    window.scrollTo({top:0, behavior:'smooth'});
+    return true;
+  }
+
+  document.addEventListener('click', function(event){
+    var link = event.target.closest('a[data-target], a[href^="#view-"]');
+    if(!link){ return; }
+
+    var target = resolveTarget(link);
+    if(!target){ return; }
+
+    if(activateToolkitSection(target)){
+      event.preventDefault();
+      event.stopPropagation();
+    }
+  }, true);
+
+  window.addEventListener('hashchange', function(){
+    var hash = location.hash || '';
+    if(hash.indexOf('#view-') === 0){
+      activateToolkitSection(hash.replace('#view-',''));
+    }
+  });
+
+  document.addEventListener('DOMContentLoaded', function(){
+    var hash = location.hash || '';
+    if(hash.indexOf('#view-') === 0){
+      activateToolkitSection(hash.replace('#view-',''));
+    } else {
+      document.body.classList.remove('section-open');
+    }
+  });
+})();
+</script>
+
+
+<script>
+(function(){
+  var globalSalesRouteMap = {
+    "Global Sales Overview":"global-sales",
+    "Global Sales Stages":"sales-stages",
+    "Global Fees":"global-fees",
+    "Global Bid Toolkit":"global-bid-toolkit",
+    "Global Win/Loss Debrief":"win-loss",
+    "Partner Agency":"partner-agency"
+  };
+
+  function closeAllMenus(){
+    document.querySelectorAll('.dropdown-menu,.dropdown-content,.nav-dropdown,.mega-menu,.global-dropdown').forEach(function(menu){
+      menu.classList.remove('open','show','active');
+      menu.style.display = '';
+    });
+  }
+
+  function openSelectedSection(target){
+    var view = document.getElementById('view-' + target);
+    if(!view){ return false; }
+
+    document.querySelectorAll('.view').forEach(function(section){
+      section.classList.remove('active');
+      section.style.display = 'none';
+    });
+
+    view.classList.add('active');
+    view.style.display = 'block';
+
+    document.querySelectorAll('[data-target]').forEach(function(item){
+      item.classList.toggle('active', item.getAttribute('data-target') === target);
+    });
+
+    document.body.classList.toggle('section-open', target !== 'home');
+    closeAllMenus();
+
+    if(history.pushState){
+      history.pushState(null, '', '#view-' + target);
+    } else {
+      location.hash = 'view-' + target;
+    }
+
+    window.scrollTo({top:0, behavior:'smooth'});
+    return true;
+  }
+
+  document.addEventListener('click', function(event){
+    var link = event.target.closest('a');
+    if(!link){ return; }
+
+    var label = (link.textContent || '').replace(/\s+/g,' ').trim();
+    if(!globalSalesRouteMap[label]){ return; }
+
+    if(openSelectedSection(globalSalesRouteMap[label])){
+      event.preventDefault();
+      event.stopPropagation();
+    }
+  }, true);
+})();
+</script>
+
 </body>
 </html>
