@@ -2956,6 +2956,108 @@ Then enable GitHub Pages from Settings > Pages > Deploy from branch > main > /ro
     transform:translateY(-8px) !important;
   }
 
+
+  /* Modern Partner Contacts section */
+  .partner-contacts-modern-hero{
+    min-height:260px;
+    background:linear-gradient(120deg,#003b49 0%,#005f73 55%,#007c94 100%);
+  }
+  .partner-contact-intro{
+    background:#fff;
+    border:1px solid var(--line);
+    border-radius:24px;
+    padding:26px;
+    box-shadow:0 10px 26px rgba(15,23,42,.08);
+    margin-bottom:22px;
+  }
+  .partner-contact-intro h2{
+    margin:0 0 10px;
+    color:#0b1f35;
+    font-size:25px;
+  }
+  .partner-contact-intro p{
+    margin:0;
+    color:#475467;
+    line-height:1.6;
+    max-width:980px;
+  }
+  .partner-contact-grid-modern{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:18px;
+    margin-top:18px;
+  }
+  .partner-contact-region-card{
+    background:#fff;
+    border:1px solid var(--line);
+    border-radius:24px;
+    overflow:hidden;
+    box-shadow:0 8px 22px rgba(15,23,42,.08);
+  }
+  .partner-contact-region-card h3{
+    margin:0;
+    padding:18px 20px;
+    color:#fff;
+    background:linear-gradient(115deg,#003b49 0%,#007c94 100%);
+    font-size:21px;
+  }
+  .partner-contact-region-card:nth-child(2) h3{background:linear-gradient(115deg,#005f73 0%,#76bc43 120%)}
+  .partner-contact-region-card:nth-child(3) h3{background:linear-gradient(115deg,#0b1f35 0%,#007c94 100%)}
+  .partner-contact-region-card:nth-child(4) h3{background:linear-gradient(115deg,#003b49 0%,#4f8f2f 120%)}
+  .partner-contact-person{
+    display:block;
+    margin:14px;
+    padding:16px;
+    border:1px solid #d8e1ea;
+    border-radius:18px;
+    background:#f8fafc;
+    text-decoration:none;
+    color:#172033;
+    transition:.15s ease;
+  }
+  .partner-contact-person:hover{
+    transform:translateY(-2px);
+    background:#fff;
+    box-shadow:0 10px 22px rgba(15,23,42,.10);
+    border-color:#b9dce3;
+  }
+  .partner-contact-person b{
+    display:block;
+    color:#0b1f35;
+    font-size:17px;
+    margin-bottom:5px;
+  }
+  .partner-contact-person span{
+    display:block;
+    color:#667085;
+    line-height:1.4;
+    font-size:13px;
+    min-height:38px;
+  }
+  .partner-contact-person em{
+    display:inline-block;
+    margin-top:12px;
+    background:#eef8fb;
+    color:#003b49;
+    border:1px solid #d7edf2;
+    border-radius:999px;
+    padding:7px 11px;
+    font-style:normal;
+    font-size:12px;
+    font-weight:800;
+  }
+  .partner-contact-note{
+    margin-top:22px;
+    background:#eef8e9;
+    border:1px solid #d7ecc9;
+    border-radius:18px;
+    padding:16px 18px;
+    color:#294914;
+    line-height:1.55;
+  }
+  @media(max-width:1200px){.partner-contact-grid-modern{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:700px){.partner-contact-grid-modern{grid-template-columns:1fr}}
+
 </style>
 <!-- Updated: All section cards and navigation items now include real clickable section links with hash URLs. -->
 </head>
@@ -3500,37 +3602,38 @@ Then enable GitHub Pages from Settings > Pages > Deploy from branch > main > /ro
 </section>
 <section class="view" id="view-partner-agency-process"><section class="content-card"><h2>Partner Agency Process</h2><p>Use this area to document the steps for partner agency intake, qualification, ownership, CRM tracking, and handoff expectations.</p><a class="backtop" data-target="partner-agency" href="#view-partner-agency">Back to Partner Agency ↑</a></section></section>
 <section class="view" id="view-partner-agency-contacts">
-<section class="hero">
+<section class="hero partner-contacts-modern-hero">
 <div class="eyebrow">Partner Agency</div>
 <h1>Partner Contacts</h1>
-<p>Regional partner agency owners, sales contacts, and escalation points for partner-supported opportunities and global pursuit coordination.</p>
+<p>Use this contact hub to quickly identify the right regional partner contact for partner-supported opportunities, bid coordination, regional alignment, and escalation support.</p>
 <span class="owner">Page owner: Global Sales / Partner Agency Program</span>
 </section>
-<section class="content-card">
-<h2>Partner Contacts</h2>
-<p>Use these contacts when a pursuit requires regional support, partner agency coordination, or bid input across North America, EMEA, APAC, and ANZ.</p>
-<div class="bid-contact-grid">
-<div class="bid-contact-card">
+
+<section class="partner-contact-intro">
+<h2>Regional Partner Contact Hub</h2>
+<p>Select the regional contact card below to start an email request. Include the opportunity name, client footprint, region, services needed, timeline, and any bid/RFP deadlines.</p>
+<div class="partner-contact-grid-modern">
+<div class="partner-contact-region-card">
 <h3>North America</h3>
-<p><b>Linda Shevlin</b><br/>Vice President, Sales<br/><a href="mailto:?subject=Partner%20Agency%20Request%20-%20North%20America">Email request →</a></p>
-<p><b>Mary Ellen Hess</b><br/>EVP, Business Development<br/><a href="mailto:?subject=Partner%20Agency%20Request%20-%20North%20America">Email request →</a></p>
+<a class="partner-contact-person" href="mailto:?subject=Partner%20Agency%20Request%20-%20Linda%20Shevlin"><b>Linda Shevlin</b><span>Vice President, Sales</span><em>Email request →</em></a>
+<a class="partner-contact-person" href="mailto:?subject=Partner%20Agency%20Request%20-%20Mary%20Ellen%20Hess"><b>Mary Ellen Hess</b><span>EVP, Business Development</span><em>Email request →</em></a>
 </div>
-<div class="bid-contact-card">
+<div class="partner-contact-region-card">
 <h3>EMEA</h3>
-<p><b>Julian Mills</b><br/>SVP, Sales Strategy &amp; Transformation<br/><a href="mailto:?subject=Partner%20Agency%20Request%20-%20EMEA">Email request →</a></p>
-<p><b>Stuart Birkin</b><br/>General Manager, UK<br/><a href="mailto:?subject=Partner%20Agency%20Request%20-%20EMEA">Email request →</a></p>
+<a class="partner-contact-person" href="mailto:?subject=Partner%20Agency%20Request%20-%20Julian%20Mills"><b>Julian Mills</b><span>SVP, Sales Strategy &amp; Transformation</span><em>Email request →</em></a>
+<a class="partner-contact-person" href="mailto:?subject=Partner%20Agency%20Request%20-%20Stuart%20Birkin"><b>Stuart Birkin</b><span>General Manager, UK</span><em>Email request →</em></a>
 </div>
-<div class="bid-contact-card">
+<div class="partner-contact-region-card">
 <h3>APAC</h3>
-<p><b>Wayne Koh</b><br/>GM, Sales &amp; Client Value<br/><a href="mailto:?subject=Partner%20Agency%20Request%20-%20APAC">Email request →</a></p>
-<p><b>Nicky Leung</b><br/>Head of Business Analysis &amp; Solutions<br/><a href="mailto:?subject=Partner%20Agency%20Request%20-%20APAC">Email request →</a></p>
+<a class="partner-contact-person" href="mailto:?subject=Partner%20Agency%20Request%20-%20Wayne%20Koh"><b>Wayne Koh</b><span>GM, Sales &amp; Client Value</span><em>Email request →</em></a>
+<a class="partner-contact-person" href="mailto:?subject=Partner%20Agency%20Request%20-%20Nicky%20Leung"><b>Nicky Leung</b><span>Head of Business Analysis &amp; Solutions</span><em>Email request →</em></a>
 </div>
-<div class="bid-contact-card">
+<div class="partner-contact-region-card">
 <h3>ANZ</h3>
-<p><b>Peter Wiseman</b><br/>Head of Sales<br/><a href="mailto:?subject=Partner%20Agency%20Request%20-%20ANZ">Email request →</a></p>
+<a class="partner-contact-person" href="mailto:?subject=Partner%20Agency%20Request%20-%20Peter%20Wiseman"><b>Peter Wiseman</b><span>Head of Sales</span><em>Email request →</em></a>
 </div>
 </div>
-<div class="debrief-note-box">Use the email request links to start a partner agency support request. Add the opportunity name, region, client footprint, required services, timeline, and any bid/RFP deadlines before sending.</div>
+<div class="partner-contact-note"><b>When to use this section:</b> Use Partner Contacts when partner agency support, regional bid input, local-market guidance, or escalation visibility is needed.</div>
 <a class="backtop" data-target="partner-agency" href="#view-partner-agency">Back to Partner Agency ↑</a>
 </section>
 </section><section class="view" id="view-partner-agency-referrals"><section class="content-card"><h2>Referral Guidance</h2><p>Use this area for referral intake, lead source documentation, CRM expectations, follow-up timing, and ownership guidance.</p><a class="backtop" data-target="partner-agency" href="#view-partner-agency">Back to Partner Agency ↑</a></section></section>
