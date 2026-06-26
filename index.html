@@ -2916,6 +2916,46 @@ Then enable GitHub Pages from Settings > Pages > Deploy from branch > main > /ro
     body.section-open .site-header{grid-template-columns:1fr}
   }
 
+
+  /* Dropdown recedes after a section is selected */
+  body.menu-receding .nav-menu .dropdown-menu,
+  body.menu-receding .dropdown-menu,
+  body.menu-receding .dropdown-content,
+  body.menu-receding .nav-dropdown,
+  body.menu-receding .mega-menu,
+  body.menu-receding .global-dropdown,
+  body.menu-receding .menu-panel,
+  body.menu-receding .submenu,
+  body.menu-receding .flyout,
+  body.menu-receding .dropdown:hover .dropdown-menu,
+  body.menu-receding .nav-item:hover .dropdown-menu,
+  body.menu-receding .has-dropdown:hover .dropdown-menu{
+    display:none !important;
+    opacity:0 !important;
+    visibility:hidden !important;
+    transform:translateY(-8px) !important;
+    pointer-events:none !important;
+  }
+
+  body.menu-receding .dropdown,
+  body.menu-receding .nav-item,
+  body.menu-receding .has-dropdown{
+    pointer-events:none;
+  }
+
+
+  /* Close native details dropdown after menu selection */
+  details.nav-group:not([open]) > .nav-menu{
+    display:none !important;
+  }
+  details.nav-group.menu-selected > .nav-menu{
+    display:none !important;
+    opacity:0 !important;
+    visibility:hidden !important;
+    pointer-events:none !important;
+    transform:translateY(-8px) !important;
+  }
+
 </style>
 <!-- Updated: All section cards and navigation items now include real clickable section links with hash URLs. -->
 </head>
@@ -9269,6 +9309,7 @@ Then enable GitHub Pages from Settings > Pages > Deploy from branch > main > /ro
   };
 
   function closeAllMenus(){
+    document.querySelectorAll('details.nav-group').forEach(function(group){ group.removeAttribute('open'); });
     document.querySelectorAll('.dropdown-menu,.dropdown-content,.nav-dropdown,.mega-menu,.global-dropdown').forEach(function(menu){
       menu.classList.remove('open','show','active');
       menu.style.display = '';
@@ -9316,6 +9357,127 @@ Then enable GitHub Pages from Settings > Pages > Deploy from branch > main > /ro
       event.stopPropagation();
     }
   }, true);
+})();
+</script>
+
+
+<script>
+(function(){
+  function getTargetFromLink(link){
+    if(!link){ return ""; }
+    var target = link.getAttribute("data-target") || "";
+    if(target){ return target; }
+    var href = link.getAttribute("href") || "";
+    if(href.indexOf("#view-") === 0){ return href.replace("#view-",""); }
+    return "";
+  }
+
+  function closeAllDropdownMenus(){
+    document.querySelectorAll('details.nav-group').forEach(function(group){ group.removeAttribute('open'); });
+    document.querySelectorAll(".dropdown-menu,.dropdown-content,.nav-dropdown,.mega-menu,.global-dropdown,.menu-panel,.submenu,.flyout").forEach(function(menu){
+      menu.classList.remove("open","show","active","is-open","expanded");
+      menu.style.display = "none";
+      menu.style.opacity = "0";
+      menu.style.visibility = "hidden";
+      menu.style.pointerEvents = "none";
+    });
+
+    document.querySelectorAll(".dropdown,.nav-item,.menu-item,.has-dropdown,.pill").forEach(function(item){
+      item.classList.remove("open","show","active","is-open","expanded");
+      item.setAttribute("aria-expanded","false");
+    });
+  }
+
+  function restoreDropdownMenus(){
+    document.body.classList.remove("menu-receding");
+    document.querySelectorAll(".dropdown-menu,.dropdown-content,.nav-dropdown,.mega-menu,.global-dropdown,.menu-panel,.submenu,.flyout").forEach(function(menu){
+      menu.style.display = "";
+      menu.style.opacity = "";
+      menu.style.visibility = "";
+      menu.style.pointerEvents = "";
+      menu.style.transform = "";
+    });
+    document.querySelectorAll(".dropdown,.nav-item,.menu-item,.has-dropdown,.pill").forEach(function(item){
+      item.style.pointerEvents = "";
+    });
+  }
+
+  function recedeDropdowns(){
+    closeAllDropdownMenus();
+    document.body.classList.add("menu-receding");
+
+    // Keep it hidden long enough for the cursor to no longer be treated as hovering the open menu.
+    window.setTimeout(closeAllDropdownMenus, 50);
+    window.setTimeout(closeAllDropdownMenus, 150);
+    window.setTimeout(closeAllDropdownMenus, 300);
+  }
+
+  document.addEventListener("click", function(event){
+    var link = event.target.closest("a[data-target], a[href^='#view-']");
+    if(!link){ return; }
+
+    var target = getTargetFromLink(link);
+    if(!target){ return; }
+
+    // Let the existing section navigation run, then immediately recede the dropdown.
+    window.setTimeout(recedeDropdowns, 0);
+    window.setTimeout(recedeDropdowns, 120);
+  }, true);
+
+  document.addEventListener("mousemove", function(event){
+    if(!document.body.classList.contains("menu-receding")){ return; }
+    if(!event.target.closest(".dropdown,.nav-item,.has-dropdown,.dropdown-menu,.dropdown-content,.nav-dropdown,.mega-menu,.global-dropdown,.menu-panel,.submenu,.flyout")){
+      restoreDropdownMenus();
+    }
+  }, true);
+
+  document.addEventListener("click", function(event){
+    if(document.body.classList.contains("menu-receding") && !event.target.closest(".dropdown,.nav-item,.has-dropdown,.dropdown-menu,.dropdown-content,.nav-dropdown,.mega-menu,.global-dropdown,.menu-panel,.submenu,.flyout")){
+      restoreDropdownMenus();
+    }
+  }, true);
+
+  document.addEventListener("keydown", function(event){
+    if(event.key === "Escape"){
+      recedeDropdowns();
+      window.setTimeout(restoreDropdownMenus, 250);
+    }
+  });
+})();
+</script>
+
+
+<script>
+(function(){
+  function closeNativeDropdowns(){
+    document.querySelectorAll('details.nav-group').forEach(function(group){
+      group.removeAttribute('open');
+      group.classList.add('menu-selected');
+      var summary = group.querySelector('summary');
+      if(summary){ summary.setAttribute('aria-expanded','false'); }
+    });
+
+    window.setTimeout(function(){
+      document.querySelectorAll('details.nav-group').forEach(function(group){
+        group.classList.remove('menu-selected');
+      });
+    }, 350);
+  }
+
+  document.addEventListener('click', function(event){
+    var link = event.target.closest('details.nav-group .nav-menu a, details.nav-group a[data-target], details.nav-group a[href^="#view-"]');
+    if(!link){ return; }
+
+    // Let the existing section-routing code run first, then close the open <details> menu.
+    window.setTimeout(closeNativeDropdowns, 0);
+    window.setTimeout(closeNativeDropdowns, 75);
+  }, true);
+
+  document.addEventListener('keydown', function(event){
+    if(event.key === 'Escape'){
+      closeNativeDropdowns();
+    }
+  });
 })();
 </script>
 
