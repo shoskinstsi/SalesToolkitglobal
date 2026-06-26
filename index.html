@@ -2724,63 +2724,132 @@ Then enable GitHub Pages from Settings > Pages > Deploy from branch > main > /ro
   @media(max-width:700px){.na-bid-process-grid,.na-responsibility-grid{grid-template-columns:1fr}.na-bid-process-card{min-height:auto}.na-bid-target{display:flex;flex-wrap:wrap}.na-bid-target strong{font-size:34px}}
 
 
-  /* Clickable CRM template navigation */
-  .crm-template-nav{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:14px;
-    margin:18px 0 0;
-  }
-  .crm-template-link{
-    background:#fff;
-    border:1px solid var(--line);
-    border-left:7px solid var(--ctm-teal);
-    border-radius:18px;
-    padding:18px;
+  /* Clickable Win/Loss outcome pill links */
+  .closing-chip-link{
+    display:inline-flex;
+    align-items:center;
+    gap:6px;
+    background:rgba(255,255,255,.16);
+    color:#fff;
+    border:1px solid rgba(255,255,255,.38);
+    border-radius:999px;
+    padding:10px 13px;
     text-decoration:none;
-    color:var(--ink);
-    display:block;
-    box-shadow:0 2px 8px rgba(15,23,42,.06);
+    font-weight:400;
+    line-height:1;
     cursor:pointer;
     transition:.15s ease;
   }
-  .crm-template-link:nth-child(2n){border-left-color:var(--ctm-green)}
-  .crm-template-link:nth-child(3n){border-left-color:#f0b429}
-  .crm-template-link:nth-child(4n){border-left-color:#667085}
-  .crm-template-link:hover{
-    transform:translateY(-2px);
-    box-shadow:0 10px 24px rgba(15,23,42,.12);
-    background:#fff;
+  .closing-chip-link:hover{
+    background:rgba(255,255,255,.26);
+    border-color:rgba(255,255,255,.72);
+    transform:translateY(-1px);
+    box-shadow:0 6px 18px rgba(0,0,0,.16);
   }
-  .crm-template-link h3{margin:0 0 7px;color:#0b1f35;font-size:18px}
-  .crm-template-link p{margin:0;color:#667085;font-size:13px;line-height:1.45}
-  .crm-template-link span{
-    display:inline-block;
-    margin-top:12px;
+  .crm-field-anchor{scroll-margin-top:130px}
+
+  /* Modern Win/Loss Outcome section */
+  .winloss-outcome-spotlight{
+    background:#ffffff !important;
+    color:var(--ink);
+    border:1px solid #d7e6ea;
+    border-radius:26px;
+    padding:0;
+    box-shadow:0 12px 32px rgba(15,23,42,.10);
+    overflow:hidden;
+    position:relative;
+  }
+  .winloss-outcome-spotlight:after{display:none}
+  .winloss-outcome-spotlight .closing-questionnaire-header{
+    background:linear-gradient(115deg,#003b49 0%,#007c94 100%);
+    color:#fff;
+    padding:28px 30px;
+    position:relative;
+    overflow:hidden;
+  }
+  .winloss-outcome-spotlight .closing-questionnaire-header:after{
+    content:"";
+    position:absolute;
+    right:-70px;
+    top:-90px;
+    width:260px;
+    height:260px;
+    border-radius:50%;
+    border:1px solid rgba(255,255,255,.25);
+    box-shadow:0 0 0 34px rgba(255,255,255,.04),0 0 0 68px rgba(255,255,255,.025);
+    pointer-events:none;
+  }
+  .winloss-outcome-spotlight h2{
+    color:#fff !important;
+    font-size:28px;
+    margin:0 0 8px;
+    position:relative;
+    z-index:1;
+  }
+  .winloss-outcome-spotlight .closing-questionnaire-header p{
+    color:rgba(255,255,255,.92) !important;
+    max-width:980px;
+    margin:0;
+    position:relative;
+    z-index:1;
+  }
+  .winloss-outcome-spotlight .field-grid{
+    padding:24px 26px 10px;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:14px;
+    position:relative;
+    z-index:1;
+  }
+  .winloss-outcome-spotlight .template-field{
+    background:#f8fafc;
+    border:1px solid #d8e6ec;
+    border-radius:18px;
+    padding:18px;
+    box-shadow:none;
+    min-height:108px;
+    border-top:6px solid var(--ctm-teal);
+  }
+  .winloss-outcome-spotlight .template-field:nth-child(2n){border-top-color:var(--ctm-green)}
+  .winloss-outcome-spotlight .template-field:nth-child(3n){border-top-color:#f0b429}
+  .winloss-outcome-spotlight .template-field b{
+    color:#003b49;
+    font-size:14px;
+    text-transform:uppercase;
+    letter-spacing:.04em;
+    margin-bottom:10px;
+  }
+  .winloss-outcome-spotlight .fillable-input,
+  .winloss-outcome-spotlight .fillable-select{
+    background:#fff;
+    border:1px solid #cfd8e3;
+    border-radius:12px;
+    padding:11px 12px;
+    width:100%;
+  }
+  .winloss-outcome-note{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:12px;
+    padding:0 26px 26px;
+    margin-top:8px;
+  }
+  .winloss-outcome-mini{
     background:#eef8fb;
     border:1px solid #d7edf2;
-    color:var(--ctm-navy);
-    border-radius:999px;
-    padding:7px 10px;
-    font-size:12px;
-    font-weight:400;
+    border-radius:16px;
+    padding:14px 16px;
+    color:#003b49;
+    line-height:1.45;
+    font-size:14px;
   }
-  .crm-section-anchor{scroll-margin-top:120px}
-  .crm-back-link{
-    display:inline-block;
-    margin-top:14px;
-    background:#f8fafc;
-    border:1px solid var(--line);
-    color:#344054;
-    border-radius:999px;
-    padding:8px 12px;
-    text-decoration:none;
-    font-weight:400;
-    font-size:13px;
+  .winloss-outcome-mini b{
+    display:block;
+    margin-bottom:5px;
+    color:#003b49;
   }
-  .crm-back-link:hover{background:#eef8fb;color:var(--ctm-navy);border-color:#d7edf2}
-  @media(max-width:1000px){.crm-template-nav{grid-template-columns:repeat(2,1fr)}}
-  @media(max-width:650px){.crm-template-nav{grid-template-columns:1fr}}
+  @media(max-width:1000px){.winloss-outcome-spotlight .field-grid,.winloss-outcome-note{grid-template-columns:1fr}}
+
 
 </style>
 <!-- Updated: All section cards and navigation items now include real clickable section links with hash URLs. -->
@@ -4121,7 +4190,7 @@ Then enable GitHub Pages from Settings > Pages > Deploy from branch > main > /ro
 <div class="debrief-field"><b>Improvement Actions:</b> What should be changed before the next pursuit?</div>
 </div>
 </section>
-<section class="content-card crm-section-anchor" id="crm-decision-drivers">
+<section class="content-card">
 <h2>4. Decision Drivers</h2>
 <p>Select all that apply and add notes for context.</p>
 <div class="checklist">
@@ -4136,8 +4205,6 @@ Then enable GitHub Pages from Settings > Pages > Deploy from branch > main > /ro
 <div class="check">Proposal quality / response alignment</div>
 <div class="check">Other</div>
 </div>
-
-<a class="crm-back-link" href="#crm-template-menu">Back to CRM Template Sections ↑</a>
 </section>
 <section class="content-card">
 <h2>5. Competitor / Supplier Feedback</h2>
@@ -6909,22 +6976,8 @@ Then enable GitHub Pages from Settings > Pages > Deploy from branch > main > /ro
 <p>This template is designed to live inside CRM and be completed after an opportunity closes. It supports one global win/loss process, required CRM fields, meaningful reason subcategories, clear ownership, and consistent reporting across regions.</p>
 <div class="debrief-note-box">Recommended use: Complete this CRM template for both wins and losses after Stage 8 - Closed Won/Loss. The data should feed the Global Win/Loss SharePoint Answer List and support enterprise dashboards, competitor insights, product feedback, and future pursuit planning.</div>
 </section>
-<section class="content-card" id="crm-template-menu">
-<h2>Open CRM Template Sections</h2>
-<p>Select a section below to jump directly to the CRM field group you need to complete.</p>
-<div class="crm-template-nav">
-<a class="crm-template-link" href="#crm-opportunity-information"><h3>Opportunity Information</h3><p>Account, CRM ID, region, owner, deal size, close date, and opportunity type.</p><span>Open section</span></a>
-<a class="crm-template-link" href="#crm-win-loss-outcome"><h3>Win or Loss Outcome</h3><p>Outcome, reason code, subcategory, selected supplier, and decision maker.</p><span>Open section</span></a>
-<a class="crm-template-link" href="#crm-competitors"><h3>Competitors</h3><p>Supplier, incumbent, finalist, competitor strengths, weaknesses, and notes.</p><span>Open section</span></a>
-<a class="crm-template-link" href="#crm-decision-drivers"><h3>Decision Drivers</h3><p>Service, technology, pricing, relationship, implementation, and proposal quality.</p><span>Open section</span></a>
-<a class="crm-template-link" href="#crm-top-reasons"><h3>Top 3 Reasons Won/Lost</h3><p>Ranked reason codes, subcategories, evidence, and owner to action.</p><span>Open section</span></a>
-<a class="crm-template-link" href="#crm-functional-feedback"><h3>Functional Feedback</h3><p>Product, pricing, technology, service, implementation, and competitive intelligence.</p><span>Open section</span></a>
-<a class="crm-template-link" href="#crm-lessons-learned"><h3>Lessons Learned</h3><p>What worked, what CTM should do differently, and what should be shared globally.</p><span>Open section</span></a>
-<a class="crm-template-link" href="#crm-action-items"><h3>Recommended Action Items</h3><p>Owners, teams, due dates, statuses, and follow-up improvement tracking.</p><span>Open section</span></a>
-</div>
-</section>
 
-<section class="content-card crm-section-anchor" id="crm-opportunity-information">
+<section class="content-card">
 <h2>1. Opportunity Information</h2>
 <p>Capture the required CRM opportunity data so the debrief can be filtered, reported, and reviewed globally.</p>
 <div class="field-grid">
@@ -6938,15 +6991,13 @@ Then enable GitHub Pages from Settings > Pages > Deploy from branch > main > /ro
 <div class="template-field"><b>Opportunity Type</b><select class="fillable-select"><option value="">Select type...</option><option>New Logo</option><option>Existing Account Expansion</option><option>Renewal / Retention</option><option>Partner Agency</option><option>Global / Multi-Region</option></select></div>
 <div class="template-field"><b>CRM Stage</b><select class="fillable-select"><option value="">Select stage...</option><option>Stage 8 - Closed Won</option><option>Stage 8 - Closed Lost</option><option>No Decision</option><option>Delayed / Deferred</option></select></div>
 </div>
-
-<a class="crm-back-link" href="#crm-template-menu">Back to CRM Template Sections ↑</a>
 </section>
 
-<section class="content-card closing-questionnaire-card crm-section-anchor" id="crm-win-loss-outcome">
+<section class="content-card closing-questionnaire-card crm-section-anchor winloss-outcome-spotlight" id="crm-win-loss-outcome">
 <div class="closing-questionnaire-header">
 <h2>2. Win or Loss Outcome</h2>
 <p>Document the final outcome and make the reason clear enough to support global reporting and executive dashboards.</p>
-<div class="closing-chip-row"><span class="closing-chip">Required CRM Field</span><span class="closing-chip">Win/Loss</span><span class="closing-chip">Reason Code</span><span class="closing-chip">Subcategory</span></div>
+
 </div>
 <div class="field-grid">
 <div class="template-field"><b>Outcome</b><select class="fillable-select"><option value="">Select outcome...</option><option>Won</option><option>Lost</option><option>No Decision</option><option>Delayed</option></select></div>
@@ -6956,11 +7007,14 @@ Then enable GitHub Pages from Settings > Pages > Deploy from branch > main > /ro
 <div class="template-field"><b>Incumbent Supplier</b><input class="fillable-input" placeholder="Enter incumbent if known..." type="text"/></div>
 <div class="template-field"><b>Decision Maker / Buying Committee</b><input class="fillable-input" placeholder="Enter key decision makers..." type="text"/></div>
 </div>
-
-<a class="crm-back-link" href="#crm-template-menu">Back to CRM Template Sections ↑</a>
+<div class="winloss-outcome-note">
+<div class="winloss-outcome-mini"><b>Complete Before Close</b>Outcome, reason code, supplier, and decision maker should be completed before final CRM closeout.</div>
+<div class="winloss-outcome-mini"><b>Power BI Ready</b>Standardized reason codes support executive dashboards and global win/loss reporting.</div>
+<div class="winloss-outcome-mini"><b>Action Oriented</b>Feedback should be specific enough to create coaching, product, service, or competitive follow-up.</div>
+</div>
 </section>
 
-<section class="content-card crm-section-anchor" id="crm-competitors">
+<section class="content-card">
 <h2>3. Competitors</h2>
 <p>Capture competitor and incumbent insight so sales teams can update competitor profiles, battlecards, and future pursuit guidance.</p>
 <table aria-label="Competitor CRM template" class="dashboard-table">
@@ -6971,8 +7025,6 @@ Then enable GitHub Pages from Settings > Pages > Deploy from branch > main > /ro
 <tr><td contenteditable="true"></td><td contenteditable="true">Selected supplier / finalist / incumbent</td><td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true"></td></tr>
 </tbody>
 </table>
-
-<a class="crm-back-link" href="#crm-template-menu">Back to CRM Template Sections ↑</a>
 </section>
 
 <section class="content-card">
@@ -6994,7 +7046,7 @@ Then enable GitHub Pages from Settings > Pages > Deploy from branch > main > /ro
 </div>
 </section>
 
-<section class="content-card crm-section-anchor" id="crm-top-reasons">
+<section class="content-card">
 <h2>5. Top 3 Reasons Won/Lost</h2>
 <p>Required CRM fields: document the three most important reasons behind the outcome. Use specific subcategories so reporting is actionable.</p>
 <table aria-label="Top 3 win loss reasons" class="dashboard-table">
@@ -7005,11 +7057,9 @@ Then enable GitHub Pages from Settings > Pages > Deploy from branch > main > /ro
 <tr><td>3</td><td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true"></td></tr>
 </tbody>
 </table>
-
-<a class="crm-back-link" href="#crm-template-menu">Back to CRM Template Sections ↑</a>
 </section>
 
-<section class="content-card crm-section-anchor" id="crm-functional-feedback">
+<section class="content-card">
 <h2>6. Functional Feedback</h2>
 <p>Use these CRM feedback fields to route themes to Product, Technology, Marketing, Sales, Implementation, and Service leadership.</p>
 <div class="debrief-question-section">
@@ -7020,11 +7070,9 @@ Then enable GitHub Pages from Settings > Pages > Deploy from branch > main > /ro
 <div class="debrief-question-panel"><h3>Implementation Concerns</h3><p>Implementation complexity, timing, training, change management, risk, or resource concerns.</p><textarea class="fillable-textarea" placeholder="Type implementation feedback..."></textarea></div>
 <div class="debrief-question-panel"><h3>Competitive Intelligence</h3><p>Competitor positioning, proof points, claims, pricing, relationship, or service model notes.</p><textarea class="fillable-textarea" placeholder="Type competitive intelligence..."></textarea></div>
 </div>
-
-<a class="crm-back-link" href="#crm-template-menu">Back to CRM Template Sections ↑</a>
 </section>
 
-<section class="content-card crm-section-anchor" id="crm-lessons-learned">
+<section class="content-card">
 <h2>7. Lessons Learned</h2>
 <p>Capture what should be shared globally so future pursuits can benefit from the debrief.</p>
 <div class="debrief-field-list">
@@ -7033,11 +7081,9 @@ Then enable GitHub Pages from Settings > Pages > Deploy from branch > main > /ro
 <div class="debrief-field"><b>What should be shared globally?</b><textarea class="fillable-textarea" placeholder="Enter lessons, trends, or insights that should be visible across regions..."></textarea></div>
 <div class="debrief-field"><b>What should be updated in CRM?</b><textarea class="fillable-textarea" placeholder="Document CRM updates, reason codes, notes, and ownership..."></textarea></div>
 </div>
-
-<a class="crm-back-link" href="#crm-template-menu">Back to CRM Template Sections ↑</a>
 </section>
 
-<section class="content-card crm-section-anchor" id="crm-action-items">
+<section class="content-card">
 <h2>8. Recommended Action Items</h2>
 <p>Assign action items so the feedback does not stop at data entry. This supports quarterly review boards and improvement tracking.</p>
 <table aria-label="Recommended action items" class="dashboard-table">
@@ -7050,8 +7096,6 @@ Then enable GitHub Pages from Settings > Pages > Deploy from branch > main > /ro
 </tbody>
 </table>
 <div class="debrief-form-actions"><button class="debrief-print-button" onclick="window.print()" type="button">Print / Save CRM Template</button><button class="debrief-reset-button" onclick="clearDebriefAnswers(this)" type="button">Erase Answers</button><span class="debrief-clear-note">Use Erase Answers to clear the typed CRM responses and start a new debrief.</span></div>
-
-<a class="crm-back-link" href="#crm-template-menu">Back to CRM Template Sections ↑</a>
 </section>
 
 <section class="content-card">
