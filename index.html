@@ -9209,9 +9209,20 @@ Then enable GitHub Pages from Settings > Pages > Deploy from branch > main > /ro
     return '';
   }
 
+  function clearToolkitSearch(){
+    const input = document.getElementById('toolkitSearchInput');
+    const results = document.getElementById('toolkitSearchResults');
+    if (input) input.value = '';
+    if (results) {
+      results.innerHTML = '';
+      results.classList.remove('active');
+    }
+  }
+
   function openSearchTarget(target){
     if (window.CTMToolkitNavigate) {
       window.CTMToolkitNavigate(target);
+      clearToolkitSearch();
       return;
     }
 
@@ -9253,8 +9264,7 @@ Then enable GitHub Pages from Settings > Pages > Deploy from branch > main > /ro
       e.preventDefault();
       e.stopPropagation();
       openSearchTarget(item.target);
-      const results = document.getElementById('toolkitSearchResults');
-      if (results) results.classList.remove('active');
+      clearToolkitSearch();
     });
     return result;
   }
@@ -9324,8 +9334,7 @@ Then enable GitHub Pages from Settings > Pages > Deploy from branch > main > /ro
     if (!matches.length) return;
 
     openSearchTarget(matches[0].target);
-    input.value = matches[0].label;
-    if (results) results.classList.remove('active');
+    clearToolkitSearch();
   }
 
   function initToolkitSearch(){
