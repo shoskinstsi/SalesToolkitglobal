@@ -3058,6 +3058,33 @@ Then enable GitHub Pages from Settings > Pages > Deploy from branch > main > /ro
   @media(max-width:1200px){.partner-contact-grid-modern{grid-template-columns:repeat(2,1fr)}}
   @media(max-width:700px){.partner-contact-grid-modern{grid-template-columns:1fr}}
 
+
+  /* Dropdown visibility fix - keeps top navigation menus above the page content/search panels */
+  .site-header.clean-top-header,
+  .site-header{
+    z-index:3000 !important;
+    overflow:visible !important;
+  }
+  .clean-top-nav,
+  .clean-top-nav .nav-group{
+    position:relative !important;
+    z-index:3100 !important;
+    overflow:visible !important;
+  }
+  .clean-top-nav .nav-menu{
+    z-index:4000 !important;
+  }
+  .global-page-search{
+    z-index:1000 !important;
+  }
+  main,
+  .view,
+  .hero,
+  .content-card{
+    position:relative;
+    z-index:1;
+  }
+
 </style>
 <!-- Updated: All section cards and navigation items now include real clickable section links with hash URLs. -->
 </head>
@@ -9232,34 +9259,47 @@ Then enable GitHub Pages from Settings > Pages > Deploy from branch > main > /ro
     return result;
   }
 
-  function runSearch(){
-    const input = document.getElementById('toolkitSearchInput');
-    const results = document.getElementById('toolkitSearchResults');
-    if (!input || !results) return;
+  function getSearchMatches(query){
+    const cleanQuery = normalize(query);
+    if (!cleanQuery) return [];
 
-    const query = normalize(input.value);
-    results.innerHTML = '';
-    if (!query) {
-      results.classList.remove('active');
-      return;
-    }
-
-    const words = query.split(' ').filter(Boolean);
-    const matches = buildSearchIndex()
+    const words = cleanQuery.split(' ').filter(Boolean);
+    return buildSearchIndex()
       .map(item => {
         const label = normalize(item.label);
         const target = normalize(makeLabelFromTarget(item.target));
         const keywords = normalize(item.keywords);
         const haystack = label + ' ' + target + ' ' + keywords;
+        const exactLabel = label === cleanQuery ? 10 : 0;
+        const exactTarget = target === cleanQuery ? 9 : 0;
+        const startsWithLabel = label.startsWith(cleanQuery) ? 6 : 0;
         const score = words.reduce((total, word) => total + (haystack.includes(word) ? 1 : 0), 0)
-          + (label.includes(query) ? 4 : 0)
-          + (target.includes(query) ? 3 : 0)
-          + (keywords.includes(query) ? 2 : 0);
+          + exactLabel
+          + exactTarget
+          + startsWithLabel
+          + (label.includes(cleanQuery) ? 4 : 0)
+          + (target.includes(cleanQuery) ? 3 : 0)
+          + (keywords.includes(cleanQuery) ? 2 : 0);
         return {...item, score};
       })
       .filter(item => item.score > 0)
       .sort((a, b) => b.score - a.score || a.label.localeCompare(b.label))
       .slice(0, 15);
+  }
+
+  function runSearch(){
+    const input = document.getElementById('toolkitSearchInput');
+    const results = document.getElementById('toolkitSearchResults');
+    if (!input || !results) return [];
+
+    const query = normalize(input.value);
+    results.innerHTML = '';
+    if (!query) {
+      results.classList.remove('active');
+      return [];
+    }
+
+    const matches = getSearchMatches(query);
 
     if (!matches.length) {
       const noResult = document.createElement('div');
@@ -9267,11 +9307,25 @@ Then enable GitHub Pages from Settings > Pages > Deploy from branch > main > /ro
       noResult.textContent = 'No results found. Try bid, CRM, training, North America, ANZ, templates, legal, or win loss.';
       results.appendChild(noResult);
       results.classList.add('active');
-      return;
+      return [];
     }
 
     matches.forEach(item => results.appendChild(createResult(item, query)));
     results.classList.add('active');
+    return matches;
+  }
+
+  function openBestSearchMatch(){
+    const input = document.getElementById('toolkitSearchInput');
+    const results = document.getElementById('toolkitSearchResults');
+    if (!input) return;
+
+    const matches = runSearch();
+    if (!matches.length) return;
+
+    openSearchTarget(matches[0].target);
+    input.value = matches[0].label;
+    if (results) results.classList.remove('active');
   }
 
   function initToolkitSearch(){
@@ -9284,14 +9338,16 @@ Then enable GitHub Pages from Settings > Pages > Deploy from branch > main > /ro
     input.addEventListener('keydown', function(e){
       if (e.key === 'Enter') {
         e.preventDefault();
-        runSearch();
-        const first = document.querySelector('#toolkitSearchResults .search-result-item[data-target]');
-        if (first) first.click();
+        openBestSearchMatch();
+      }
+      if (e.key === 'Escape') {
+        const results = document.getElementById('toolkitSearchResults');
+        if (results) results.classList.remove('active');
       }
     });
     button.addEventListener('click', function(e){
       e.preventDefault();
-      runSearch();
+      openBestSearchMatch();
     });
   }
 
