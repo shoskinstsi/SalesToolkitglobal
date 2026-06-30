@@ -2613,6 +2613,57 @@ Then enable GitHub Pages from Settings > Pages > Deploy from branch > main > /ro
   .pill, .stage-pill, .risk-pill, .status-pill, .mini-pill, .bid-mini-pill, .simple-region-pill, .onboarding-mini-pill, .global-sales-pill, .global-tools-pill, .region-pill, .priority-pill{font-weight:400 !important;}
 
 
+
+
+  /* Executive-friendly Global Sales and Global Bid Process refresh */
+  .executive-hub-hero{background:linear-gradient(120deg,#003b49 0%,#005f73 58%,#76bc43 150%);position:relative;overflow:hidden}
+  .executive-hub-hero:before{content:"";position:absolute;right:-170px;top:-170px;width:520px;height:520px;border-radius:50%;border:1px solid rgba(255,255,255,.25);box-shadow:0 0 0 42px rgba(255,255,255,.04),0 0 0 86px rgba(255,255,255,.025)}
+  .executive-hub-hero .eyebrow,.executive-hub-hero h1,.executive-hub-hero p,.executive-hub-hero .owner{position:relative;z-index:1}
+  .global-sales-command-panel,.bid-command-panel{background:#fff;border:1px solid var(--line);border-radius:26px;padding:26px;box-shadow:0 12px 30px rgba(15,23,42,.09);margin-bottom:22px;position:relative;overflow:hidden}
+  .global-sales-command-panel:before,.bid-command-panel:before{content:"";position:absolute;left:0;top:0;bottom:0;width:9px;background:linear-gradient(180deg,var(--ctm-teal),var(--ctm-green))}
+  .command-title{display:flex;justify-content:space-between;align-items:flex-start;gap:20px;margin-bottom:18px}
+  .command-title h2{margin:0 0 6px;color:#0b1f35;font-size:27px}
+  .command-title p{margin:0;color:#667085;line-height:1.55;max-width:950px}
+  .command-badge{background:#eef8fb;border:1px solid #d7edf2;color:var(--ctm-navy);border-radius:999px;padding:9px 13px;font-size:12px;font-weight:800;white-space:nowrap}
+  .executive-metric-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:18px}
+  .executive-metric{background:#f8fafc;border:1px solid var(--line);border-radius:18px;padding:18px;min-height:130px}
+  .executive-metric-label{font-size:12px;text-transform:uppercase;letter-spacing:.08em;color:#667085;font-weight:800;margin-bottom:8px}
+  .executive-metric-value{font-size:24px;font-weight:900;color:#0b1f35;margin-bottom:6px}
+  .executive-metric-note{font-size:13px;color:#475467;line-height:1.45}
+  .global-sales-priority-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:18px 0 22px}
+  .global-sales-priority-card{background:#fff;border:1px solid var(--line);border-radius:20px;padding:20px;text-decoration:none;color:var(--ink);box-shadow:0 6px 18px rgba(15,23,42,.07);display:block;transition:.16s ease;border-top:7px solid var(--ctm-teal)}
+  .global-sales-priority-card:nth-child(2){border-top-color:var(--ctm-green)}
+  .global-sales-priority-card:nth-child(3){border-top-color:#f0b429}
+  .global-sales-priority-card:hover,.professional-sales-card:hover,.bid-path-card:hover,.bid-step-pro-card:hover{transform:translateY(-3px);box-shadow:0 13px 30px rgba(15,23,42,.13)}
+  .priority-card-label{font-size:12px;text-transform:uppercase;letter-spacing:.08em;color:#667085;font-weight:800;margin-bottom:8px}
+  .global-sales-priority-card h3{margin:0 0 8px;color:#0b1f35;font-size:21px}
+  .global-sales-priority-card p{margin:0;color:#475467;line-height:1.5;font-size:14px}
+  .professional-sales-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+  .professional-sales-card{background:#fff;border:1px solid var(--line);border-radius:20px;padding:20px;text-decoration:none;color:var(--ink);box-shadow:0 3px 12px rgba(15,23,42,.06);display:block;transition:.16s ease}
+  .professional-sales-card h3{margin:0 0 8px;color:#0b1f35;font-size:20px}
+  .professional-sales-card p{margin:0;color:#667085;line-height:1.45;font-size:14px}
+  .sales-card-action{display:inline-flex;align-items:center;gap:7px;margin-top:14px;background:#eef8fb;border:1px solid #d7edf2;border-radius:999px;padding:8px 12px;color:var(--ctm-navy);font-size:12px;font-weight:800}
+  .bid-path-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:18px}
+  .bid-path-card{background:#f8fafc;border:1px solid var(--line);border-radius:18px;padding:18px;text-decoration:none;color:var(--ink);transition:.16s ease}
+  .bid-path-card b{display:block;color:#0b1f35;margin-bottom:6px;font-size:16px}
+  .bid-path-card span{display:block;color:#667085;line-height:1.45;font-size:13px}
+  .bid-path-card:before{content:"";display:block;width:42px;height:6px;border-radius:999px;background:linear-gradient(90deg,var(--ctm-teal),var(--ctm-green));margin-bottom:13px}
+  .bid-process-pro-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:18px}
+  .bid-step-pro-card{background:#fff;border:1px solid var(--line);border-radius:22px;padding:0;overflow:hidden;box-shadow:0 4px 14px rgba(15,23,42,.07);transition:.16s ease}
+  .bid-step-pro-top{display:flex;gap:16px;align-items:flex-start;background:#f8fafc;border-bottom:1px solid var(--line);padding:20px}
+  .bid-step-pro-number{width:48px;height:48px;min-width:48px;border-radius:16px;background:var(--ctm-navy);color:#fff;display:flex;align-items:center;justify-content:center;font-size:22px;font-weight:900}
+  .bid-step-pro-card:nth-child(2n) .bid-step-pro-number{background:var(--ctm-teal)}
+  .bid-step-pro-card:nth-child(3n) .bid-step-pro-number{background:var(--ctm-green);color:#173100}
+  .bid-step-pro-top h3{margin:0 0 7px;color:#0b1f35;font-size:21px}
+  .bid-step-pro-top p{margin:0;color:#475467;line-height:1.45;font-size:14px}
+  .bid-step-pro-body{padding:20px;display:grid;gap:12px}
+  .bid-detail-row{background:#f8fafc;border:1px solid var(--line);border-radius:14px;padding:14px;color:#344054;line-height:1.45;font-size:14px}
+  .bid-detail-row b{display:block;color:#0b1f35;margin-bottom:4px;font-size:13px;text-transform:uppercase;letter-spacing:.05em}
+  .bid-executive-note{background:#eef8e9;border:1px solid #d7ecc9;border-radius:18px;padding:18px;color:#294914;line-height:1.55;margin-top:18px}
+  @media(max-width:1100px){.executive-metric-grid,.global-sales-priority-grid,.professional-sales-grid,.bid-path-grid{grid-template-columns:repeat(2,1fr)}.bid-process-pro-grid{grid-template-columns:1fr}}
+  @media(max-width:720px){.executive-metric-grid,.global-sales-priority-grid,.professional-sales-grid,.bid-path-grid{grid-template-columns:1fr}.command-title{display:block}.command-badge{display:inline-flex;margin-top:12px}}
+
+
   /* Global Bid Process */
   .global-bid-process-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:18px}
   .global-bid-process-card{background:#fff;border:1px solid var(--line);border-radius:20px;padding:22px;box-shadow:0 2px 8px rgba(15,23,42,.06);border-left:8px solid var(--ctm-teal)}
@@ -2640,11 +2691,13 @@ Then enable GitHub Pages from Settings > Pages > Deploy from branch > main > /ro
   .global-bid-toolkit-card p{margin:0;color:#667085;line-height:1.5;font-size:14px}
   .gbt-icon{width:46px;height:46px;border-radius:14px;background:#eef8fb;color:var(--ctm-navy);display:flex;align-items:center;justify-content:center;font-size:23px;font-weight:900;margin-bottom:14px}
   .global-bid-resource-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:18px}
-  .global-bid-resource{background:#fff;border:1px solid var(--line);border-radius:18px;padding:18px;box-shadow:0 2px 8px rgba(15,23,42,.06);border-left:7px solid var(--ctm-teal)}
+  .global-bid-resource{background:#fff;border:1px solid var(--line);border-radius:18px;padding:18px;box-shadow:0 2px 8px rgba(15,23,42,.06);border-left:7px solid var(--ctm-teal);text-decoration:none;color:var(--ink);display:block;cursor:pointer;transition:.15s ease}
   .global-bid-resource:nth-child(2n){border-left-color:var(--ctm-green)}
   .global-bid-resource:nth-child(3n){border-left-color:#f0b429}
+  .global-bid-resource:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(15,23,42,.12);background:#fdfefe}
   .global-bid-resource h3{margin:0 0 8px;color:#0b1f35;font-size:18px}
   .global-bid-resource p{margin:0;color:#667085;line-height:1.5;font-size:14px}
+  .global-bid-resource-action{display:inline-flex;align-items:center;gap:6px;margin-top:14px;color:var(--ctm-teal);font-weight:800;font-size:13px}
   .raci-legend{display:flex;gap:10px;flex-wrap:wrap;margin:14px 0 18px}
   .raci-legend span,.raci-cell{display:inline-flex;align-items:center;justify-content:center;border-radius:999px;padding:6px 10px;font-size:12px;font-weight:900;line-height:1}
   .raci-r{background:#eef8e9;color:#2d7d1f}.raci-a{background:#e8f7fb;color:#007c94}.raci-c{background:#fff0f7;color:#c11574}.raci-i{background:#fff7dc;color:#a15c00}
@@ -3322,149 +3375,89 @@ Then enable GitHub Pages from Settings > Pages > Deploy from branch > main > /ro
 </section>
 </section>
 <section class="view" id="view-global-sales">
-<section class="hero">
+<section class="hero executive-hub-hero">
 <div class="eyebrow">Global Sales</div>
-<h1>Global Sales</h1>
-<p>Use this section to access company positioning, sales team references, territory guidance, expectations, strategy, and sales cycle resources.</p>
+<h1>Global Sales Hub</h1>
+<p>A centralized launch point for global sales guidance, regional resources, pursuit tools, templates, dashboards, customer proof, and win/loss insights.</p>
 <span class="owner">Page owner: Global Sales / Sales Enablement</span>
 </section>
-<section class="global-sales-intro">
-<h2>Global Sales Sections</h2>
-<p>Select a topic below. Each card opens a focused page with guidance, suggested SharePoint setup, and placeholder areas for approved links and resources.</p>
+<section class="global-sales-command-panel">
+<div class="command-title">
+<div><h2>Start with the right sales action</h2><p>Use the Global Sales Hub to quickly find the right process, owner, template, or regional resource. The layout is organized around how sales teams work: plan the opportunity, prepare the pursuit, support the client, and capture insights after close.</p></div>
+<span class="command-badge">Executive-ready structure</span>
+</div>
+<div class="executive-metric-grid">
+<div class="executive-metric"><div class="executive-metric-label">Consistency</div><div class="executive-metric-value">One structure</div><div class="executive-metric-note">Standard sections across global and regional sales content.</div></div>
+<div class="executive-metric"><div class="executive-metric-label">Speed</div><div class="executive-metric-value">Fast access</div><div class="executive-metric-note">Users can move directly to the resource or section they need.</div></div>
+<div class="executive-metric"><div class="executive-metric-label">Visibility</div><div class="executive-metric-value">Dashboards</div><div class="executive-metric-note">Sales stages and dashboards help leadership review activity and risk.</div></div>
+<div class="executive-metric"><div class="executive-metric-label">Learning</div><div class="executive-metric-value">Win/Loss</div><div class="executive-metric-note">Closed opportunities feed lessons learned and improvement actions.</div></div>
+</div>
 </section>
-<section class="global-sales-link-grid">
-<a class="global-sales-card" data-target="about-ctm" href="#view-about-ctm">
-<div class="global-sales-card-top"><div><h3>About CTM</h3><p>Company background, global presence, purpose, values, and differentiators.</p></div><div class="global-sales-arrow">›</div></div>
-<div class="global-sales-pill-row"><span class="global-sales-pill">Company</span><span class="global-sales-pill">Purpose</span><span class="global-sales-pill">Differentiators</span></div>
-</a>
-<a class="global-sales-card" data-target="ctm-value-proposition" href="#view-ctm-value-proposition">
-<div class="global-sales-card-top"><div><h3>CTM Value Proposition</h3><p>Service, innovation, return, and customer-centric messaging used across sales content.</p></div><div class="global-sales-arrow">›</div></div>
-<div class="global-sales-pill-row"><span class="global-sales-pill">Service</span><span class="global-sales-pill">Innovation</span><span class="global-sales-pill">Customer Value</span></div>
-</a>
-<a class="global-sales-card" data-target="sales-team" href="#view-sales-team">
-<div class="global-sales-card-top"><div><h3>Sales Team</h3><p>Leadership, Sales Support, Technology Sales, segment owners, and support crew references.</p></div><div class="global-sales-arrow">›</div></div>
-<div class="global-sales-pill-row"><span class="global-sales-pill">Leadership</span><span class="global-sales-pill">Support</span><span class="global-sales-pill">Owners</span></div>
-</a>
-<a class="global-sales-card" data-target="goals-expectations" href="#view-goals-expectations">
-<div class="global-sales-card-top"><div><h3>Goals &amp; Expectations</h3><p>Annual goals, pipeline targets, activity expectations, and CRM requirements.</p></div><div class="global-sales-arrow">›</div></div>
-<div class="global-sales-pill-row"><span class="global-sales-pill">Goals</span><span class="global-sales-pill">Pipeline</span><span class="global-sales-pill">CRM</span></div>
-</a>
-<a class="global-sales-card" data-target="territories" href="#view-territories">
-<div class="global-sales-card-top"><div><h3>Territories</h3><p>Territory ownership, account responsibility, verticals, and regional coverage details.</p></div><div class="global-sales-arrow">›</div></div>
-<div class="global-sales-pill-row"><span class="global-sales-pill">Ownership</span><span class="global-sales-pill">Accounts</span><span class="global-sales-pill">Coverage</span></div>
-</a>
-<a class="global-sales-card" data-target="sales-strategy" href="#view-sales-strategy">
-<div class="global-sales-card-top"><div><h3>Sales Strategy</h3><p>Deal captain expectations, annual planning, win strategy, and account planning guidance.</p></div><div class="global-sales-arrow">›</div></div>
-<div class="global-sales-pill-row"><span class="global-sales-pill">Planning</span><span class="global-sales-pill">Win Strategy</span><span class="global-sales-pill">Account Plans</span></div>
-</a>
-<a class="global-sales-card" data-target="sales-cycles" href="#view-sales-cycles">
-<div class="global-sales-card-top"><div><h3>Sales Cycles</h3><p>Opportunity stages from qualified through closed won, including proposal and negotiation.</p></div><div class="global-sales-arrow">›</div></div>
-<div class="global-sales-pill-row"><span class="global-sales-pill">Stages</span><span class="global-sales-pill">Proposal</span><span class="global-sales-pill">Negotiation</span></div>
-</a>
-<a class="global-sales-card" data-target="sales-stages" href="#view-sales-stages">
-<div class="global-sales-card-top"><div><h3>Global Sales Stages</h3><p>Global 8-stage CRM workflow with stage criteria, deliverables, probability guidance, and next-step expectations.</p></div><div class="global-sales-arrow">›</div></div>
-<div class="global-sales-pill-row"><span class="global-sales-pill">8 Stages</span><span class="global-sales-pill">CRM Workflow</span><span class="global-sales-pill">Stage Criteria</span></div>
-</a>
-<a class="global-sales-card" data-target="win-loss" href="#view-win-loss">
-<div class="global-sales-card-top"><div><h3>Win Loss Debrief</h3><p>Capture global win/loss feedback, decision drivers, competitor insights, proposal quality, and lessons learned after close.</p></div><div class="global-sales-arrow">›</div></div>
-<div class="global-sales-pill-row"><span class="global-sales-pill">Debrief</span><span class="global-sales-pill">Decision Drivers</span><span class="global-sales-pill">Lessons Learned</span></div>
-</a>
-<a class="global-sales-card" data-target="global-fees" href="#view-global-fees">
-<div class="global-sales-card-top"><div><h3>Global Fees</h3><p>Central fee visibility organized by region, customer, spend, and date requested.</p></div><div class="global-sales-arrow">›</div></div>
-<div class="global-sales-pill-row"><span class="global-sales-pill">North America</span><span class="global-sales-pill">ANZ</span><span class="global-sales-pill">APAC</span><span class="global-sales-pill">EMEA</span></div>
-</a>
-<a class="global-sales-card" data-target="bid-toolkit" href="#view-bid-toolkit">
-<div class="global-sales-card-top"><div><h3>Global Bid Toolkit</h3><p>One hub for the US-led global bid workflow, bid resources, RACI ownership, contacts, and submission support.</p></div><div class="global-sales-arrow">›</div></div>
-<div class="global-sales-pill-row"><span class="global-sales-pill">Bid Process</span><span class="global-sales-pill">Resources</span><span class="global-sales-pill">RACI</span></div>
-</a>
+<section class="global-sales-priority-grid">
+<a class="global-sales-priority-card" data-target="bid-toolkit" href="#view-bid-toolkit"><div class="priority-card-label">Most used</div><h3>Prepare a Global Bid</h3><p>Open the Global Bid Toolkit for bid process, resources, RACI ownership, and support contacts.</p><span class="sales-card-action">Open toolkit →</span></a>
+<a class="global-sales-priority-card" data-target="sales-stages" href="#view-sales-stages"><div class="priority-card-label">Pipeline control</div><h3>Confirm Sales Stage</h3><p>Use the global 8-stage workflow to validate CRM stage, next steps, deliverables, and close expectations.</p><span class="sales-card-action">Open stages →</span></a>
+<a class="global-sales-priority-card" data-target="win-loss" href="#view-win-loss"><div class="priority-card-label">After close</div><h3>Capture Win/Loss Insights</h3><p>Document decision drivers, competitor feedback, proposal quality, and improvement actions.</p><span class="sales-card-action">Open debrief →</span></a>
 </section>
-<section class="content-card" style="margin-top:20px">
-<h2>Suggested SharePoint Setup</h2>
-<p>Recommended web parts: Quick Links, Document Library, People, Highlighted Content, File Viewer, and Lists. Recommended metadata: Topic, Region, Owner, Audience, Status, Review Date, and Resource Type.</p>
+<section class="content-card">
+<div class="command-title">
+<div><h2>Global Sales Sections</h2><p>Select a section below. Each area opens a focused page so users do not need to scroll through unrelated content.</p></div>
+<span class="command-badge">Click any card</span>
+</div>
+<div class="professional-sales-grid">
+<a class="professional-sales-card" data-target="about-ctm" href="#view-about-ctm"><h3>About CTM</h3><p>Company background, global presence, purpose, values, and differentiators.</p><span class="sales-card-action">Open section →</span></a>
+<a class="professional-sales-card" data-target="ctm-value-proposition" href="#view-ctm-value-proposition"><h3>CTM Value Proposition</h3><p>Approved messaging for service, innovation, return, and customer value.</p><span class="sales-card-action">Open section →</span></a>
+<a class="professional-sales-card" data-target="sales-team" href="#view-sales-team"><h3>Sales Team</h3><p>Leadership, Sales Support, Technology Sales, and ownership references.</p><span class="sales-card-action">Open section →</span></a>
+<a class="professional-sales-card" data-target="goals-expectations" href="#view-goals-expectations"><h3>Goals &amp; Expectations</h3><p>Annual goals, pipeline targets, activity expectations, and CRM requirements.</p><span class="sales-card-action">Open section →</span></a>
+<a class="professional-sales-card" data-target="territories" href="#view-territories"><h3>Territories</h3><p>Territory ownership, account responsibility, verticals, and coverage details.</p><span class="sales-card-action">Open section →</span></a>
+<a class="professional-sales-card" data-target="sales-strategy" href="#view-sales-strategy"><h3>Sales Strategy</h3><p>Deal captain expectations, annual planning, win strategy, and account planning.</p><span class="sales-card-action">Open section →</span></a>
+<a class="professional-sales-card" data-target="sales-cycles" href="#view-sales-cycles"><h3>Sales Cycles</h3><p>Opportunity stages from qualified through closed won, proposal, and negotiation.</p><span class="sales-card-action">Open section →</span></a>
+<a class="professional-sales-card" data-target="sales-stages" href="#view-sales-stages"><h3>Global Sales Stages</h3><p>Global 8-stage CRM workflow with criteria, deliverables, and next-step guidance.</p><span class="sales-card-action">Open section →</span></a>
+<a class="professional-sales-card" data-target="win-loss" href="#view-win-loss"><h3>Win/Loss Debrief</h3><p>Capture decision drivers, competitor insights, proposal quality, and lessons learned.</p><span class="sales-card-action">Open section →</span></a>
+<a class="professional-sales-card" data-target="global-fees" href="#view-global-fees"><h3>Global Fees</h3><p>Fee visibility by region, customer, spend, and request date.</p><span class="sales-card-action">Open section →</span></a>
+<a class="professional-sales-card" data-target="bid-toolkit" href="#view-bid-toolkit"><h3>Global Bid Toolkit</h3><p>US-led global bid workflow, resources, RACI ownership, contacts, and submission support.</p><span class="sales-card-action">Open section →</span></a>
+</div>
 <a class="backtop" data-target="home" href="#view-home">Back to Home ↑</a>
 </section>
 </section>
 
 <section class="view" id="view-global-bid-process">
-<section class="hero">
+<section class="hero executive-hub-hero">
 <div class="eyebrow">Global Sales</div>
 <h1>Global Bid Process</h1>
-<p>A global, US-led pursuit process that aligns discovery, bid/no-bid decisions, kickoff, solutioning, pricing, and submission across regional sales teams, SMEs, Sales Support, Pricing, CPP, and leadership.</p>
+<p>A clear, role-based pursuit process that aligns discovery, bid/no-bid decisions, kickoff, solutioning, pricing, approvals, and final submission across global and regional teams.</p>
 <span class="owner">Page owner: Global Sales / Sales Support / Pricing</span>
 </section>
-<section class="global-sales-intro">
-<h2>Process Overview</h2>
-<p>Use this section as the standard workflow for global opportunities. Each step clarifies ownership, required inputs, collaboration points, and approval expectations before the final response is submitted.</p>
-<div class="bid-process-strip"><span class="bid-step-chip">1. Discovery</span><span class="bid-step-chip">2. Bid / No-Bid</span><span class="bid-step-chip">3. Kickoff</span><span class="bid-step-chip">4. Solutioning</span><span class="bid-step-chip">5. Pricing</span><span class="bid-step-chip">6. Submit</span></div>
+<section class="bid-command-panel">
+<div class="command-title">
+<div><h2>How to use this process</h2><p>Start with the stage of the pursuit, confirm the owner and required inputs, then use the related output to move the opportunity forward. This view is designed to reduce ambiguity during active global bids.</p></div>
+<span class="command-badge">6-step workflow</span>
+</div>
+<div class="bid-path-grid">
+<a class="bid-path-card" data-target="global-bid-resources" href="#view-global-bid-resources"><b>Need a template?</b><span>Open bid resources, WOW, executive briefing, pricing, and response files.</span></a>
+<a class="bid-path-card" data-target="global-bid-raci" href="#view-global-bid-raci"><b>Need an owner?</b><span>Open RACI to confirm responsible, accountable, consulted, and informed teams.</span></a>
+<a class="bid-path-card" data-target="bid-support-mailboxes" href="#view-bid-support-mailboxes"><b>Need support?</b><span>Use bid support mailboxes to route requests to the correct team.</span></a>
+<a class="bid-path-card" data-target="win-loss" href="#view-win-loss"><b>Bid complete?</b><span>After the decision, complete the win/loss debrief and capture lessons learned.</span></a>
+</div>
+<div class="bid-executive-note"><b>Executive reminder:</b> Any bid valued over $20 million requires CEO approval before submission. Use the process below to confirm approval needs early and avoid late-stage delays.</div>
 </section>
-<section class="global-bid-process-grid">
-<div class="global-bid-process-card">
-<div class="global-bid-process-header"><div class="global-bid-process-number">1</div><div><h3>Discovery</h3><p>Confirm client needs early and bring in the right regional and technology expertise from the start.</p></div></div>
-<ul>
-<li>Sales teams engage regional SMEs as needed to support client Discovery Sessions.</li>
-<li>A technology consultant is available for technology discovery and CTM global tech stack guidance.</li>
-<li>Regional SMEs and CPP may be consulted for service configuration solutions.</li>
-<li>Document client needs, service expectations, technology questions, and solution considerations before moving into bid/no-bid.</li>
-</ul>
-</div>
-<div class="global-bid-process-card">
-<div class="global-bid-process-header"><div class="global-bid-process-number">2</div><div><h3>Bid / No-Bid</h3><p>Determine whether CTM should submit a proposal based on strategic fit, requirements, profitability, competition, and relationship strength.</p></div></div>
-<ul>
-<li>Complete the WOW with bid/no-bid calculation.</li>
-<li>Schedule a decision call with the GM, regional sales lead, sales support leads, and relevant SMEs.</li>
-<li>Include the appropriate CPP representative when a market does not include a CTM wholly-owned agency.</li>
-<li>Obtain regional lead assignment and distribute bid documents and initial questions to Pricing, Sales Support, and regional leads.</li>
-</ul>
-</div>
-<div class="global-bid-process-card">
-<div class="global-bid-process-header"><div class="global-bid-process-number">3</div><div><h3>Kickoff</h3><p>Once the bid is approved, align the pursuit team on scope, ownership, expectations, and target dates.</p></div></div>
-<ul>
-<li>Hold a project kickoff with the GM, regional leads, Pricing, Sales Support, and CTM M&amp;E if applicable.</li>
-<li>Use the WOW so participants can review key information before the call.</li>
-<li>Review customer overview, relationship status, goals and solutions, win strategy, client requirements, risks, pricing strategy, and target dates.</li>
-<li>Confirm owners, action items, deadlines, and escalation points.</li>
-</ul>
-</div>
-<div class="global-bid-process-card">
-<div class="global-bid-process-header"><div class="global-bid-process-number">4</div><div><h3>Solutioning</h3><p>Build and approve the global service solution with the right regional, technology, and partner agency input.</p></div></div>
-<ul>
-<li>Work with regional SMEs and the technology consultant to devise the global service solution.</li>
-<li>Regional sales leads devise and approve the service solution within their region.</li>
-<li>If service falls under a CTM Partner agency, work with the appropriate CPP representative to determine the partner-agency approach.</li>
-<li>Store the WOW in Sales SharePoint as a continuously updated global company shared version.</li>
-<li>After the proposed solution is formulated, secure regional GM approval and share the configuration with Sales Support and Pricing.</li>
-</ul>
-</div>
-<div class="global-bid-process-card">
-<div class="global-bid-process-header"><div class="global-bid-process-number">5</div><div><h3>Pricing</h3><p>Coordinate global pricing alignment, cost model completion, approvals, and final commercial review.</p></div></div>
-<ul>
-<li>Collaborate with the pricing team to prepare and finalize required documentation.</li>
-<li>Submit cost model components, the WOW, client-required sales documents, assumptions, and timelines to Pricing; allow a 10-day turnaround.</li>
-<li>Arrange a strategy meeting with regional sales leaders, the global pricing lead, and Sales Support to address open questions.</li>
-<li>The deal captain develops the pricing strategy with EVP Business Development and SVP Sales, then aligns with regional leadership.</li>
-<li>Pricing returns the vetted pricing and strategy for final review and confirmation.</li>
-<li><b>Please note:</b> Any bid valued over $20 million requires CEO approval before submission.</li>
-</ul>
-</div>
-<div class="global-bid-process-card">
-<div class="global-bid-process-header"><div class="global-bid-process-number">6</div><div><h3>Submit</h3><p>Finalize the response package, confirm approvals, and submit the global RFP response.</p></div></div>
-<ul>
-<li>Sales Support partners with Sales to complete the questionnaire, executive summary, and required attachments.</li>
-<li>Sales reviews and approves draft versions before final submission.</li>
-<li>The final response is built using promised documentation, attachments, and any required regional or SME inputs.</li>
-<li>Submit through the required portal or client delivery method and retain the final copy in SharePoint.</li>
-<li>After submission, orchestrate global presentations and technology demos with regional SMEs and CTM Partner agencies through APP as needed.</li>
-</ul>
-</div>
+<section class="bid-process-pro-grid">
+<div class="bid-step-pro-card"><div class="bid-step-pro-top"><div class="bid-step-pro-number">1</div><div><h3>Discovery</h3><p>Confirm client needs and bring the right regional, service, and technology expertise into the conversation early.</p></div></div><div class="bid-step-pro-body"><div class="bid-detail-row"><b>Primary action</b>Engage regional SMEs, CPP, and technology consultants as needed for discovery sessions.</div><div class="bid-detail-row"><b>Required input</b>Client requirements, service expectations, technology questions, regional needs, and known risks.</div><div class="bid-detail-row"><b>Output</b>Documented discovery notes that support the bid/no-bid decision.</div></div></div>
+<div class="bid-step-pro-card"><div class="bid-step-pro-top"><div class="bid-step-pro-number">2</div><div><h3>Bid / No-Bid</h3><p>Decide whether CTM should pursue based on fit, requirements, profitability, competition, and relationship strength.</p></div></div><div class="bid-step-pro-body"><div class="bid-detail-row"><b>Primary action</b>Complete the WOW and bid/no-bid calculation.</div><div class="bid-detail-row"><b>Required input</b>GM, regional sales lead, Sales Support, SMEs, Pricing, and CPP input where applicable.</div><div class="bid-detail-row"><b>Output</b>Documented decision, regional lead assignment, and approved next steps.</div></div></div>
+<div class="bid-step-pro-card"><div class="bid-step-pro-top"><div class="bid-step-pro-number">3</div><div><h3>Kickoff</h3><p>Align the pursuit team on scope, ownership, deadlines, strategy, risks, and approval expectations.</p></div></div><div class="bid-step-pro-body"><div class="bid-detail-row"><b>Primary action</b>Hold a formal kickoff with the GM, regional leads, Pricing, Sales Support, and CTM M&amp;E if applicable.</div><div class="bid-detail-row"><b>Required input</b>WOW, client overview, win strategy, requirements, pricing approach, and target dates.</div><div class="bid-detail-row"><b>Output</b>Confirmed action log, owners, deadlines, escalation points, and review cadence.</div></div></div>
+<div class="bid-step-pro-card"><div class="bid-step-pro-top"><div class="bid-step-pro-number">4</div><div><h3>Solutioning</h3><p>Build and approve the global service solution with regional, technology, and partner agency input.</p></div></div><div class="bid-step-pro-body"><div class="bid-detail-row"><b>Primary action</b>Define the service model, regional approach, technology stack, and CPP or partner agency path.</div><div class="bid-detail-row"><b>Required input</b>Regional SME recommendations, technology discovery, service configuration, and partner agency guidance.</div><div class="bid-detail-row"><b>Output</b>Approved service solution shared with Sales Support and Pricing.</div></div></div>
+<div class="bid-step-pro-card"><div class="bid-step-pro-top"><div class="bid-step-pro-number">5</div><div><h3>Pricing</h3><p>Coordinate pricing strategy, cost model completion, assumptions, and final commercial review.</p></div></div><div class="bid-step-pro-body"><div class="bid-detail-row"><b>Primary action</b>Submit cost model components, WOW, client documents, assumptions, and timelines to Pricing.</div><div class="bid-detail-row"><b>Required input</b>Regional pricing needs, open questions, approval requirements, and deal captain strategy.</div><div class="bid-detail-row"><b>Output</b>Vetted pricing and strategy returned for final review and confirmation.</div></div></div>
+<div class="bid-step-pro-card"><div class="bid-step-pro-top"><div class="bid-step-pro-number">6</div><div><h3>Submit</h3><p>Finalize the response package, confirm approvals, submit to the client, and retain the final record.</p></div></div><div class="bid-step-pro-body"><div class="bid-detail-row"><b>Primary action</b>Sales Support and Sales complete the questionnaire, executive summary, final response, and attachments.</div><div class="bid-detail-row"><b>Required input</b>Final pricing, solution approvals, regional inputs, SME materials, and client portal requirements.</div><div class="bid-detail-row"><b>Output</b>Submitted response, final archive in SharePoint, and presentation or demo follow-up plan.</div></div></div>
 </section>
 <section class="content-card" style="margin-top:20px">
-<h2>Suggested SharePoint Setup</h2>
-<p>Recommended location: Global Sales &gt; Global Bid Process. Store the WOW, bid/no-bid notes, kickoff summary, pricing files, solution configuration, final response, and presentation/demo materials in the opportunity folder.</p>
-<div class="global-bid-note">Recommended metadata: Opportunity Name, Region, Deal Captain, Regional Lead, Sales Support Owner, Pricing Owner, Status, Due Date, Approval Required, CEO Approval Required, and Final Submission Link.</div>
+<h2>SharePoint Setup and Governance</h2>
+<div class="global-detail-grid">
+<div class="global-detail-box"><b>Recommended Location</b>Global Sales &gt; Global Bid Process with one opportunity folder for each active pursuit.</div>
+<div class="global-detail-box"><b>Required Files</b>WOW, bid/no-bid notes, kickoff summary, pricing files, solution configuration, final response, and presentation/demo materials.</div>
+<div class="global-detail-box"><b>Recommended Metadata</b>Opportunity Name, Region, Deal Captain, Sales Support Owner, Pricing Owner, Status, Due Date, Approval Required, CEO Approval Required, and Final Submission Link.</div>
+</div>
 <a class="backtop" data-target="global-sales" href="#view-global-sales">Back to Global Sales ↑</a>
 </section>
 </section>
-
 
 <section class="view" id="view-global-bid-resources">
 <section class="hero">
@@ -3478,15 +3471,15 @@ Then enable GitHub Pages from Settings > Pages > Deploy from branch > main > /ro
 <p>Use this page as the controlled library for global bid assets. Each resource should include an owner, review date, region applicability, and approved status before being used in a client response.</p>
 </section>
 <section class="global-bid-resource-grid">
-<div class="global-bid-resource"><h3>Win Opportunity Workbook (WOW)</h3><p>Primary working file for discovery notes, bid/no-bid calculation, win strategy, solution configuration, risks, pricing inputs, and action ownership.</p></div>
-<div class="global-bid-resource"><h3>Executive Briefing</h3><p>Leadership-ready summary of client opportunity, service solution, global requirements, competitive position, and bid/no-bid recommendation.</p></div>
-<div class="global-bid-resource"><h3>Bid / No-Bid Calculator</h3><p>Decision tool to validate strategic fit, profitability, operational feasibility, relationship strength, and win probability.</p></div>
-<div class="global-bid-resource"><h3>RFP Source Documents</h3><p>Client RFP, Q&amp;A documents, addenda, pricing schedules, contract terms, portal instructions, and required attachments.</p></div>
-<div class="global-bid-resource"><h3>Pricing &amp; Cost Model Files</h3><p>Approved pricing templates, assumptions, cost model components, regional pricing responses, and final pricing confirmation.</p></div>
-<div class="global-bid-resource"><h3>Global Solution Configuration</h3><p>Documented service model, technology configuration, regional service expectations, CPP/partner agency approach, and approval notes.</p></div>
-<div class="global-bid-resource"><h3>Bid Calendar &amp; Action Log</h3><p>Critical dates, owner assignments, SME deadlines, pricing due dates, draft review milestones, and final submission date.</p></div>
-<div class="global-bid-resource"><h3>Presentation &amp; Demo Materials</h3><p>Approved presentation deck, technology demo outline, regional SME talking points, proof points, and follow-up materials.</p></div>
-<div class="global-bid-resource"><h3>Final Response Archive</h3><p>Final submitted response, attachments, approval confirmations, client delivery record, and post-submission presentation materials.</p></div>
+<a class="global-bid-resource" data-target="global-tool-win-opportunity-workbook" href="#view-global-tool-win-opportunity-workbook" aria-label="Open Win Opportunity Workbook resource"><h3>Win Opportunity Workbook (WOW)</h3><p>Primary working file for discovery notes, bid/no-bid calculation, win strategy, solution configuration, risks, pricing inputs, and action ownership.</p><span class="global-bid-resource-action">Open resource →</span></a>
+<a class="global-bid-resource" data-target="executive-briefing" href="#view-executive-briefing" aria-label="Open Executive Briefing resource"><h3>Executive Briefing</h3><p>Leadership-ready summary of client opportunity, service solution, global requirements, competitive position, and bid/no-bid recommendation.</p><span class="global-bid-resource-action">Open resource →</span></a>
+<a class="global-bid-resource" data-target="bid-no-bid" href="#view-bid-no-bid" aria-label="Open Bid No-Bid Calculator resource"><h3>Bid / No-Bid Calculator</h3><p>Decision tool to validate strategic fit, profitability, operational feasibility, relationship strength, and win probability.</p><span class="global-bid-resource-action">Open resource →</span></a>
+<a class="global-bid-resource" data-target="rfp-intake" href="#view-rfp-intake" aria-label="Open RFP Source Documents resource"><h3>RFP Source Documents</h3><p>Client RFP, Q&amp;A documents, addenda, pricing schedules, contract terms, portal instructions, and required attachments.</p><span class="global-bid-resource-action">Open resource →</span></a>
+<a class="global-bid-resource" data-target="pricing-intake" href="#view-pricing-intake" aria-label="Open Pricing and Cost Model Files resource"><h3>Pricing &amp; Cost Model Files</h3><p>Approved pricing templates, assumptions, cost model components, regional pricing responses, and final pricing confirmation.</p><span class="global-bid-resource-action">Open resource →</span></a>
+<a class="global-bid-resource" data-target="global-bid-process" href="#view-global-bid-process" aria-label="Open Global Solution Configuration resource"><h3>Global Solution Configuration</h3><p>Documented service model, technology configuration, regional service expectations, CPP/partner agency approach, and approval notes.</p><span class="global-bid-resource-action">Open resource →</span></a>
+<a class="global-bid-resource" data-target="bid-writing-checklist" href="#view-bid-writing-checklist" aria-label="Open Bid Calendar and Action Log resource"><h3>Bid Calendar &amp; Action Log</h3><p>Critical dates, owner assignments, SME deadlines, pricing due dates, draft review milestones, and final submission date.</p><span class="global-bid-resource-action">Open resource →</span></a>
+<a class="global-bid-resource" data-target="sales-toolkit-deck-template" href="#view-sales-toolkit-deck-template" aria-label="Open Presentation and Demo Materials resource"><h3>Presentation &amp; Demo Materials</h3><p>Approved presentation deck, technology demo outline, regional SME talking points, proof points, and follow-up materials.</p><span class="global-bid-resource-action">Open resource →</span></a>
+<a class="global-bid-resource" data-target="final-submission" href="#view-final-submission" aria-label="Open Final Response Archive resource"><h3>Final Response Archive</h3><p>Final submitted response, attachments, approval confirmations, client delivery record, and post-submission presentation materials.</p><span class="global-bid-resource-action">Open resource →</span></a>
 </section>
 <section class="content-card" style="margin-top:20px">
 <h2>Suggested SharePoint Metadata</h2>
