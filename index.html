@@ -9753,5 +9753,237 @@ Then enable GitHub Pages from Settings > Pages > Deploy from branch > main > /ro
 })();
 </script>
 
+
+
+<!-- Search Box Selected Section Navigation Fix -->
+<script>
+(function(){
+  function normalize(value){
+    return (value || "").toLowerCase().replace(/&/g," and ").replace(/[^a-z0-9\s-]/g," ").replace(/\s+/g," ").trim();
+  }
+
+  function labelFromTarget(target){
+    return String(target || "")
+      .split('-')
+      .map(function(word){ return word ? word.charAt(0).toUpperCase() + word.slice(1) : word; })
+      .join(' ')
+      .replace(/Ctm/g,'CTM')
+      .replace(/Crm/g,'CRM')
+      .replace(/Anz/g,'ANZ')
+      .replace(/Apac/g,'APAC')
+      .replace(/Emea/g,'EMEA')
+      .replace(/Rfp/g,'RFP');
+  }
+
+  var priorityItems = [
+    {label:'Home', target:'home', keywords:'home global sales hub start'},
+    {label:'Start Here', target:'start-here', keywords:'start here begin new user existing user'},
+    {label:'Global Sales', target:'global-sales', keywords:'global sales overview strategy value proposition'},
+    {label:'Regions', target:'regions', keywords:'regions regional north america anz apac emea'},
+    {label:'North America', target:'north-america', keywords:'north america regional hub'},
+    {label:'ANZ', target:'anz', keywords:'anz regional hub'},
+    {label:'APAC', target:'apac', keywords:'apac regional hub'},
+    {label:'EMEA', target:'emea', keywords:'emea regional hub'},
+    {label:'Global Bid Toolkit', target:'bid-toolkit', keywords:'bid toolkit rfp proposal tender'},
+    {label:'Global Bid Process', target:'global-bid-process', keywords:'bid process discovery bid no bid kickoff solution pricing submit'},
+    {label:'Global Bid Resources', target:'global-bid-resources', keywords:'bid resources support proposal pricing legal security'},
+    {label:'Sales Stages', target:'sales-stages', keywords:'sales stages crm workflow discovery proposal negotiation closed'},
+    {label:'Dashboard', target:'sales-agent-dashboard', keywords:'dashboard pipeline kpi metrics summary graph'},
+    {label:'Win Loss Debrief', target:'win-loss', keywords:'win loss debrief analysis competitor battlecards'},
+    {label:'Global Win Loss Debrief Form', target:'win-loss-debrief', keywords:'debrief form closing questionnaire submit'},
+    {label:'Templates', target:'templates', keywords:'templates documents sales plan executive briefing'},
+    {label:'Training', target:'training', keywords:'training onboarding job aids recorded'},
+    {label:'Global Tools', target:'global-tools', keywords:'tools crm loopio linkedin zoominfo powerbi slidecamp instantly'},
+    {label:'Customer Proof Hub', target:'customer-proof-hub', keywords:'customer proof case studies references retain grow'},
+    {label:'Partner Agency Bid Resources', target:'partner-agency-bid-resources', keywords:'partner agency bid resources agency partner program'},
+    {label:'Help & Contacts', target:'help-contacts', keywords:'help contacts support email request regional sales contacts'}
+  ];
+
+  function buildSearchIndex(){
+    var byTarget = new Map();
+    priorityItems.forEach(function(item){ byTarget.set(item.target, item); });
+    document.querySelectorAll('.view[id^="view-"]').forEach(function(view){
+      var target = view.id.replace(/^view-/, '');
+      var heading = view.querySelector('h1, h2, h3');
+      var label = heading ? heading.textContent.replace(/\s+/g,' ').trim() : labelFromTarget(target);
+      var existing = byTarget.get(target);
+      byTarget.set(target, {
+        label: existing && existing.label ? existing.label : label,
+        target: target,
+        keywords: [existing && existing.keywords, label, target, view.textContent].filter(Boolean).join(' ')
+      });
+    });
+    return Array.from(byTarget.values()).filter(function(item){ return document.getElementById('view-' + item.target); });
+  }
+
+  function inferTopNav(target){
+    if (document.querySelector('.pill[data-target="' + CSS.escape(target) + '"]')) return target;
+    if (/^(north-america|anz|apac|emea)(-|$)/.test(target)) return 'regions';
+    if (/^(global-bid-process|global-bid-resources|global-bid-raci|bid-no-bid|executive-briefing|kickoff|pricing-intake|bid-writing-checklist|rfp-intake|risk-review|finance-pricing|proposal-development|final-submission)$/.test(target)) return 'bid-toolkit';
+    if (/^(about-ctm|ctm-value-proposition|sales-team|goals-expectations|territories|sales-strategy|sales-cycles|partner-agency|partner-agency-process|partner-agency-contacts|partner-agency-referrals|partner-agency-materials|partner-agency-bid-resources|global-fees)/.test(target)) return 'global-sales';
+    if (/^(crm-tools|reporting-dashboards|sales-enablement-tools|proposal-tools|technology-sales-tools|global-resource-library|partner-tools|reporting-insights|resource-library|global-tool-)/.test(target)) return 'global-tools';
+    if (/template|crm-update-guide/.test(target)) return 'templates';
+    if (/training|onboarding|job-aids|refresher/.test(target)) return 'training';
+    if (/win-loss|competitor|battlecards|market-product-updates/.test(target)) return 'win-loss';
+    if (/customer-proof|retain-grow|growth/.test(target)) return 'customer-proof-hub';
+    if (/contact$|help-contacts/.test(target)) return 'help-contacts';
+    return '';
+  }
+
+  function closeSearch(){
+    var input = document.getElementById('toolkitSearchInput');
+    var results = document.getElementById('toolkitSearchResults');
+    if(input){ input.value = ''; input.blur(); }
+    if(results){ results.innerHTML = ''; results.classList.remove('active'); }
+  }
+
+  function openTarget(target){
+    var view = document.getElementById('view-' + target);
+    if(!view) return false;
+
+    if (typeof window.CTMToolkitNavigate === 'function') {
+      window.CTMToolkitNavigate(target, {record:true});
+    }
+
+    document.querySelectorAll('.view').forEach(function(section){
+      var isSelected = section.id === 'view-' + target;
+      section.classList.toggle('active', isSelected);
+      section.style.display = isSelected ? 'block' : 'none';
+    });
+
+    var topNav = inferTopNav(target);
+    document.querySelectorAll('.pill[data-target]').forEach(function(pill){
+      pill.classList.toggle('active', pill.getAttribute('data-target') === topNav || pill.getAttribute('data-target') === target);
+    });
+
+    document.querySelectorAll('details.nav-group').forEach(function(group){ group.removeAttribute('open'); });
+    document.body.classList.toggle('section-open', target !== 'home');
+    if(history.replaceState){ history.replaceState(null, '', '#view-' + target); }
+    else { location.hash = 'view-' + target; }
+    window.scrollTo({top:0, behavior:'smooth'});
+    closeSearch();
+    return true;
+  }
+
+  function scoreItem(item, query){
+    var q = normalize(query);
+    var label = normalize(item.label);
+    var target = normalize(labelFromTarget(item.target));
+    var keywords = normalize(item.keywords);
+    var score = 0;
+    if(label === q) score += 100;
+    if(target === q) score += 90;
+    if(label.indexOf(q) === 0) score += 70;
+    if(target.indexOf(q) === 0) score += 60;
+    if(label.indexOf(q) > -1) score += 40;
+    if(target.indexOf(q) > -1) score += 35;
+    q.split(' ').forEach(function(word){
+      if(!word) return;
+      if(label.indexOf(word) > -1) score += 10;
+      if(target.indexOf(word) > -1) score += 8;
+      if(keywords.indexOf(word) > -1) score += 3;
+    });
+    return score;
+  }
+
+  function getMatches(query){
+    var q = normalize(query);
+    if(!q) return [];
+    return buildSearchIndex()
+      .map(function(item){ item._score = scoreItem(item, q); return item; })
+      .filter(function(item){ return item._score > 0; })
+      .sort(function(a,b){ return b._score - a._score || a.label.localeCompare(b.label); })
+      .slice(0, 12);
+  }
+
+  function renderResults(){
+    var input = document.getElementById('toolkitSearchInput');
+    var results = document.getElementById('toolkitSearchResults');
+    if(!input || !results) return [];
+    var matches = getMatches(input.value);
+    results.innerHTML = '';
+    if(!normalize(input.value)){
+      results.classList.remove('active');
+      return [];
+    }
+    if(!matches.length){
+      var empty = document.createElement('div');
+      empty.className = 'search-result-item';
+      empty.textContent = 'No results found. Try bid, APAC, dashboard, templates, training, contacts, or win loss.';
+      results.appendChild(empty);
+      results.classList.add('active');
+      return [];
+    }
+    matches.forEach(function(item, index){
+      var button = document.createElement('button');
+      button.type = 'button';
+      button.className = 'search-result-item';
+      button.setAttribute('data-target', item.target);
+      button.setAttribute('aria-selected', index === 0 ? 'true' : 'false');
+      button.innerHTML = '<div style="font-weight:900">' + item.label + '</div><div style="font-size:12px;color:#667085;margin-top:4px">Open selected section →</div>';
+      button.addEventListener('click', function(event){
+        event.preventDefault();
+        event.stopPropagation();
+        openTarget(item.target);
+      });
+      results.appendChild(button);
+    });
+    results.classList.add('active');
+    return matches;
+  }
+
+  function initSearchSelectedSectionFix(){
+    var input = document.getElementById('toolkitSearchInput');
+    var button = document.getElementById('toolkitSearchButton');
+    if(!input || !button) return;
+
+    var newInput = input.cloneNode(true);
+    var newButton = button.cloneNode(true);
+    input.parentNode.replaceChild(newInput, input);
+    button.parentNode.replaceChild(newButton, button);
+    input = newInput;
+    button = newButton;
+
+    input.removeAttribute('disabled');
+    input.removeAttribute('readonly');
+    input.placeholder = 'Search and select a section: bid, APAC, dashboard, templates, contacts';
+
+    input.addEventListener('input', renderResults);
+    input.addEventListener('focus', renderResults);
+    input.addEventListener('keydown', function(event){
+      var results = document.getElementById('toolkitSearchResults');
+      var selected = results ? results.querySelector('.search-result-item[aria-selected="true"]') : null;
+      if(event.key === 'Enter'){
+        event.preventDefault();
+        var target = selected && selected.getAttribute('data-target');
+        var matches = getMatches(input.value);
+        openTarget(target || (matches[0] && matches[0].target));
+      }
+      if(event.key === 'Escape'){
+        closeSearch();
+      }
+    });
+    button.addEventListener('click', function(event){
+      event.preventDefault();
+      var matches = getMatches(input.value);
+      if(matches.length) openTarget(matches[0].target);
+    });
+
+    document.addEventListener('click', function(event){
+      if(!event.target.closest('.toolkit-search-wrap')){
+        var results = document.getElementById('toolkitSearchResults');
+        if(results) results.classList.remove('active');
+      }
+    });
+  }
+
+  if(document.readyState === 'loading'){
+    document.addEventListener('DOMContentLoaded', initSearchSelectedSectionFix);
+  } else {
+    initSearchSelectedSectionFix();
+  }
+})();
+</script>
+
 </body>
 </html>
