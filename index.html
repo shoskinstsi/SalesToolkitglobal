@@ -543,11 +543,25 @@ Then enable GitHub Pages from Settings > Pages > Deploy from branch > main > /ro
   .toolkit-search-input:focus{border-color:var(--ctm-teal);box-shadow:0 0 0 4px rgba(0,124,148,.12);background:#fff}
   .toolkit-search-button{border:0;border-radius:999px;background:var(--ctm-navy);color:#fff;padding:15px 20px;font-weight:900;cursor:pointer;white-space:nowrap}
   .toolkit-search-results{display:none;margin-top:14px;border-top:1px solid var(--line);padding-top:14px}
-  .toolkit-search-results.active{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
-  .search-result-item{background:#f8fafc;border:1px solid var(--line);border-radius:14px;padding:12px 14px;color:#344054;cursor:pointer;text-decoration:none;font-weight:800;font-size:13px}
-  .search-result-item:hover{background:#eef8fb;color:var(--ctm-navy);border-color:#d7edf2}
+  .toolkit-search-results.active{display:grid;grid-template-columns:1fr;gap:10px}
+  .search-results-top{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:4px 2px 8px;border-bottom:1px solid #eef2f6;margin-bottom:2px}
+  .search-result-summary{font-size:12px;color:#667085;line-height:1.35;font-weight:700;text-transform:uppercase;letter-spacing:.06em}
+  .search-clear-hint{font-size:12px;color:#667085;background:#f8fafc;border:1px solid var(--line);border-radius:999px;padding:5px 9px;white-space:nowrap}
+  .search-result-item{background:linear-gradient(180deg,#ffffff 0%,#fbfdff 100%);border:1px solid #e3e9f0;border-left:5px solid var(--ctm-teal);border-radius:16px;padding:14px 16px;color:#344054;cursor:pointer;text-decoration:none;font-size:13px;text-align:left;width:100%;display:grid;gap:9px;box-shadow:0 2px 8px rgba(15,23,42,.045);transition:.16s ease}
+  .search-result-item:nth-of-type(3n){border-left-color:var(--ctm-green)}
+  .search-result-item:nth-of-type(4n){border-left-color:#f0b429}
+  .search-result-item:hover,.search-result-item[aria-selected="true"]{background:#fff;color:var(--ctm-navy);border-color:#b9dbe3;border-left-color:var(--ctm-navy);box-shadow:0 10px 24px rgba(15,23,42,.12);transform:translateY(-2px)}
+  .search-result-head{display:flex;align-items:flex-start;justify-content:space-between;gap:14px}
+  .search-result-title{font-weight:900;color:#0b1f35;font-size:15px;line-height:1.3}
+  .search-result-subtitle{color:#667085;font-size:12px;line-height:1.35;margin-top:3px}
+  .search-result-meta{display:flex;align-items:center;justify-content:space-between;gap:10px;color:#667085;font-size:12px;line-height:1.3}
+  .search-result-section{display:inline-flex;align-items:center;border-radius:999px;background:#eef8fb;border:1px solid #d7edf2;color:var(--ctm-navy);padding:5px 9px;font-weight:700;max-width:78%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .search-result-section:before{content:"";width:7px;height:7px;border-radius:50%;background:var(--ctm-teal);margin-right:7px;flex:0 0 auto}
+  .search-result-action{color:var(--ctm-teal);font-weight:900;white-space:nowrap}
+  .search-result-empty{background:#f8fafc;border:1px dashed #c9d4df;border-radius:16px;padding:18px;color:#667085;font-size:13px;line-height:1.5;text-align:left}
+  .search-result-empty b{display:block;color:#0b1f35;font-size:15px;margin-bottom:5px}
   .search-helper{font-size:13px;color:#667085;margin-top:10px;line-height:1.45}
-  @media(max-width:900px){.toolkit-search-row{flex-direction:column}.toolkit-search-button{width:100%}.toolkit-search-results.active{grid-template-columns:1fr}}
+  @media(max-width:900px){.toolkit-search-row{flex-direction:column}.toolkit-search-button{width:100%}.toolkit-search-results.active{grid-template-columns:1fr}.search-results-top,.search-result-head,.search-result-meta{align-items:flex-start;flex-direction:column}.search-result-section{max-width:100%}.search-clear-hint{white-space:normal}}
 
 
   .hub-hero-with-search{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(360px,.8fr);gap:22px;align-items:center}
@@ -1302,15 +1316,17 @@ Then enable GitHub Pages from Settings > Pages > Deploy from branch > main > /ro
     position:absolute;
     left:0;
     right:0;
-    top:calc(100% + 8px);
+    top:calc(100% + 10px);
     background:#fff;
-    border:1px solid var(--line);
-    border-radius:16px;
-    box-shadow:0 16px 36px rgba(15,23,42,.16);
-    padding:10px;
-    max-height:320px;
+    border:1px solid #dfe6ee;
+    border-radius:20px;
+    box-shadow:0 18px 42px rgba(15,23,42,.18);
+    padding:14px;
+    max-height:390px;
     overflow:auto;
   }
+  .compact-global-search .toolkit-search-results.active{display:grid;grid-template-columns:1fr;gap:10px}
+  .compact-global-search .search-result-item{border-radius:16px;padding:14px 16px}
   #view-home .hub-hero-with-search{grid-template-columns:1fr}
   .site-header.clean-top-header{transition:padding .18s ease, box-shadow .18s ease, background .18s ease}
   .site-header.clean-top-header .ctm-box,
@@ -3163,6 +3179,870 @@ Then enable GitHub Pages from Settings > Pages > Deploy from branch > main > /ro
   .content-card{
     position:relative;
     z-index:1;
+  }
+
+
+
+  /* Professional Search Results Refresh */
+  .toolkit-search-results,
+  .compact-global-search .toolkit-search-results{
+    background:#ffffff !important;
+    border:1px solid #d9e2ec !important;
+    border-radius:18px !important;
+    box-shadow:0 18px 44px rgba(15,23,42,.16) !important;
+    padding:10px !important;
+  }
+
+  .toolkit-search-results.active,
+  .compact-global-search .toolkit-search-results.active{
+    display:grid !important;
+    grid-template-columns:1fr !important;
+    gap:8px !important;
+  }
+
+  .search-results-top{
+    background:#f8fafc !important;
+    border:1px solid #e5e9ef !important;
+    border-radius:14px !important;
+    padding:11px 13px !important;
+    margin:0 0 4px !important;
+    display:flex !important;
+    align-items:center !important;
+    justify-content:space-between !important;
+    gap:12px !important;
+  }
+
+  .search-result-summary{
+    color:#0b1f35 !important;
+    font-size:12px !important;
+    font-weight:800 !important;
+    letter-spacing:.08em !important;
+    text-transform:uppercase !important;
+  }
+
+  .search-clear-hint{
+    background:#ffffff !important;
+    border:1px solid #d9e2ec !important;
+    color:#667085 !important;
+    border-radius:999px !important;
+    padding:6px 10px !important;
+    font-size:12px !important;
+    font-weight:600 !important;
+    white-space:nowrap !important;
+  }
+
+  .search-result-item,
+  .compact-global-search .search-result-item,
+  .hub-search-panel .search-result-item{
+    position:relative !important;
+    background:#ffffff !important;
+    border:1px solid #e1e8f0 !important;
+    border-left:0 !important;
+    border-radius:14px !important;
+    padding:13px 14px 13px 16px !important;
+    color:#344054 !important;
+    cursor:pointer !important;
+    text-align:left !important;
+    width:100% !important;
+    display:grid !important;
+    gap:8px !important;
+    box-shadow:none !important;
+    transition:background .16s ease,border-color .16s ease,box-shadow .16s ease,transform .16s ease !important;
+  }
+
+  .search-result-item:before,
+  .compact-global-search .search-result-item:before,
+  .hub-search-panel .search-result-item:before{
+    content:"";
+    position:absolute;
+    left:0;
+    top:12px;
+    bottom:12px;
+    width:4px;
+    border-radius:0 999px 999px 0;
+    background:var(--ctm-teal);
+  }
+
+  .search-result-item:hover,
+  .search-result-item[aria-selected="true"],
+  .compact-global-search .search-result-item:hover,
+  .hub-search-panel .search-result-item:hover{
+    background:#f9fcfd !important;
+    border-color:#bfd6de !important;
+    box-shadow:0 10px 24px rgba(15,23,42,.10) !important;
+    transform:translateY(-1px) !important;
+  }
+
+  .search-result-head{
+    display:flex !important;
+    align-items:flex-start !important;
+    justify-content:space-between !important;
+    gap:14px !important;
+  }
+
+  .search-result-title{
+    color:#0b1f35 !important;
+    font-size:15px !important;
+    font-weight:800 !important;
+    line-height:1.25 !important;
+    letter-spacing:0 !important;
+  }
+
+  .search-result-subtitle{
+    color:#667085 !important;
+    font-size:12px !important;
+    line-height:1.35 !important;
+    margin-top:4px !important;
+    font-weight:500 !important;
+  }
+
+  .search-result-action{
+    color:var(--ctm-navy) !important;
+    background:#eef8fb !important;
+    border:1px solid #d7edf2 !important;
+    border-radius:999px !important;
+    padding:6px 10px !important;
+    font-size:12px !important;
+    font-weight:800 !important;
+    white-space:nowrap !important;
+  }
+
+  .search-result-meta{
+    display:flex !important;
+    align-items:center !important;
+    justify-content:flex-start !important;
+    gap:8px !important;
+  }
+
+  .search-result-section{
+    display:inline-flex !important;
+    align-items:center !important;
+    max-width:100% !important;
+    background:#f8fafc !important;
+    border:1px solid #e5e9ef !important;
+    color:#475467 !important;
+    border-radius:999px !important;
+    padding:5px 9px !important;
+    font-size:11px !important;
+    font-weight:700 !important;
+    line-height:1 !important;
+    white-space:nowrap !important;
+    overflow:hidden !important;
+    text-overflow:ellipsis !important;
+  }
+
+  .search-result-section:before{
+    content:"" !important;
+    width:6px !important;
+    height:6px !important;
+    border-radius:50% !important;
+    background:var(--ctm-teal) !important;
+    margin-right:7px !important;
+    flex:0 0 auto !important;
+  }
+
+  .search-result-empty{
+    background:#f8fafc !important;
+    border:1px dashed #cbd5e1 !important;
+    border-radius:14px !important;
+    padding:18px !important;
+    color:#667085 !important;
+    font-size:13px !important;
+    line-height:1.5 !important;
+    text-align:left !important;
+  }
+
+  .search-result-empty b{
+    color:#0b1f35 !important;
+    display:block !important;
+    font-size:15px !important;
+    margin-bottom:5px !important;
+  }
+
+  @media(max-width:900px){
+    .search-results-top,
+    .search-result-head,
+    .search-result-meta{
+      align-items:flex-start !important;
+      flex-direction:column !important;
+    }
+    .search-clear-hint{white-space:normal !important;}
+    .search-result-action{align-self:flex-start !important;}
+  }
+
+
+
+  /* Executive Search Results View - refined list layout */
+  .toolkit-search-results,
+  .compact-global-search .toolkit-search-results{
+    background:#ffffff !important;
+    border:1px solid #d6dee8 !important;
+    border-radius:20px !important;
+    box-shadow:0 22px 54px rgba(16,24,40,.18) !important;
+    padding:0 !important;
+    overflow:hidden !important;
+    counter-reset:searchResult !important;
+  }
+
+  .toolkit-search-results:before,
+  .compact-global-search .toolkit-search-results:before{
+    content:"";
+    display:block;
+    height:5px;
+    background:linear-gradient(90deg,var(--ctm-navy),var(--ctm-teal),var(--ctm-green));
+  }
+
+  .toolkit-search-results.active,
+  .compact-global-search .toolkit-search-results.active{
+    display:grid !important;
+    grid-template-columns:1fr !important;
+    gap:0 !important;
+  }
+
+  .search-results-top{
+    background:#ffffff !important;
+    border:0 !important;
+    border-bottom:1px solid #e7edf3 !important;
+    border-radius:0 !important;
+    padding:15px 18px !important;
+    margin:0 !important;
+    display:flex !important;
+    align-items:center !important;
+    justify-content:space-between !important;
+    gap:14px !important;
+  }
+
+  .search-result-summary{
+    color:#0b1f35 !important;
+    font-size:13px !important;
+    font-weight:900 !important;
+    letter-spacing:.04em !important;
+    text-transform:uppercase !important;
+  }
+
+  .search-clear-hint{
+    background:#f7fafc !important;
+    border:1px solid #d8e1ea !important;
+    color:#475467 !important;
+    border-radius:999px !important;
+    padding:6px 11px !important;
+    font-size:12px !important;
+    font-weight:700 !important;
+    white-space:nowrap !important;
+  }
+
+  .search-result-item,
+  .compact-global-search .search-result-item,
+  .hub-search-panel .search-result-item{
+    counter-increment:searchResult !important;
+    position:relative !important;
+    background:#ffffff !important;
+    border:0 !important;
+    border-bottom:1px solid #edf1f5 !important;
+    border-radius:0 !important;
+    padding:16px 18px 16px 72px !important;
+    color:#344054 !important;
+    cursor:pointer !important;
+    text-align:left !important;
+    width:100% !important;
+    display:grid !important;
+    gap:8px !important;
+    box-shadow:none !important;
+    transition:background .16s ease,box-shadow .16s ease,transform .16s ease !important;
+  }
+
+  .search-result-item:last-child,
+  .compact-global-search .search-result-item:last-child,
+  .hub-search-panel .search-result-item:last-child{
+    border-bottom:0 !important;
+  }
+
+  .search-result-item:before,
+  .compact-global-search .search-result-item:before,
+  .hub-search-panel .search-result-item:before{
+    content:counter(searchResult, decimal-leading-zero) !important;
+    position:absolute !important;
+    left:18px !important;
+    top:17px !important;
+    width:38px !important;
+    height:38px !important;
+    border-radius:12px !important;
+    background:#eef8fb !important;
+    border:1px solid #d6edf2 !important;
+    color:var(--ctm-navy) !important;
+    display:flex !important;
+    align-items:center !important;
+    justify-content:center !important;
+    font-size:12px !important;
+    font-weight:900 !important;
+    letter-spacing:.03em !important;
+  }
+
+  .search-result-item:hover,
+  .search-result-item[aria-selected="true"],
+  .compact-global-search .search-result-item:hover,
+  .hub-search-panel .search-result-item:hover{
+    background:#f8fbfc !important;
+    box-shadow:inset 4px 0 0 var(--ctm-teal) !important;
+    transform:none !important;
+  }
+
+  .search-result-head{
+    display:flex !important;
+    align-items:flex-start !important;
+    justify-content:space-between !important;
+    gap:18px !important;
+  }
+
+  .search-result-title{
+    color:#0b1f35 !important;
+    font-size:15px !important;
+    font-weight:900 !important;
+    line-height:1.25 !important;
+    letter-spacing:0 !important;
+  }
+
+  .search-result-subtitle{
+    color:#667085 !important;
+    font-size:12px !important;
+    line-height:1.45 !important;
+    margin-top:4px !important;
+    font-weight:500 !important;
+  }
+
+  .search-result-action{
+    color:var(--ctm-teal) !important;
+    background:transparent !important;
+    border:0 !important;
+    border-radius:0 !important;
+    padding:0 !important;
+    font-size:12px !important;
+    font-weight:900 !important;
+    white-space:nowrap !important;
+    text-transform:uppercase !important;
+    letter-spacing:.04em !important;
+  }
+
+  .search-result-meta{
+    display:flex !important;
+    align-items:center !important;
+    justify-content:flex-start !important;
+    gap:8px !important;
+  }
+
+  .search-result-section{
+    display:inline-flex !important;
+    align-items:center !important;
+    max-width:100% !important;
+    background:#ffffff !important;
+    border:1px solid #dfe7ef !important;
+    color:#344054 !important;
+    border-radius:999px !important;
+    padding:5px 10px !important;
+    font-size:11px !important;
+    font-weight:800 !important;
+    line-height:1 !important;
+    white-space:nowrap !important;
+    overflow:hidden !important;
+    text-overflow:ellipsis !important;
+  }
+
+  .search-result-section:before{
+    content:"" !important;
+    width:6px !important;
+    height:6px !important;
+    border-radius:50% !important;
+    background:var(--ctm-green) !important;
+    margin-right:7px !important;
+    flex:0 0 auto !important;
+  }
+
+  .search-result-empty{
+    background:#fbfcfe !important;
+    border:0 !important;
+    border-top:1px solid #edf1f5 !important;
+    border-radius:0 !important;
+    padding:22px 20px !important;
+    color:#667085 !important;
+    font-size:13px !important;
+    line-height:1.55 !important;
+    text-align:left !important;
+  }
+
+  .search-result-empty b{
+    color:#0b1f35 !important;
+    display:block !important;
+    font-size:16px !important;
+    margin-bottom:6px !important;
+  }
+
+  @media(max-width:900px){
+    .search-results-top,
+    .search-result-head,
+    .search-result-meta{
+      align-items:flex-start !important;
+      flex-direction:column !important;
+    }
+    .search-result-item,
+    .compact-global-search .search-result-item,
+    .hub-search-panel .search-result-item{
+      padding:16px 16px 16px 66px !important;
+    }
+    .search-clear-hint{white-space:normal !important;}
+    .search-result-action{align-self:flex-start !important;}
+  }
+
+
+
+  /* Functional Professional Search Results */
+  .toolkit-search-results,
+  .compact-global-search .toolkit-search-results{
+    background:#ffffff !important;
+    border:1px solid #d7dee8 !important;
+    border-radius:16px !important;
+    box-shadow:0 12px 30px rgba(16,24,40,.12) !important;
+    padding:0 !important;
+    overflow:hidden !important;
+    max-height:430px !important;
+  }
+
+  .toolkit-search-results:before,
+  .compact-global-search .toolkit-search-results:before{
+    display:none !important;
+    content:none !important;
+  }
+
+  .toolkit-search-results.active,
+  .compact-global-search .toolkit-search-results.active{
+    display:block !important;
+  }
+
+  .search-results-top{
+    background:#f8fafc !important;
+    border:0 !important;
+    border-bottom:1px solid #e5e9ef !important;
+    border-radius:0 !important;
+    padding:12px 15px !important;
+    margin:0 !important;
+    display:flex !important;
+    align-items:center !important;
+    justify-content:space-between !important;
+    gap:12px !important;
+    position:sticky !important;
+    top:0 !important;
+    z-index:2 !important;
+  }
+
+  .search-result-summary{
+    color:#0b1f35 !important;
+    font-size:13px !important;
+    font-weight:800 !important;
+    letter-spacing:0 !important;
+    text-transform:none !important;
+    line-height:1.35 !important;
+  }
+
+  .search-clear-hint{
+    background:transparent !important;
+    border:0 !important;
+    color:#667085 !important;
+    border-radius:0 !important;
+    padding:0 !important;
+    font-size:12px !important;
+    font-weight:500 !important;
+    white-space:nowrap !important;
+  }
+
+  .search-result-item{
+    background:#ffffff !important;
+    border:0 !important;
+    border-bottom:1px solid #edf1f5 !important;
+    border-left:4px solid transparent !important;
+    border-radius:0 !important;
+    box-shadow:none !important;
+    color:#344054 !important;
+    cursor:pointer !important;
+    display:grid !important;
+    grid-template-columns:minmax(0,1fr) auto !important;
+    gap:12px !important;
+    align-items:center !important;
+    padding:13px 15px !important;
+    text-align:left !important;
+    width:100% !important;
+    transition:background .12s ease,border-color .12s ease !important;
+  }
+
+  .search-result-item:last-child{border-bottom:0 !important;}
+
+  .search-result-item:hover,
+  .search-result-item[aria-selected="true"]{
+    background:#f7fbfc !important;
+    border-left-color:var(--ctm-teal) !important;
+    color:#0b1f35 !important;
+    transform:none !important;
+    box-shadow:none !important;
+  }
+
+  .search-result-head{
+    display:block !important;
+    min-width:0 !important;
+  }
+
+  .search-result-title{
+    color:#0b1f35 !important;
+    font-size:14px !important;
+    font-weight:800 !important;
+    line-height:1.3 !important;
+    margin:0 0 4px !important;
+    white-space:nowrap !important;
+    overflow:hidden !important;
+    text-overflow:ellipsis !important;
+  }
+
+  .search-result-subtitle{
+    color:#667085 !important;
+    font-size:12px !important;
+    line-height:1.35 !important;
+    margin:0 !important;
+    white-space:nowrap !important;
+    overflow:hidden !important;
+    text-overflow:ellipsis !important;
+  }
+
+  .search-result-meta{
+    display:flex !important;
+    align-items:center !important;
+    justify-content:flex-end !important;
+    gap:10px !important;
+    min-width:max-content !important;
+  }
+
+  .search-result-section{
+    background:#eef8fb !important;
+    border:1px solid #d7edf2 !important;
+    color:var(--ctm-navy) !important;
+    border-radius:999px !important;
+    padding:5px 9px !important;
+    font-size:11px !important;
+    font-weight:700 !important;
+    line-height:1 !important;
+    max-width:150px !important;
+    white-space:nowrap !important;
+    overflow:hidden !important;
+    text-overflow:ellipsis !important;
+  }
+
+  .search-result-section:before{display:none !important;content:none !important;}
+
+  .search-result-action{
+    color:#475467 !important;
+    font-size:12px !important;
+    font-weight:800 !important;
+    white-space:nowrap !important;
+  }
+
+  .search-result-empty{
+    background:#ffffff !important;
+    border:0 !important;
+    border-left:4px solid #cbd5e1 !important;
+    border-radius:0 !important;
+    padding:18px 18px 18px 16px !important;
+    color:#667085 !important;
+    font-size:13px !important;
+    line-height:1.5 !important;
+    text-align:left !important;
+  }
+
+  .search-result-empty b{
+    color:#0b1f35 !important;
+    display:block !important;
+    font-size:15px !important;
+    margin-bottom:5px !important;
+  }
+
+  @media(max-width:900px){
+    .search-results-top{align-items:flex-start !important;flex-direction:column !important;}
+    .search-clear-hint{white-space:normal !important;}
+    .search-result-item{grid-template-columns:1fr !important;gap:8px !important;}
+    .search-result-title,.search-result-subtitle{white-space:normal !important;}
+    .search-result-meta{justify-content:space-between !important;min-width:0 !important;width:100% !important;}
+  }
+
+
+
+  /* Professional Utility Search Panel - Final Refresh */
+  .toolkit-search-wrap{
+    border-radius:20px !important;
+  }
+
+  .toolkit-search-results,
+  .compact-global-search .toolkit-search-results,
+  .hub-search-panel .toolkit-search-results{
+    background:#ffffff !important;
+    border:1px solid #cfd8e3 !important;
+    border-radius:18px !important;
+    box-shadow:0 18px 42px rgba(16,24,40,.14) !important;
+    padding:0 !important;
+    margin-top:12px !important;
+    overflow:hidden !important;
+    max-height:440px !important;
+  }
+
+  .toolkit-search-results.active,
+  .compact-global-search .toolkit-search-results.active,
+  .hub-search-panel .toolkit-search-results.active{
+    display:block !important;
+  }
+
+  .search-results-top{
+    background:linear-gradient(180deg,#fbfcfd 0%,#f5f8fb 100%) !important;
+    border:0 !important;
+    border-bottom:1px solid #e3e9f0 !important;
+    border-radius:0 !important;
+    margin:0 !important;
+    padding:14px 18px !important;
+    display:flex !important;
+    align-items:center !important;
+    justify-content:space-between !important;
+    gap:14px !important;
+    position:sticky !important;
+    top:0 !important;
+    z-index:3 !important;
+  }
+
+  .search-result-summary{
+    color:#0b1f35 !important;
+    font-size:14px !important;
+    font-weight:800 !important;
+    letter-spacing:0 !important;
+    line-height:1.3 !important;
+    text-transform:none !important;
+  }
+
+  .search-clear-hint{
+    background:#ffffff !important;
+    border:1px solid #d9e2ec !important;
+    border-radius:999px !important;
+    color:#667085 !important;
+    font-size:12px !important;
+    font-weight:600 !important;
+    padding:6px 10px !important;
+    white-space:nowrap !important;
+  }
+
+  .search-result-item,
+  .compact-global-search .search-result-item,
+  .hub-search-panel .search-result-item{
+    background:#ffffff !important;
+    border:0 !important;
+    border-bottom:1px solid #edf1f5 !important;
+    border-left:0 !important;
+    border-radius:0 !important;
+    box-shadow:none !important;
+    color:#344054 !important;
+    cursor:pointer !important;
+    display:grid !important;
+    grid-template-columns:34px minmax(0,1fr) auto !important;
+    gap:14px !important;
+    align-items:center !important;
+    padding:14px 18px !important;
+    position:relative !important;
+    text-align:left !important;
+    width:100% !important;
+    transition:background .14s ease, box-shadow .14s ease !important;
+  }
+
+  .search-result-item:before,
+  .compact-global-search .search-result-item:before,
+  .hub-search-panel .search-result-item:before{
+    content:"" !important;
+    width:34px !important;
+    height:34px !important;
+    border-radius:10px !important;
+    background:#eef8fb !important;
+    border:1px solid #d7edf2 !important;
+    position:static !important;
+    display:block !important;
+  }
+
+  .search-result-item:after,
+  .compact-global-search .search-result-item:after,
+  .hub-search-panel .search-result-item:after{
+    content:"↗" !important;
+    position:absolute !important;
+    left:28px !important;
+    top:50% !important;
+    transform:translateY(-50%) !important;
+    color:var(--ctm-teal) !important;
+    font-size:15px !important;
+    font-weight:900 !important;
+    line-height:1 !important;
+  }
+
+  .search-result-item:last-child,
+  .compact-global-search .search-result-item:last-child,
+  .hub-search-panel .search-result-item:last-child{
+    border-bottom:0 !important;
+  }
+
+  .search-result-item:hover,
+  .search-result-item[aria-selected="true"],
+  .compact-global-search .search-result-item:hover,
+  .hub-search-panel .search-result-item:hover{
+    background:#f7fbfc !important;
+    box-shadow:inset 4px 0 0 var(--ctm-teal) !important;
+    color:#0b1f35 !important;
+    transform:none !important;
+  }
+
+  .search-result-head{
+    display:block !important;
+    min-width:0 !important;
+  }
+
+  .search-result-title{
+    color:#0b1f35 !important;
+    font-size:14px !important;
+    font-weight:800 !important;
+    line-height:1.35 !important;
+    margin:0 0 4px !important;
+    overflow:hidden !important;
+    text-overflow:ellipsis !important;
+    white-space:nowrap !important;
+  }
+
+  .search-result-subtitle{
+    color:#667085 !important;
+    font-size:12px !important;
+    line-height:1.35 !important;
+    margin:0 !important;
+    overflow:hidden !important;
+    text-overflow:ellipsis !important;
+    white-space:nowrap !important;
+  }
+
+  .search-result-meta{
+    display:flex !important;
+    align-items:center !important;
+    justify-content:flex-end !important;
+    gap:10px !important;
+    min-width:max-content !important;
+  }
+
+  .search-result-section{
+    background:#f8fafc !important;
+    border:1px solid #d9e2ec !important;
+    border-radius:999px !important;
+    color:#344054 !important;
+    font-size:11px !important;
+    font-weight:700 !important;
+    line-height:1 !important;
+    max-width:170px !important;
+    overflow:hidden !important;
+    padding:6px 9px !important;
+    text-overflow:ellipsis !important;
+    white-space:nowrap !important;
+  }
+
+  .search-result-section:before{
+    display:none !important;
+    content:none !important;
+  }
+
+  .search-result-action{
+    background:var(--ctm-navy) !important;
+    border-radius:999px !important;
+    color:#ffffff !important;
+    font-size:11px !important;
+    font-weight:800 !important;
+    letter-spacing:.01em !important;
+    padding:6px 10px !important;
+    white-space:nowrap !important;
+  }
+
+  .search-result-empty{
+    background:#ffffff !important;
+    border:0 !important;
+    border-radius:0 !important;
+    color:#667085 !important;
+    font-size:13px !important;
+    line-height:1.55 !important;
+    padding:22px 20px !important;
+    text-align:left !important;
+  }
+
+  .search-result-empty b{
+    color:#0b1f35 !important;
+    display:block !important;
+    font-size:15px !important;
+    margin-bottom:5px !important;
+  }
+
+  @media(max-width:900px){
+    .search-results-top{align-items:flex-start !important;flex-direction:column !important;}
+    .search-clear-hint{white-space:normal !important;}
+    .search-result-item,
+    .compact-global-search .search-result-item,
+    .hub-search-panel .search-result-item{grid-template-columns:34px minmax(0,1fr) !important;align-items:start !important;}
+    .search-result-meta{grid-column:2 !important;justify-content:flex-start !important;min-width:0 !important;width:100% !important;flex-wrap:wrap !important;}
+    .search-result-title,.search-result-subtitle{white-space:normal !important;}
+  }
+
+
+  /* Short, de-duplicated search results */
+  .toolkit-search-results,
+  .compact-global-search .toolkit-search-results,
+  .hub-search-panel .toolkit-search-results{
+    max-height:315px !important;
+  }
+
+  .search-results-top{
+    padding:11px 16px !important;
+  }
+
+  .search-result-item,
+  .compact-global-search .search-result-item,
+  .hub-search-panel .search-result-item{
+    grid-template-columns:minmax(0,1fr) auto !important;
+    gap:12px !important;
+    padding:11px 16px !important;
+  }
+
+  .search-result-item:before,
+  .compact-global-search .search-result-item:before,
+  .hub-search-panel .search-result-item:before,
+  .search-result-item:after,
+  .compact-global-search .search-result-item:after,
+  .hub-search-panel .search-result-item:after{
+    display:none !important;
+    content:none !important;
+  }
+
+  .search-result-title{
+    font-size:13.5px !important;
+    margin-bottom:2px !important;
+  }
+
+  .search-result-subtitle{
+    color:#667085 !important;
+    font-size:11.5px !important;
+  }
+
+  .search-result-section{
+    max-width:135px !important;
+  }
+
+  .search-result-action{
+    background:#ffffff !important;
+    border:1px solid #d7edf2 !important;
+    color:var(--ctm-navy) !important;
+  }
+
+  @media(max-width:900px){
+    .search-result-item,
+    .compact-global-search .search-result-item,
+    .hub-search-panel .search-result-item{grid-template-columns:1fr !important;}
+    .search-result-meta{grid-column:auto !important;}
   }
 
 </style>
@@ -9270,19 +10150,39 @@ Then enable GitHub Pages from Settings > Pages > Deploy from branch > main > /ro
     result.setAttribute('data-target', item.target);
     result.setAttribute('aria-label', 'Open ' + item.label);
 
+    const head = document.createElement('div');
+    head.className = 'search-result-head';
+
+    const titleWrap = document.createElement('div');
+
     const title = document.createElement('div');
-    title.style.fontWeight = '900';
+    title.className = 'search-result-title';
     title.textContent = item.label;
 
-    const detail = document.createElement('div');
-    detail.style.fontWeight = '600';
-    detail.style.fontSize = '12px';
-    detail.style.color = '#667085';
-    detail.style.marginTop = '4px';
-    detail.textContent = makeLabelFromTarget(item.target);
+    const subtitle = document.createElement('div');
+    subtitle.className = 'search-result-subtitle';
+    subtitle.textContent = 'Open the related toolkit page or section.';
 
-    result.appendChild(title);
-    result.appendChild(detail);
+    const action = document.createElement('div');
+    action.className = 'search-result-action';
+    action.textContent = 'Open →';
+
+    titleWrap.appendChild(title);
+    titleWrap.appendChild(subtitle);
+    head.appendChild(titleWrap);
+    head.appendChild(action);
+
+    const meta = document.createElement('div');
+    meta.className = 'search-result-meta';
+
+    const section = document.createElement('span');
+    section.className = 'search-result-section';
+    section.textContent = makeLabelFromTarget(item.target);
+
+    meta.appendChild(section);
+
+    result.appendChild(head);
+    result.appendChild(meta);
     result.addEventListener('click', function(e){
       e.preventDefault();
       e.stopPropagation();
@@ -9336,12 +10236,27 @@ Then enable GitHub Pages from Settings > Pages > Deploy from branch > main > /ro
 
     if (!matches.length) {
       const noResult = document.createElement('div');
-      noResult.className = 'search-result-item';
-      noResult.textContent = 'No results found. Try bid, CRM, training, North America, ANZ, templates, legal, or win loss.';
+      noResult.className = 'search-result-empty';
+      noResult.innerHTML = '<b>No matching results</b>Try a broader term such as bid, training, region, templates, legal, or win loss.';
       results.appendChild(noResult);
       results.classList.add('active');
       return [];
     }
+
+    const summary = document.createElement('div');
+    summary.className = 'search-results-top';
+
+    const summaryText = document.createElement('div');
+    summaryText.className = 'search-result-summary';
+    summaryText.textContent = matches.length + ' matching result' + (matches.length === 1 ? '' : 's');
+
+    const hint = document.createElement('div');
+    hint.className = 'search-clear-hint';
+    hint.textContent = 'Select a result to open';
+
+    summary.appendChild(summaryText);
+    summary.appendChild(hint);
+    results.appendChild(summary);
 
     matches.forEach(item => results.appendChild(createResult(item, query)));
     results.classList.add('active');
@@ -9862,38 +10777,113 @@ Then enable GitHub Pages from Settings > Pages > Deploy from branch > main > /ro
   function getMatches(query){
     var q = normalize(query);
     if(!q) return [];
-    return buildSearchIndex()
-      .map(function(item){ item._score = scoreItem(item, q); return item; })
+
+    var seen = new Set();
+    var uniqueMatches = [];
+
+    buildSearchIndex()
+      .map(function(item){
+        return Object.assign({}, item, {_score: scoreItem(item, q)});
+      })
       .filter(function(item){ return item._score > 0; })
       .sort(function(a,b){ return b._score - a._score || a.label.localeCompare(b.label); })
-      .slice(0, 12);
+      .forEach(function(item){
+        var category = getSearchCategory(item.target);
+        var cleanLabel = normalize(item.label).replace(/\b(global sales hub|ctm global sales hub|section|overview)\b/g,'').trim();
+        var key = category + '|' + cleanLabel;
+
+        if(!seen.has(key)){
+          seen.add(key);
+          uniqueMatches.push(item);
+        }
+      });
+
+    return uniqueMatches.slice(0, 6);
+  }
+
+  function getSearchCategory(target){
+    if (/^(north-america|anz|apac|emea)(-|$)/.test(target)) return 'Region';
+    if (/bid|rfp|proposal|pricing|submission|kickoff|briefing/.test(target)) return 'Bid Toolkit';
+    if (/training|onboarding|job-aids|refresher/.test(target)) return 'Training';
+    if (/template|crm-update-guide/.test(target)) return 'Templates';
+    if (/win-loss|competitor|battlecards|market-product-updates/.test(target)) return 'Win / Loss';
+    if (/global-tool|crm-tools|reporting|sales-enablement|proposal-tools|technology|resource-library|partner-tools/.test(target)) return 'Global Tools';
+    if (/customer-proof|retain-grow|growth/.test(target)) return 'Customer Proof';
+    if (/contact|help/.test(target)) return 'Help & Contacts';
+    if (/sales-stages|stage/.test(target)) return 'Sales Stages';
+    if (/dashboard/.test(target)) return 'Dashboard';
+    return 'Toolkit Section';
   }
 
   function renderResults(){
     var input = document.getElementById('toolkitSearchInput');
     var results = document.getElementById('toolkitSearchResults');
     if(!input || !results) return [];
+    var query = normalize(input.value);
     var matches = getMatches(input.value);
     results.innerHTML = '';
-    if(!normalize(input.value)){
+    if(!query){
       results.classList.remove('active');
       return [];
     }
     if(!matches.length){
       var empty = document.createElement('div');
-      empty.className = 'search-result-item';
-      empty.textContent = 'No results found. Try bid, APAC, dashboard, templates, training, contacts, or win loss.';
+      empty.className = 'search-result-empty';
+      empty.innerHTML = '<b>No matching section found</b>Try a broader term such as bid, region, APAC, dashboard, templates, training, contacts, or win loss.';
       results.appendChild(empty);
       results.classList.add('active');
       return [];
     }
+
+    var top = document.createElement('div');
+    top.className = 'search-results-top';
+    var summary = document.createElement('div');
+    summary.className = 'search-result-summary';
+    summary.textContent = matches.length === 1 ? 'Top unique result' : 'Top ' + matches.length + ' unique results';
+    var hint = document.createElement('div');
+    hint.className = 'search-clear-hint';
+    hint.textContent = 'Showing best matches only';
+    top.appendChild(summary);
+    top.appendChild(hint);
+    results.appendChild(top);
+
     matches.forEach(function(item, index){
       var button = document.createElement('button');
       button.type = 'button';
       button.className = 'search-result-item';
       button.setAttribute('data-target', item.target);
       button.setAttribute('aria-selected', index === 0 ? 'true' : 'false');
-      button.innerHTML = '<div style="font-weight:900">' + item.label + '</div><div style="font-size:12px;color:#667085;margin-top:4px">Open selected section →</div>';
+      button.setAttribute('aria-label', 'Open ' + item.label);
+
+      var head = document.createElement('div');
+      head.className = 'search-result-head';
+
+      var title = document.createElement('div');
+      title.className = 'search-result-title';
+      title.textContent = item.label;
+
+      var subtitle = document.createElement('div');
+      subtitle.className = 'search-result-subtitle';
+      subtitle.textContent = getSearchCategory(item.target) + ' • ' + labelFromTarget(item.target);
+
+      var meta = document.createElement('div');
+      meta.className = 'search-result-meta';
+
+      var section = document.createElement('span');
+      section.className = 'search-result-section';
+      section.textContent = getSearchCategory(item.target);
+
+      var action = document.createElement('span');
+      action.className = 'search-result-action';
+      action.textContent = 'Open';
+
+      head.appendChild(title);
+      head.appendChild(subtitle);
+      meta.appendChild(section);
+      meta.appendChild(action);
+      button.appendChild(head);
+      button.appendChild(meta);
+
       button.addEventListener('click', function(event){
         event.preventDefault();
         event.stopPropagation();
@@ -9925,10 +10915,22 @@ Then enable GitHub Pages from Settings > Pages > Deploy from branch > main > /ro
     input.addEventListener('focus', renderResults);
     input.addEventListener('keydown', function(event){
       var results = document.getElementById('toolkitSearchResults');
+      var items = results ? Array.prototype.slice.call(results.querySelectorAll('.search-result-item')) : [];
       var selected = results ? results.querySelector('.search-result-item[aria-selected="true"]') : null;
+      var currentIndex = selected ? items.indexOf(selected) : 0;
+      if(event.key === 'ArrowDown' || event.key === 'ArrowUp'){
+        event.preventDefault();
+        if(!items.length) return;
+        var nextIndex = event.key === 'ArrowDown' ? currentIndex + 1 : currentIndex - 1;
+        if(nextIndex < 0) nextIndex = items.length - 1;
+        if(nextIndex >= items.length) nextIndex = 0;
+        items.forEach(function(item, index){ item.setAttribute('aria-selected', index === nextIndex ? 'true' : 'false'); });
+        items[nextIndex].scrollIntoView({block:'nearest'});
+      }
       if(event.key === 'Enter'){
         event.preventDefault();
-        var target = selected && selected.getAttribute('data-target');
+        var active = results ? results.querySelector('.search-result-item[aria-selected="true"]') : null;
+        var target = active && active.getAttribute('data-target');
         var matches = getMatches(input.value);
         openTarget(target || (matches[0] && matches[0].target));
       }
