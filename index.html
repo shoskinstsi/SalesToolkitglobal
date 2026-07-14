@@ -10656,11 +10656,42 @@
     });
   }
 
+
+  window.__ctmBackStack = window.__ctmBackStack || [];
+  window.__ctmNavigationBackMode = false;
+  window.__ctmGetActiveTarget = function(){
+    var active = document.querySelector('.view.active');
+    if(!active){ active = Array.from(document.querySelectorAll('.view')).find(function(view){ return view.style.display !== 'none'; }); }
+    return active && active.id ? active.id.replace(/^view-/, '') : 'home';
+  };
+  window.__ctmUpdateBackButtons = function(){
+    document.querySelectorAll('.backtop').forEach(function(button){
+      button.textContent = '← Back to Previous Page';
+      button.setAttribute('title','Return to the page or section you came from');
+      button.setAttribute('aria-label','Back to previous page');
+    });
+  };
+  window.__ctmRecordToolkitHistory = function(target){
+    var activeTarget = window.__ctmGetActiveTarget ? window.__ctmGetActiveTarget() : 'home';
+    if(!window.__ctmNavigationBackMode && activeTarget && target && activeTarget !== target){
+      var stack = window.__ctmBackStack || (window.__ctmBackStack = []);
+      if(stack[stack.length - 1] !== activeTarget){ stack.push(activeTarget); }
+      if(stack.length > 75){ stack.splice(0, stack.length - 75); }
+    }
+    if(window.__ctmUpdateBackButtons){ window.__ctmUpdateBackButtons(); }
+  };
+  window.__ctmGoBackToPrevious = function(fallbackTarget){
+    var stack = window.__ctmBackStack || (window.__ctmBackStack = []);
+    return stack.pop() || fallbackTarget || 'home';
+  };
+
   function activateToolkitSection(target){
     if(!target){ return false; }
 
     var view = document.getElementById('view-' + target);
     if(!view){ return false; }
+
+    if(window.__ctmRecordToolkitHistory){ window.__ctmRecordToolkitHistory(target); }
 
     document.querySelectorAll('.view').forEach(function(section){
       section.classList.remove('active');
@@ -10693,6 +10724,17 @@
 
     var target = resolveTarget(link);
     if(!target){ return; }
+
+    if(link.classList && link.classList.contains('backtop')){
+      event.preventDefault();
+      event.stopPropagation();
+      var previousTarget = window.__ctmGoBackToPrevious ? window.__ctmGoBackToPrevious(target) : target;
+      window.__ctmNavigationBackMode = true;
+      activateToolkitSection(previousTarget);
+      window.__ctmNavigationBackMode = false;
+      if(history.replaceState){ history.replaceState(null, '', '#view-' + previousTarget); }
+      return;
+    }
 
     if(activateToolkitSection(target)){
       event.preventDefault();
@@ -10739,6 +10781,8 @@
   function openSelectedSection(target){
     var view = document.getElementById('view-' + target);
     if(!view){ return false; }
+
+    if(window.__ctmRecordToolkitHistory){ window.__ctmRecordToolkitHistory(target); }
 
     document.querySelectorAll('.view').forEach(function(section){
       section.classList.remove('active');
@@ -10982,6 +11026,8 @@
     var view = document.getElementById('view-' + target);
     if(!view) return false;
 
+    if(window.__ctmRecordToolkitHistory){ window.__ctmRecordToolkitHistory(target); }
+
     if (typeof window.CTMToolkitNavigate === 'function') {
       window.CTMToolkitNavigate(target, {record:true});
     }
@@ -11209,6 +11255,22 @@
     document.addEventListener('DOMContentLoaded', initSearchSelectedSectionFix);
   } else {
     initSearchSelectedSectionFix();
+  }
+})();
+</script>
+
+<script>
+(function(){
+  function initPreviousPageBackButtons(){
+    if(window.__ctmUpdateBackButtons){ window.__ctmUpdateBackButtons(); }
+    document.querySelectorAll('.backtop').forEach(function(button){
+      button.setAttribute('href','#');
+    });
+  }
+  if(document.readyState === 'loading'){
+    document.addEventListener('DOMContentLoaded', initPreviousPageBackButtons);
+  } else {
+    initPreviousPageBackButtons();
   }
 })();
 </script>
