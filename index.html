@@ -4193,6 +4193,31 @@
   @media(max-width:1100px){.partner-materials-grid{grid-template-columns:repeat(2,1fr)}}
   @media(max-width:700px){.partner-materials-grid{grid-template-columns:1fr}}
 
+
+
+  /* Partner Agency Process clickable cards */
+  .partner-process-hero{background:linear-gradient(125deg,#003b49 0%,#005f73 58%,#76bc43 150%);position:relative;overflow:hidden}
+  .partner-process-hero:after{content:"";position:absolute;right:-130px;top:-150px;width:430px;height:430px;border-radius:50%;border:1px solid rgba(255,255,255,.28);box-shadow:0 0 0 38px rgba(255,255,255,.04),0 0 0 78px rgba(255,255,255,.025)}
+  .partner-process-hero .eyebrow,.partner-process-hero h1,.partner-process-hero p,.partner-process-hero .owner{position:relative;z-index:1}
+  .partner-process-intro{background:#fff;border:1px solid var(--line);border-radius:24px;padding:26px;box-shadow:0 10px 26px rgba(15,23,42,.08);margin-bottom:22px}
+  .partner-process-intro h2{margin:0 0 8px;color:#0b1f35;font-size:25px}
+  .partner-process-intro p{margin:0;color:#475467;line-height:1.6;max-width:980px}
+  .partner-process-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:18px}
+  .partner-process-card{background:linear-gradient(180deg,#ffffff 0%,#f8fafc 100%);border:1px solid var(--line);border-radius:20px;padding:20px;box-shadow:0 3px 12px rgba(15,23,42,.06);border-top:7px solid var(--ctm-teal);transition:.15s ease;position:relative;overflow:hidden;text-decoration:none;color:var(--ink);display:block}
+  .partner-process-card:nth-child(2){border-top-color:var(--ctm-green)}
+  .partner-process-card:nth-child(3){border-top-color:#f0b429}
+  .partner-process-card:nth-child(4){border-top-color:#667085}
+  .partner-process-card:nth-child(5){border-top-color:#007c94}
+  .partner-process-card:nth-child(6){border-top-color:#76bc43}
+  .partner-process-card:hover{transform:translateY(-2px);box-shadow:0 12px 26px rgba(15,23,42,.12);background:#fff}
+  .partner-process-step{display:inline-flex;align-items:center;justify-content:center;width:42px;height:42px;border-radius:14px;background:#eef8fb;color:var(--ctm-navy);font-weight:900;margin-bottom:14px}
+  .partner-process-card h3{margin:0 0 8px;color:#0b1f35;font-size:19px}
+  .partner-process-card p{margin:0;color:#667085;line-height:1.5;font-size:14px}
+  .partner-process-action,.partner-referral-action,.partner-materials-action{display:inline-flex;align-items:center;margin-top:16px;color:var(--ctm-teal);font-weight:900;font-size:13px}
+  .partner-referral-card,.partner-materials-card{text-decoration:none;color:var(--ink);display:block;cursor:pointer}
+  @media(max-width:1100px){.partner-process-grid{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:700px){.partner-process-grid{grid-template-columns:1fr}}
+
 </style>
 <!-- Updated: All section cards and navigation items now include real clickable section links with hash URLs. -->
 </head>
@@ -4447,7 +4472,6 @@
 <a class="backtop" data-target="home" href="#view-home">Back to Home ↑</a>
 </section>
 </section>
-
 <section class="view" id="view-global-bid-process">
 <section class="hero executive-hub-hero">
 <div class="eyebrow">Global Sales</div>
@@ -4486,7 +4510,6 @@
 <a class="backtop" data-target="global-sales" href="#view-global-sales">Back to Global Sales ↑</a>
 </section>
 </section>
-
 <section class="view" id="view-global-bid-resources">
 <section class="hero">
 <div class="eyebrow">Global Bid Toolkit</div>
@@ -4499,15 +4522,15 @@
 <p>Use this page as the controlled library for global bid assets. Each resource should include an owner, review date, region applicability, and approved status before being used in a client response.</p>
 </section>
 <section class="global-bid-resource-grid">
-<a class="global-bid-resource" data-target="global-tool-win-opportunity-workbook" href="#view-global-tool-win-opportunity-workbook" aria-label="Open Win Opportunity Workbook resource"><h3>Win Opportunity Workbook (WOW)</h3><p>Primary working file for discovery notes, bid/no-bid calculation, win strategy, solution configuration, risks, pricing inputs, and action ownership.</p><span class="global-bid-resource-action">Open resource →</span></a>
-<a class="global-bid-resource" data-target="executive-briefing" href="#view-executive-briefing" aria-label="Open Executive Briefing resource"><h3>Executive Briefing</h3><p>Leadership-ready summary of client opportunity, service solution, global requirements, competitive position, and bid/no-bid recommendation.</p><span class="global-bid-resource-action">Open resource →</span></a>
-<a class="global-bid-resource" data-target="bid-no-bid" href="#view-bid-no-bid" aria-label="Open Bid No-Bid Calculator resource"><h3>Bid / No-Bid Calculator</h3><p>Decision tool to validate strategic fit, profitability, operational feasibility, relationship strength, and win probability.</p><span class="global-bid-resource-action">Open resource →</span></a>
-<a class="global-bid-resource" data-target="rfp-intake" href="#view-rfp-intake" aria-label="Open RFP Source Documents resource"><h3>RFP Source Documents</h3><p>Client RFP, Q&amp;A documents, addenda, pricing schedules, contract terms, portal instructions, and required attachments.</p><span class="global-bid-resource-action">Open resource →</span></a>
-<a class="global-bid-resource" data-target="pricing-intake" href="#view-pricing-intake" aria-label="Open Pricing and Cost Model Files resource"><h3>Pricing &amp; Cost Model Files</h3><p>Approved pricing templates, assumptions, cost model components, regional pricing responses, and final pricing confirmation.</p><span class="global-bid-resource-action">Open resource →</span></a>
-<a class="global-bid-resource" data-target="global-bid-process" href="#view-global-bid-process" aria-label="Open Global Solution Configuration resource"><h3>Global Solution Configuration</h3><p>Documented service model, technology configuration, regional service expectations, CPP/partner agency approach, and approval notes.</p><span class="global-bid-resource-action">Open resource →</span></a>
-<a class="global-bid-resource" data-target="bid-writing-checklist" href="#view-bid-writing-checklist" aria-label="Open Bid Calendar and Action Log resource"><h3>Bid Calendar &amp; Action Log</h3><p>Critical dates, owner assignments, SME deadlines, pricing due dates, draft review milestones, and final submission date.</p><span class="global-bid-resource-action">Open resource →</span></a>
-<a class="global-bid-resource" data-target="sales-toolkit-deck-template" href="#view-sales-toolkit-deck-template" aria-label="Open Presentation and Demo Materials resource"><h3>Presentation &amp; Demo Materials</h3><p>Approved presentation deck, technology demo outline, regional SME talking points, proof points, and follow-up materials.</p><span class="global-bid-resource-action">Open resource →</span></a>
-<a class="global-bid-resource" data-target="final-submission" href="#view-final-submission" aria-label="Open Final Response Archive resource"><h3>Final Response Archive</h3><p>Final submitted response, attachments, approval confirmations, client delivery record, and post-submission presentation materials.</p><span class="global-bid-resource-action">Open resource →</span></a>
+<a aria-label="Open Win Opportunity Workbook resource" class="global-bid-resource" data-target="global-tool-win-opportunity-workbook" href="#view-global-tool-win-opportunity-workbook"><h3>Win Opportunity Workbook (WOW)</h3><p>Primary working file for discovery notes, bid/no-bid calculation, win strategy, solution configuration, risks, pricing inputs, and action ownership.</p><span class="global-bid-resource-action">Open resource →</span></a>
+<a aria-label="Open Executive Briefing resource" class="global-bid-resource" data-target="executive-briefing" href="#view-executive-briefing"><h3>Executive Briefing</h3><p>Leadership-ready summary of client opportunity, service solution, global requirements, competitive position, and bid/no-bid recommendation.</p><span class="global-bid-resource-action">Open resource →</span></a>
+<a aria-label="Open Bid No-Bid Calculator resource" class="global-bid-resource" data-target="bid-no-bid" href="#view-bid-no-bid"><h3>Bid / No-Bid Calculator</h3><p>Decision tool to validate strategic fit, profitability, operational feasibility, relationship strength, and win probability.</p><span class="global-bid-resource-action">Open resource →</span></a>
+<a aria-label="Open RFP Source Documents resource" class="global-bid-resource" data-target="rfp-intake" href="#view-rfp-intake"><h3>RFP Source Documents</h3><p>Client RFP, Q&amp;A documents, addenda, pricing schedules, contract terms, portal instructions, and required attachments.</p><span class="global-bid-resource-action">Open resource →</span></a>
+<a aria-label="Open Pricing and Cost Model Files resource" class="global-bid-resource" data-target="pricing-intake" href="#view-pricing-intake"><h3>Pricing &amp; Cost Model Files</h3><p>Approved pricing templates, assumptions, cost model components, regional pricing responses, and final pricing confirmation.</p><span class="global-bid-resource-action">Open resource →</span></a>
+<a aria-label="Open Global Solution Configuration resource" class="global-bid-resource" data-target="global-bid-process" href="#view-global-bid-process"><h3>Global Solution Configuration</h3><p>Documented service model, technology configuration, regional service expectations, CPP/partner agency approach, and approval notes.</p><span class="global-bid-resource-action">Open resource →</span></a>
+<a aria-label="Open Bid Calendar and Action Log resource" class="global-bid-resource" data-target="bid-writing-checklist" href="#view-bid-writing-checklist"><h3>Bid Calendar &amp; Action Log</h3><p>Critical dates, owner assignments, SME deadlines, pricing due dates, draft review milestones, and final submission date.</p><span class="global-bid-resource-action">Open resource →</span></a>
+<a aria-label="Open Presentation and Demo Materials resource" class="global-bid-resource" data-target="sales-toolkit-deck-template" href="#view-sales-toolkit-deck-template"><h3>Presentation &amp; Demo Materials</h3><p>Approved presentation deck, technology demo outline, regional SME talking points, proof points, and follow-up materials.</p><span class="global-bid-resource-action">Open resource →</span></a>
+<a aria-label="Open Final Response Archive resource" class="global-bid-resource" data-target="final-submission" href="#view-final-submission"><h3>Final Response Archive</h3><p>Final submitted response, attachments, approval confirmations, client delivery record, and post-submission presentation materials.</p><span class="global-bid-resource-action">Open resource →</span></a>
 </section>
 <section class="content-card" style="margin-top:20px">
 <h2>Suggested SharePoint Metadata</h2>
@@ -4519,8 +4542,6 @@
 <a class="backtop" data-target="bid-toolkit" href="#view-bid-toolkit">Back to Global Bid Toolkit ↑</a>
 </section>
 </section>
-
-
 <section class="view" id="view-global-bid-raci">
 <section class="hero">
 <div class="eyebrow">Global Bid Toolkit</div>
@@ -4533,7 +4554,7 @@
 <p>RACI key: Responsible leads the work, Accountable approves, Consulted assists in completing work, and Informed is notified of results.</p>
 <div class="raci-legend"><span class="raci-r">R Responsible</span><span class="raci-a">A Accountable</span><span class="raci-c">C Consulted</span><span class="raci-i">I Informed</span></div>
 </section>
-<div class="raci-table-wrap"><table class="raci-table"><thead><tr><th>Action</th><th>Deal Captain / Sales Lead*</th><th>Account Manager**</th><th>Technology Solutioning</th><th>Regional Sales Lead</th><th>Sales Support</th><th>Pricing</th><th>CPP***</th><th>CTM Partner Agency†</th><th>General Manager</th></tr></thead><tbody><tr><td>Discovery call</td><td><span class="raci-cell raci-r">R</span></td><td></td><td><span class="raci-cell raci-i">I</span></td><td><span class="raci-cell raci-c">C</span></td><td><span class="raci-cell raci-c">C</span></td><td><span class="raci-cell raci-i">I</span></td><td><span class="raci-cell raci-c">C</span></td><td></td><td><span class="raci-cell raci-i">I</span></td></tr><tr><td>Complete discovery questions</td><td><span class="raci-cell raci-r">R</span></td><td></td><td><span class="raci-cell raci-i">I</span></td><td><span class="raci-cell raci-c">C</span></td><td></td><td><span class="raci-cell raci-i">I</span></td><td><span class="raci-cell raci-c">C</span></td><td></td><td><span class="raci-cell raci-i">I</span></td></tr><tr><td>Service configuration</td><td><span class="raci-cell raci-r">R</span></td><td></td><td></td><td><span class="raci-cell raci-r">R</span></td><td><span class="raci-cell raci-i">I</span></td><td><span class="raci-cell raci-c">C</span></td><td><span class="raci-cell raci-c">C</span></td><td></td><td><span class="raci-cell raci-i">I</span></td></tr><tr><td>Technology configuration</td><td><span class="raci-cell raci-r">R</span></td><td></td><td><span class="raci-cell raci-r">R</span></td><td><span class="raci-cell raci-r">R</span></td><td><span class="raci-cell raci-i">I</span></td><td><span class="raci-cell raci-i">I</span></td><td><span class="raci-cell raci-c">C</span></td><td></td><td><span class="raci-cell raci-i">I</span></td></tr><tr><td>Distribute bid documents</td><td><span class="raci-cell raci-r">R</span></td><td></td><td><span class="raci-cell raci-i">I</span></td><td><span class="raci-cell raci-i">I</span></td><td><span class="raci-cell raci-i">I</span></td><td><span class="raci-cell raci-i">I</span></td><td><span class="raci-cell raci-i">I</span></td><td></td><td><span class="raci-cell raci-i">I</span></td></tr><tr><td>Complete Executive Briefing</td><td><span class="raci-cell raci-r">R</span></td><td></td><td><span class="raci-cell raci-i">I</span></td><td><span class="raci-cell raci-i">I</span></td><td><span class="raci-cell raci-i">I</span></td><td><span class="raci-cell raci-i">I</span></td><td><span class="raci-cell raci-i">I</span></td><td></td><td><span class="raci-cell raci-i">I</span></td></tr><tr><td>Send market-specific questions to region or market</td><td><span class="raci-cell raci-r">R</span></td><td></td><td><span class="raci-cell raci-c">C</span></td><td><span class="raci-cell raci-c">C</span></td><td><span class="raci-cell raci-i">I</span></td><td></td><td><span class="raci-cell raci-c">C</span></td><td></td><td><span class="raci-cell raci-i">I</span></td></tr><tr><td>RFP and pricing responses</td><td><span class="raci-cell raci-a">A</span></td><td></td><td></td><td></td><td><span class="raci-cell raci-r">R</span></td><td><span class="raci-cell raci-r">R</span></td><td></td><td></td><td><span class="raci-cell raci-c">C</span></td></tr><tr><td>RFP submission</td><td><span class="raci-cell raci-r">R</span></td><td></td><td><span class="raci-cell raci-i">I</span></td><td><span class="raci-cell raci-i">I</span></td><td><span class="raci-cell raci-c">C</span></td><td><span class="raci-cell raci-i">I</span></td><td><span class="raci-cell raci-i">I</span></td><td></td><td><span class="raci-cell raci-i">I</span></td></tr><tr><td>Client presentations</td><td><span class="raci-cell raci-r">R</span></td><td></td><td></td><td><span class="raci-cell raci-c">C</span></td><td><span class="raci-cell raci-c">C</span></td><td></td><td><span class="raci-cell raci-c">C</span></td><td><span class="raci-cell raci-c">C</span></td><td><span class="raci-cell raci-c">C</span></td></tr><tr><td>Sales handover document</td><td><span class="raci-cell raci-r">R</span></td><td><span class="raci-cell raci-c">C</span></td><td><span class="raci-cell raci-c">C</span></td><td></td><td></td><td></td><td></td><td></td><td><span class="raci-cell raci-i">I</span></td></tr><tr><td>Pre-implementation technology review & sign-off</td><td><span class="raci-cell raci-c">C</span></td><td><span class="raci-cell raci-r">R</span></td><td><span class="raci-cell raci-a">A</span></td><td><span class="raci-cell raci-c">C</span></td><td></td><td></td><td><span class="raci-cell raci-c">C</span></td><td><span class="raci-cell raci-a">A</span></td><td><span class="raci-cell raci-a">A</span></td></tr><tr><td>Pre-implementation data scope review & sign-off</td><td><span class="raci-cell raci-c">C</span></td><td><span class="raci-cell raci-r">R</span></td><td></td><td><span class="raci-cell raci-c">C</span></td><td></td><td></td><td><span class="raci-cell raci-c">C</span></td><td><span class="raci-cell raci-a">A</span></td><td><span class="raci-cell raci-a">A</span></td></tr><tr><td>Pre-implementation operational review & sign-off</td><td><span class="raci-cell raci-c">C</span></td><td><span class="raci-cell raci-r">R</span></td><td></td><td><span class="raci-cell raci-c">C</span></td><td></td><td></td><td><span class="raci-cell raci-c">C</span></td><td><span class="raci-cell raci-a">A</span></td><td><span class="raci-cell raci-a">A</span></td></tr><tr><td>Pre-implementation pricing review</td><td><span class="raci-cell raci-c">C</span></td><td><span class="raci-cell raci-r">R</span></td><td></td><td><span class="raci-cell raci-c">C</span></td><td></td><td><span class="raci-cell raci-c">C</span></td><td><span class="raci-cell raci-c">C</span></td><td><span class="raci-cell raci-a">A</span></td><td><span class="raci-cell raci-a">A</span></td></tr></tbody></table></div>
+<div class="raci-table-wrap"><table class="raci-table"><thead><tr><th>Action</th><th>Deal Captain / Sales Lead*</th><th>Account Manager**</th><th>Technology Solutioning</th><th>Regional Sales Lead</th><th>Sales Support</th><th>Pricing</th><th>CPP***</th><th>CTM Partner Agency†</th><th>General Manager</th></tr></thead><tbody><tr><td>Discovery call</td><td><span class="raci-cell raci-r">R</span></td><td></td><td><span class="raci-cell raci-i">I</span></td><td><span class="raci-cell raci-c">C</span></td><td><span class="raci-cell raci-c">C</span></td><td><span class="raci-cell raci-i">I</span></td><td><span class="raci-cell raci-c">C</span></td><td></td><td><span class="raci-cell raci-i">I</span></td></tr><tr><td>Complete discovery questions</td><td><span class="raci-cell raci-r">R</span></td><td></td><td><span class="raci-cell raci-i">I</span></td><td><span class="raci-cell raci-c">C</span></td><td></td><td><span class="raci-cell raci-i">I</span></td><td><span class="raci-cell raci-c">C</span></td><td></td><td><span class="raci-cell raci-i">I</span></td></tr><tr><td>Service configuration</td><td><span class="raci-cell raci-r">R</span></td><td></td><td></td><td><span class="raci-cell raci-r">R</span></td><td><span class="raci-cell raci-i">I</span></td><td><span class="raci-cell raci-c">C</span></td><td><span class="raci-cell raci-c">C</span></td><td></td><td><span class="raci-cell raci-i">I</span></td></tr><tr><td>Technology configuration</td><td><span class="raci-cell raci-r">R</span></td><td></td><td><span class="raci-cell raci-r">R</span></td><td><span class="raci-cell raci-r">R</span></td><td><span class="raci-cell raci-i">I</span></td><td><span class="raci-cell raci-i">I</span></td><td><span class="raci-cell raci-c">C</span></td><td></td><td><span class="raci-cell raci-i">I</span></td></tr><tr><td>Distribute bid documents</td><td><span class="raci-cell raci-r">R</span></td><td></td><td><span class="raci-cell raci-i">I</span></td><td><span class="raci-cell raci-i">I</span></td><td><span class="raci-cell raci-i">I</span></td><td><span class="raci-cell raci-i">I</span></td><td><span class="raci-cell raci-i">I</span></td><td></td><td><span class="raci-cell raci-i">I</span></td></tr><tr><td>Complete Executive Briefing</td><td><span class="raci-cell raci-r">R</span></td><td></td><td><span class="raci-cell raci-i">I</span></td><td><span class="raci-cell raci-i">I</span></td><td><span class="raci-cell raci-i">I</span></td><td><span class="raci-cell raci-i">I</span></td><td><span class="raci-cell raci-i">I</span></td><td></td><td><span class="raci-cell raci-i">I</span></td></tr><tr><td>Send market-specific questions to region or market</td><td><span class="raci-cell raci-r">R</span></td><td></td><td><span class="raci-cell raci-c">C</span></td><td><span class="raci-cell raci-c">C</span></td><td><span class="raci-cell raci-i">I</span></td><td></td><td><span class="raci-cell raci-c">C</span></td><td></td><td><span class="raci-cell raci-i">I</span></td></tr><tr><td>RFP and pricing responses</td><td><span class="raci-cell raci-a">A</span></td><td></td><td></td><td></td><td><span class="raci-cell raci-r">R</span></td><td><span class="raci-cell raci-r">R</span></td><td></td><td></td><td><span class="raci-cell raci-c">C</span></td></tr><tr><td>RFP submission</td><td><span class="raci-cell raci-r">R</span></td><td></td><td><span class="raci-cell raci-i">I</span></td><td><span class="raci-cell raci-i">I</span></td><td><span class="raci-cell raci-c">C</span></td><td><span class="raci-cell raci-i">I</span></td><td><span class="raci-cell raci-i">I</span></td><td></td><td><span class="raci-cell raci-i">I</span></td></tr><tr><td>Client presentations</td><td><span class="raci-cell raci-r">R</span></td><td></td><td></td><td><span class="raci-cell raci-c">C</span></td><td><span class="raci-cell raci-c">C</span></td><td></td><td><span class="raci-cell raci-c">C</span></td><td><span class="raci-cell raci-c">C</span></td><td><span class="raci-cell raci-c">C</span></td></tr><tr><td>Sales handover document</td><td><span class="raci-cell raci-r">R</span></td><td><span class="raci-cell raci-c">C</span></td><td><span class="raci-cell raci-c">C</span></td><td></td><td></td><td></td><td></td><td></td><td><span class="raci-cell raci-i">I</span></td></tr><tr><td>Pre-implementation technology review &amp; sign-off</td><td><span class="raci-cell raci-c">C</span></td><td><span class="raci-cell raci-r">R</span></td><td><span class="raci-cell raci-a">A</span></td><td><span class="raci-cell raci-c">C</span></td><td></td><td></td><td><span class="raci-cell raci-c">C</span></td><td><span class="raci-cell raci-a">A</span></td><td><span class="raci-cell raci-a">A</span></td></tr><tr><td>Pre-implementation data scope review &amp; sign-off</td><td><span class="raci-cell raci-c">C</span></td><td><span class="raci-cell raci-r">R</span></td><td></td><td><span class="raci-cell raci-c">C</span></td><td></td><td></td><td><span class="raci-cell raci-c">C</span></td><td><span class="raci-cell raci-a">A</span></td><td><span class="raci-cell raci-a">A</span></td></tr><tr><td>Pre-implementation operational review &amp; sign-off</td><td><span class="raci-cell raci-c">C</span></td><td><span class="raci-cell raci-r">R</span></td><td></td><td><span class="raci-cell raci-c">C</span></td><td></td><td></td><td><span class="raci-cell raci-c">C</span></td><td><span class="raci-cell raci-a">A</span></td><td><span class="raci-cell raci-a">A</span></td></tr><tr><td>Pre-implementation pricing review</td><td><span class="raci-cell raci-c">C</span></td><td><span class="raci-cell raci-r">R</span></td><td></td><td><span class="raci-cell raci-c">C</span></td><td></td><td><span class="raci-cell raci-c">C</span></td><td><span class="raci-cell raci-c">C</span></td><td><span class="raci-cell raci-a">A</span></td><td><span class="raci-cell raci-a">A</span></td></tr></tbody></table></div>
 <section class="content-card" style="margin-top:20px">
 <h2>RACI Notes</h2>
 <ul>
@@ -4559,11 +4580,10 @@
 <div class="bid-contact-card"><p><b>Rafael Gonzalez</b><br/>VP, Agency Partnerships Program</p></div>
 <div class="bid-contact-card"><p><b>Stephen Woodford</b><br/>Executive Director, Global Agency Network - EMEA</p></div>
 </div>
-<div class="global-bid-note"><b>Pricing:</b> na.pricing_enterprise_strategic@travelctm.com &nbsp; | &nbsp; <b>Sales Support:</b> na.salessupport@travelctm.com &nbsp; | &nbsp; <b>Sales Engineering:</b> na.engineering@travelctm.com</div>
+<div class="global-bid-note"><b>Pricing:</b> na.pricing_enterprise_strategic@travelctm.com   |   <b>Sales Support:</b> na.salessupport@travelctm.com   |   <b>Sales Engineering:</b> na.engineering@travelctm.com</div>
 <a class="backtop" data-target="bid-toolkit" href="#view-bid-toolkit">Back to Global Bid Toolkit ↑</a>
 </section>
 </section>
-
 <section class="view" id="view-global-fees">
 <section class="hero">
 <div class="eyebrow">Global Sales</div>
@@ -4676,7 +4696,25 @@
 <a class="backtop" data-target="global-sales" href="#view-global-sales">Back to Global Sales ↑</a>
 </section>
 </section>
-<section class="view" id="view-partner-agency-process"><section class="content-card"><h2>Partner Agency Process</h2><p>Use this area to document the steps for partner agency intake, qualification, ownership, CRM tracking, and handoff expectations.</p><a class="backtop" data-target="partner-agency" href="#view-partner-agency">Back to Partner Agency ↑</a></section></section>
+<section class="view" id="view-partner-agency-process"><section class="hero partner-process-hero">
+<div class="eyebrow">Partner Agency</div>
+<h1>Partner Agency Process</h1>
+<p>Clickable process cards for identifying, qualifying, routing, documenting, and following through on partner agency opportunities.</p>
+<span class="owner">Page owner: Global Sales / Partner Agency Program</span>
+</section>
+<section class="partner-process-intro">
+<h2>Partner Agency Process Workflow</h2>
+<p>Use these cards as the standard process path for partner agency activity. Each card links to the related support area or next action.</p>
+<div class="partner-process-grid">
+<a class="partner-process-card" data-target="partner-agency-referrals" href="#view-partner-agency-referrals"><div class="partner-process-step">01</div><h3>Identify Referral Need</h3><p>Determine whether the opportunity requires partner agency support, regional input, or additional market coverage.</p><span class="partner-process-action">Open referral guidance →</span></a>
+<a class="partner-process-card" data-target="partner-agency-contacts" href="#view-partner-agency-contacts"><div class="partner-process-step">02</div><h3>Engage Regional Contact</h3><p>Connect with the correct regional contact for local market guidance, escalation support, or partner coordination.</p><span class="partner-process-action">Open partner contacts →</span></a>
+<a class="partner-process-card" data-target="partner-agency-bid-resources" href="#view-partner-agency-bid-resources"><div class="partner-process-step">03</div><h3>Confirm Bid Support</h3><p>Use bid resources when the opportunity requires pricing, Sales Support, Sales Engineering, or APP coordination.</p><span class="partner-process-action">Open bid resources →</span></a>
+<a class="partner-process-card" data-target="partner-agency-materials" href="#view-partner-agency-materials"><div class="partner-process-step">04</div><h3>Select Partner Materials</h3><p>Use approved collateral, decks, templates, talking points, and regional materials for the pursuit.</p><span class="partner-process-action">Open partner materials →</span></a>
+<a class="partner-process-card" data-target="sales-agent-dashboard" href="#view-sales-agent-dashboard"><div class="partner-process-step">05</div><h3>Track Pipeline Activity</h3><p>Review pipeline activity, priority opportunities, follow-up timing, and regional dashboard visibility.</p><span class="partner-process-action">Open dashboard →</span></a>
+<a class="partner-process-card" data-target="win-loss" href="#view-win-loss"><div class="partner-process-step">06</div><h3>Capture Outcome</h3><p>Document outcome, win/loss notes, lessons learned, and feedback for future partner agency activity.</p><span class="partner-process-action">Open win/loss →</span></a>
+</div>
+<a class="backtop" data-target="partner-agency" href="#view-partner-agency">Back to Partner Agency ↑</a>
+</section></section>
 <section class="view" id="view-partner-agency-contacts">
 <section class="hero partner-contacts-modern-hero">
 <div class="eyebrow">Partner Agency</div>
@@ -4684,7 +4722,6 @@
 <p>Use this contact hub to quickly identify the right regional partner contact for partner-supported opportunities, bid coordination, regional alignment, and escalation support.</p>
 <span class="owner">Page owner: Global Sales / Partner Agency Program</span>
 </section>
-
 <section class="partner-contact-intro">
 <h2>Regional Partner Contact Hub</h2>
 <p>Select the regional contact card below to start an email request. Include the opportunity name, client footprint, region, services needed, timeline, and any bid/RFP deadlines.</p>
@@ -4720,47 +4757,46 @@
 <p>A structured guide for referral intake, lead ownership, CRM notes, follow-up expectations, and regional handoff alignment.</p>
 <span class="owner">Page owner: Global Sales / Partner Agency Program</span>
 </section>
-
 <section class="partner-referral-intro">
 <h2>Referral Guidance Workflow</h2>
 <p>Use these cards to standardize how partner agency referrals are captured, assigned, documented, and followed through across regions.</p>
 <div class="partner-referral-grid">
-<div class="partner-referral-card">
+<a class="partner-referral-card" data-target="partner-agency-referrals" href="#view-partner-agency-referrals">
 <div class="partner-referral-step">01</div>
 <h3>Referral Intake</h3>
 <p>Capture the opportunity name, client contact, referring source, region, services needed, and expected timeline.</p>
 <div class="partner-referral-pill-row"><span class="partner-referral-pill">Opportunity</span><span class="partner-referral-pill">Region</span><span class="partner-referral-pill">Need</span></div>
-</div>
-<div class="partner-referral-card">
+<span class="partner-referral-action">Open intake guidance →</span></a>
+<a class="partner-referral-card" data-target="partner-agency-contacts" href="#view-partner-agency-contacts">
 <div class="partner-referral-step">02</div>
 <h3>Lead Ownership</h3>
 <p>Confirm the primary owner, supporting region, partner agency contact, and who is responsible for next steps.</p>
 <div class="partner-referral-pill-row"><span class="partner-referral-pill">Owner</span><span class="partner-referral-pill">Support</span><span class="partner-referral-pill">Next step</span></div>
-</div>
-<div class="partner-referral-card">
+<span class="partner-referral-action">Open ownership contacts →</span></a>
+<a class="partner-referral-card" data-target="sales-stages" href="#view-sales-stages">
 <div class="partner-referral-step">03</div>
 <h3>CRM Documentation</h3>
 <p>Document the referral source, current stage, handoff notes, related contacts, and follow-up activity in CRM.</p>
 <div class="partner-referral-pill-row"><span class="partner-referral-pill">CRM notes</span><span class="partner-referral-pill">Stage</span><span class="partner-referral-pill">Source</span></div>
-</div>
-<div class="partner-referral-card">
+<span class="partner-referral-action">Open sales stages →</span></a>
+<a class="partner-referral-card" data-target="partner-agency-contacts" href="#view-partner-agency-contacts">
 <div class="partner-referral-step">04</div>
 <h3>Regional Handoff</h3>
 <p>Align the appropriate regional sales contact or partner contact when local-market input or regional ownership is needed.</p>
 <div class="partner-referral-pill-row"><span class="partner-referral-pill">Local input</span><span class="partner-referral-pill">Handoff</span><span class="partner-referral-pill">Alignment</span></div>
-</div>
-<div class="partner-referral-card">
+<span class="partner-referral-action">Open regional contacts →</span></a>
+<a class="partner-referral-card" data-target="sales-agent-dashboard" href="#view-sales-agent-dashboard">
 <div class="partner-referral-step">05</div>
 <h3>Follow-Up Timing</h3>
 <p>Set clear response expectations, due dates, meeting cadence, and escalation timing for active referral opportunities.</p>
 <div class="partner-referral-pill-row"><span class="partner-referral-pill">Due date</span><span class="partner-referral-pill">Cadence</span><span class="partner-referral-pill">Escalation</span></div>
-</div>
-<div class="partner-referral-card">
+<span class="partner-referral-action">Open dashboard →</span></a>
+<a class="partner-referral-card" data-target="win-loss" href="#view-win-loss">
 <div class="partner-referral-step">06</div>
 <h3>Outcome Tracking</h3>
 <p>Track the referral outcome, next action, win/loss status, and lessons learned for future partner agency activity.</p>
 <div class="partner-referral-pill-row"><span class="partner-referral-pill">Outcome</span><span class="partner-referral-pill">Win/Loss</span><span class="partner-referral-pill">Lessons</span></div>
-</div>
+<span class="partner-referral-action">Open win/loss →</span></a>
 </div>
 <div class="partner-referral-checklist"><b>Recommended referral details:</b> Opportunity name, client footprint, region, referral source, owner, expected outcome, requested support, timeline, and link to the opportunity or supporting documents.</div>
 <a class="backtop" data-target="partner-agency" href="#view-partner-agency">Back to Partner Agency ↑</a>
@@ -4773,47 +4809,46 @@
 <p>Approved partner agency collateral, templates, decks, talking points, and shared pursuit content in one organized location.</p>
 <span class="owner">Page owner: Global Sales / Partner Agency Program</span>
 </section>
-
 <section class="partner-materials-intro">
 <h2>Partner Materials Library</h2>
 <p>Use these cards to organize current, approved partner materials so sales teams can quickly find the right content for outreach, pursuits, presentations, and regional collaboration.</p>
 <div class="partner-materials-grid">
-<div class="partner-materials-card">
+<a class="partner-materials-card" data-target="partner-agency-materials" href="#view-partner-agency-materials">
 <div class="partner-materials-icon">01</div>
 <h3>Approved Collateral</h3>
 <p>Store approved partner agency one-pagers, overview documents, capability summaries, and client-facing collateral.</p>
 <div class="partner-materials-pill-row"><span class="partner-materials-pill">One-pagers</span><span class="partner-materials-pill">Overviews</span><span class="partner-materials-pill">Client-ready</span></div>
-</div>
-<div class="partner-materials-card">
+<span class="partner-materials-action">Open approved collateral →</span></a>
+<a class="partner-materials-card" data-target="partner-agency-materials" href="#view-partner-agency-materials">
 <div class="partner-materials-icon">02</div>
 <h3>Partner Decks</h3>
 <p>Provide standard partner agency decks, presentation slides, executive summaries, and reusable pitch content.</p>
 <div class="partner-materials-pill-row"><span class="partner-materials-pill">Decks</span><span class="partner-materials-pill">Slides</span><span class="partner-materials-pill">Pitch content</span></div>
-</div>
-<div class="partner-materials-card">
+<span class="partner-materials-action">Open partner decks →</span></a>
+<a class="partner-materials-card" data-target="partner-agency-materials" href="#view-partner-agency-materials">
 <div class="partner-materials-icon">03</div>
 <h3>Talking Points</h3>
 <p>Centralize approved messaging, positioning statements, discovery prompts, and partner agency conversation guides.</p>
 <div class="partner-materials-pill-row"><span class="partner-materials-pill">Messaging</span><span class="partner-materials-pill">Positioning</span><span class="partner-materials-pill">Discovery</span></div>
-</div>
-<div class="partner-materials-card">
+<span class="partner-materials-action">Open talking points →</span></a>
+<a class="partner-materials-card" data-target="templates" href="#view-templates">
 <div class="partner-materials-icon">04</div>
 <h3>Templates</h3>
 <p>Link standard email templates, referral templates, pursuit templates, and handoff documentation.</p>
 <div class="partner-materials-pill-row"><span class="partner-materials-pill">Email</span><span class="partner-materials-pill">Referral</span><span class="partner-materials-pill">Handoff</span></div>
-</div>
-<div class="partner-materials-card">
+<span class="partner-materials-action">Open templates →</span></a>
+<a class="partner-materials-card" data-target="customer-proof" href="#view-customer-proof">
 <div class="partner-materials-icon">05</div>
 <h3>Proof Points</h3>
 <p>Capture approved examples, partner success stories, client outcomes, and supporting evidence for pursuits.</p>
 <div class="partner-materials-pill-row"><span class="partner-materials-pill">Success stories</span><span class="partner-materials-pill">Outcomes</span><span class="partner-materials-pill">Evidence</span></div>
-</div>
-<div class="partner-materials-card">
+<span class="partner-materials-action">Open proof points →</span></a>
+<a class="partner-materials-card" data-target="regions" href="#view-regions">
 <div class="partner-materials-icon">06</div>
 <h3>Regional Content</h3>
 <p>Organize region-specific partner agency materials, contacts, market notes, and local support resources.</p>
 <div class="partner-materials-pill-row"><span class="partner-materials-pill">Regional</span><span class="partner-materials-pill">Contacts</span><span class="partner-materials-pill">Local notes</span></div>
-</div>
+<span class="partner-materials-action">Open regional content →</span></a>
 </div>
 <div class="partner-materials-note"><b>Recommended material details:</b> Add the document owner, last reviewed date, audience, approved use case, region, and link to the current source file.</div>
 <a class="backtop" data-target="partner-agency" href="#view-partner-agency">Back to Partner Agency ↑</a>
@@ -4826,13 +4861,11 @@
 <p>A high-visibility resource hub for partner agency pursuits. Use this page to quickly identify the right regional sales contact, APP owner, and support mailbox for pricing, sales support, and technical solutioning.</p>
 <span class="owner">Page owner: Global Sales / Partner Agency Program</span>
 </section>
-
 <section class="partner-bid-quick-grid">
 <a class="partner-bid-quick-card" href="#partner-bid-regional-sales"><div class="partner-bid-quick-label">Start here</div><h3>Regional Sales Contacts</h3><p>Use North America, EMEA, APAC, and ANZ contacts for market guidance, client alignment, and local sales ownership.</p><span class="partner-card-action">Open contacts ↓</span></a>
 <a class="partner-bid-quick-card" href="#partner-bid-app-contacts"><div class="partner-bid-quick-label">Partner support</div><h3>APP Contacts</h3><p>Use APP owners for partner agency coordination, program guidance, and network support.</p><span class="partner-card-action">Open APP contacts ↓</span></a>
 <a class="partner-bid-quick-card" href="#partner-bid-mailboxes"><div class="partner-bid-quick-label">Execution support</div><h3>Bid Mailboxes</h3><p>Use Pricing, Sales Support, and Sales Engineering to move active bids forward.</p><span class="partner-card-action">Email support teams ↓</span></a>
 </section>
-
 <section class="partner-bid-panel" id="partner-bid-regional-sales">
 <h2>Regional Sales Contacts</h2>
 <p class="partner-bid-panel-sub">Contact the regional sales lead when a bid requires market-specific guidance, regional approval, partner agency alignment, or local client context. Click a contact card to start an email through Sales Support.</p>
@@ -4843,7 +4876,6 @@
 <div class="partner-bid-region-card"><h3>ANZ</h3><a class="partner-person" href="mailto:Pete.Wiseman@travelctm.com?subject=Regional%20Sales%20Contact%20Request%20-%20Peter%20Wiseman"><b>Peter Wiseman</b><span>Head of Sales</span><em>Email request →</em></a></div>
 </div>
 </section>
-
 <section class="partner-bid-panel" id="partner-bid-app-contacts">
 <h2>Agency Partner Program Contacts</h2>
 <p class="partner-bid-panel-sub">Use these contacts for partner network guidance, APP permissions, partner coordination, and agency program escalation. Click a card to start an APP support email.</p>
@@ -4853,7 +4885,6 @@
 <a class="partner-bid-app-card" href="mailto:stephen.woodford@travelctm.com?subject=Partner%20Agency%20Program%20Contact%20-%20Stephen%20Woodford"><b>Stephen Woodford</b><span>Executive Director, Global Agency Network - EMEA</span><em>Email request →</em></a>
 </div>
 </section>
-
 <section class="partner-bid-panel" id="partner-bid-mailboxes">
 <div class="partner-mailbox-header">
 <div>
@@ -4863,7 +4894,7 @@
 <span class="partner-mailbox-note">Shared support channels</span>
 </div>
 <div class="partner-mailbox-grid professional-mailbox-grid">
-<a aria-label="Email Pricing Support" class="partner-mailbox-card professional-mailbox-card" href="mailto:na.pricing_enterprise_strategic@travelctm.com?subject=Bid%20Support%20Request%20-%20Pricing&body=Opportunity%20/%20Client%3A%0ARegion%3A%0ADue%20date%3A%0ASupport%20needed%3A%0ACurrent%20status%3A%0AAttachments%20/%20links%3A">
+<a aria-label="Email Pricing Support" class="partner-mailbox-card professional-mailbox-card" href="mailto:na.pricing_enterprise_strategic@travelctm.com?subject=Bid%20Support%20Request%20-%20Pricing&amp;body=Opportunity%20/%20Client%3A%0ARegion%3A%0ADue%20date%3A%0ASupport%20needed%3A%0ACurrent%20status%3A%0AAttachments%20/%20links%3A">
 <div>
 <div class="mailbox-card-header"><span class="mailbox-icon">P</span><span class="mailbox-tag">Commercial Review</span></div>
 <b>Pricing Support</b>
@@ -4872,7 +4903,7 @@
 </div>
 <em>Email request →</em>
 </a>
-<a aria-label="Email Sales Support" class="partner-mailbox-card professional-mailbox-card" href="mailto:na.salessupport@travelctm.com?subject=Bid%20Support%20Request%20-%20Sales%20Support&body=Opportunity%20/%20Client%3A%0ARegion%3A%0ADue%20date%3A%0ASupport%20needed%3A%0ACurrent%20status%3A%0AAttachments%20/%20links%3A">
+<a aria-label="Email Sales Support" class="partner-mailbox-card professional-mailbox-card" href="mailto:na.salessupport@travelctm.com?subject=Bid%20Support%20Request%20-%20Sales%20Support&amp;body=Opportunity%20/%20Client%3A%0ARegion%3A%0ADue%20date%3A%0ASupport%20needed%3A%0ACurrent%20status%3A%0AAttachments%20/%20links%3A">
 <div>
 <div class="mailbox-card-header"><span class="mailbox-icon">S</span><span class="mailbox-tag">Proposal Support</span></div>
 <b>Sales Support</b>
@@ -4881,7 +4912,7 @@
 </div>
 <em>Email request →</em>
 </a>
-<a aria-label="Email Sales Engineering" class="partner-mailbox-card professional-mailbox-card" href="mailto:na.engineering@travelctm.com?subject=Bid%20Support%20Request%20-%20Sales%20Engineering&body=Opportunity%20/%20Client%3A%0ARegion%3A%0ADue%20date%3A%0ASupport%20needed%3A%0ACurrent%20status%3A%0AAttachments%20/%20links%3A">
+<a aria-label="Email Sales Engineering" class="partner-mailbox-card professional-mailbox-card" href="mailto:na.engineering@travelctm.com?subject=Bid%20Support%20Request%20-%20Sales%20Engineering&amp;body=Opportunity%20/%20Client%3A%0ARegion%3A%0ADue%20date%3A%0ASupport%20needed%3A%0ACurrent%20status%3A%0AAttachments%20/%20links%3A">
 <div>
 <div class="mailbox-card-header"><span class="mailbox-icon">E</span><span class="mailbox-tag">Solution Support</span></div>
 <b>Sales Engineering</b>
@@ -5512,20 +5543,18 @@
 <p>Use the same standardized Win Loss CRM template after every closed North America opportunity so each region captures the same win/loss data, reason codes, client feedback, competitive intelligence, and action items in a consistent format.</p>
 <span class="owner">Page owner: North America Regional Sales / Sales Enablement / CRM Governance</span>
 </section>
-
 <section class="content-card">
 <h2>CRM Template Purpose</h2>
 <p>This template is designed to live inside CRM and be completed after an opportunity closes. It supports one global win/loss process, required CRM fields, meaningful reason subcategories, clear ownership, and consistent reporting across regions.</p>
 <div class="debrief-note-box">Recommended use: Complete this CRM template for both wins and losses after Stage 8 - Closed Won/Loss. The data should feed the Win Loss SharePoint Answer List and support enterprise dashboards, competitor insights, product feedback, and future pursuit planning.</div>
 </section>
-
 <section class="content-card">
 <h2>1. Opportunity Information</h2>
 <p>Capture the required CRM opportunity data so the debrief can be filtered, reported, and reviewed globally.</p>
 <div class="field-grid">
 <div class="template-field"><b>Account / Prospect Name</b><input class="fillable-input" placeholder="Click to type..." type="text"/></div>
 <div class="template-field"><b>CRM Opportunity ID</b><input class="fillable-input" placeholder="Enter CRM opportunity ID..." type="text"/></div>
-<div class="template-field"><b>Region</b><select class="fillable-select"><option value="">Select region...</option><option selected>North America</option><option>ANZ</option><option>APAC</option><option>EMEA</option><option>Global / Multi-Region</option></select></div>
+<div class="template-field"><b>Region</b><select class="fillable-select"><option value="">Select region...</option><option selected="">North America</option><option>ANZ</option><option>APAC</option><option>EMEA</option><option>Global / Multi-Region</option></select></div>
 <div class="template-field"><b>Sales Agent / Opportunity Owner</b><input class="fillable-input" placeholder="Click to type..." type="text"/></div>
 <div class="template-field"><b>Client Segment / Vertical</b><input class="fillable-input" placeholder="Enter segment or vertical..." type="text"/></div>
 <div class="template-field"><b>Close Date</b><input class="fillable-input" placeholder="Enter close date..." type="text"/></div>
@@ -5534,12 +5563,10 @@
 <div class="template-field"><b>CRM Stage</b><select class="fillable-select"><option value="">Select stage...</option><option>Stage 8 - Closed Won</option><option>Stage 8 - Closed Lost</option><option>No Decision</option><option>Delayed / Deferred</option></select></div>
 </div>
 </section>
-
 <section class="content-card closing-questionnaire-card crm-section-anchor winloss-outcome-spotlight" id="north-america-crm-win-loss-outcome">
 <div class="closing-questionnaire-header">
 <h2>2. Win or Loss Outcome</h2>
 <p>Document the final outcome and make the reason clear enough to support global reporting and executive dashboards.</p>
-
 </div>
 <div class="field-grid">
 <div class="template-field"><b>Outcome</b><select class="fillable-select"><option value="">Select outcome...</option><option>Won</option><option>Lost</option><option>No Decision</option><option>Delayed</option></select></div>
@@ -5555,7 +5582,6 @@
 <div class="winloss-outcome-mini"><b>Action Oriented</b>Feedback should be specific enough to create coaching, product, service, or competitive follow-up.</div>
 </div>
 </section>
-
 <section class="content-card">
 <h2>3. Competitors</h2>
 <p>Capture competitor and incumbent insight so sales teams can update competitor profiles, battlecards, and future pursuit guidance.</p>
@@ -5568,7 +5594,6 @@
 </tbody>
 </table>
 </section>
-
 <section class="content-card">
 <h2>4. Decision Drivers</h2>
 <p>Select the top buying factors and add CRM notes explaining what mattered most to the client.</p>
@@ -5587,7 +5612,6 @@
 <div class="debrief-field"><b>Client Quote / Evidence</b><textarea class="fillable-textarea" placeholder="Capture specific client comments or evidence supporting the decision..."></textarea></div>
 </div>
 </section>
-
 <section class="content-card">
 <h2>5. Top 3 Reasons Won/Lost</h2>
 <p>Required CRM fields: document the three most important reasons behind the outcome. Use specific subcategories so reporting is actionable.</p>
@@ -5600,7 +5624,6 @@
 </tbody>
 </table>
 </section>
-
 <section class="content-card">
 <h2>6. Functional Feedback</h2>
 <p>Use these CRM feedback fields to route themes to Product, Technology, Marketing, Sales, Implementation, and Service leadership.</p>
@@ -5613,7 +5636,6 @@
 <div class="debrief-question-panel"><h3>Competitive Intelligence</h3><p>Competitor positioning, proof points, claims, pricing, relationship, or service model notes.</p><textarea class="fillable-textarea" placeholder="Type competitive intelligence..."></textarea></div>
 </div>
 </section>
-
 <section class="content-card">
 <h2>7. Lessons Learned</h2>
 <p>Capture what should be shared globally so future pursuits can benefit from the debrief.</p>
@@ -5624,7 +5646,6 @@
 <div class="debrief-field"><b>What should be updated in CRM?</b><textarea class="fillable-textarea" placeholder="Document CRM updates, reason codes, notes, and ownership..."></textarea></div>
 </div>
 </section>
-
 <section class="content-card">
 <h2>8. Recommended Action Items</h2>
 <p>Assign action items so the feedback does not stop at data entry. This supports quarterly review boards and improvement tracking.</p>
@@ -5639,7 +5660,6 @@
 </table>
 <div class="debrief-form-actions"><button class="debrief-print-button" onclick="window.print()" type="button">Print / Save CRM Template</button><button class="debrief-reset-button" onclick="clearDebriefAnswers(this)" type="button">Erase Answers</button><span class="debrief-clear-note">Use Erase Answers to clear the typed CRM responses and start a new debrief.</span></div>
 </section>
-
 <section class="content-card">
 <h2>CRM Deployment Guidance</h2>
 <div class="global-detail-grid">
@@ -5651,7 +5671,6 @@
 <a class="backtop" data-target="north-america-win-loss" href="#view-north-america-win-loss">Back to North America Win / Loss ↑</a>
 </section>
 </section>
-
 <section class="view" id="view-north-america-win-loss-analysis">
 <section class="hero regional-section-hero">
 <div class="eyebrow">Win / Loss Analysis</div>
@@ -6033,20 +6052,18 @@
 <p>Use the same standardized Win Loss CRM template after every closed ANZ opportunity so each region captures the same win/loss data, reason codes, client feedback, competitive intelligence, and action items in a consistent format.</p>
 <span class="owner">Page owner: ANZ Regional Sales / Sales Enablement / CRM Governance</span>
 </section>
-
 <section class="content-card">
 <h2>CRM Template Purpose</h2>
 <p>This template is designed to live inside CRM and be completed after an opportunity closes. It supports one global win/loss process, required CRM fields, meaningful reason subcategories, clear ownership, and consistent reporting across regions.</p>
 <div class="debrief-note-box">Recommended use: Complete this CRM template for both wins and losses after Stage 8 - Closed Won/Loss. The data should feed the Win Loss SharePoint Answer List and support enterprise dashboards, competitor insights, product feedback, and future pursuit planning.</div>
 </section>
-
 <section class="content-card">
 <h2>1. Opportunity Information</h2>
 <p>Capture the required CRM opportunity data so the debrief can be filtered, reported, and reviewed globally.</p>
 <div class="field-grid">
 <div class="template-field"><b>Account / Prospect Name</b><input class="fillable-input" placeholder="Click to type..." type="text"/></div>
 <div class="template-field"><b>CRM Opportunity ID</b><input class="fillable-input" placeholder="Enter CRM opportunity ID..." type="text"/></div>
-<div class="template-field"><b>Region</b><select class="fillable-select"><option value="">Select region...</option><option>North America</option><option selected>ANZ</option><option>APAC</option><option>EMEA</option><option>Global / Multi-Region</option></select></div>
+<div class="template-field"><b>Region</b><select class="fillable-select"><option value="">Select region...</option><option>North America</option><option selected="">ANZ</option><option>APAC</option><option>EMEA</option><option>Global / Multi-Region</option></select></div>
 <div class="template-field"><b>Sales Agent / Opportunity Owner</b><input class="fillable-input" placeholder="Click to type..." type="text"/></div>
 <div class="template-field"><b>Client Segment / Vertical</b><input class="fillable-input" placeholder="Enter segment or vertical..." type="text"/></div>
 <div class="template-field"><b>Close Date</b><input class="fillable-input" placeholder="Enter close date..." type="text"/></div>
@@ -6055,12 +6072,10 @@
 <div class="template-field"><b>CRM Stage</b><select class="fillable-select"><option value="">Select stage...</option><option>Stage 8 - Closed Won</option><option>Stage 8 - Closed Lost</option><option>No Decision</option><option>Delayed / Deferred</option></select></div>
 </div>
 </section>
-
 <section class="content-card closing-questionnaire-card crm-section-anchor winloss-outcome-spotlight" id="anz-crm-win-loss-outcome">
 <div class="closing-questionnaire-header">
 <h2>2. Win or Loss Outcome</h2>
 <p>Document the final outcome and make the reason clear enough to support global reporting and executive dashboards.</p>
-
 </div>
 <div class="field-grid">
 <div class="template-field"><b>Outcome</b><select class="fillable-select"><option value="">Select outcome...</option><option>Won</option><option>Lost</option><option>No Decision</option><option>Delayed</option></select></div>
@@ -6076,7 +6091,6 @@
 <div class="winloss-outcome-mini"><b>Action Oriented</b>Feedback should be specific enough to create coaching, product, service, or competitive follow-up.</div>
 </div>
 </section>
-
 <section class="content-card">
 <h2>3. Competitors</h2>
 <p>Capture competitor and incumbent insight so sales teams can update competitor profiles, battlecards, and future pursuit guidance.</p>
@@ -6089,7 +6103,6 @@
 </tbody>
 </table>
 </section>
-
 <section class="content-card">
 <h2>4. Decision Drivers</h2>
 <p>Select the top buying factors and add CRM notes explaining what mattered most to the client.</p>
@@ -6108,7 +6121,6 @@
 <div class="debrief-field"><b>Client Quote / Evidence</b><textarea class="fillable-textarea" placeholder="Capture specific client comments or evidence supporting the decision..."></textarea></div>
 </div>
 </section>
-
 <section class="content-card">
 <h2>5. Top 3 Reasons Won/Lost</h2>
 <p>Required CRM fields: document the three most important reasons behind the outcome. Use specific subcategories so reporting is actionable.</p>
@@ -6121,7 +6133,6 @@
 </tbody>
 </table>
 </section>
-
 <section class="content-card">
 <h2>6. Functional Feedback</h2>
 <p>Use these CRM feedback fields to route themes to Product, Technology, Marketing, Sales, Implementation, and Service leadership.</p>
@@ -6134,7 +6145,6 @@
 <div class="debrief-question-panel"><h3>Competitive Intelligence</h3><p>Competitor positioning, proof points, claims, pricing, relationship, or service model notes.</p><textarea class="fillable-textarea" placeholder="Type competitive intelligence..."></textarea></div>
 </div>
 </section>
-
 <section class="content-card">
 <h2>7. Lessons Learned</h2>
 <p>Capture what should be shared globally so future pursuits can benefit from the debrief.</p>
@@ -6145,7 +6155,6 @@
 <div class="debrief-field"><b>What should be updated in CRM?</b><textarea class="fillable-textarea" placeholder="Document CRM updates, reason codes, notes, and ownership..."></textarea></div>
 </div>
 </section>
-
 <section class="content-card">
 <h2>8. Recommended Action Items</h2>
 <p>Assign action items so the feedback does not stop at data entry. This supports quarterly review boards and improvement tracking.</p>
@@ -6160,7 +6169,6 @@
 </table>
 <div class="debrief-form-actions"><button class="debrief-print-button" onclick="window.print()" type="button">Print / Save CRM Template</button><button class="debrief-reset-button" onclick="clearDebriefAnswers(this)" type="button">Erase Answers</button><span class="debrief-clear-note">Use Erase Answers to clear the typed CRM responses and start a new debrief.</span></div>
 </section>
-
 <section class="content-card">
 <h2>CRM Deployment Guidance</h2>
 <div class="global-detail-grid">
@@ -6172,7 +6180,6 @@
 <a class="backtop" data-target="anz-win-loss" href="#view-anz-win-loss">Back to ANZ Win / Loss ↑</a>
 </section>
 </section>
-
 <section class="view" id="view-anz-win-loss-analysis">
 <section class="hero regional-section-hero">
 <div class="eyebrow">Win / Loss Analysis</div>
@@ -6554,20 +6561,18 @@
 <p>Use the same standardized Win Loss CRM template after every closed APAC opportunity so each region captures the same win/loss data, reason codes, client feedback, competitive intelligence, and action items in a consistent format.</p>
 <span class="owner">Page owner: APAC Regional Sales / Sales Enablement / CRM Governance</span>
 </section>
-
 <section class="content-card">
 <h2>CRM Template Purpose</h2>
 <p>This template is designed to live inside CRM and be completed after an opportunity closes. It supports one global win/loss process, required CRM fields, meaningful reason subcategories, clear ownership, and consistent reporting across regions.</p>
 <div class="debrief-note-box">Recommended use: Complete this CRM template for both wins and losses after Stage 8 - Closed Won/Loss. The data should feed the Win Loss SharePoint Answer List and support enterprise dashboards, competitor insights, product feedback, and future pursuit planning.</div>
 </section>
-
 <section class="content-card">
 <h2>1. Opportunity Information</h2>
 <p>Capture the required CRM opportunity data so the debrief can be filtered, reported, and reviewed globally.</p>
 <div class="field-grid">
 <div class="template-field"><b>Account / Prospect Name</b><input class="fillable-input" placeholder="Click to type..." type="text"/></div>
 <div class="template-field"><b>CRM Opportunity ID</b><input class="fillable-input" placeholder="Enter CRM opportunity ID..." type="text"/></div>
-<div class="template-field"><b>Region</b><select class="fillable-select"><option value="">Select region...</option><option>North America</option><option>ANZ</option><option selected>APAC</option><option>EMEA</option><option>Global / Multi-Region</option></select></div>
+<div class="template-field"><b>Region</b><select class="fillable-select"><option value="">Select region...</option><option>North America</option><option>ANZ</option><option selected="">APAC</option><option>EMEA</option><option>Global / Multi-Region</option></select></div>
 <div class="template-field"><b>Sales Agent / Opportunity Owner</b><input class="fillable-input" placeholder="Click to type..." type="text"/></div>
 <div class="template-field"><b>Client Segment / Vertical</b><input class="fillable-input" placeholder="Enter segment or vertical..." type="text"/></div>
 <div class="template-field"><b>Close Date</b><input class="fillable-input" placeholder="Enter close date..." type="text"/></div>
@@ -6576,12 +6581,10 @@
 <div class="template-field"><b>CRM Stage</b><select class="fillable-select"><option value="">Select stage...</option><option>Stage 8 - Closed Won</option><option>Stage 8 - Closed Lost</option><option>No Decision</option><option>Delayed / Deferred</option></select></div>
 </div>
 </section>
-
 <section class="content-card closing-questionnaire-card crm-section-anchor winloss-outcome-spotlight" id="apac-crm-win-loss-outcome">
 <div class="closing-questionnaire-header">
 <h2>2. Win or Loss Outcome</h2>
 <p>Document the final outcome and make the reason clear enough to support global reporting and executive dashboards.</p>
-
 </div>
 <div class="field-grid">
 <div class="template-field"><b>Outcome</b><select class="fillable-select"><option value="">Select outcome...</option><option>Won</option><option>Lost</option><option>No Decision</option><option>Delayed</option></select></div>
@@ -6597,7 +6600,6 @@
 <div class="winloss-outcome-mini"><b>Action Oriented</b>Feedback should be specific enough to create coaching, product, service, or competitive follow-up.</div>
 </div>
 </section>
-
 <section class="content-card">
 <h2>3. Competitors</h2>
 <p>Capture competitor and incumbent insight so sales teams can update competitor profiles, battlecards, and future pursuit guidance.</p>
@@ -6610,7 +6612,6 @@
 </tbody>
 </table>
 </section>
-
 <section class="content-card">
 <h2>4. Decision Drivers</h2>
 <p>Select the top buying factors and add CRM notes explaining what mattered most to the client.</p>
@@ -6629,7 +6630,6 @@
 <div class="debrief-field"><b>Client Quote / Evidence</b><textarea class="fillable-textarea" placeholder="Capture specific client comments or evidence supporting the decision..."></textarea></div>
 </div>
 </section>
-
 <section class="content-card">
 <h2>5. Top 3 Reasons Won/Lost</h2>
 <p>Required CRM fields: document the three most important reasons behind the outcome. Use specific subcategories so reporting is actionable.</p>
@@ -6642,7 +6642,6 @@
 </tbody>
 </table>
 </section>
-
 <section class="content-card">
 <h2>6. Functional Feedback</h2>
 <p>Use these CRM feedback fields to route themes to Product, Technology, Marketing, Sales, Implementation, and Service leadership.</p>
@@ -6655,7 +6654,6 @@
 <div class="debrief-question-panel"><h3>Competitive Intelligence</h3><p>Competitor positioning, proof points, claims, pricing, relationship, or service model notes.</p><textarea class="fillable-textarea" placeholder="Type competitive intelligence..."></textarea></div>
 </div>
 </section>
-
 <section class="content-card">
 <h2>7. Lessons Learned</h2>
 <p>Capture what should be shared globally so future pursuits can benefit from the debrief.</p>
@@ -6666,7 +6664,6 @@
 <div class="debrief-field"><b>What should be updated in CRM?</b><textarea class="fillable-textarea" placeholder="Document CRM updates, reason codes, notes, and ownership..."></textarea></div>
 </div>
 </section>
-
 <section class="content-card">
 <h2>8. Recommended Action Items</h2>
 <p>Assign action items so the feedback does not stop at data entry. This supports quarterly review boards and improvement tracking.</p>
@@ -6681,7 +6678,6 @@
 </table>
 <div class="debrief-form-actions"><button class="debrief-print-button" onclick="window.print()" type="button">Print / Save CRM Template</button><button class="debrief-reset-button" onclick="clearDebriefAnswers(this)" type="button">Erase Answers</button><span class="debrief-clear-note">Use Erase Answers to clear the typed CRM responses and start a new debrief.</span></div>
 </section>
-
 <section class="content-card">
 <h2>CRM Deployment Guidance</h2>
 <div class="global-detail-grid">
@@ -6693,7 +6689,6 @@
 <a class="backtop" data-target="apac-win-loss" href="#view-apac-win-loss">Back to APAC Win / Loss ↑</a>
 </section>
 </section>
-
 <section class="view" id="view-apac-win-loss-analysis">
 <section class="hero regional-section-hero">
 <div class="eyebrow">Win / Loss Analysis</div>
@@ -7075,20 +7070,18 @@
 <p>Use the same standardized Win Loss CRM template after every closed EMEA opportunity so each region captures the same win/loss data, reason codes, client feedback, competitive intelligence, and action items in a consistent format.</p>
 <span class="owner">Page owner: EMEA Regional Sales / Sales Enablement / CRM Governance</span>
 </section>
-
 <section class="content-card">
 <h2>CRM Template Purpose</h2>
 <p>This template is designed to live inside CRM and be completed after an opportunity closes. It supports one global win/loss process, required CRM fields, meaningful reason subcategories, clear ownership, and consistent reporting across regions.</p>
 <div class="debrief-note-box">Recommended use: Complete this CRM template for both wins and losses after Stage 8 - Closed Won/Loss. The data should feed the Win Loss SharePoint Answer List and support enterprise dashboards, competitor insights, product feedback, and future pursuit planning.</div>
 </section>
-
 <section class="content-card">
 <h2>1. Opportunity Information</h2>
 <p>Capture the required CRM opportunity data so the debrief can be filtered, reported, and reviewed globally.</p>
 <div class="field-grid">
 <div class="template-field"><b>Account / Prospect Name</b><input class="fillable-input" placeholder="Click to type..." type="text"/></div>
 <div class="template-field"><b>CRM Opportunity ID</b><input class="fillable-input" placeholder="Enter CRM opportunity ID..." type="text"/></div>
-<div class="template-field"><b>Region</b><select class="fillable-select"><option value="">Select region...</option><option>North America</option><option>ANZ</option><option>APAC</option><option selected>EMEA</option><option>Global / Multi-Region</option></select></div>
+<div class="template-field"><b>Region</b><select class="fillable-select"><option value="">Select region...</option><option>North America</option><option>ANZ</option><option>APAC</option><option selected="">EMEA</option><option>Global / Multi-Region</option></select></div>
 <div class="template-field"><b>Sales Agent / Opportunity Owner</b><input class="fillable-input" placeholder="Click to type..." type="text"/></div>
 <div class="template-field"><b>Client Segment / Vertical</b><input class="fillable-input" placeholder="Enter segment or vertical..." type="text"/></div>
 <div class="template-field"><b>Close Date</b><input class="fillable-input" placeholder="Enter close date..." type="text"/></div>
@@ -7097,12 +7090,10 @@
 <div class="template-field"><b>CRM Stage</b><select class="fillable-select"><option value="">Select stage...</option><option>Stage 8 - Closed Won</option><option>Stage 8 - Closed Lost</option><option>No Decision</option><option>Delayed / Deferred</option></select></div>
 </div>
 </section>
-
 <section class="content-card closing-questionnaire-card crm-section-anchor winloss-outcome-spotlight" id="emea-crm-win-loss-outcome">
 <div class="closing-questionnaire-header">
 <h2>2. Win or Loss Outcome</h2>
 <p>Document the final outcome and make the reason clear enough to support global reporting and executive dashboards.</p>
-
 </div>
 <div class="field-grid">
 <div class="template-field"><b>Outcome</b><select class="fillable-select"><option value="">Select outcome...</option><option>Won</option><option>Lost</option><option>No Decision</option><option>Delayed</option></select></div>
@@ -7118,7 +7109,6 @@
 <div class="winloss-outcome-mini"><b>Action Oriented</b>Feedback should be specific enough to create coaching, product, service, or competitive follow-up.</div>
 </div>
 </section>
-
 <section class="content-card">
 <h2>3. Competitors</h2>
 <p>Capture competitor and incumbent insight so sales teams can update competitor profiles, battlecards, and future pursuit guidance.</p>
@@ -7131,7 +7121,6 @@
 </tbody>
 </table>
 </section>
-
 <section class="content-card">
 <h2>4. Decision Drivers</h2>
 <p>Select the top buying factors and add CRM notes explaining what mattered most to the client.</p>
@@ -7150,7 +7139,6 @@
 <div class="debrief-field"><b>Client Quote / Evidence</b><textarea class="fillable-textarea" placeholder="Capture specific client comments or evidence supporting the decision..."></textarea></div>
 </div>
 </section>
-
 <section class="content-card">
 <h2>5. Top 3 Reasons Won/Lost</h2>
 <p>Required CRM fields: document the three most important reasons behind the outcome. Use specific subcategories so reporting is actionable.</p>
@@ -7163,7 +7151,6 @@
 </tbody>
 </table>
 </section>
-
 <section class="content-card">
 <h2>6. Functional Feedback</h2>
 <p>Use these CRM feedback fields to route themes to Product, Technology, Marketing, Sales, Implementation, and Service leadership.</p>
@@ -7176,7 +7163,6 @@
 <div class="debrief-question-panel"><h3>Competitive Intelligence</h3><p>Competitor positioning, proof points, claims, pricing, relationship, or service model notes.</p><textarea class="fillable-textarea" placeholder="Type competitive intelligence..."></textarea></div>
 </div>
 </section>
-
 <section class="content-card">
 <h2>7. Lessons Learned</h2>
 <p>Capture what should be shared globally so future pursuits can benefit from the debrief.</p>
@@ -7187,7 +7173,6 @@
 <div class="debrief-field"><b>What should be updated in CRM?</b><textarea class="fillable-textarea" placeholder="Document CRM updates, reason codes, notes, and ownership..."></textarea></div>
 </div>
 </section>
-
 <section class="content-card">
 <h2>8. Recommended Action Items</h2>
 <p>Assign action items so the feedback does not stop at data entry. This supports quarterly review boards and improvement tracking.</p>
@@ -7202,7 +7187,6 @@
 </table>
 <div class="debrief-form-actions"><button class="debrief-print-button" onclick="window.print()" type="button">Print / Save CRM Template</button><button class="debrief-reset-button" onclick="clearDebriefAnswers(this)" type="button">Erase Answers</button><span class="debrief-clear-note">Use Erase Answers to clear the typed CRM responses and start a new debrief.</span></div>
 </section>
-
 <section class="content-card">
 <h2>CRM Deployment Guidance</h2>
 <div class="global-detail-grid">
@@ -7214,7 +7198,6 @@
 <a class="backtop" data-target="emea-win-loss" href="#view-emea-win-loss">Back to EMEA Win / Loss ↑</a>
 </section>
 </section>
-
 <section class="view" id="view-emea-win-loss-analysis">
 <section class="hero regional-section-hero">
 <div class="eyebrow">Win / Loss Analysis</div>
@@ -7562,7 +7545,6 @@
 <a class="backtop" data-target="global-sales" href="#view-global-sales">Back to Global Sales ↑</a>
 </section>
 </section>
-
 <section class="view" id="view-templates">
 <section class="hero">
 <div class="eyebrow">Templates</div>
@@ -8370,7 +8352,6 @@
 <a class="backtop" data-target="win-loss" href="#view-win-loss">Back to Win / Loss ↑</a>
 </section>
 </section>
-
 <section class="view" id="view-win-loss-debrief">
 <section class="hero">
 <div class="eyebrow">Win Loss CRM Template</div>
@@ -8378,13 +8359,11 @@
 <p>Use this standardized CRM template after every closed opportunity so each region captures the same win/loss data, reason codes, client feedback, competitive intelligence, and action items in a consistent format.</p>
 <span class="owner">Page owner: Sales Enablement / Sales Support / CRM Governance</span>
 </section>
-
 <section class="content-card">
 <h2>CRM Template Purpose</h2>
 <p>This template is designed to live inside CRM and be completed after an opportunity closes. It supports one global win/loss process, required CRM fields, meaningful reason subcategories, clear ownership, and consistent reporting across regions.</p>
 <div class="debrief-note-box">Recommended use: Complete this CRM template for both wins and losses after Stage 8 - Closed Won/Loss. The data should feed the Win Loss SharePoint Answer List and support enterprise dashboards, competitor insights, product feedback, and future pursuit planning.</div>
 </section>
-
 <section class="content-card">
 <h2>1. Opportunity Information</h2>
 <p>Capture the required CRM opportunity data so the debrief can be filtered, reported, and reviewed globally.</p>
@@ -8400,12 +8379,10 @@
 <div class="template-field"><b>CRM Stage</b><select class="fillable-select"><option value="">Select stage...</option><option>Stage 8 - Closed Won</option><option>Stage 8 - Closed Lost</option><option>No Decision</option><option>Delayed / Deferred</option></select></div>
 </div>
 </section>
-
 <section class="content-card closing-questionnaire-card crm-section-anchor winloss-outcome-spotlight" id="crm-win-loss-outcome">
 <div class="closing-questionnaire-header">
 <h2>2. Win or Loss Outcome</h2>
 <p>Document the final outcome and make the reason clear enough to support global reporting and executive dashboards.</p>
-
 </div>
 <div class="field-grid">
 <div class="template-field"><b>Outcome</b><select class="fillable-select"><option value="">Select outcome...</option><option>Won</option><option>Lost</option><option>No Decision</option><option>Delayed</option></select></div>
@@ -8421,7 +8398,6 @@
 <div class="winloss-outcome-mini"><b>Action Oriented</b>Feedback should be specific enough to create coaching, product, service, or competitive follow-up.</div>
 </div>
 </section>
-
 <section class="content-card">
 <h2>3. Competitors</h2>
 <p>Capture competitor and incumbent insight so sales teams can update competitor profiles, battlecards, and future pursuit guidance.</p>
@@ -8434,7 +8410,6 @@
 </tbody>
 </table>
 </section>
-
 <section class="content-card">
 <h2>4. Decision Drivers</h2>
 <p>Select the top buying factors and add CRM notes explaining what mattered most to the client.</p>
@@ -8453,7 +8428,6 @@
 <div class="debrief-field"><b>Client Quote / Evidence</b><textarea class="fillable-textarea" placeholder="Capture specific client comments or evidence supporting the decision..."></textarea></div>
 </div>
 </section>
-
 <section class="content-card">
 <h2>5. Top 3 Reasons Won/Lost</h2>
 <p>Required CRM fields: document the three most important reasons behind the outcome. Use specific subcategories so reporting is actionable.</p>
@@ -8466,7 +8440,6 @@
 </tbody>
 </table>
 </section>
-
 <section class="content-card">
 <h2>6. Functional Feedback</h2>
 <p>Use these CRM feedback fields to route themes to Product, Technology, Marketing, Sales, Implementation, and Service leadership.</p>
@@ -8479,7 +8452,6 @@
 <div class="debrief-question-panel"><h3>Competitive Intelligence</h3><p>Competitor positioning, proof points, claims, pricing, relationship, or service model notes.</p><textarea class="fillable-textarea" placeholder="Type competitive intelligence..."></textarea></div>
 </div>
 </section>
-
 <section class="content-card">
 <h2>7. Lessons Learned</h2>
 <p>Capture what should be shared globally so future pursuits can benefit from the debrief.</p>
@@ -8490,7 +8462,6 @@
 <div class="debrief-field"><b>What should be updated in CRM?</b><textarea class="fillable-textarea" placeholder="Document CRM updates, reason codes, notes, and ownership..."></textarea></div>
 </div>
 </section>
-
 <section class="content-card">
 <h2>8. Recommended Action Items</h2>
 <p>Assign action items so the feedback does not stop at data entry. This supports quarterly review boards and improvement tracking.</p>
@@ -8505,7 +8476,6 @@
 </table>
 <div class="debrief-form-actions"><button class="debrief-print-button" onclick="window.print()" type="button">Print / Save CRM Template</button><button class="debrief-reset-button" onclick="clearDebriefAnswers(this)" type="button">Erase Answers</button><span class="debrief-clear-note">Use Erase Answers to clear the typed CRM responses and start a new debrief.</span></div>
 </section>
-
 <section class="content-card">
 <h2>CRM Deployment Guidance</h2>
 <div class="global-detail-grid">
@@ -8517,7 +8487,6 @@
 <a class="backtop" data-target="win-loss" href="#view-win-loss">Back to Win / Loss ↑</a>
 </section>
 </section>
-
 <section class="view" id="view-competitor-profiles">
 <section class="hero">
 <div class="eyebrow">Competitive Intelligence</div>
@@ -10670,7 +10639,6 @@
   }
 })();
 </script>
-
 <script>
 (function(){
   function resolveTarget(link){
@@ -10749,8 +10717,6 @@
   });
 })();
 </script>
-
-
 <script>
 (function(){
   var globalSalesRouteMap = {
@@ -10813,8 +10779,6 @@
   }, true);
 })();
 </script>
-
-
 <script>
 (function(){
   function getTargetFromLink(link){
@@ -10899,8 +10863,6 @@
   });
 })();
 </script>
-
-
 <script>
 (function(){
   function closeNativeDropdowns(){
@@ -10934,9 +10896,6 @@
   });
 })();
 </script>
-
-
-
 <!-- Search Box Selected Section Navigation Fix -->
 <script>
 (function(){
@@ -11253,6 +11212,5 @@
   }
 })();
 </script>
-
 </body>
 </html>
