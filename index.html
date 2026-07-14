@@ -4140,6 +4140,33 @@
   @media(max-width:1300px){#view-partner-agency .tile-grid{grid-template-columns:repeat(3,1fr)}}
   @media(max-width:900px){#view-partner-agency .tile-grid{grid-template-columns:repeat(2,1fr)}}
   @media(max-width:650px){#view-partner-agency .tile-grid{grid-template-columns:1fr}}
+
+
+  /* Modern Referral Guidance Cards */
+  .partner-referral-hero{background:linear-gradient(125deg,#003b49 0%,#006e84 62%,#76bc43 165%);position:relative;overflow:hidden}
+  .partner-referral-hero:after{content:"";position:absolute;right:-130px;top:-150px;width:430px;height:430px;border-radius:50%;border:1px solid rgba(255,255,255,.28);box-shadow:0 0 0 38px rgba(255,255,255,.04),0 0 0 78px rgba(255,255,255,.025)}
+  .partner-referral-hero .eyebrow,.partner-referral-hero h1,.partner-referral-hero p,.partner-referral-hero .owner{position:relative;z-index:1}
+  .partner-referral-intro{background:#fff;border:1px solid var(--line);border-radius:24px;padding:26px;box-shadow:0 10px 26px rgba(15,23,42,.08);margin-bottom:22px}
+  .partner-referral-intro h2{margin:0 0 8px;color:#0b1f35;font-size:25px}
+  .partner-referral-intro p{margin:0;color:#475467;line-height:1.6;max-width:980px}
+  .partner-referral-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:18px}
+  .partner-referral-card{background:linear-gradient(180deg,#ffffff 0%,#f8fafc 100%);border:1px solid var(--line);border-radius:20px;padding:20px;box-shadow:0 3px 12px rgba(15,23,42,.06);border-top:7px solid var(--ctm-teal);transition:.15s ease;position:relative;overflow:hidden}
+  .partner-referral-card:nth-child(2){border-top-color:var(--ctm-green)}
+  .partner-referral-card:nth-child(3){border-top-color:#f0b429}
+  .partner-referral-card:nth-child(4){border-top-color:#667085}
+  .partner-referral-card:nth-child(5){border-top-color:#007c94}
+  .partner-referral-card:nth-child(6){border-top-color:#76bc43}
+  .partner-referral-card:hover{transform:translateY(-2px);box-shadow:0 12px 26px rgba(15,23,42,.12);background:#fff}
+  .partner-referral-step{display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:13px;background:#eef8fb;color:var(--ctm-navy);font-weight:900;margin-bottom:14px}
+  .partner-referral-card h3{margin:0 0 8px;color:#0b1f35;font-size:19px}
+  .partner-referral-card p{margin:0;color:#667085;line-height:1.5;font-size:14px}
+  .partner-referral-pill-row{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}
+  .partner-referral-pill{background:#fff;border:1px solid #d8e1ea;border-radius:999px;padding:6px 10px;color:#475467;font-size:12px;font-weight:800}
+  .partner-referral-checklist{background:#eef8fb;border:1px solid #d7edf2;color:var(--ctm-navy);border-radius:18px;padding:18px;margin-top:18px;line-height:1.55}
+  .partner-referral-checklist b{color:#0b1f35}
+  @media(max-width:1100px){.partner-referral-grid{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:700px){.partner-referral-grid{grid-template-columns:1fr}}
+
 </style>
 <!-- Updated: All section cards and navigation items now include real clickable section links with hash URLs. -->
 </head>
@@ -4659,7 +4686,60 @@
 <div class="partner-contact-note"><b>When to use this section:</b> Use Partner Contacts when partner agency support, regional bid input, local-market guidance, or escalation visibility is needed.</div>
 <a class="backtop" data-target="partner-agency" href="#view-partner-agency">Back to Partner Agency ↑</a>
 </section>
-</section><section class="view" id="view-partner-agency-referrals"><section class="content-card"><h2>Referral Guidance</h2><p>Use this area for referral intake, lead source documentation, CRM expectations, follow-up timing, and ownership guidance.</p><a class="backtop" data-target="partner-agency" href="#view-partner-agency">Back to Partner Agency ↑</a></section></section>
+</section>
+<section class="view" id="view-partner-agency-referrals">
+<section class="hero partner-referral-hero">
+<div class="eyebrow">Partner Agency</div>
+<h1>Referral Guidance</h1>
+<p>A structured guide for referral intake, lead ownership, CRM notes, follow-up expectations, and regional handoff alignment.</p>
+<span class="owner">Page owner: Global Sales / Partner Agency Program</span>
+</section>
+
+<section class="partner-referral-intro">
+<h2>Referral Guidance Workflow</h2>
+<p>Use these cards to standardize how partner agency referrals are captured, assigned, documented, and followed through across regions.</p>
+<div class="partner-referral-grid">
+<div class="partner-referral-card">
+<div class="partner-referral-step">01</div>
+<h3>Referral Intake</h3>
+<p>Capture the opportunity name, client contact, referring source, region, services needed, and expected timeline.</p>
+<div class="partner-referral-pill-row"><span class="partner-referral-pill">Opportunity</span><span class="partner-referral-pill">Region</span><span class="partner-referral-pill">Need</span></div>
+</div>
+<div class="partner-referral-card">
+<div class="partner-referral-step">02</div>
+<h3>Lead Ownership</h3>
+<p>Confirm the primary owner, supporting region, partner agency contact, and who is responsible for next steps.</p>
+<div class="partner-referral-pill-row"><span class="partner-referral-pill">Owner</span><span class="partner-referral-pill">Support</span><span class="partner-referral-pill">Next step</span></div>
+</div>
+<div class="partner-referral-card">
+<div class="partner-referral-step">03</div>
+<h3>CRM Documentation</h3>
+<p>Document the referral source, current stage, handoff notes, related contacts, and follow-up activity in CRM.</p>
+<div class="partner-referral-pill-row"><span class="partner-referral-pill">CRM notes</span><span class="partner-referral-pill">Stage</span><span class="partner-referral-pill">Source</span></div>
+</div>
+<div class="partner-referral-card">
+<div class="partner-referral-step">04</div>
+<h3>Regional Handoff</h3>
+<p>Align the appropriate regional sales contact or partner contact when local-market input or regional ownership is needed.</p>
+<div class="partner-referral-pill-row"><span class="partner-referral-pill">Local input</span><span class="partner-referral-pill">Handoff</span><span class="partner-referral-pill">Alignment</span></div>
+</div>
+<div class="partner-referral-card">
+<div class="partner-referral-step">05</div>
+<h3>Follow-Up Timing</h3>
+<p>Set clear response expectations, due dates, meeting cadence, and escalation timing for active referral opportunities.</p>
+<div class="partner-referral-pill-row"><span class="partner-referral-pill">Due date</span><span class="partner-referral-pill">Cadence</span><span class="partner-referral-pill">Escalation</span></div>
+</div>
+<div class="partner-referral-card">
+<div class="partner-referral-step">06</div>
+<h3>Outcome Tracking</h3>
+<p>Track the referral outcome, next action, win/loss status, and lessons learned for future partner agency activity.</p>
+<div class="partner-referral-pill-row"><span class="partner-referral-pill">Outcome</span><span class="partner-referral-pill">Win/Loss</span><span class="partner-referral-pill">Lessons</span></div>
+</div>
+</div>
+<div class="partner-referral-checklist"><b>Recommended referral details:</b> Opportunity name, client footprint, region, referral source, owner, expected outcome, requested support, timeline, and link to the opportunity or supporting documents.</div>
+<a class="backtop" data-target="partner-agency" href="#view-partner-agency">Back to Partner Agency ↑</a>
+</section>
+</section>
 <section class="view" id="view-partner-agency-materials"><section class="content-card"><h2>Partner Materials</h2><p>Use this area for approved partner agency collateral, templates, decks, talking points, and shared pursuit materials.</p><a class="backtop" data-target="partner-agency" href="#view-partner-agency">Back to Partner Agency ↑</a></section></section>
 <section class="view" id="view-partner-agency-bid-resources">
 <section class="hero partner-bid-hero">
