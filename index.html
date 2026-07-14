@@ -4167,6 +4167,32 @@
   @media(max-width:1100px){.partner-referral-grid{grid-template-columns:repeat(2,1fr)}}
   @media(max-width:700px){.partner-referral-grid{grid-template-columns:1fr}}
 
+
+  /* Partner Materials card layout */
+  .partner-materials-hero{background:linear-gradient(125deg,#0b1f35 0%,#003b49 48%,#007c94 105%);position:relative;overflow:hidden}
+  .partner-materials-hero:after{content:"";position:absolute;right:-130px;top:-150px;width:430px;height:430px;border-radius:50%;border:1px solid rgba(255,255,255,.28);box-shadow:0 0 0 38px rgba(255,255,255,.04),0 0 0 78px rgba(255,255,255,.025)}
+  .partner-materials-hero .eyebrow,.partner-materials-hero h1,.partner-materials-hero p,.partner-materials-hero .owner{position:relative;z-index:1}
+  .partner-materials-intro{background:#fff;border:1px solid var(--line);border-radius:24px;padding:26px;box-shadow:0 10px 26px rgba(15,23,42,.08);margin-bottom:22px}
+  .partner-materials-intro h2{margin:0 0 8px;color:#0b1f35;font-size:25px}
+  .partner-materials-intro p{margin:0;color:#475467;line-height:1.6;max-width:980px}
+  .partner-materials-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:18px}
+  .partner-materials-card{background:linear-gradient(180deg,#ffffff 0%,#f8fafc 100%);border:1px solid var(--line);border-radius:20px;padding:20px;box-shadow:0 3px 12px rgba(15,23,42,.06);border-top:7px solid var(--ctm-teal);transition:.15s ease;position:relative;overflow:hidden}
+  .partner-materials-card:nth-child(2){border-top-color:var(--ctm-green)}
+  .partner-materials-card:nth-child(3){border-top-color:#f0b429}
+  .partner-materials-card:nth-child(4){border-top-color:#667085}
+  .partner-materials-card:nth-child(5){border-top-color:#007c94}
+  .partner-materials-card:nth-child(6){border-top-color:#76bc43}
+  .partner-materials-card:hover{transform:translateY(-2px);box-shadow:0 12px 26px rgba(15,23,42,.12);background:#fff}
+  .partner-materials-icon{display:inline-flex;align-items:center;justify-content:center;width:42px;height:42px;border-radius:14px;background:#eef8fb;color:var(--ctm-navy);font-weight:900;margin-bottom:14px}
+  .partner-materials-card h3{margin:0 0 8px;color:#0b1f35;font-size:19px}
+  .partner-materials-card p{margin:0;color:#667085;line-height:1.5;font-size:14px}
+  .partner-materials-pill-row{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}
+  .partner-materials-pill{background:#fff;border:1px solid #d8e1ea;border-radius:999px;padding:6px 10px;color:#475467;font-size:12px;font-weight:800}
+  .partner-materials-note{background:#eef8fb;border:1px solid #d7edf2;color:var(--ctm-navy);border-radius:18px;padding:18px;margin-top:18px;line-height:1.55}
+  .partner-materials-note b{color:#0b1f35}
+  @media(max-width:1100px){.partner-materials-grid{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:700px){.partner-materials-grid{grid-template-columns:1fr}}
+
 </style>
 <!-- Updated: All section cards and navigation items now include real clickable section links with hash URLs. -->
 </head>
@@ -4740,7 +4766,59 @@
 <a class="backtop" data-target="partner-agency" href="#view-partner-agency">Back to Partner Agency ↑</a>
 </section>
 </section>
-<section class="view" id="view-partner-agency-materials"><section class="content-card"><h2>Partner Materials</h2><p>Use this area for approved partner agency collateral, templates, decks, talking points, and shared pursuit materials.</p><a class="backtop" data-target="partner-agency" href="#view-partner-agency">Back to Partner Agency ↑</a></section></section>
+<section class="view" id="view-partner-agency-materials">
+<section class="hero partner-materials-hero">
+<div class="eyebrow">Partner Agency</div>
+<h1>Partner Materials</h1>
+<p>Approved partner agency collateral, templates, decks, talking points, and shared pursuit content in one organized location.</p>
+<span class="owner">Page owner: Global Sales / Partner Agency Program</span>
+</section>
+
+<section class="partner-materials-intro">
+<h2>Partner Materials Library</h2>
+<p>Use these cards to organize current, approved partner materials so sales teams can quickly find the right content for outreach, pursuits, presentations, and regional collaboration.</p>
+<div class="partner-materials-grid">
+<div class="partner-materials-card">
+<div class="partner-materials-icon">01</div>
+<h3>Approved Collateral</h3>
+<p>Store approved partner agency one-pagers, overview documents, capability summaries, and client-facing collateral.</p>
+<div class="partner-materials-pill-row"><span class="partner-materials-pill">One-pagers</span><span class="partner-materials-pill">Overviews</span><span class="partner-materials-pill">Client-ready</span></div>
+</div>
+<div class="partner-materials-card">
+<div class="partner-materials-icon">02</div>
+<h3>Partner Decks</h3>
+<p>Provide standard partner agency decks, presentation slides, executive summaries, and reusable pitch content.</p>
+<div class="partner-materials-pill-row"><span class="partner-materials-pill">Decks</span><span class="partner-materials-pill">Slides</span><span class="partner-materials-pill">Pitch content</span></div>
+</div>
+<div class="partner-materials-card">
+<div class="partner-materials-icon">03</div>
+<h3>Talking Points</h3>
+<p>Centralize approved messaging, positioning statements, discovery prompts, and partner agency conversation guides.</p>
+<div class="partner-materials-pill-row"><span class="partner-materials-pill">Messaging</span><span class="partner-materials-pill">Positioning</span><span class="partner-materials-pill">Discovery</span></div>
+</div>
+<div class="partner-materials-card">
+<div class="partner-materials-icon">04</div>
+<h3>Templates</h3>
+<p>Link standard email templates, referral templates, pursuit templates, and handoff documentation.</p>
+<div class="partner-materials-pill-row"><span class="partner-materials-pill">Email</span><span class="partner-materials-pill">Referral</span><span class="partner-materials-pill">Handoff</span></div>
+</div>
+<div class="partner-materials-card">
+<div class="partner-materials-icon">05</div>
+<h3>Proof Points</h3>
+<p>Capture approved examples, partner success stories, client outcomes, and supporting evidence for pursuits.</p>
+<div class="partner-materials-pill-row"><span class="partner-materials-pill">Success stories</span><span class="partner-materials-pill">Outcomes</span><span class="partner-materials-pill">Evidence</span></div>
+</div>
+<div class="partner-materials-card">
+<div class="partner-materials-icon">06</div>
+<h3>Regional Content</h3>
+<p>Organize region-specific partner agency materials, contacts, market notes, and local support resources.</p>
+<div class="partner-materials-pill-row"><span class="partner-materials-pill">Regional</span><span class="partner-materials-pill">Contacts</span><span class="partner-materials-pill">Local notes</span></div>
+</div>
+</div>
+<div class="partner-materials-note"><b>Recommended material details:</b> Add the document owner, last reviewed date, audience, approved use case, region, and link to the current source file.</div>
+<a class="backtop" data-target="partner-agency" href="#view-partner-agency">Back to Partner Agency ↑</a>
+</section>
+</section>
 <section class="view" id="view-partner-agency-bid-resources">
 <section class="hero partner-bid-hero">
 <div class="eyebrow">Partner Agency</div>
