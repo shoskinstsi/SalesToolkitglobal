@@ -4218,6 +4218,36 @@
   @media(max-width:1100px){.partner-process-grid{grid-template-columns:repeat(2,1fr)}}
   @media(max-width:700px){.partner-process-grid{grid-template-columns:1fr}}
 
+
+
+/* Customer Proof Hub - Modern Cards */
+.proof-hero-panel{
+  background:linear-gradient(115deg,#003b49 0%,#006e84 55%,#76bc43 120%);
+  color:#fff;border-radius:26px;padding:34px;margin-bottom:22px;
+  box-shadow:0 12px 30px rgba(15,23,42,.16);position:relative;overflow:hidden
+}
+.proof-hero-panel:after{content:"";position:absolute;right:-70px;top:-90px;width:260px;height:260px;border-radius:50%;border:1px solid rgba(255,255,255,.28);box-shadow:0 0 0 34px rgba(255,255,255,.04),0 0 0 70px rgba(255,255,255,.025)}
+.proof-hero-panel h2{margin:0 0 10px;color:#fff;font-size:30px;position:relative;z-index:1}
+.proof-hero-panel p{margin:0;color:rgba(255,255,255,.92);line-height:1.6;max-width:980px;position:relative;z-index:1}
+.proof-action-strip{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px;position:relative;z-index:1}
+.proof-action-pill{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.24);color:#fff;border-radius:999px;padding:8px 12px;font-size:12px;font-weight:700}
+.proof-kpi-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:22px}
+.proof-kpi{background:#fff;border:1px solid var(--line);border-radius:18px;padding:18px;box-shadow:0 2px 8px rgba(15,23,42,.06);border-top:6px solid var(--ctm-teal)}
+.proof-kpi:nth-child(2){border-top-color:var(--ctm-green)}.proof-kpi:nth-child(3){border-top-color:#f0b429}.proof-kpi:nth-child(4){border-top-color:#667085}
+.proof-kpi b{display:block;color:#0b1f35;font-size:18px;margin-bottom:6px}.proof-kpi span{color:#667085;font-size:13px;line-height:1.4}
+.proof-card-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:18px}
+.proof-card{background:#fff;border:1px solid var(--line);border-radius:22px;padding:24px;text-decoration:none;color:var(--ink);box-shadow:0 2px 8px rgba(15,23,42,.06);transition:.16s ease;display:flex;flex-direction:column;min-height:230px;border-left:8px solid var(--ctm-teal)}
+.proof-card:nth-child(2){border-left-color:var(--ctm-green)}.proof-card:nth-child(3){border-left-color:#f0b429}.proof-card:nth-child(4){border-left-color:#667085}.proof-card:nth-child(5){border-left-color:#007c94}.proof-card:nth-child(6){border-left-color:#76bc43}
+.proof-card:hover{transform:translateY(-3px);box-shadow:0 14px 30px rgba(15,23,42,.14);background:#fff}
+.proof-card-top{display:flex;justify-content:space-between;gap:16px;align-items:flex-start}
+.proof-icon{width:44px;height:44px;min-width:44px;border-radius:15px;background:#eef8fb;color:var(--ctm-navy);display:flex;align-items:center;justify-content:center;font-weight:900;font-size:19px}
+.proof-card h3{margin:0 0 8px;color:#0b1f35;font-size:21px}.proof-card p{margin:0;color:#667085;line-height:1.5;font-size:14px}
+.proof-card-tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:16px}.proof-tag{background:#f8fafc;border:1px solid var(--line);border-radius:999px;padding:6px 10px;color:#475467;font-size:12px;font-weight:600}
+.proof-card-action{margin-top:auto;padding-top:18px;color:var(--ctm-teal);font-weight:800;display:flex;justify-content:space-between;border-top:1px solid var(--line)}
+.proof-detail-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:16px}.proof-detail-box{background:#f8fafc;border:1px solid var(--line);border-radius:14px;padding:16px;color:#344054;line-height:1.5}.proof-detail-box b{display:block;color:#0b1f35;margin-bottom:8px}
+@media(max-width:1100px){.proof-card-grid,.proof-kpi-grid,.proof-detail-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:720px){.proof-card-grid,.proof-kpi-grid,.proof-detail-grid{grid-template-columns:1fr}.proof-hero-panel{padding:26px}.proof-card{min-height:auto}}
+
 </style>
 <!-- Updated: All section cards and navigation items now include real clickable section links with hash URLs. -->
 </head>
@@ -7672,17 +7702,32 @@
 </section>
 </section>
 <section class="view" id="view-customer-proof-hub">
-<section class="content-card">
+<section class="proof-hero-panel">
 <h2>Customer Proof Hub</h2>
-<p>Open one of the customer proof hub areas below to show only that section.</p>
+<p>Use this hub to quickly find approved proof points, customer stories, references, and growth insights that support pursuits, executive briefings, proposals, and client conversations.</p>
+<div class="proof-action-strip"><span class="proof-action-pill">Approved proof</span><span class="proof-action-pill">Regional stories</span><span class="proof-action-pill">CRM insights</span><span class="proof-action-pill">Growth opportunities</span></div>
 </section>
-<section class="three-grid">
-<a class="region-tile" data-target="retain-grow" href="#view-retain-grow"><h3>Retain &amp; Grow</h3><p>Review satisfaction, service performance, adoption, support trends, and risks to strengthen the partnership.</p></a>
-<a class="region-tile" data-target="crm" href="#view-crm"><h3>CRM</h3><p>Document outcomes, client feedback, risks, action items, owners, and due dates.</p></a>
-<a class="region-tile" data-target="growth" href="#view-growth"><h3>Growth Opportunities</h3><p>Identify expanded services, additional products, traveler adoption, and regional/global needs.</p></a>
+<section class="proof-kpi-grid">
+<div class="proof-kpi"><b>Proof Points</b><span>Reusable value statements and differentiators.</span></div>
+<div class="proof-kpi"><b>Client Stories</b><span>Relevant examples by segment, solution, and region.</span></div>
+<div class="proof-kpi"><b>References</b><span>Approved reference guidance and usage notes.</span></div>
+<div class="proof-kpi"><b>Insights</b><span>Feedback and outcomes connected to CRM and Win/Loss.</span></div>
 </section>
-<section class="content-card" style="margin-top:18px"><a class="backtop" data-target="home" href="#view-home">Back to Home ↑</a></section>
+<section class="content-card">
+<h2>Choose a Customer Proof Area</h2>
+<p>Select a card below to open the related section. Each card is clickable and designed to guide sales teams to the right proof material faster.</p>
+<div class="proof-card-grid">
+<a class="proof-card" data-target="retain-grow" href="#view-retain-grow"><div class="proof-card-top"><div><h3>Retain &amp; Grow</h3><p>Review satisfaction, service performance, adoption, support trends, and risk indicators to strengthen the relationship.</p></div><div class="proof-icon">↗</div></div><div class="proof-card-tags"><span class="proof-tag">Retention</span><span class="proof-tag">Service trends</span><span class="proof-tag">Risk</span></div><div class="proof-card-action"><span>Open section</span><span>→</span></div></a>
+<a class="proof-card" data-target="crm" href="#view-crm"><div class="proof-card-top"><div><h3>CRM Documentation</h3><p>Document outcomes, client feedback, risks, action items, owners, and due dates in one consistent process.</p></div><div class="proof-icon">◎</div></div><div class="proof-card-tags"><span class="proof-tag">CRM</span><span class="proof-tag">Actions</span><span class="proof-tag">Owners</span></div><div class="proof-card-action"><span>Open section</span><span>→</span></div></a>
+<a class="proof-card" data-target="growth" href="#view-growth"><div class="proof-card-top"><div><h3>Growth Opportunities</h3><p>Identify expanded services, additional products, traveler adoption opportunities, and regional or global needs.</p></div><div class="proof-icon">+</div></div><div class="proof-card-tags"><span class="proof-tag">Growth</span><span class="proof-tag">Adoption</span><span class="proof-tag">Expansion</span></div><div class="proof-card-action"><span>Open section</span><span>→</span></div></a>
+<a class="proof-card" data-target="templates" href="#view-templates"><div class="proof-card-top"><div><h3>Proof Templates</h3><p>Open approved proposal inserts, customer story formats, executive briefing content, and reusable value statements.</p></div><div class="proof-icon">▣</div></div><div class="proof-card-tags"><span class="proof-tag">Templates</span><span class="proof-tag">Proposal inserts</span></div><div class="proof-card-action"><span>Open templates</span><span>→</span></div></a>
+<a class="proof-card" data-target="customer-proof-hub-template" href="#view-customer-proof-hub-template"><div class="proof-card-top"><div><h3>Customer Proof Template</h3><p>Use a structured template to capture proof details, customer outcomes, approval status, and related links.</p></div><div class="proof-icon">✓</div></div><div class="proof-card-tags"><span class="proof-tag">Capture</span><span class="proof-tag">Approval</span></div><div class="proof-card-action"><span>Open template</span><span>→</span></div></a>
+<a class="proof-card" data-target="win-loss" href="#view-win-loss"><div class="proof-card-top"><div><h3>Win/Loss Insights</h3><p>Connect customer proof to debrief learnings so successful positioning and lessons learned can be reused.</p></div><div class="proof-icon">★</div></div><div class="proof-card-tags"><span class="proof-tag">Lessons learned</span><span class="proof-tag">Debrief</span></div><div class="proof-card-action"><span>Open Win/Loss</span><span>→</span></div></a>
+</div>
 </section>
+<section class="content-card"><a class="backtop" data-target="home" href="#view-home">Back to Home ↑</a></section>
+</section>
+
 <section class="view" id="view-stage-1-active">
 <section class="hero">
 <div class="eyebrow">Sales Stage Workflow</div>
@@ -8219,9 +8264,9 @@
 </section>
 <section class="view" id="view-strategy"><section class="content-card"><h2>Sales Strategy</h2><p>Deal captain expectations, annual planning, win strategy, and account planning guidance.</p><a class="backtop" data-target="global-sales" href="#view-global-sales">Back to Global Sales ↑</a></section></section>
 <section class="view" id="view-cycles"><section class="content-card"><h2>Sales Cycles</h2><p>Opportunity stages from qualified through closed won, including proposal and negotiation.</p><a class="backtop" data-target="global-sales" href="#view-global-sales">Back to Global Sales ↑</a></section></section>
-<section class="view" id="view-retain-grow"><section class="content-card"><h2>Retain &amp; Grow</h2><p>Review client satisfaction, service performance, adoption, support trends, risks, and relationship health.</p><a class="backtop" data-target="customer-proof-hub" href="#view-customer-proof-hub">Back to Customer Proof Hub ↑</a></section></section>
-<section class="view" id="view-crm"><section class="content-card"><h2>CRM</h2><p>Document review outcomes, client feedback, action items, owners, risks, opportunities, and due dates in CRM.</p><a class="backtop" data-target="customer-proof-hub" href="#view-customer-proof-hub">Back to Customer Proof Hub ↑</a></section></section>
-<section class="view" id="view-growth"><section class="content-card"><h2>Growth Opportunities</h2><p>Identify expanded services, additional products, traveler adoption, regional/global needs, and process improvements.</p><a class="backtop" data-target="customer-proof-hub" href="#view-customer-proof-hub">Back to Customer Proof Hub ↑</a></section></section>
+<section class="view" id="view-retain-grow"><section class="proof-hero-panel"><h2>Retain &amp; Grow</h2><p>Use this section to review relationship health, adoption trends, service performance, and risks before key client conversations.</p><div class="proof-action-strip"><span class="proof-action-pill">Client health</span><span class="proof-action-pill">Risk review</span><span class="proof-action-pill">Retention planning</span></div></section><section class="content-card"><h2>Retain &amp; Grow Focus Areas</h2><div class="proof-detail-grid"><div class="proof-detail-box"><b>Satisfaction</b>Client feedback, meeting outcomes, sentiment, and executive sponsor input.</div><div class="proof-detail-box"><b>Service Performance</b>Support themes, escalation patterns, SLA performance, and traveler experience.</div><div class="proof-detail-box"><b>Adoption</b>Tool usage, policy adoption, program engagement, and traveler behavior trends.</div><div class="proof-detail-box"><b>Risk</b>Open issues, competitive pressure, renewal concerns, or stakeholder changes.</div><div class="proof-detail-box"><b>Value Delivered</b>Savings, compliance, reporting, service outcomes, and implementation wins.</div><div class="proof-detail-box"><b>Next Action</b>Owner, due date, CRM update, and follow-up plan.</div></div><a class="backtop" data-target="customer-proof-hub" href="#view-customer-proof-hub">Back to Customer Proof Hub ↑</a></section></section>
+<section class="view" id="view-crm"><section class="proof-hero-panel"><h2>CRM Documentation</h2><p>Use this section to keep customer proof, feedback, and action items documented consistently so teams can reuse insights across pursuits.</p><div class="proof-action-strip"><span class="proof-action-pill">Outcome tracking</span><span class="proof-action-pill">Owner assignment</span><span class="proof-action-pill">Follow-up visibility</span></div></section><section class="content-card"><h2>CRM Documentation Guidance</h2><div class="proof-detail-grid"><div class="proof-detail-box"><b>Client Feedback</b>Capture feedback from meetings, QBRs, executive briefings, and debriefs.</div><div class="proof-detail-box"><b>Proof Link</b>Attach or link approved case studies, value statements, dashboards, or proposal inserts.</div><div class="proof-detail-box"><b>Risks</b>Document at-risk indicators, competitive threats, stakeholder concerns, and open issues.</div><div class="proof-detail-box"><b>Actions</b>Assign owners, due dates, next steps, and required follow-up.</div><div class="proof-detail-box"><b>Opportunity Notes</b>Connect proof to relevant sales stage, region, customer, or opportunity.</div><div class="proof-detail-box"><b>Governance</b>Confirm approval status, review date, and whether the proof can be reused externally.</div></div><a class="backtop" data-target="customer-proof-hub" href="#view-customer-proof-hub">Back to Customer Proof Hub ↑</a></section></section>
+<section class="view" id="view-growth"><section class="proof-hero-panel"><h2>Growth Opportunities</h2><p>Use this section to identify where existing proof, client feedback, and service outcomes can support account growth or expanded solutions.</p><div class="proof-action-strip"><span class="proof-action-pill">Expansion</span><span class="proof-action-pill">Cross-sell</span><span class="proof-action-pill">Regional needs</span></div></section><section class="content-card"><h2>Growth Opportunity Areas</h2><div class="proof-detail-grid"><div class="proof-detail-box"><b>Expanded Services</b>Identify additional service lines, new markets, or expanded account coverage.</div><div class="proof-detail-box"><b>Product Adoption</b>Look for technology, reporting, payment, mobile, or traveler experience opportunities.</div><div class="proof-detail-box"><b>Regional / Global Needs</b>Capture gaps where regional support or global alignment could add value.</div><div class="proof-detail-box"><b>Stakeholder Signals</b>Track sponsor feedback, decision-maker interest, and upcoming business changes.</div><div class="proof-detail-box"><b>Proof to Reuse</b>Connect relevant case studies, value statements, and proposal inserts.</div><div class="proof-detail-box"><b>Next Step</b>Assign owner, timeline, follow-up action, and CRM update.</div></div><a class="backtop" data-target="customer-proof-hub" href="#view-customer-proof-hub">Back to Customer Proof Hub ↑</a></section></section>
 <section class="view" id="view-bid-no-bid">
 <section class="hero">
 <div class="eyebrow">Bid Toolkit</div>
