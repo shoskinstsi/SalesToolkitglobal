@@ -4040,6 +4040,106 @@
     .search-result-meta{grid-column:auto !important;}
   }
 
+
+
+  /* Updated Partner Agency card layout */
+  #view-partner-agency .tile-grid{
+    display:grid;
+    grid-template-columns:repeat(5,1fr);
+    gap:16px;
+    margin-top:18px;
+  }
+  #view-partner-agency .tile{
+    position:relative;
+    overflow:hidden;
+    min-height:210px;
+    padding:0;
+    border:1px solid #d8e1ea;
+    border-radius:24px;
+    background:#fff;
+    box-shadow:0 10px 26px rgba(15,23,42,.08);
+    transition:.18s ease;
+  }
+  #view-partner-agency .tile:before{
+    content:"";
+    display:block;
+    height:9px;
+    background:linear-gradient(90deg,var(--ctm-navy),var(--ctm-teal));
+  }
+  #view-partner-agency .tile:nth-child(2):before{background:linear-gradient(90deg,var(--ctm-teal),var(--ctm-green))}
+  #view-partner-agency .tile:nth-child(3):before{background:linear-gradient(90deg,#0b1f35,#f0b429)}
+  #view-partner-agency .tile:nth-child(4):before{background:linear-gradient(90deg,#003b49,#667085)}
+  #view-partner-agency .tile:nth-child(5):before{background:linear-gradient(90deg,#007c94,#76bc43)}
+  #view-partner-agency .tile:after{
+    content:"";
+    position:absolute;
+    right:-46px;
+    top:-46px;
+    width:132px;
+    height:132px;
+    border-radius:50%;
+    background:rgba(0,124,148,.08);
+    box-shadow:0 0 0 28px rgba(118,188,67,.045);
+    pointer-events:none;
+  }
+  #view-partner-agency .tile:hover{
+    transform:translateY(-4px);
+    box-shadow:0 16px 34px rgba(15,23,42,.14);
+    border-color:#b9dce3;
+  }
+  #view-partner-agency .tile-top{
+    position:relative;
+    z-index:1;
+    display:block;
+    padding:22px 20px 6px;
+  }
+  #view-partner-agency .circle{
+    width:auto;
+    height:auto;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    margin-bottom:16px;
+    padding:7px 11px;
+    border-radius:999px;
+    background:#eef8fb;
+    border:1px solid #d7edf2;
+    color:var(--ctm-navy);
+    font-size:12px;
+    font-weight:800;
+    letter-spacing:.08em;
+  }
+  #view-partner-agency .tile h3{
+    margin:0 0 9px;
+    color:#0b1f35;
+    font-size:20px;
+    line-height:1.25;
+  }
+  #view-partner-agency .tile p{
+    margin:0;
+    color:#667085;
+    font-size:14px;
+    line-height:1.5;
+  }
+  #view-partner-agency .arrow{
+    position:relative;
+    z-index:1;
+    margin:14px 20px 20px;
+    align-self:auto;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    width:38px;
+    height:38px;
+    border-radius:50%;
+    background:var(--ctm-navy);
+    color:#fff;
+    font-size:24px;
+    font-weight:400;
+  }
+  @media(max-width:1300px){#view-partner-agency .tile-grid{grid-template-columns:repeat(3,1fr)}}
+  @media(max-width:900px){#view-partner-agency .tile-grid{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:650px){#view-partner-agency .tile-grid{grid-template-columns:1fr}}
 </style>
 <!-- Updated: All section cards and navigation items now include real clickable section links with hash URLs. -->
 </head>
