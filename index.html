@@ -4249,32 +4249,147 @@
 @media(max-width:720px){.proof-card-grid,.proof-kpi-grid,.proof-detail-grid{grid-template-columns:1fr}.proof-hero-panel{padding:26px}.proof-card{min-height:auto}}
 
 
-  .kpi-card-link{display:block;text-decoration:none;color:inherit;cursor:pointer;transition:.15s ease}
-  .kpi-card-link:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(15,23,42,.12)}
-  .kpi-card-link .kpi-note:after{content:"  View details →";color:var(--ctm-teal);font-weight:700}
-  .opportunity-summary{display:flex;gap:10px;flex-wrap:wrap;margin:16px 0 20px}
-  .opportunity-summary-pill{background:#eef8fb;border:1px solid #d7edf2;color:var(--ctm-navy);border-radius:999px;padding:8px 12px;font-size:13px}
-  .opportunity-account-link{color:var(--ctm-teal);font-weight:700;text-decoration:none}
-  .opportunity-account-link:hover{text-decoration:underline}
 
-  .dashboard-drill-link{display:block;text-decoration:none;color:inherit;cursor:pointer;transition:.15s ease}
-  .dashboard-drill-link:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(15,23,42,.12)}
-  .dashboard-drill-link .kpi-note:after{content:"  View details →";color:var(--ctm-teal);font-weight:700}
-  .drill-summary{display:flex;gap:10px;flex-wrap:wrap;margin:16px 0 20px}
-  .drill-summary-pill{background:#eef8fb;border:1px solid #d7edf2;color:var(--ctm-navy);border-radius:999px;padding:8px 12px;font-size:13px}
+  /* Modern Help & Contacts card refresh */
+  .help-intro{
+    background:linear-gradient(115deg,#ffffff 0%,#f7fbfc 55%,#eef8fb 100%);
+    border:1px solid #d7edf2;
+    border-radius:24px;
+    padding:30px;
+    box-shadow:0 8px 22px rgba(15,23,42,.07);
+    position:relative;
+    overflow:hidden;
+  }
+  .help-intro:after{
+    content:"";
+    position:absolute;
+    right:-70px;
+    top:-90px;
+    width:230px;
+    height:230px;
+    border-radius:50%;
+    background:rgba(0,124,148,.08);
+  }
+  .help-intro h2{font-size:28px;margin-bottom:8px;position:relative;z-index:1}
+  .help-intro p{position:relative;z-index:1;color:#475467;font-size:15px;max-width:980px}
+  .help-link-grid{grid-template-columns:repeat(3,1fr);gap:18px;margin-top:18px}
+  .help-link-card{
+    border:1px solid #dfe7ef;
+    border-left:0;
+    border-radius:22px;
+    padding:0;
+    overflow:hidden;
+    background:#fff;
+    min-height:190px;
+    position:relative;
+  }
+  .help-link-card:before{
+    content:"";
+    display:block;
+    height:8px;
+    background:linear-gradient(90deg,var(--ctm-teal),#9ccbd4);
+  }
+  .help-link-card:nth-child(2n):before{background:linear-gradient(90deg,var(--ctm-green),#b6d99a)}
+  .help-link-card:nth-child(3n):before{background:linear-gradient(90deg,#f0b429,#f7d58a)}
+  .help-link-card:nth-child(4n):before{background:linear-gradient(90deg,#667085,#c7ced8)}
+  .help-link-card:hover{background:#fff;transform:translateY(-4px);box-shadow:0 14px 30px rgba(15,23,42,.14)}
+  .help-link-top{padding:22px;align-items:flex-start}
+  .help-link-card h3{font-size:21px;margin-bottom:10px;color:#0b1f35}
+  .help-link-card p{font-size:14px;line-height:1.55;color:#5b6678}
+  .help-arrow{
+    background:var(--ctm-navy);
+    color:#fff;
+    width:42px;
+    height:42px;
+    min-width:42px;
+    box-shadow:0 6px 14px rgba(0,59,73,.18);
+  }
+  .help-link-card:nth-child(2n) .help-arrow{background:var(--ctm-teal)}
+  .help-link-card:nth-child(3n) .help-arrow{background:var(--ctm-green);color:#173100}
+  .view[id$="-contact"] .content-card{
+    border-radius:24px;
+    border:1px solid #dfe7ef;
+    box-shadow:0 6px 18px rgba(15,23,42,.07);
+  }
+  .view[id$="-contact"] .content-card h2{
+    font-size:24px;
+    color:#0b1f35;
+  }
+  .help-detail-grid{grid-template-columns:repeat(3,1fr);gap:16px;margin-top:18px}
+  .help-detail-box{
+    background:linear-gradient(180deg,#ffffff 0%,#f8fafc 100%);
+    border:1px solid #dfe7ef;
+    border-radius:18px;
+    padding:20px;
+    min-height:138px;
+    position:relative;
+    overflow:hidden;
+    box-shadow:0 2px 8px rgba(15,23,42,.05);
+  }
+  .help-detail-box:before{
+    content:"";
+    position:absolute;
+    left:0;
+    top:0;
+    bottom:0;
+    width:6px;
+    background:var(--ctm-teal);
+  }
+  .help-detail-box:nth-child(2):before{background:var(--ctm-green)}
+  .help-detail-box:nth-child(3):before{background:#f0b429}
+  .help-detail-box b{
+    display:block;
+    font-size:15px;
+    text-transform:uppercase;
+    letter-spacing:.06em;
+    color:#0b1f35;
+    margin-bottom:10px;
+  }
+  .help-checklist{grid-template-columns:repeat(4,1fr);gap:14px;margin-top:18px}
+  .help-check{
+    background:#fff;
+    border:1px solid #dfe7ef;
+    border-radius:18px;
+    padding:18px 18px 18px 46px;
+    position:relative;
+    min-height:96px;
+    box-shadow:0 2px 8px rgba(15,23,42,.05);
+  }
+  .help-check:before{
+    content:"✓";
+    position:absolute;
+    left:16px;
+    top:17px;
+    width:22px;
+    height:22px;
+    border-radius:50%;
+    background:#eef8fb;
+    color:var(--ctm-navy);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-weight:900;
+  }
+  .view[id$="-contact"] .content-card:last-of-type{
+    background:#f8fafc;
+  }
+  .view[id$="-contact"] .content-card:last-of-type p{
+    background:#fff;
+    border:1px solid var(--line);
+    border-radius:14px;
+    padding:14px 16px;
+    margin:10px 0;
+  }
+  @media(max-width:1200px){.help-link-grid,.help-detail-grid{grid-template-columns:repeat(2,1fr)}.help-checklist{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:720px){.help-link-grid,.help-detail-grid,.help-checklist{grid-template-columns:1fr}.help-link-card{min-height:auto}}
 
-  .regional-bar-stage-link{display:grid;grid-template-columns:220px 1fr 54px;gap:14px;align-items:center;text-decoration:none;color:inherit;border-radius:14px;padding:8px 10px;margin:-8px -10px;transition:.15s ease;cursor:pointer}
-  .regional-bar-stage-link:hover{background:#f8fafc;box-shadow:0 4px 14px rgba(15,23,42,.08);transform:translateY(-1px)}
-  .regional-bar-stage-link .regional-bar-value{color:var(--ctm-teal)}
-  .regional-bar-stage-link .regional-bar-value:after{content:"  →";font-weight:700}
-  @media(max-width:1000px){.regional-bar-stage-link{grid-template-columns:1fr}.regional-bar-stage-link .regional-bar-value{text-align:left}}
 </style>
 <!-- Updated: All section cards and navigation items now include real clickable section links with hash URLs. -->
 </head>
 <body>
 <div class="shared-banner">
 <strong>CTM Global Sales Hub Mockup</strong>
-     
+    You’re viewing user-generated content that may be unverified or unsafe. <a href="#">Report</a>
 </div>
 <header class="site-header clean-top-header">
 <div class="brand">
@@ -4537,7 +4652,7 @@
 <div class="bid-path-grid">
 <a class="bid-path-card" data-target="global-bid-resources" href="#view-global-bid-resources"><b>Need a template?</b><span>Open bid resources, WOW, executive briefing, pricing, and response files.</span></a>
 <a class="bid-path-card" data-target="global-bid-raci" href="#view-global-bid-raci"><b>Need an owner?</b><span>Open RACI to confirm responsible, accountable, consulted, and informed teams.</span></a>
-<a class="bid-path-card" data-target="help-contacts" href="#view-help-contacts"><b>Need support?</b><span>Open Help &amp; Contacts to route bid questions to the correct support area.</span></a>
+<a class="bid-path-card" data-target="bid-support-mailboxes" href="#view-bid-support-mailboxes"><b>Need support?</b><span>Use bid support mailboxes to route requests to the correct team.</span></a>
 <a class="bid-path-card" data-target="win-loss" href="#view-win-loss"><b>Bid complete?</b><span>After the decision, complete the win/loss debrief and capture lessons learned.</span></a>
 </div>
 <div class="bid-executive-note"><b>Executive reminder:</b> Any bid valued over $20 million requires CEO approval before submission. Use the process below to confirm approval needs early and avoid late-stage delays.</div>
@@ -4714,6 +4829,10 @@
 <section class="hero"><div class="eyebrow">Global Fees</div><h1>Global Fees - All Regions by Customer</h1><p>Use this view to search or filter fee records by customer across North America, ANZ, APAC, and EMEA.</p><span class="owner">Page owner: Global Sales / Finance</span></section>
 <section class="content-card"><h2>Customer View</h2><p>Recommended SharePoint view: group by <b>Customer</b> and keep the Region column visible.</p><table class="dashboard-table"><thead><tr><th>Region</th><th>Customer</th><th>Spend</th><th>Date Requested</th></tr></thead><tbody><tr><td>North America</td><td>Acme Global</td><td>$5M+</td><td>Jun 10, 2026</td></tr><tr><td>ANZ</td><td>Pacific Works</td><td>$500K–$1M</td><td>Jun 11, 2026</td></tr><tr><td>APAC</td><td>Brightway Holdings</td><td>$1M–$5M</td><td>Jun 12, 2026</td></tr><tr><td>EMEA</td><td>Northstar Energy</td><td>$5M+</td><td>Jun 14, 2026</td></tr></tbody></table><a class="backtop" data-target="global-fees" href="#view-global-fees">Back to Global Fees ↑</a></section>
 </section>
+<section class="view" id="view-global-fees-by-spend">
+<section class="hero"><div class="eyebrow">Global Fees</div><h1>Global Fees - All Regions by Spend</h1><p>Use this view to group fee requests by spend across each region.</p><span class="owner">Page owner: Global Sales / Finance</span></section>
+<section class="content-card"><h2>Spend View</h2><p>Recommended SharePoint view: group by <b>Spend</b> and keep Region visible for leadership review.</p><table class="dashboard-table"><thead><tr><th>Region</th><th>Customer</th><th>Spend</th><th>Date Requested</th></tr></thead><tbody><tr><td>North America</td><td>Acme Global</td><td>$5M+</td><td>Jun 10, 2026</td></tr><tr><td>EMEA</td><td>Northstar Energy</td><td>$5M+</td><td>Jun 14, 2026</td></tr><tr><td>APAC</td><td>Brightway Holdings</td><td>$1M–$5M</td><td>Jun 12, 2026</td></tr><tr><td>ANZ</td><td>Pacific Works</td><td>$500K–$1M</td><td>Jun 11, 2026</td></tr></tbody></table><a class="backtop" data-target="global-fees" href="#view-global-fees">Back to Global Fees ↑</a></section>
+</section>
 <section class="view" id="view-global-fees-by-date-requested">
 <section class="hero"><div class="eyebrow">Global Fees</div><h1>Global Fees - All Regions by Date Requested</h1><p>Use this view to monitor aging, approval cycle time, and open follow-up items across all regions.</p><span class="owner">Page owner: Global Sales / Finance</span></section>
 <section class="content-card"><h2>Date Requested View</h2><p>Recommended SharePoint view: sort by <b>Date Requested</b> and filter by Region as needed.</p><table class="dashboard-table"><thead><tr><th>Region</th><th>Customer</th><th>Spend</th><th>Date Requested</th></tr></thead><tbody><tr><td>North America</td><td>Acme Global</td><td>$5M+</td><td>Jun 10, 2026</td></tr><tr><td>ANZ</td><td>Pacific Works</td><td>$500K–$1M</td><td>Jun 11, 2026</td></tr><tr><td>APAC</td><td>Brightway Holdings</td><td>$1M–$5M</td><td>Jun 12, 2026</td></tr><tr><td>EMEA</td><td>Northstar Energy</td><td>$5M+</td><td>Jun 14, 2026</td></tr></tbody></table><a class="backtop" data-target="global-fees" href="#view-global-fees">Back to Global Fees ↑</a></section>
@@ -4883,7 +5002,7 @@
 <p>Link standard email templates, referral templates, pursuit templates, and handoff documentation.</p>
 <div class="partner-materials-pill-row"><span class="partner-materials-pill">Email</span><span class="partner-materials-pill">Referral</span><span class="partner-materials-pill">Handoff</span></div>
 <span class="partner-materials-action">Open templates →</span></a>
-<a class="partner-materials-card" data-target="customer-proof-hub" href="#view-customer-proof-hub">
+<a class="partner-materials-card" data-target="customer-proof" href="#view-customer-proof">
 <div class="partner-materials-icon">05</div>
 <h3>Proof Points</h3>
 <p>Capture approved examples, partner success stories, client outcomes, and supporting evidence for pursuits.</p>
@@ -5831,7 +5950,7 @@
 <p>Regional pipeline visibility by account, owner, stage, next step, probability, and risk level.</p>
 <span class="owner">Page owner: North America Regional Sales / Sales Enablement</span>
 </section>
-<section class="content-card"><h2>Dashboard Summary</h2><div class="dashboard-kpis"><a class="kpi-card dashboard-drill-link" data-target="north-america-open-opportunities" href="#view-north-america-open-opportunities"><div class="kpi-label">Open Opportunities</div><div class="kpi-value">22</div><div class="kpi-note">Active regional opportunities requiring current stage and next step.</div></a><a class="kpi-card dashboard-drill-link" data-target="north-america-late-next-steps" href="#view-north-america-late-next-steps"><div class="kpi-label">Late Next Steps</div><div class="kpi-value">5</div><div class="kpi-note">Opportunities needing owner follow-up or CRM update.</div></a><a class="kpi-card dashboard-drill-link" data-target="north-america-stage-6-7" href="#view-north-america-stage-6-7"><div class="kpi-label">Stage 6–7</div><div class="kpi-value">7</div><div class="kpi-note">Shortlisted, negotiation, or verbal award opportunities.</div></a><a class="kpi-card dashboard-drill-link" data-target="north-america-win-loss-needed" href="#view-north-america-win-loss-needed"><div class="kpi-label">Win/Loss Needed</div><div class="kpi-value">3</div><div class="kpi-note">Closed opportunities requiring debrief completion.</div></a></div></section>
+<section class="content-card"><h2>Dashboard Summary</h2><div class="dashboard-kpis"><div class="kpi-card"><div class="kpi-label">Open Opportunities</div><div class="kpi-value">24</div><div class="kpi-note">Active regional opportunities requiring current stage and next step.</div></div><div class="kpi-card"><div class="kpi-label">Late Next Steps</div><div class="kpi-value">5</div><div class="kpi-note">Opportunities needing owner follow-up or CRM update.</div></div><div class="kpi-card"><div class="kpi-label">Stage 6–7</div><div class="kpi-value">7</div><div class="kpi-note">Shortlisted, negotiation, or verbal award opportunities.</div></div><div class="kpi-card"><div class="kpi-label">Win/Loss Needed</div><div class="kpi-value">3</div><div class="kpi-note">Closed opportunities requiring debrief completion.</div></div></div></section>
 <section class="content-card">
 <h2>Pipeline Graph</h2>
 <p>Visual snapshot of sales stage movement and opportunity risk for the North America regional Sales Agent Dashboard.</p>
@@ -5840,7 +5959,7 @@
 <h2>Opportunities by Sales Stage</h2>
 <p>Use this graph to quickly see where opportunities are concentrated across the global 8 sales stages.</p>
 <div class="regional-bar-chart">
-<a class="regional-bar-stage-link" data-target="north-america-sales-stage-1" href="#view-north-america-sales-stage-1"><div class="regional-bar-label">Stage 1 - Active Opportunity</div><div class="regional-bar-track"><div class="regional-bar-fill" style="width:17%"></div></div><div class="regional-bar-value">4</div></a><a class="regional-bar-stage-link" data-target="north-america-sales-stage-2" href="#view-north-america-sales-stage-2"><div class="regional-bar-label">Stage 2 - Qualified</div><div class="regional-bar-track"><div class="regional-bar-fill" style="width:13%"></div></div><div class="regional-bar-value">3</div></a><a class="regional-bar-stage-link" data-target="north-america-sales-stage-3" href="#view-north-america-sales-stage-3"><div class="regional-bar-label">Stage 3 - Solution Development</div><div class="regional-bar-track"><div class="regional-bar-fill" style="width:21%"></div></div><div class="regional-bar-value">5</div></a><a class="regional-bar-stage-link" data-target="north-america-sales-stage-4" href="#view-north-america-sales-stage-4"><div class="regional-bar-label">Stage 4 - Proposal / Bid</div><div class="regional-bar-track"><div class="regional-bar-fill" style="width:21%"></div></div><div class="regional-bar-value">5</div></a><a class="regional-bar-stage-link" data-target="north-america-sales-stage-5" href="#view-north-america-sales-stage-5"><div class="regional-bar-label">Stage 5 - Presentation</div><div class="regional-bar-track"><div class="regional-bar-fill" style="width:13%"></div></div><div class="regional-bar-value">3</div></a><a class="regional-bar-stage-link" data-target="north-america-sales-stage-6" href="#view-north-america-sales-stage-6"><div class="regional-bar-label">Stage 6 - Shortlisted</div><div class="regional-bar-track"><div class="regional-bar-fill" style="width:8%"></div></div><div class="regional-bar-value">2</div></a><a class="regional-bar-stage-link" data-target="north-america-sales-stage-7" href="#view-north-america-sales-stage-7"><div class="regional-bar-label">Stage 7 - Negotiation</div><div class="regional-bar-track"><div class="regional-bar-fill" style="width:8%"></div></div><div class="regional-bar-value">2</div></a><a class="regional-bar-stage-link" data-target="north-america-sales-stage-8" href="#view-north-america-sales-stage-8"><div class="regional-bar-label">Stage 8 - Closed</div><div class="regional-bar-track"><div class="regional-bar-fill" style="width:13%"></div></div><div class="regional-bar-value">3</div></a>
+<div class="regional-bar-row"><div class="regional-bar-label">Stage 1 - Active Opportunity</div><div class="regional-bar-track"><div class="regional-bar-fill" style="width:17%"></div></div><div class="regional-bar-value">4</div></div><div class="regional-bar-row"><div class="regional-bar-label">Stage 2 - Qualified</div><div class="regional-bar-track"><div class="regional-bar-fill" style="width:13%"></div></div><div class="regional-bar-value">3</div></div><div class="regional-bar-row"><div class="regional-bar-label">Stage 3 - Solution Development</div><div class="regional-bar-track"><div class="regional-bar-fill" style="width:21%"></div></div><div class="regional-bar-value">5</div></div><div class="regional-bar-row"><div class="regional-bar-label">Stage 4 - Proposal / Bid</div><div class="regional-bar-track"><div class="regional-bar-fill" style="width:21%"></div></div><div class="regional-bar-value">5</div></div><div class="regional-bar-row"><div class="regional-bar-label">Stage 5 - Presentation</div><div class="regional-bar-track"><div class="regional-bar-fill" style="width:13%"></div></div><div class="regional-bar-value">3</div></div><div class="regional-bar-row"><div class="regional-bar-label">Stage 6 - Shortlisted</div><div class="regional-bar-track"><div class="regional-bar-fill" style="width:8%"></div></div><div class="regional-bar-value">2</div></div><div class="regional-bar-row"><div class="regional-bar-label">Stage 7 - Negotiation</div><div class="regional-bar-track"><div class="regional-bar-fill" style="width:8%"></div></div><div class="regional-bar-value">2</div></div><div class="regional-bar-row"><div class="regional-bar-label">Stage 8 - Closed</div><div class="regional-bar-track"><div class="regional-bar-fill" style="width:13%"></div></div><div class="regional-bar-value">3</div></div>
 </div>
 </div>
 <div class="regional-chart-card">
@@ -5855,163 +5974,7 @@
 </section>
 <section class="content-card"><h2>Regional Pipeline View</h2><table class="dashboard-table"><thead><tr><th>Account</th><th>Owner</th><th>Stage</th><th>Probability</th><th>Next Step</th><th>Risk</th></tr></thead><tbody><tr><td>Example Global Manufacturing</td><td><span class="owner-tag">Sales Agent</span></td><td><span class="stage-pill">3 - Solution Development</span></td><td>20%</td><td>Confirm stakeholder map and TTV data.</td><td><span class="risk-pill">Medium</span></td></tr><tr><td>Example Healthcare Group</td><td><span class="owner-tag">Sales Agent</span></td><td><span class="stage-pill">5 - Presentation</span></td><td>40%</td><td>Send follow-up responses and case study.</td><td><span class="risk-pill">Low</span></td></tr><tr><td>Example Technology Client</td><td><span class="owner-tag">Sales Agent</span></td><td><span class="stage-pill">8 - Closed</span></td><td>100%</td><td>Complete Win/Loss Debrief and update CRM.</td><td><span class="risk-pill">Action Needed</span></td></tr></tbody></table></section>
 <a class="backtop" data-target="north-america" href="#view-north-america">Back to North America Hub ↑</a>
-</section><section class="view" id="view-north-america-sales-stage-1"><section class="hero regional-section-hero">
-<div class="eyebrow">Sales Stage Drill-Down</div>
-<h1>North America - Stage 1: Active Opportunity</h1>
-<p>Review the opportunities represented by Stage 1 in the Opportunities by Sales Stage graph.</p>
-<span class="owner">4 opportunityies in this stage</span>
-</section><section class="content-card">
-<h2>Stage 1 Opportunity Detail</h2>
-<p>This drill-down shows the records behind the chart value. The opportunity names and values are sample mockup data and can be replaced with CRM or SharePoint List data.</p>
-<div class="drill-summary">
-<span class="drill-summary-pill"><b>4</b> Opportunities</span>
-<span class="drill-summary-pill"><b>Stage 1</b> Active Opportunity</span>
-<span class="drill-summary-pill"><b>North America</b> Region</span>
-</div>
-<table class="dashboard-table"><thead><tr><th>Opportunity</th><th>Owner</th><th>CRM Stage</th><th>Probability</th><th>Close Date</th><th>Value</th><th>Next Step</th><th>Status</th></tr></thead><tbody><tr><td><a class="opportunity-account-link" href="#" title="CRM / SharePoint opportunity link placeholder">Atlas Manufacturing</a></td><td>Jordan Lee</td><td><span class="stage-pill">1 - Active Opportunity</span></td><td>5%</td><td>Aug 20</td><td>$87K</td><td>Confirm sponsor and qualification criteria.</td><td><span class="status-pill">On Track</span></td></tr><tr><td><a class="opportunity-account-link" href="#" title="CRM / SharePoint opportunity link placeholder">Beacon Health</a></td><td>Taylor Morgan</td><td><span class="stage-pill">1 - Active Opportunity</span></td><td>5%</td><td>Sep 21</td><td>$98K</td><td>Confirm sponsor and qualification criteria.</td><td><span class="status-pill">Follow Up</span></td></tr><tr><td><a class="opportunity-account-link" href="#" title="CRM / SharePoint opportunity link placeholder">Cobalt Technology</a></td><td>Alex Rivera</td><td><span class="stage-pill">1 - Active Opportunity</span></td><td>5%</td><td>Oct 22</td><td>$119K</td><td>Confirm sponsor and qualification criteria.</td><td><span class="status-pill">Needs Update</span></td></tr><tr><td><a class="opportunity-account-link" href="#" title="CRM / SharePoint opportunity link placeholder">Delta Retail</a></td><td>Casey Bennett</td><td><span class="stage-pill">1 - Active Opportunity</span></td><td>5%</td><td>Nov 23</td><td>$131K</td><td>Confirm sponsor and qualification criteria.</td><td><span class="status-pill">On Track</span></td></tr></tbody></table><a class="backtop" data-target="north-america-sales-agent-dashboard" href="#view-north-america-sales-agent-dashboard">← Back to North America Dashboard</a></section></section><section class="view" id="view-north-america-sales-stage-2"><section class="hero regional-section-hero">
-<div class="eyebrow">Sales Stage Drill-Down</div>
-<h1>North America - Stage 2: Qualified</h1>
-<p>Review the opportunities represented by Stage 2 in the Opportunities by Sales Stage graph.</p>
-<span class="owner">3 opportunityies in this stage</span>
-</section><section class="content-card">
-<h2>Stage 2 Opportunity Detail</h2>
-<p>This drill-down shows the records behind the chart value. The opportunity names and values are sample mockup data and can be replaced with CRM or SharePoint List data.</p>
-<div class="drill-summary">
-<span class="drill-summary-pill"><b>3</b> Opportunities</span>
-<span class="drill-summary-pill"><b>Stage 2</b> Qualified</span>
-<span class="drill-summary-pill"><b>North America</b> Region</span>
-</div>
-<table class="dashboard-table"><thead><tr><th>Opportunity</th><th>Owner</th><th>CRM Stage</th><th>Probability</th><th>Close Date</th><th>Value</th><th>Next Step</th><th>Status</th></tr></thead><tbody><tr><td><a class="opportunity-account-link" href="#" title="CRM / SharePoint opportunity link placeholder">Evergreen Energy</a></td><td>Taylor Morgan</td><td><span class="stage-pill">2 - Qualified</span></td><td>10%</td><td>Sep 22</td><td>$107K</td><td>Complete discovery recap and stakeholder map.</td><td><span class="status-pill">On Track</span></td></tr><tr><td><a class="opportunity-account-link" href="#" title="CRM / SharePoint opportunity link placeholder">Frontier Logistics</a></td><td>Alex Rivera</td><td><span class="stage-pill">2 - Qualified</span></td><td>10%</td><td>Oct 23</td><td>$126K</td><td>Complete discovery recap and stakeholder map.</td><td><span class="status-pill">Follow Up</span></td></tr><tr><td><a class="opportunity-account-link" href="#" title="CRM / SharePoint opportunity link placeholder">Granite Financial</a></td><td>Casey Bennett</td><td><span class="stage-pill">2 - Qualified</span></td><td>10%</td><td>Nov 24</td><td>$142K</td><td>Complete discovery recap and stakeholder map.</td><td><span class="status-pill">Needs Update</span></td></tr></tbody></table><a class="backtop" data-target="north-america-sales-agent-dashboard" href="#view-north-america-sales-agent-dashboard">← Back to North America Dashboard</a></section></section><section class="view" id="view-north-america-sales-stage-3"><section class="hero regional-section-hero">
-<div class="eyebrow">Sales Stage Drill-Down</div>
-<h1>North America - Stage 3: Solution Development</h1>
-<p>Review the opportunities represented by Stage 3 in the Opportunities by Sales Stage graph.</p>
-<span class="owner">5 opportunityies in this stage</span>
-</section><section class="content-card">
-<h2>Stage 3 Opportunity Detail</h2>
-<p>This drill-down shows the records behind the chart value. The opportunity names and values are sample mockup data and can be replaced with CRM or SharePoint List data.</p>
-<div class="drill-summary">
-<span class="drill-summary-pill"><b>5</b> Opportunities</span>
-<span class="drill-summary-pill"><b>Stage 3</b> Solution Development</span>
-<span class="drill-summary-pill"><b>North America</b> Region</span>
-</div>
-<table class="dashboard-table"><thead><tr><th>Opportunity</th><th>Owner</th><th>CRM Stage</th><th>Probability</th><th>Close Date</th><th>Value</th><th>Next Step</th><th>Status</th></tr></thead><tbody><tr><td><a class="opportunity-account-link" href="#" title="CRM / SharePoint opportunity link placeholder">Horizon Brands</a></td><td>Alex Rivera</td><td><span class="stage-pill">3 - Solution Development</span></td><td>20%</td><td>Oct 24</td><td>$128K</td><td>Validate solution design and SME inputs.</td><td><span class="status-pill">On Track</span></td></tr><tr><td><a class="opportunity-account-link" href="#" title="CRM / SharePoint opportunity link placeholder">Ironwood Construction</a></td><td>Casey Bennett</td><td><span class="stage-pill">3 - Solution Development</span></td><td>20%</td><td>Nov 25</td><td>$152K</td><td>Validate solution design and SME inputs.</td><td><span class="status-pill">Follow Up</span></td></tr><tr><td><a class="opportunity-account-link" href="#" title="CRM / SharePoint opportunity link placeholder">Juniper Life Sciences</a></td><td>Morgan Chen</td><td><span class="stage-pill">3 - Solution Development</span></td><td>20%</td><td>Jul 26</td><td>$169K</td><td>Validate solution design and SME inputs.</td><td><span class="status-pill">Needs Update</span></td></tr><tr><td><a class="opportunity-account-link" href="#" title="CRM / SharePoint opportunity link placeholder">Keystone Services</a></td><td>Riley Davis</td><td><span class="stage-pill">3 - Solution Development</span></td><td>20%</td><td>Aug 27</td><td>$182K</td><td>Validate solution design and SME inputs.</td><td><span class="status-pill">On Track</span></td></tr><tr><td><a class="opportunity-account-link" href="#" title="CRM / SharePoint opportunity link placeholder">Lighthouse Media</a></td><td>Jordan Lee</td><td><span class="stage-pill">3 - Solution Development</span></td><td>20%</td><td>Sep 28</td><td>$198K</td><td>Validate solution design and SME inputs.</td><td><span class="status-pill">Follow Up</span></td></tr></tbody></table><a class="backtop" data-target="north-america-sales-agent-dashboard" href="#view-north-america-sales-agent-dashboard">← Back to North America Dashboard</a></section></section><section class="view" id="view-north-america-sales-stage-4"><section class="hero regional-section-hero">
-<div class="eyebrow">Sales Stage Drill-Down</div>
-<h1>North America - Stage 4: Proposal / Bid</h1>
-<p>Review the opportunities represented by Stage 4 in the Opportunities by Sales Stage graph.</p>
-<span class="owner">5 opportunityies in this stage</span>
-</section><section class="content-card">
-<h2>Stage 4 Opportunity Detail</h2>
-<p>This drill-down shows the records behind the chart value. The opportunity names and values are sample mockup data and can be replaced with CRM or SharePoint List data.</p>
-<div class="drill-summary">
-<span class="drill-summary-pill"><b>5</b> Opportunities</span>
-<span class="drill-summary-pill"><b>Stage 4</b> Proposal / Bid</span>
-<span class="drill-summary-pill"><b>North America</b> Region</span>
-</div>
-<table class="dashboard-table"><thead><tr><th>Opportunity</th><th>Owner</th><th>CRM Stage</th><th>Probability</th><th>Close Date</th><th>Value</th><th>Next Step</th><th>Status</th></tr></thead><tbody><tr><td><a class="opportunity-account-link" href="#" title="CRM / SharePoint opportunity link placeholder">Monarch Industrial</a></td><td>Casey Bennett</td><td><span class="stage-pill">4 - Proposal / Bid</span></td><td>30%</td><td>Nov 26</td><td>$155K</td><td>Confirm proposal review and client questions.</td><td><span class="status-pill">On Track</span></td></tr><tr><td><a class="opportunity-account-link" href="#" title="CRM / SharePoint opportunity link placeholder">Northstar Education</a></td><td>Morgan Chen</td><td><span class="stage-pill">4 - Proposal / Bid</span></td><td>30%</td><td>Jul 27</td><td>$173K</td><td>Confirm proposal review and client questions.</td><td><span class="status-pill">Follow Up</span></td></tr><tr><td><a class="opportunity-account-link" href="#" title="CRM / SharePoint opportunity link placeholder">Oakridge Hospitality</a></td><td>Riley Davis</td><td><span class="stage-pill">4 - Proposal / Bid</span></td><td>30%</td><td>Aug 28</td><td>$191K</td><td>Confirm proposal review and client questions.</td><td><span class="status-pill">Needs Update</span></td></tr><tr><td><a class="opportunity-account-link" href="#" title="CRM / SharePoint opportunity link placeholder">Pioneer Aerospace</a></td><td>Jordan Lee</td><td><span class="stage-pill">4 - Proposal / Bid</span></td><td>30%</td><td>Sep 18</td><td>$205K</td><td>Confirm proposal review and client questions.</td><td><span class="status-pill">On Track</span></td></tr><tr><td><a class="opportunity-account-link" href="#" title="CRM / SharePoint opportunity link placeholder">Quantum Data</a></td><td>Taylor Morgan</td><td><span class="stage-pill">4 - Proposal / Bid</span></td><td>30%</td><td>Oct 19</td><td>$217K</td><td>Confirm proposal review and client questions.</td><td><span class="status-pill">Follow Up</span></td></tr></tbody></table><a class="backtop" data-target="north-america-sales-agent-dashboard" href="#view-north-america-sales-agent-dashboard">← Back to North America Dashboard</a></section></section><section class="view" id="view-north-america-sales-stage-5"><section class="hero regional-section-hero">
-<div class="eyebrow">Sales Stage Drill-Down</div>
-<h1>North America - Stage 5: Presentation</h1>
-<p>Review the opportunities represented by Stage 5 in the Opportunities by Sales Stage graph.</p>
-<span class="owner">3 opportunityies in this stage</span>
-</section><section class="content-card">
-<h2>Stage 5 Opportunity Detail</h2>
-<p>This drill-down shows the records behind the chart value. The opportunity names and values are sample mockup data and can be replaced with CRM or SharePoint List data.</p>
-<div class="drill-summary">
-<span class="drill-summary-pill"><b>3</b> Opportunities</span>
-<span class="drill-summary-pill"><b>Stage 5</b> Presentation</span>
-<span class="drill-summary-pill"><b>North America</b> Region</span>
-</div>
-<table class="dashboard-table"><thead><tr><th>Opportunity</th><th>Owner</th><th>CRM Stage</th><th>Probability</th><th>Close Date</th><th>Value</th><th>Next Step</th><th>Status</th></tr></thead><tbody><tr><td><a class="opportunity-account-link" href="#" title="CRM / SharePoint opportunity link placeholder">Redwood Food Services</a></td><td>Morgan Chen</td><td><span class="stage-pill">5 - Presentation</span></td><td>40%</td><td>Jul 28</td><td>$181K</td><td>Prepare presentation follow-up and proof points.</td><td><span class="status-pill">On Track</span></td></tr><tr><td><a class="opportunity-account-link" href="#" title="CRM / SharePoint opportunity link placeholder">Summit Insurance</a></td><td>Riley Davis</td><td><span class="stage-pill">5 - Presentation</span></td><td>40%</td><td>Aug 18</td><td>$193K</td><td>Prepare presentation follow-up and proof points.</td><td><span class="status-pill">Follow Up</span></td></tr><tr><td><a class="opportunity-account-link" href="#" title="CRM / SharePoint opportunity link placeholder">Timberline Automotive</a></td><td>Jordan Lee</td><td><span class="stage-pill">5 - Presentation</span></td><td>40%</td><td>Sep 19</td><td>$215K</td><td>Prepare presentation follow-up and proof points.</td><td><span class="status-pill">Needs Update</span></td></tr></tbody></table><a class="backtop" data-target="north-america-sales-agent-dashboard" href="#view-north-america-sales-agent-dashboard">← Back to North America Dashboard</a></section></section><section class="view" id="view-north-america-sales-stage-6"><section class="hero regional-section-hero">
-<div class="eyebrow">Sales Stage Drill-Down</div>
-<h1>North America - Stage 6: Shortlisted</h1>
-<p>Review the opportunities represented by Stage 6 in the Opportunities by Sales Stage graph.</p>
-<span class="owner">2 opportunityies in this stage</span>
-</section><section class="content-card">
-<h2>Stage 6 Opportunity Detail</h2>
-<p>This drill-down shows the records behind the chart value. The opportunity names and values are sample mockup data and can be replaced with CRM or SharePoint List data.</p>
-<div class="drill-summary">
-<span class="drill-summary-pill"><b>2</b> Opportunities</span>
-<span class="drill-summary-pill"><b>Stage 6</b> Shortlisted</span>
-<span class="drill-summary-pill"><b>North America</b> Region</span>
-</div>
-<table class="dashboard-table"><thead><tr><th>Opportunity</th><th>Owner</th><th>CRM Stage</th><th>Probability</th><th>Close Date</th><th>Value</th><th>Next Step</th><th>Status</th></tr></thead><tbody><tr><td><a class="opportunity-account-link" href="#" title="CRM / SharePoint opportunity link placeholder">Union Healthcare</a></td><td>Riley Davis</td><td><span class="stage-pill">6 - Shortlisted</span></td><td>75%</td><td>Aug 19</td><td>$199K</td><td>Review shortlist requirements and negotiation plan.</td><td><span class="status-pill">Priority</span></td></tr><tr><td><a class="opportunity-account-link" href="#" title="CRM / SharePoint opportunity link placeholder">Vista Global Consulting</a></td><td>Jordan Lee</td><td><span class="stage-pill">6 - Shortlisted</span></td><td>75%</td><td>Sep 20</td><td>$223K</td><td>Review shortlist requirements and negotiation plan.</td><td><span class="status-pill">Priority</span></td></tr></tbody></table><a class="backtop" data-target="north-america-sales-agent-dashboard" href="#view-north-america-sales-agent-dashboard">← Back to North America Dashboard</a></section></section><section class="view" id="view-north-america-sales-stage-7"><section class="hero regional-section-hero">
-<div class="eyebrow">Sales Stage Drill-Down</div>
-<h1>North America - Stage 7: Negotiation</h1>
-<p>Review the opportunities represented by Stage 7 in the Opportunities by Sales Stage graph.</p>
-<span class="owner">2 opportunityies in this stage</span>
-</section><section class="content-card">
-<h2>Stage 7 Opportunity Detail</h2>
-<p>This drill-down shows the records behind the chart value. The opportunity names and values are sample mockup data and can be replaced with CRM or SharePoint List data.</p>
-<div class="drill-summary">
-<span class="drill-summary-pill"><b>2</b> Opportunities</span>
-<span class="drill-summary-pill"><b>Stage 7</b> Negotiation</span>
-<span class="drill-summary-pill"><b>North America</b> Region</span>
-</div>
-<table class="dashboard-table"><thead><tr><th>Opportunity</th><th>Owner</th><th>CRM Stage</th><th>Probability</th><th>Close Date</th><th>Value</th><th>Next Step</th><th>Status</th></tr></thead><tbody><tr><td><a class="opportunity-account-link" href="#" title="CRM / SharePoint opportunity link placeholder">Atlas Manufacturing</a></td><td>Jordan Lee</td><td><span class="stage-pill">7 - Negotiation</span></td><td>95%</td><td>Sep 21</td><td>$225K</td><td>Confirm final pricing, redlines, and award timeline.</td><td><span class="status-pill">Priority</span></td></tr><tr><td><a class="opportunity-account-link" href="#" title="CRM / SharePoint opportunity link placeholder">Beacon Health</a></td><td>Taylor Morgan</td><td><span class="stage-pill">7 - Negotiation</span></td><td>95%</td><td>Oct 22</td><td>$46K</td><td>Confirm final pricing, redlines, and award timeline.</td><td><span class="status-pill">Priority</span></td></tr></tbody></table><a class="backtop" data-target="north-america-sales-agent-dashboard" href="#view-north-america-sales-agent-dashboard">← Back to North America Dashboard</a></section></section><section class="view" id="view-north-america-sales-stage-8"><section class="hero regional-section-hero">
-<div class="eyebrow">Sales Stage Drill-Down</div>
-<h1>North America - Stage 8: Closed</h1>
-<p>Review the opportunities represented by Stage 8 in the Opportunities by Sales Stage graph.</p>
-<span class="owner">3 opportunityies in this stage</span>
-</section><section class="content-card">
-<h2>Stage 8 Opportunity Detail</h2>
-<p>This drill-down shows the records behind the chart value. The opportunity names and values are sample mockup data and can be replaced with CRM or SharePoint List data.</p>
-<div class="drill-summary">
-<span class="drill-summary-pill"><b>3</b> Opportunities</span>
-<span class="drill-summary-pill"><b>Stage 8</b> Closed</span>
-<span class="drill-summary-pill"><b>North America</b> Region</span>
-</div>
-<table class="dashboard-table"><thead><tr><th>Opportunity</th><th>Owner</th><th>CRM Stage</th><th>Probability</th><th>Close Date</th><th>Value</th><th>Next Step</th><th>Status</th></tr></thead><tbody><tr><td><a class="opportunity-account-link" href="#" title="CRM / SharePoint opportunity link placeholder">Cobalt Technology</a></td><td>Taylor Morgan</td><td><span class="stage-pill">8 - Closed</span></td><td>100%</td><td>Oct 23</td><td>$56K</td><td>Complete win/loss debrief and capture decision drivers.</td><td><span class="status-pill">Debrief Needed</span></td></tr><tr><td><a class="opportunity-account-link" href="#" title="CRM / SharePoint opportunity link placeholder">Delta Retail</a></td><td>Alex Rivera</td><td><span class="stage-pill">8 - Closed</span></td><td>100%</td><td>Nov 24</td><td>$68K</td><td>Complete win/loss debrief and capture decision drivers.</td><td><span class="status-pill">Debrief Needed</span></td></tr><tr><td><a class="opportunity-account-link" href="#" title="CRM / SharePoint opportunity link placeholder">Evergreen Energy</a></td><td>Casey Bennett</td><td><span class="stage-pill">8 - Closed</span></td><td>100%</td><td>Jul 25</td><td>$89K</td><td>Complete win/loss debrief and capture decision drivers.</td><td><span class="status-pill">Debrief Needed</span></td></tr></tbody></table><a class="backtop" data-target="north-america-sales-agent-dashboard" href="#view-north-america-sales-agent-dashboard">← Back to North America Dashboard</a></section></section><section class="view" id="view-north-america-open-opportunities"><section class="hero regional-section-hero">
-<div class="eyebrow">Regional Dashboard Drill-Down</div>
-<h1>North America - Open Opportunities</h1>
-<p>Active opportunities requiring a current stage and next step.</p>
-<span class="owner">22 records in this dashboard view</span>
-</section><section class="content-card">
-<h2>Open Opportunities Detail</h2>
-<p>Click from the North America Sales Agent Dashboard to review the records behind this metric. The records below are mockup data and can be replaced with CRM or SharePoint List data.</p>
-<div class="drill-summary">
-<span class="drill-summary-pill"><b>22</b> Open Opportunities</span>
-<span class="drill-summary-pill"><b>6</b> Owners</span>
-<span class="drill-summary-pill"><b>North America</b> Region</span>
-</div>
-<table class="dashboard-table"><thead><tr><th>Opportunity</th><th>Owner</th><th>CRM Stage</th><th>Probability</th><th>Close Date</th><th>Value</th><th>Next Step</th><th>Status</th></tr></thead><tbody><tr><td><a class="opportunity-account-link" href="#" title="CRM / SharePoint opportunity link placeholder">Atlas Manufacturing</a></td><td>Jordan Lee</td><td><span class="stage-pill">1 - Active Opportunity</span></td><td>5%</td><td>Jul 18</td><td>$64K</td><td>Confirm sponsor</td><td><span class="status-pill">On Track</span></td></tr><tr><td><a class="opportunity-account-link" href="#" title="CRM / SharePoint opportunity link placeholder">Beacon Health</a></td><td>Taylor Morgan</td><td><span class="stage-pill">2 - Discovery / Qualification</span></td><td>10%</td><td>Aug 19</td><td>$75K</td><td>Complete discovery recap</td><td><span class="status-pill">Follow Up</span></td></tr><tr><td><a class="opportunity-account-link" href="#" title="CRM / SharePoint opportunity link placeholder">Cobalt Technology</a></td><td>Alex Rivera</td><td><span class="stage-pill">3 - Solution Development</span></td><td>20%</td><td>Sep 20</td><td>$96K</td><td>Validate solution</td><td><span class="status-pill">Priority</span></td></tr><tr><td><a class="opportunity-account-link" href="#" title="CRM / SharePoint opportunity link placeholder">Delta Retail</a></td><td>Casey Bennett</td><td><span class="stage-pill">4 - Proposal Submitted</span></td><td>30%</td><td>Oct 21</td><td>$108K</td><td>Follow up on proposal</td><td><span class="status-pill">Needs Update</span></td></tr><tr><td><a class="opportunity-account-link" href="#" title="CRM / SharePoint opportunity link placeholder">Evergreen Energy</a></td><td>Morgan Chen</td><td><span class="stage-pill">5 - Presentation</span></td><td>40%</td><td>Nov 22</td><td>$129K</td><td>Prepare presentation</td><td><span class="status-pill">On Track</span></td></tr><tr><td><a class="opportunity-account-link" href="#" title="CRM / SharePoint opportunity link placeholder">Frontier Logistics</a></td><td>Riley Davis</td><td><span class="stage-pill">6 - Short Listed / Negotiations</span></td><td>75%</td><td>Jul 23</td><td>$148K</td><td>Review negotiations</td><td><span class="status-pill">Follow Up</span></td></tr><tr><td><a class="opportunity-account-link" href="#" title="CRM / SharePoint opportunity link placeholder">Granite Financial</a></td><td>Jordan Lee</td><td><span class="stage-pill">7 - Verbal Award</span></td><td>95%</td><td>Aug 24</td><td>$164K</td><td>Confirm award</td><td><span class="status-pill">Priority</span></td></tr><tr><td><a class="opportunity-account-link" href="#" title="CRM / SharePoint opportunity link placeholder">Horizon Brands</a></td><td>Taylor Morgan</td><td><span class="stage-pill">1 - Active Opportunity</span></td><td>5%</td><td>Sep 25</td><td>$178K</td><td>Confirm sponsor</td><td><span class="status-pill">Needs Update</span></td></tr><tr><td><a class="opportunity-account-link" href="#" title="CRM / SharePoint opportunity link placeholder">Ironwood Construction</a></td><td>Alex Rivera</td><td><span class="stage-pill">2 - Discovery / Qualification</span></td><td>10%</td><td>Oct 26</td><td>$202K</td><td>Complete discovery recap</td><td><span class="status-pill">On Track</span></td></tr><tr><td><a class="opportunity-account-link" href="#" title="CRM / SharePoint opportunity link placeholder">Juniper Life Sciences</a></td><td>Casey Bennett</td><td><span class="stage-pill">3 - Solution Development</span></td><td>20%</td><td>Nov 27</td><td>$219K</td><td>Validate solution</td><td><span class="status-pill">Follow Up</span></td></tr><tr><td><a class="opportunity-account-link" href="#" title="CRM / SharePoint opportunity link placeholder">Keystone Services</a></td><td>Morgan Chen</td><td><span class="stage-pill">4 - Proposal Submitted</span></td><td>30%</td><td>Jul 28</td><td>$232K</td><td>Follow up on proposal</td><td><span class="status-pill">Priority</span></td></tr><tr><td><a class="opportunity-account-link" href="#" title="CRM / SharePoint opportunity link placeholder">Lighthouse Media</a></td><td>Riley Davis</td><td><span class="stage-pill">5 - Presentation</span></td><td>40%</td><td>Aug 18</td><td>$58K</td><td>Prepare presentation</td><td><span class="status-pill">Needs Update</span></td></tr><tr><td><a class="opportunity-account-link" href="#" title="CRM / SharePoint opportunity link placeholder">Monarch Industrial</a></td><td>Jordan Lee</td><td><span class="stage-pill">6 - Short Listed / Negotiations</span></td><td>75%</td><td>Sep 19</td><td>$77K</td><td>Review negotiations</td><td><span class="status-pill">On Track</span></td></tr><tr><td><a class="opportunity-account-link" href="#" title="CRM / SharePoint opportunity link placeholder">Northstar Education</a></td><td>Taylor Morgan</td><td><span class="stage-pill">7 - Verbal Award</span></td><td>95%</td><td>Oct 20</td><td>$95K</td><td>Confirm award</td><td><span class="status-pill">Follow Up</span></td></tr><tr><td><a class="opportunity-account-link" href="#" title="CRM / SharePoint opportunity link placeholder">Oakridge Hospitality</a></td><td>Alex Rivera</td><td><span class="stage-pill">1 - Active Opportunity</span></td><td>5%</td><td>Nov 21</td><td>$113K</td><td>Confirm sponsor</td><td><span class="status-pill">Priority</span></td></tr><tr><td><a class="opportunity-account-link" href="#" title="CRM / SharePoint opportunity link placeholder">Pioneer Aerospace</a></td><td>Casey Bennett</td><td><span class="stage-pill">2 - Discovery / Qualification</span></td><td>10%</td><td>Jul 22</td><td>$127K</td><td>Complete discovery recap</td><td><span class="status-pill">Needs Update</span></td></tr><tr><td><a class="opportunity-account-link" href="#" title="CRM / SharePoint opportunity link placeholder">Quantum Data</a></td><td>Morgan Chen</td><td><span class="stage-pill">3 - Solution Development</span></td><td>20%</td><td>Aug 23</td><td>$139K</td><td>Validate solution</td><td><span class="status-pill">On Track</span></td></tr><tr><td><a class="opportunity-account-link" href="#" title="CRM / SharePoint opportunity link placeholder">Redwood Food Services</a></td><td>Riley Davis</td><td><span class="stage-pill">4 - Proposal Submitted</span></td><td>30%</td><td>Sep 24</td><td>$165K</td><td>Follow up on proposal</td><td><span class="status-pill">Follow Up</span></td></tr><tr><td><a class="opportunity-account-link" href="#" title="CRM / SharePoint opportunity link placeholder">Summit Insurance</a></td><td>Jordan Lee</td><td><span class="stage-pill">5 - Presentation</span></td><td>40%</td><td>Oct 25</td><td>$177K</td><td>Prepare presentation</td><td><span class="status-pill">Priority</span></td></tr><tr><td><a class="opportunity-account-link" href="#" title="CRM / SharePoint opportunity link placeholder">Timberline Automotive</a></td><td>Taylor Morgan</td><td><span class="stage-pill">6 - Short Listed / Negotiations</span></td><td>75%</td><td>Nov 26</td><td>$199K</td><td>Review negotiations</td><td><span class="status-pill">Needs Update</span></td></tr><tr><td><a class="opportunity-account-link" href="#" title="CRM / SharePoint opportunity link placeholder">Union Healthcare</a></td><td>Alex Rivera</td><td><span class="stage-pill">7 - Verbal Award</span></td><td>95%</td><td>Jul 27</td><td>$211K</td><td>Confirm award</td><td><span class="status-pill">On Track</span></td></tr><tr><td><a class="opportunity-account-link" href="#" title="CRM / SharePoint opportunity link placeholder">Vista Global Consulting</a></td><td>Casey Bennett</td><td><span class="stage-pill">1 - Active Opportunity</span></td><td>5%</td><td>Aug 28</td><td>$45K</td><td>Confirm sponsor</td><td><span class="status-pill">Follow Up</span></td></tr></tbody></table><a class="backtop" data-target="north-america-sales-agent-dashboard" href="#view-north-america-sales-agent-dashboard">← Back to North America Dashboard</a></section></section><section class="view" id="view-north-america-late-next-steps"><section class="hero regional-section-hero">
-<div class="eyebrow">Regional Dashboard Drill-Down</div>
-<h1>North America - Late Next Steps</h1>
-<p>Opportunities with overdue owner follow-up or CRM next-step updates.</p>
-<span class="owner">5 records in this dashboard view</span>
-</section><section class="content-card">
-<h2>Late Next Steps Detail</h2>
-<p>Click from the North America Sales Agent Dashboard to review the records behind this metric. The records below are mockup data and can be replaced with CRM or SharePoint List data.</p>
-<div class="drill-summary">
-<span class="drill-summary-pill"><b>5</b> Late Next Steps</span>
-<span class="drill-summary-pill"><b>5</b> Owners</span>
-<span class="drill-summary-pill"><b>North America</b> Region</span>
-</div>
-<table class="dashboard-table"><thead><tr><th>Opportunity</th><th>Owner</th><th>CRM Stage</th><th>Probability</th><th>Close Date</th><th>Value</th><th>Next Step</th><th>Status</th></tr></thead><tbody><tr><td><a class="opportunity-account-link" href="#" title="CRM / SharePoint opportunity link placeholder">Atlas Manufacturing</a></td><td>Jordan Lee</td><td><span class="stage-pill">2 - Discovery / Qualification</span></td><td>10%</td><td>Jul 18</td><td>$64K</td><td>Update CRM next step</td><td><span class="status-pill">Late</span></td></tr><tr><td><a class="opportunity-account-link" href="#" title="CRM / SharePoint opportunity link placeholder">Beacon Health</a></td><td>Taylor Morgan</td><td><span class="stage-pill">3 - Solution Development</span></td><td>20%</td><td>Aug 19</td><td>$75K</td><td>Confirm client follow-up</td><td><span class="status-pill">Late</span></td></tr><tr><td><a class="opportunity-account-link" href="#" title="CRM / SharePoint opportunity link placeholder">Cobalt Technology</a></td><td>Alex Rivera</td><td><span class="stage-pill">4 - Proposal Submitted</span></td><td>30%</td><td>Sep 20</td><td>$96K</td><td>Schedule discovery recap</td><td><span class="status-pill">Late</span></td></tr><tr><td><a class="opportunity-account-link" href="#" title="CRM / SharePoint opportunity link placeholder">Delta Retail</a></td><td>Casey Bennett</td><td><span class="stage-pill">5 - Presentation</span></td><td>40%</td><td>Oct 21</td><td>$108K</td><td>Send requested materials</td><td><span class="status-pill">Late</span></td></tr><tr><td><a class="opportunity-account-link" href="#" title="CRM / SharePoint opportunity link placeholder">Evergreen Energy</a></td><td>Morgan Chen</td><td><span class="stage-pill">1 - Active Opportunity</span></td><td>5%</td><td>Nov 22</td><td>$129K</td><td>Update CRM next step</td><td><span class="status-pill">Late</span></td></tr></tbody></table><a class="backtop" data-target="north-america-sales-agent-dashboard" href="#view-north-america-sales-agent-dashboard">← Back to North America Dashboard</a></section></section><section class="view" id="view-north-america-stage-6-7"><section class="hero regional-section-hero">
-<div class="eyebrow">Regional Dashboard Drill-Down</div>
-<h1>North America - Stage 6–7</h1>
-<p>Shortlisted, negotiation, or verbal award opportunities requiring close-stage attention.</p>
-<span class="owner">7 records in this dashboard view</span>
-</section><section class="content-card">
-<h2>Stage 6–7 Detail</h2>
-<p>Click from the North America Sales Agent Dashboard to review the records behind this metric. The records below are mockup data and can be replaced with CRM or SharePoint List data.</p>
-<div class="drill-summary">
-<span class="drill-summary-pill"><b>7</b> Stage 6–7</span>
-<span class="drill-summary-pill"><b>6</b> Owners</span>
-<span class="drill-summary-pill"><b>North America</b> Region</span>
-</div>
-<table class="dashboard-table"><thead><tr><th>Opportunity</th><th>Owner</th><th>CRM Stage</th><th>Probability</th><th>Close Date</th><th>Value</th><th>Next Step</th><th>Status</th></tr></thead><tbody><tr><td><a class="opportunity-account-link" href="#" title="CRM / SharePoint opportunity link placeholder">Atlas Manufacturing</a></td><td>Jordan Lee</td><td><span class="stage-pill">6 - Short Listed / Negotiations</span></td><td>75%</td><td>Jul 18</td><td>$64K</td><td>Confirm negotiation position</td><td><span class="status-pill">Close Stage</span></td></tr><tr><td><a class="opportunity-account-link" href="#" title="CRM / SharePoint opportunity link placeholder">Beacon Health</a></td><td>Taylor Morgan</td><td><span class="stage-pill">7 - Verbal Award</span></td><td>95%</td><td>Aug 19</td><td>$75K</td><td>Validate pricing and redlines</td><td><span class="status-pill">Close Stage</span></td></tr><tr><td><a class="opportunity-account-link" href="#" title="CRM / SharePoint opportunity link placeholder">Cobalt Technology</a></td><td>Alex Rivera</td><td><span class="stage-pill">6 - Short Listed / Negotiations</span></td><td>75%</td><td>Sep 20</td><td>$96K</td><td>Secure written award</td><td><span class="status-pill">Close Stage</span></td></tr><tr><td><a class="opportunity-account-link" href="#" title="CRM / SharePoint opportunity link placeholder">Delta Retail</a></td><td>Casey Bennett</td><td><span class="stage-pill">7 - Verbal Award</span></td><td>95%</td><td>Oct 21</td><td>$108K</td><td>Align implementation handoff</td><td><span class="status-pill">Close Stage</span></td></tr><tr><td><a class="opportunity-account-link" href="#" title="CRM / SharePoint opportunity link placeholder">Evergreen Energy</a></td><td>Morgan Chen</td><td><span class="stage-pill">6 - Short Listed / Negotiations</span></td><td>75%</td><td>Nov 22</td><td>$129K</td><td>Confirm negotiation position</td><td><span class="status-pill">Close Stage</span></td></tr><tr><td><a class="opportunity-account-link" href="#" title="CRM / SharePoint opportunity link placeholder">Frontier Logistics</a></td><td>Riley Davis</td><td><span class="stage-pill">7 - Verbal Award</span></td><td>95%</td><td>Jul 23</td><td>$148K</td><td>Validate pricing and redlines</td><td><span class="status-pill">Close Stage</span></td></tr><tr><td><a class="opportunity-account-link" href="#" title="CRM / SharePoint opportunity link placeholder">Granite Financial</a></td><td>Jordan Lee</td><td><span class="stage-pill">6 - Short Listed / Negotiations</span></td><td>75%</td><td>Aug 24</td><td>$164K</td><td>Secure written award</td><td><span class="status-pill">Close Stage</span></td></tr></tbody></table><a class="backtop" data-target="north-america-sales-agent-dashboard" href="#view-north-america-sales-agent-dashboard">← Back to North America Dashboard</a></section></section><section class="view" id="view-north-america-win-loss-needed"><section class="hero regional-section-hero">
-<div class="eyebrow">Regional Dashboard Drill-Down</div>
-<h1>North America - Win/Loss Needed</h1>
-<p>Closed opportunities requiring a completed win/loss debrief.</p>
-<span class="owner">3 records in this dashboard view</span>
-</section><section class="content-card">
-<h2>Win/Loss Needed Detail</h2>
-<p>Click from the North America Sales Agent Dashboard to review the records behind this metric. The records below are mockup data and can be replaced with CRM or SharePoint List data.</p>
-<div class="drill-summary">
-<span class="drill-summary-pill"><b>3</b> Win/Loss Needed</span>
-<span class="drill-summary-pill"><b>3</b> Owners</span>
-<span class="drill-summary-pill"><b>North America</b> Region</span>
-</div>
-<table class="dashboard-table"><thead><tr><th>Opportunity</th><th>Owner</th><th>CRM Stage</th><th>Probability</th><th>Close Date</th><th>Value</th><th>Next Step</th><th>Status</th></tr></thead><tbody><tr><td><a class="opportunity-account-link" href="#" title="CRM / SharePoint opportunity link placeholder">Atlas Manufacturing</a></td><td>Jordan Lee</td><td><span class="stage-pill">8 - Closed</span></td><td>100%</td><td>Jul 18</td><td>$64K</td><td>Complete win/loss debrief</td><td><span class="status-pill">Debrief Needed</span></td></tr><tr><td><a class="opportunity-account-link" href="#" title="CRM / SharePoint opportunity link placeholder">Beacon Health</a></td><td>Taylor Morgan</td><td><span class="stage-pill">8 - Closed</span></td><td>100%</td><td>Aug 19</td><td>$75K</td><td>Document decision drivers</td><td><span class="status-pill">Debrief Needed</span></td></tr><tr><td><a class="opportunity-account-link" href="#" title="CRM / SharePoint opportunity link placeholder">Cobalt Technology</a></td><td>Alex Rivera</td><td><span class="stage-pill">8 - Closed</span></td><td>100%</td><td>Sep 20</td><td>$96K</td><td>Capture competitor feedback</td><td><span class="status-pill">Debrief Needed</span></td></tr></tbody></table><a class="backtop" data-target="north-america-sales-agent-dashboard" href="#view-north-america-sales-agent-dashboard">← Back to North America Dashboard</a></section></section><section class="view" id="view-anz">
+</section><section class="view" id="view-anz">
 <section class="hero region-hero">
 <div class="hub-hero-with-search">
 <div class="hub-hero-copy">
@@ -6496,7 +6459,7 @@
 <p>Regional pipeline visibility by account, owner, stage, next step, probability, and risk level.</p>
 <span class="owner">Page owner: ANZ Regional Sales / Sales Enablement</span>
 </section>
-<section class="content-card"><h2>Dashboard Summary</h2><div class="dashboard-kpis"><a class="kpi-card dashboard-drill-link" data-target="anz-open-opportunities" href="#view-anz-open-opportunities"><div class="kpi-label">Open Opportunities</div><div class="kpi-value">10</div><div class="kpi-note">Active regional opportunities requiring current stage and next step.</div></a><a class="kpi-card dashboard-drill-link" data-target="anz-late-next-steps" href="#view-anz-late-next-steps"><div class="kpi-label">Late Next Steps</div><div class="kpi-value">1</div><div class="kpi-note">Opportunities needing owner follow-up or CRM update.</div></a><a class="kpi-card dashboard-drill-link" data-target="anz-stage-6-7" href="#view-anz-stage-6-7"><div class="kpi-label">Stage 6–7</div><div class="kpi-value">2</div><div class="kpi-note">Shortlisted, negotiation, or verbal award opportunities.</div></a><a class="kpi-card dashboard-drill-link" data-target="anz-win-loss-needed" href="#view-anz-win-loss-needed"><div class="kpi-label">Win/Loss Needed</div><div class="kpi-value">1</div><div class="kpi-note">Closed opportunities requiring debrief completion.</div></a></div></section>
+<section class="content-card"><h2>Dashboard Summary</h2><div class="dashboard-kpis"><div class="kpi-card"><div class="kpi-label">Open Opportunities</div><div class="kpi-value">10</div><div class="kpi-note">Active regional opportunities requiring current stage and next step.</div></div><div class="kpi-card"><div class="kpi-label">Late Next Steps</div><div class="kpi-value">1</div><div class="kpi-note">Opportunities needing owner follow-up or CRM update.</div></div><div class="kpi-card"><div class="kpi-label">Stage 6–7</div><div class="kpi-value">2</div><div class="kpi-note">Shortlisted, negotiation, or verbal award opportunities.</div></div><div class="kpi-card"><div class="kpi-label">Win/Loss Needed</div><div class="kpi-value">1</div><div class="kpi-note">Closed opportunities requiring debrief completion.</div></div></div></section>
 <section class="content-card">
 <h2>Pipeline Graph</h2>
 <p>Visual snapshot of sales stage movement and opportunity risk for the ANZ regional Sales Agent Dashboard.</p>
@@ -6505,7 +6468,7 @@
 <h2>Opportunities by Sales Stage</h2>
 <p>Use this graph to quickly see where opportunities are concentrated across the global 8 sales stages.</p>
 <div class="regional-bar-chart">
-<a class="regional-bar-stage-link" data-target="anz-sales-stage-1" href="#view-anz-sales-stage-1"><div class="regional-bar-label">Stage 1 - Active Opportunity</div><div class="regional-bar-track"><div class="regional-bar-fill" style="width:10%"></div></div><div class="regional-bar-value">1</div></a><a class="regional-bar-stage-link" data-target="anz-sales-stage-2" href="#view-anz-sales-stage-2"><div class="regional-bar-label">Stage 2 - Qualified</div><div class="regional-bar-track"><div class="regional-bar-fill" style="width:20%"></div></div><div class="regional-bar-value">2</div></a><a class="regional-bar-stage-link" data-target="anz-sales-stage-3" href="#view-anz-sales-stage-3"><div class="regional-bar-label">Stage 3 - Solution Development</div><div class="regional-bar-track"><div class="regional-bar-fill" style="width:20%"></div></div><div class="regional-bar-value">2</div></a><a class="regional-bar-stage-link" data-target="anz-sales-stage-4" href="#view-anz-sales-stage-4"><div class="regional-bar-label">Stage 4 - Proposal / Bid</div><div class="regional-bar-track"><div class="regional-bar-fill" style="width:20%"></div></div><div class="regional-bar-value">2</div></a><a class="regional-bar-stage-link" data-target="anz-sales-stage-5" href="#view-anz-sales-stage-5"><div class="regional-bar-label">Stage 5 - Presentation</div><div class="regional-bar-track"><div class="regional-bar-fill" style="width:10%"></div></div><div class="regional-bar-value">1</div></a><a class="regional-bar-stage-link" data-target="anz-sales-stage-6" href="#view-anz-sales-stage-6"><div class="regional-bar-label">Stage 6 - Shortlisted</div><div class="regional-bar-track"><div class="regional-bar-fill" style="width:10%"></div></div><div class="regional-bar-value">1</div></a><a class="regional-bar-stage-link" data-target="anz-sales-stage-7" href="#view-anz-sales-stage-7"><div class="regional-bar-label">Stage 7 - Negotiation</div><div class="regional-bar-track"><div class="regional-bar-fill" style="width:10%"></div></div><div class="regional-bar-value">1</div></a><a class="regional-bar-stage-link" data-target="anz-sales-stage-8" href="#view-anz-sales-stage-8"><div class="regional-bar-label">Stage 8 - Closed</div><div class="regional-bar-track"><div class="regional-bar-fill" style="width:10%"></div></div><div class="regional-bar-value">1</div></a>
+<div class="regional-bar-row"><div class="regional-bar-label">Stage 1 - Active Opportunity</div><div class="regional-bar-track"><div class="regional-bar-fill" style="width:10%"></div></div><div class="regional-bar-value">1</div></div><div class="regional-bar-row"><div class="regional-bar-label">Stage 2 - Qualified</div><div class="regional-bar-track"><div class="regional-bar-fill" style="width:20%"></div></div><div class="regional-bar-value">2</div></div><div class="regional-bar-row"><div class="regional-bar-label">Stage 3 - Solution Development</div><div class="regional-bar-track"><div class="regional-bar-fill" style="width:20%"></div></div><div class="regional-bar-value">2</div></div><div class="regional-bar-row"><div class="regional-bar-label">Stage 4 - Proposal / Bid</div><div class="regional-bar-track"><div class="regional-bar-fill" style="width:20%"></div></div><div class="regional-bar-value">2</div></div><div class="regional-bar-row"><div class="regional-bar-label">Stage 5 - Presentation</div><div class="regional-bar-track"><div class="regional-bar-fill" style="width:10%"></div></div><div class="regional-bar-value">1</div></div><div class="regional-bar-row"><div class="regional-bar-label">Stage 6 - Shortlisted</div><div class="regional-bar-track"><div class="regional-bar-fill" style="width:10%"></div></div><div class="regional-bar-value">1</div></div><div class="regional-bar-row"><div class="regional-bar-label">Stage 7 - Negotiation</div><div class="regional-bar-track"><div class="regional-bar-fill" style="width:10%"></div></div><div class="regional-bar-value">1</div></div><div class="regional-bar-row"><div class="regional-bar-label">Stage 8 - Closed</div><div class="regional-bar-track"><div class="regional-bar-fill" style="width:10%"></div></div><div class="regional-bar-value">1</div></div>
 </div>
 </div>
 <div class="regional-chart-card">
@@ -6520,163 +6483,7 @@
 </section>
 <section class="content-card"><h2>Regional Pipeline View</h2><table class="dashboard-table"><thead><tr><th>Account</th><th>Owner</th><th>Stage</th><th>Probability</th><th>Next Step</th><th>Risk</th></tr></thead><tbody><tr><td>Example Global Manufacturing</td><td><span class="owner-tag">Sales Agent</span></td><td><span class="stage-pill">3 - Solution Development</span></td><td>20%</td><td>Confirm stakeholder map and TTV data.</td><td><span class="risk-pill">Medium</span></td></tr><tr><td>Example Healthcare Group</td><td><span class="owner-tag">Sales Agent</span></td><td><span class="stage-pill">5 - Presentation</span></td><td>40%</td><td>Send follow-up responses and case study.</td><td><span class="risk-pill">Low</span></td></tr><tr><td>Example Technology Client</td><td><span class="owner-tag">Sales Agent</span></td><td><span class="stage-pill">8 - Closed</span></td><td>100%</td><td>Complete Win/Loss Debrief and update CRM.</td><td><span class="risk-pill">Action Needed</span></td></tr></tbody></table></section>
 <a class="backtop" data-target="anz" href="#view-anz">Back to ANZ Hub ↑</a>
-</section><section class="view" id="view-anz-sales-stage-1"><section class="hero regional-section-hero">
-<div class="eyebrow">Sales Stage Drill-Down</div>
-<h1>ANZ - Stage 1: Active Opportunity</h1>
-<p>Review the opportunities represented by Stage 1 in the Opportunities by Sales Stage graph.</p>
-<span class="owner">1 opportunityy in this stage</span>
-</section><section class="content-card">
-<h2>Stage 1 Opportunity Detail</h2>
-<p>This drill-down shows the records behind the chart value. The opportunity names and values are sample mockup data and can be replaced with CRM or SharePoint List data.</p>
-<div class="drill-summary">
-<span class="drill-summary-pill"><b>1</b> Opportunities</span>
-<span class="drill-summary-pill"><b>Stage 1</b> Active Opportunity</span>
-<span class="drill-summary-pill"><b>ANZ</b> Region</span>
-</div>
-<table class="dashboard-table"><thead><tr><th>Opportunity</th><th>Owner</th><th>CRM Stage</th><th>Probability</th><th>Close Date</th><th>Value</th><th>Next Step</th><th>Status</th></tr></thead><tbody><tr><td><a class="opportunity-account-link" href="#" title="CRM / SharePoint opportunity link placeholder">Auckland Infrastructure</a></td><td>Avery Smith</td><td><span class="stage-pill">1 - Active Opportunity</span></td><td>5%</td><td>Aug 20</td><td>$91K</td><td>Confirm sponsor and qualification criteria.</td><td><span class="status-pill">On Track</span></td></tr></tbody></table><a class="backtop" data-target="anz-sales-agent-dashboard" href="#view-anz-sales-agent-dashboard">← Back to ANZ Dashboard</a></section></section><section class="view" id="view-anz-sales-stage-2"><section class="hero regional-section-hero">
-<div class="eyebrow">Sales Stage Drill-Down</div>
-<h1>ANZ - Stage 2: Qualified</h1>
-<p>Review the opportunities represented by Stage 2 in the Opportunities by Sales Stage graph.</p>
-<span class="owner">2 opportunityies in this stage</span>
-</section><section class="content-card">
-<h2>Stage 2 Opportunity Detail</h2>
-<p>This drill-down shows the records behind the chart value. The opportunity names and values are sample mockup data and can be replaced with CRM or SharePoint List data.</p>
-<div class="drill-summary">
-<span class="drill-summary-pill"><b>2</b> Opportunities</span>
-<span class="drill-summary-pill"><b>Stage 2</b> Qualified</span>
-<span class="drill-summary-pill"><b>ANZ</b> Region</span>
-</div>
-<table class="dashboard-table"><thead><tr><th>Opportunity</th><th>Owner</th><th>CRM Stage</th><th>Probability</th><th>Close Date</th><th>Value</th><th>Next Step</th><th>Status</th></tr></thead><tbody><tr><td><a class="opportunity-account-link" href="#" title="CRM / SharePoint opportunity link placeholder">Bluewater Mining</a></td><td>Mia Wilson</td><td><span class="stage-pill">2 - Qualified</span></td><td>10%</td><td>Sep 22</td><td>$107K</td><td>Complete discovery recap and stakeholder map.</td><td><span class="status-pill">On Track</span></td></tr><tr><td><a class="opportunity-account-link" href="#" title="CRM / SharePoint opportunity link placeholder">Coral Health</a></td><td>Noah Taylor</td><td><span class="stage-pill">2 - Qualified</span></td><td>10%</td><td>Oct 23</td><td>$120K</td><td>Complete discovery recap and stakeholder map.</td><td><span class="status-pill">Follow Up</span></td></tr></tbody></table><a class="backtop" data-target="anz-sales-agent-dashboard" href="#view-anz-sales-agent-dashboard">← Back to ANZ Dashboard</a></section></section><section class="view" id="view-anz-sales-stage-3"><section class="hero regional-section-hero">
-<div class="eyebrow">Sales Stage Drill-Down</div>
-<h1>ANZ - Stage 3: Solution Development</h1>
-<p>Review the opportunities represented by Stage 3 in the Opportunities by Sales Stage graph.</p>
-<span class="owner">2 opportunityies in this stage</span>
-</section><section class="content-card">
-<h2>Stage 3 Opportunity Detail</h2>
-<p>This drill-down shows the records behind the chart value. The opportunity names and values are sample mockup data and can be replaced with CRM or SharePoint List data.</p>
-<div class="drill-summary">
-<span class="drill-summary-pill"><b>2</b> Opportunities</span>
-<span class="drill-summary-pill"><b>Stage 3</b> Solution Development</span>
-<span class="drill-summary-pill"><b>ANZ</b> Region</span>
-</div>
-<table class="dashboard-table"><thead><tr><th>Opportunity</th><th>Owner</th><th>CRM Stage</th><th>Probability</th><th>Close Date</th><th>Value</th><th>Next Step</th><th>Status</th></tr></thead><tbody><tr><td><a class="opportunity-account-link" href="#" title="CRM / SharePoint opportunity link placeholder">Daintree Retail</a></td><td>Noah Taylor</td><td><span class="stage-pill">3 - Solution Development</span></td><td>20%</td><td>Oct 24</td><td>$129K</td><td>Validate solution design and SME inputs.</td><td><span class="status-pill">On Track</span></td></tr><tr><td><a class="opportunity-account-link" href="#" title="CRM / SharePoint opportunity link placeholder">Endeavour Energy</a></td><td>Sophie Brown</td><td><span class="stage-pill">3 - Solution Development</span></td><td>20%</td><td>Nov 25</td><td>$147K</td><td>Validate solution design and SME inputs.</td><td><span class="status-pill">Follow Up</span></td></tr></tbody></table><a class="backtop" data-target="anz-sales-agent-dashboard" href="#view-anz-sales-agent-dashboard">← Back to ANZ Dashboard</a></section></section><section class="view" id="view-anz-sales-stage-4"><section class="hero regional-section-hero">
-<div class="eyebrow">Sales Stage Drill-Down</div>
-<h1>ANZ - Stage 4: Proposal / Bid</h1>
-<p>Review the opportunities represented by Stage 4 in the Opportunities by Sales Stage graph.</p>
-<span class="owner">2 opportunityies in this stage</span>
-</section><section class="content-card">
-<h2>Stage 4 Opportunity Detail</h2>
-<p>This drill-down shows the records behind the chart value. The opportunity names and values are sample mockup data and can be replaced with CRM or SharePoint List data.</p>
-<div class="drill-summary">
-<span class="drill-summary-pill"><b>2</b> Opportunities</span>
-<span class="drill-summary-pill"><b>Stage 4</b> Proposal / Bid</span>
-<span class="drill-summary-pill"><b>ANZ</b> Region</span>
-</div>
-<table class="dashboard-table"><thead><tr><th>Opportunity</th><th>Owner</th><th>CRM Stage</th><th>Probability</th><th>Close Date</th><th>Value</th><th>Next Step</th><th>Status</th></tr></thead><tbody><tr><td><a class="opportunity-account-link" href="#" title="CRM / SharePoint opportunity link placeholder">Fremantle Logistics</a></td><td>Sophie Brown</td><td><span class="stage-pill">4 - Proposal / Bid</span></td><td>30%</td><td>Nov 26</td><td>$156K</td><td>Confirm proposal review and client questions.</td><td><span class="status-pill">On Track</span></td></tr><tr><td><a class="opportunity-account-link" href="#" title="CRM / SharePoint opportunity link placeholder">Harbour Financial</a></td><td>Avery Smith</td><td><span class="stage-pill">4 - Proposal / Bid</span></td><td>30%</td><td>Jul 27</td><td>$171K</td><td>Confirm proposal review and client questions.</td><td><span class="status-pill">Follow Up</span></td></tr></tbody></table><a class="backtop" data-target="anz-sales-agent-dashboard" href="#view-anz-sales-agent-dashboard">← Back to ANZ Dashboard</a></section></section><section class="view" id="view-anz-sales-stage-5"><section class="hero regional-section-hero">
-<div class="eyebrow">Sales Stage Drill-Down</div>
-<h1>ANZ - Stage 5: Presentation</h1>
-<p>Review the opportunities represented by Stage 5 in the Opportunities by Sales Stage graph.</p>
-<span class="owner">1 opportunityy in this stage</span>
-</section><section class="content-card">
-<h2>Stage 5 Opportunity Detail</h2>
-<p>This drill-down shows the records behind the chart value. The opportunity names and values are sample mockup data and can be replaced with CRM or SharePoint List data.</p>
-<div class="drill-summary">
-<span class="drill-summary-pill"><b>1</b> Opportunities</span>
-<span class="drill-summary-pill"><b>Stage 5</b> Presentation</span>
-<span class="drill-summary-pill"><b>ANZ</b> Region</span>
-</div>
-<table class="dashboard-table"><thead><tr><th>Opportunity</th><th>Owner</th><th>CRM Stage</th><th>Probability</th><th>Close Date</th><th>Value</th><th>Next Step</th><th>Status</th></tr></thead><tbody><tr><td><a class="opportunity-account-link" href="#" title="CRM / SharePoint opportunity link placeholder">Koru Technology</a></td><td>Avery Smith</td><td><span class="stage-pill">5 - Presentation</span></td><td>40%</td><td>Jul 28</td><td>$175K</td><td>Prepare presentation follow-up and proof points.</td><td><span class="status-pill">On Track</span></td></tr></tbody></table><a class="backtop" data-target="anz-sales-agent-dashboard" href="#view-anz-sales-agent-dashboard">← Back to ANZ Dashboard</a></section></section><section class="view" id="view-anz-sales-stage-6"><section class="hero regional-section-hero">
-<div class="eyebrow">Sales Stage Drill-Down</div>
-<h1>ANZ - Stage 6: Shortlisted</h1>
-<p>Review the opportunities represented by Stage 6 in the Opportunities by Sales Stage graph.</p>
-<span class="owner">1 opportunityy in this stage</span>
-</section><section class="content-card">
-<h2>Stage 6 Opportunity Detail</h2>
-<p>This drill-down shows the records behind the chart value. The opportunity names and values are sample mockup data and can be replaced with CRM or SharePoint List data.</p>
-<div class="drill-summary">
-<span class="drill-summary-pill"><b>1</b> Opportunities</span>
-<span class="drill-summary-pill"><b>Stage 6</b> Shortlisted</span>
-<span class="drill-summary-pill"><b>ANZ</b> Region</span>
-</div>
-<table class="dashboard-table"><thead><tr><th>Opportunity</th><th>Owner</th><th>CRM Stage</th><th>Probability</th><th>Close Date</th><th>Value</th><th>Next Step</th><th>Status</th></tr></thead><tbody><tr><td><a class="opportunity-account-link" href="#" title="CRM / SharePoint opportunity link placeholder">Southern Cross Media</a></td><td>Mia Wilson</td><td><span class="stage-pill">6 - Shortlisted</span></td><td>75%</td><td>Aug 19</td><td>$203K</td><td>Review shortlist requirements and negotiation plan.</td><td><span class="status-pill">Priority</span></td></tr></tbody></table><a class="backtop" data-target="anz-sales-agent-dashboard" href="#view-anz-sales-agent-dashboard">← Back to ANZ Dashboard</a></section></section><section class="view" id="view-anz-sales-stage-7"><section class="hero regional-section-hero">
-<div class="eyebrow">Sales Stage Drill-Down</div>
-<h1>ANZ - Stage 7: Negotiation</h1>
-<p>Review the opportunities represented by Stage 7 in the Opportunities by Sales Stage graph.</p>
-<span class="owner">1 opportunityy in this stage</span>
-</section><section class="content-card">
-<h2>Stage 7 Opportunity Detail</h2>
-<p>This drill-down shows the records behind the chart value. The opportunity names and values are sample mockup data and can be replaced with CRM or SharePoint List data.</p>
-<div class="drill-summary">
-<span class="drill-summary-pill"><b>1</b> Opportunities</span>
-<span class="drill-summary-pill"><b>Stage 7</b> Negotiation</span>
-<span class="drill-summary-pill"><b>ANZ</b> Region</span>
-</div>
-<table class="dashboard-table"><thead><tr><th>Opportunity</th><th>Owner</th><th>CRM Stage</th><th>Probability</th><th>Close Date</th><th>Value</th><th>Next Step</th><th>Status</th></tr></thead><tbody><tr><td><a class="opportunity-account-link" href="#" title="CRM / SharePoint opportunity link placeholder">Tasman Consulting</a></td><td>Noah Taylor</td><td><span class="stage-pill">7 - Negotiation</span></td><td>95%</td><td>Sep 21</td><td>$223K</td><td>Confirm final pricing, redlines, and award timeline.</td><td><span class="status-pill">Priority</span></td></tr></tbody></table><a class="backtop" data-target="anz-sales-agent-dashboard" href="#view-anz-sales-agent-dashboard">← Back to ANZ Dashboard</a></section></section><section class="view" id="view-anz-sales-stage-8"><section class="hero regional-section-hero">
-<div class="eyebrow">Sales Stage Drill-Down</div>
-<h1>ANZ - Stage 8: Closed</h1>
-<p>Review the opportunities represented by Stage 8 in the Opportunities by Sales Stage graph.</p>
-<span class="owner">1 opportunityy in this stage</span>
-</section><section class="content-card">
-<h2>Stage 8 Opportunity Detail</h2>
-<p>This drill-down shows the records behind the chart value. The opportunity names and values are sample mockup data and can be replaced with CRM or SharePoint List data.</p>
-<div class="drill-summary">
-<span class="drill-summary-pill"><b>1</b> Opportunities</span>
-<span class="drill-summary-pill"><b>Stage 8</b> Closed</span>
-<span class="drill-summary-pill"><b>ANZ</b> Region</span>
-</div>
-<table class="dashboard-table"><thead><tr><th>Opportunity</th><th>Owner</th><th>CRM Stage</th><th>Probability</th><th>Close Date</th><th>Value</th><th>Next Step</th><th>Status</th></tr></thead><tbody><tr><td><a class="opportunity-account-link" href="#" title="CRM / SharePoint opportunity link placeholder">Auckland Infrastructure</a></td><td>Sophie Brown</td><td><span class="stage-pill">8 - Closed</span></td><td>100%</td><td>Oct 23</td><td>$62K</td><td>Complete win/loss debrief and capture decision drivers.</td><td><span class="status-pill">Debrief Needed</span></td></tr></tbody></table><a class="backtop" data-target="anz-sales-agent-dashboard" href="#view-anz-sales-agent-dashboard">← Back to ANZ Dashboard</a></section></section><section class="view" id="view-anz-open-opportunities"><section class="hero regional-section-hero">
-<div class="eyebrow">Regional Dashboard Drill-Down</div>
-<h1>ANZ - Open Opportunities</h1>
-<p>Active opportunities requiring a current stage and next step.</p>
-<span class="owner">10 records in this dashboard view</span>
-</section><section class="content-card">
-<h2>Open Opportunities Detail</h2>
-<p>Click from the ANZ Sales Agent Dashboard to review the records behind this metric. The records below are mockup data and can be replaced with CRM or SharePoint List data.</p>
-<div class="drill-summary">
-<span class="drill-summary-pill"><b>10</b> Open Opportunities</span>
-<span class="drill-summary-pill"><b>4</b> Owners</span>
-<span class="drill-summary-pill"><b>ANZ</b> Region</span>
-</div>
-<table class="dashboard-table"><thead><tr><th>Opportunity</th><th>Owner</th><th>CRM Stage</th><th>Probability</th><th>Close Date</th><th>Value</th><th>Next Step</th><th>Status</th></tr></thead><tbody><tr><td><a class="opportunity-account-link" href="#" title="CRM / SharePoint opportunity link placeholder">Auckland Infrastructure</a></td><td>Avery Smith</td><td><span class="stage-pill">1 - Active Opportunity</span></td><td>5%</td><td>Jul 18</td><td>$68K</td><td>Confirm sponsor</td><td><span class="status-pill">On Track</span></td></tr><tr><td><a class="opportunity-account-link" href="#" title="CRM / SharePoint opportunity link placeholder">Bluewater Mining</a></td><td>Mia Wilson</td><td><span class="stage-pill">2 - Discovery / Qualification</span></td><td>10%</td><td>Aug 19</td><td>$78K</td><td>Complete discovery recap</td><td><span class="status-pill">Follow Up</span></td></tr><tr><td><a class="opportunity-account-link" href="#" title="CRM / SharePoint opportunity link placeholder">Coral Health</a></td><td>Noah Taylor</td><td><span class="stage-pill">3 - Solution Development</span></td><td>20%</td><td>Sep 20</td><td>$91K</td><td>Validate solution</td><td><span class="status-pill">Priority</span></td></tr><tr><td><a class="opportunity-account-link" href="#" title="CRM / SharePoint opportunity link placeholder">Daintree Retail</a></td><td>Sophie Brown</td><td><span class="stage-pill">4 - Proposal Submitted</span></td><td>30%</td><td>Oct 21</td><td>$111K</td><td>Follow up on proposal</td><td><span class="status-pill">Needs Update</span></td></tr><tr><td><a class="opportunity-account-link" href="#" title="CRM / SharePoint opportunity link placeholder">Endeavour Energy</a></td><td>Avery Smith</td><td><span class="stage-pill">5 - Presentation</span></td><td>40%</td><td>Nov 22</td><td>$129K</td><td>Prepare presentation</td><td><span class="status-pill">On Track</span></td></tr><tr><td><a class="opportunity-account-link" href="#" title="CRM / SharePoint opportunity link placeholder">Fremantle Logistics</a></td><td>Mia Wilson</td><td><span class="stage-pill">6 - Short Listed / Negotiations</span></td><td>75%</td><td>Jul 23</td><td>$149K</td><td>Review negotiations</td><td><span class="status-pill">Follow Up</span></td></tr><tr><td><a class="opportunity-account-link" href="#" title="CRM / SharePoint opportunity link placeholder">Harbour Financial</a></td><td>Noah Taylor</td><td><span class="stage-pill">7 - Verbal Award</span></td><td>95%</td><td>Aug 24</td><td>$164K</td><td>Confirm award</td><td><span class="status-pill">Priority</span></td></tr><tr><td><a class="opportunity-account-link" href="#" title="CRM / SharePoint opportunity link placeholder">Koru Technology</a></td><td>Sophie Brown</td><td><span class="stage-pill">1 - Active Opportunity</span></td><td>5%</td><td>Sep 25</td><td>$179K</td><td>Confirm sponsor</td><td><span class="status-pill">Needs Update</span></td></tr><tr><td><a class="opportunity-account-link" href="#" title="CRM / SharePoint opportunity link placeholder">Southern Cross Media</a></td><td>Avery Smith</td><td><span class="stage-pill">2 - Discovery / Qualification</span></td><td>10%</td><td>Oct 26</td><td>$201K</td><td>Complete discovery recap</td><td><span class="status-pill">On Track</span></td></tr><tr><td><a class="opportunity-account-link" href="#" title="CRM / SharePoint opportunity link placeholder">Tasman Consulting</a></td><td>Mia Wilson</td><td><span class="stage-pill">3 - Solution Development</span></td><td>20%</td><td>Nov 27</td><td>$215K</td><td>Validate solution</td><td><span class="status-pill">Follow Up</span></td></tr></tbody></table><a class="backtop" data-target="anz-sales-agent-dashboard" href="#view-anz-sales-agent-dashboard">← Back to ANZ Dashboard</a></section></section><section class="view" id="view-anz-late-next-steps"><section class="hero regional-section-hero">
-<div class="eyebrow">Regional Dashboard Drill-Down</div>
-<h1>ANZ - Late Next Steps</h1>
-<p>Opportunities with overdue owner follow-up or CRM next-step updates.</p>
-<span class="owner">1 record in this dashboard view</span>
-</section><section class="content-card">
-<h2>Late Next Steps Detail</h2>
-<p>Click from the ANZ Sales Agent Dashboard to review the records behind this metric. The records below are mockup data and can be replaced with CRM or SharePoint List data.</p>
-<div class="drill-summary">
-<span class="drill-summary-pill"><b>1</b> Late Next Steps</span>
-<span class="drill-summary-pill"><b>1</b> Owners</span>
-<span class="drill-summary-pill"><b>ANZ</b> Region</span>
-</div>
-<table class="dashboard-table"><thead><tr><th>Opportunity</th><th>Owner</th><th>CRM Stage</th><th>Probability</th><th>Close Date</th><th>Value</th><th>Next Step</th><th>Status</th></tr></thead><tbody><tr><td><a class="opportunity-account-link" href="#" title="CRM / SharePoint opportunity link placeholder">Auckland Infrastructure</a></td><td>Avery Smith</td><td><span class="stage-pill">2 - Discovery / Qualification</span></td><td>10%</td><td>Jul 18</td><td>$68K</td><td>Update CRM next step</td><td><span class="status-pill">Late</span></td></tr></tbody></table><a class="backtop" data-target="anz-sales-agent-dashboard" href="#view-anz-sales-agent-dashboard">← Back to ANZ Dashboard</a></section></section><section class="view" id="view-anz-stage-6-7"><section class="hero regional-section-hero">
-<div class="eyebrow">Regional Dashboard Drill-Down</div>
-<h1>ANZ - Stage 6–7</h1>
-<p>Shortlisted, negotiation, or verbal award opportunities requiring close-stage attention.</p>
-<span class="owner">2 records in this dashboard view</span>
-</section><section class="content-card">
-<h2>Stage 6–7 Detail</h2>
-<p>Click from the ANZ Sales Agent Dashboard to review the records behind this metric. The records below are mockup data and can be replaced with CRM or SharePoint List data.</p>
-<div class="drill-summary">
-<span class="drill-summary-pill"><b>2</b> Stage 6–7</span>
-<span class="drill-summary-pill"><b>2</b> Owners</span>
-<span class="drill-summary-pill"><b>ANZ</b> Region</span>
-</div>
-<table class="dashboard-table"><thead><tr><th>Opportunity</th><th>Owner</th><th>CRM Stage</th><th>Probability</th><th>Close Date</th><th>Value</th><th>Next Step</th><th>Status</th></tr></thead><tbody><tr><td><a class="opportunity-account-link" href="#" title="CRM / SharePoint opportunity link placeholder">Auckland Infrastructure</a></td><td>Avery Smith</td><td><span class="stage-pill">6 - Short Listed / Negotiations</span></td><td>75%</td><td>Jul 18</td><td>$68K</td><td>Confirm negotiation position</td><td><span class="status-pill">Close Stage</span></td></tr><tr><td><a class="opportunity-account-link" href="#" title="CRM / SharePoint opportunity link placeholder">Bluewater Mining</a></td><td>Mia Wilson</td><td><span class="stage-pill">7 - Verbal Award</span></td><td>95%</td><td>Aug 19</td><td>$78K</td><td>Validate pricing and redlines</td><td><span class="status-pill">Close Stage</span></td></tr></tbody></table><a class="backtop" data-target="anz-sales-agent-dashboard" href="#view-anz-sales-agent-dashboard">← Back to ANZ Dashboard</a></section></section><section class="view" id="view-anz-win-loss-needed"><section class="hero regional-section-hero">
-<div class="eyebrow">Regional Dashboard Drill-Down</div>
-<h1>ANZ - Win/Loss Needed</h1>
-<p>Closed opportunities requiring a completed win/loss debrief.</p>
-<span class="owner">1 record in this dashboard view</span>
-</section><section class="content-card">
-<h2>Win/Loss Needed Detail</h2>
-<p>Click from the ANZ Sales Agent Dashboard to review the records behind this metric. The records below are mockup data and can be replaced with CRM or SharePoint List data.</p>
-<div class="drill-summary">
-<span class="drill-summary-pill"><b>1</b> Win/Loss Needed</span>
-<span class="drill-summary-pill"><b>1</b> Owners</span>
-<span class="drill-summary-pill"><b>ANZ</b> Region</span>
-</div>
-<table class="dashboard-table"><thead><tr><th>Opportunity</th><th>Owner</th><th>CRM Stage</th><th>Probability</th><th>Close Date</th><th>Value</th><th>Next Step</th><th>Status</th></tr></thead><tbody><tr><td><a class="opportunity-account-link" href="#" title="CRM / SharePoint opportunity link placeholder">Auckland Infrastructure</a></td><td>Avery Smith</td><td><span class="stage-pill">8 - Closed</span></td><td>100%</td><td>Jul 18</td><td>$68K</td><td>Complete win/loss debrief</td><td><span class="status-pill">Debrief Needed</span></td></tr></tbody></table><a class="backtop" data-target="anz-sales-agent-dashboard" href="#view-anz-sales-agent-dashboard">← Back to ANZ Dashboard</a></section></section><section class="view" id="view-apac">
+</section><section class="view" id="view-apac">
 <section class="hero region-hero">
 <div class="hub-hero-with-search">
 <div class="hub-hero-copy">
@@ -7161,7 +6968,7 @@
 <p>Regional pipeline visibility by account, owner, stage, next step, probability, and risk level.</p>
 <span class="owner">Page owner: APAC Regional Sales / Sales Enablement</span>
 </section>
-<section class="content-card"><h2>Dashboard Summary</h2><div class="dashboard-kpis"><a class="kpi-card dashboard-drill-link" data-target="apac-open-opportunities" href="#view-apac-open-opportunities"><div class="kpi-label">Open Opportunities</div><div class="kpi-value">8</div><div class="kpi-note">Active regional opportunities requiring current stage and next step.</div></a><a class="kpi-card dashboard-drill-link" data-target="apac-late-next-steps" href="#view-apac-late-next-steps"><div class="kpi-label">Late Next Steps</div><div class="kpi-value">1</div><div class="kpi-note">Opportunities needing owner follow-up or CRM update.</div></a><a class="kpi-card dashboard-drill-link" data-target="apac-stage-6-7" href="#view-apac-stage-6-7"><div class="kpi-label">Stage 6–7</div><div class="kpi-value">1</div><div class="kpi-note">Shortlisted, negotiation, or verbal award opportunities.</div></a><a class="kpi-card dashboard-drill-link" data-target="apac-win-loss-needed" href="#view-apac-win-loss-needed"><div class="kpi-label">Win/Loss Needed</div><div class="kpi-value">1</div><div class="kpi-note">Closed opportunities requiring debrief completion.</div></a></div></section>
+<section class="content-card"><h2>Dashboard Summary</h2><div class="dashboard-kpis"><div class="kpi-card"><div class="kpi-label">Open Opportunities</div><div class="kpi-value">8</div><div class="kpi-note">Active regional opportunities requiring current stage and next step.</div></div><div class="kpi-card"><div class="kpi-label">Late Next Steps</div><div class="kpi-value">1</div><div class="kpi-note">Opportunities needing owner follow-up or CRM update.</div></div><div class="kpi-card"><div class="kpi-label">Stage 6–7</div><div class="kpi-value">1</div><div class="kpi-note">Shortlisted, negotiation, or verbal award opportunities.</div></div><div class="kpi-card"><div class="kpi-label">Win/Loss Needed</div><div class="kpi-value">1</div><div class="kpi-note">Closed opportunities requiring debrief completion.</div></div></div></section>
 <section class="content-card">
 <h2>Pipeline Graph</h2>
 <p>Visual snapshot of sales stage movement and opportunity risk for the APAC regional Sales Agent Dashboard.</p>
@@ -7170,7 +6977,7 @@
 <h2>Opportunities by Sales Stage</h2>
 <p>Use this graph to quickly see where opportunities are concentrated across the global 8 sales stages.</p>
 <div class="regional-bar-chart">
-<a class="regional-bar-stage-link" data-target="apac-sales-stage-1" href="#view-apac-sales-stage-1"><div class="regional-bar-label">Stage 1 - Active Opportunity</div><div class="regional-bar-track"><div class="regional-bar-fill" style="width:25%"></div></div><div class="regional-bar-value">2</div></a><a class="regional-bar-stage-link" data-target="apac-sales-stage-2" href="#view-apac-sales-stage-2"><div class="regional-bar-label">Stage 2 - Qualified</div><div class="regional-bar-track"><div class="regional-bar-fill" style="width:25%"></div></div><div class="regional-bar-value">2</div></a><a class="regional-bar-stage-link" data-target="apac-sales-stage-3" href="#view-apac-sales-stage-3"><div class="regional-bar-label">Stage 3 - Solution Development</div><div class="regional-bar-track"><div class="regional-bar-fill" style="width:25%"></div></div><div class="regional-bar-value">2</div></a><a class="regional-bar-stage-link" data-target="apac-sales-stage-4" href="#view-apac-sales-stage-4"><div class="regional-bar-label">Stage 4 - Proposal / Bid</div><div class="regional-bar-track"><div class="regional-bar-fill" style="width:13%"></div></div><div class="regional-bar-value">1</div></a><a class="regional-bar-stage-link" data-target="apac-sales-stage-5" href="#view-apac-sales-stage-5"><div class="regional-bar-label">Stage 5 - Presentation</div><div class="regional-bar-track"><div class="regional-bar-fill" style="width:13%"></div></div><div class="regional-bar-value">1</div></a><a class="regional-bar-stage-link" data-target="apac-sales-stage-6" href="#view-apac-sales-stage-6"><div class="regional-bar-label">Stage 6 - Shortlisted</div><div class="regional-bar-track"><div class="regional-bar-fill" style="width:0%"></div></div><div class="regional-bar-value">0</div></a><a class="regional-bar-stage-link" data-target="apac-sales-stage-7" href="#view-apac-sales-stage-7"><div class="regional-bar-label">Stage 7 - Negotiation</div><div class="regional-bar-track"><div class="regional-bar-fill" style="width:13%"></div></div><div class="regional-bar-value">1</div></a><a class="regional-bar-stage-link" data-target="apac-sales-stage-8" href="#view-apac-sales-stage-8"><div class="regional-bar-label">Stage 8 - Closed</div><div class="regional-bar-track"><div class="regional-bar-fill" style="width:13%"></div></div><div class="regional-bar-value">1</div></a>
+<div class="regional-bar-row"><div class="regional-bar-label">Stage 1 - Active Opportunity</div><div class="regional-bar-track"><div class="regional-bar-fill" style="width:25%"></div></div><div class="regional-bar-value">2</div></div><div class="regional-bar-row"><div class="regional-bar-label">Stage 2 - Qualified</div><div class="regional-bar-track"><div class="regional-bar-fill" style="width:25%"></div></div><div class="regional-bar-value">2</div></div><div class="regional-bar-row"><div class="regional-bar-label">Stage 3 - Solution Development</div><div class="regional-bar-track"><div class="regional-bar-fill" style="width:25%"></div></div><div class="regional-bar-value">2</div></div><div class="regional-bar-row"><div class="regional-bar-label">Stage 4 - Proposal / Bid</div><div class="regional-bar-track"><div class="regional-bar-fill" style="width:13%"></div></div><div class="regional-bar-value">1</div></div><div class="regional-bar-row"><div class="regional-bar-label">Stage 5 - Presentation</div><div class="regional-bar-track"><div class="regional-bar-fill" style="width:13%"></div></div><div class="regional-bar-value">1</div></div><div class="regional-bar-row"><div class="regional-bar-label">Stage 6 - Shortlisted</div><div class="regional-bar-track"><div class="regional-bar-fill" style="width:0%"></div></div><div class="regional-bar-value">0</div></div><div class="regional-bar-row"><div class="regional-bar-label">Stage 7 - Negotiation</div><div class="regional-bar-track"><div class="regional-bar-fill" style="width:13%"></div></div><div class="regional-bar-value">1</div></div><div class="regional-bar-row"><div class="regional-bar-label">Stage 8 - Closed</div><div class="regional-bar-track"><div class="regional-bar-fill" style="width:13%"></div></div><div class="regional-bar-value">1</div></div>
 </div>
 </div>
 <div class="regional-chart-card">
@@ -7185,163 +6992,7 @@
 </section>
 <section class="content-card"><h2>Regional Pipeline View</h2><table class="dashboard-table"><thead><tr><th>Account</th><th>Owner</th><th>Stage</th><th>Probability</th><th>Next Step</th><th>Risk</th></tr></thead><tbody><tr><td>Example Global Manufacturing</td><td><span class="owner-tag">Sales Agent</span></td><td><span class="stage-pill">3 - Solution Development</span></td><td>20%</td><td>Confirm stakeholder map and TTV data.</td><td><span class="risk-pill">Medium</span></td></tr><tr><td>Example Healthcare Group</td><td><span class="owner-tag">Sales Agent</span></td><td><span class="stage-pill">5 - Presentation</span></td><td>40%</td><td>Send follow-up responses and case study.</td><td><span class="risk-pill">Low</span></td></tr><tr><td>Example Technology Client</td><td><span class="owner-tag">Sales Agent</span></td><td><span class="stage-pill">8 - Closed</span></td><td>100%</td><td>Complete Win/Loss Debrief and update CRM.</td><td><span class="risk-pill">Action Needed</span></td></tr></tbody></table></section>
 <a class="backtop" data-target="apac" href="#view-apac">Back to APAC Hub ↑</a>
-</section><section class="view" id="view-apac-sales-stage-1"><section class="hero regional-section-hero">
-<div class="eyebrow">Sales Stage Drill-Down</div>
-<h1>APAC - Stage 1: Active Opportunity</h1>
-<p>Review the opportunities represented by Stage 1 in the Opportunities by Sales Stage graph.</p>
-<span class="owner">2 opportunityies in this stage</span>
-</section><section class="content-card">
-<h2>Stage 1 Opportunity Detail</h2>
-<p>This drill-down shows the records behind the chart value. The opportunity names and values are sample mockup data and can be replaced with CRM or SharePoint List data.</p>
-<div class="drill-summary">
-<span class="drill-summary-pill"><b>2</b> Opportunities</span>
-<span class="drill-summary-pill"><b>Stage 1</b> Active Opportunity</span>
-<span class="drill-summary-pill"><b>APAC</b> Region</span>
-</div>
-<table class="dashboard-table"><thead><tr><th>Opportunity</th><th>Owner</th><th>CRM Stage</th><th>Probability</th><th>Close Date</th><th>Value</th><th>Next Step</th><th>Status</th></tr></thead><tbody><tr><td><a class="opportunity-account-link" href="#" title="CRM / SharePoint opportunity link placeholder">Apex Asia Holdings</a></td><td>Priya Rao</td><td><span class="stage-pill">1 - Active Opportunity</span></td><td>5%</td><td>Aug 20</td><td>$86K</td><td>Confirm sponsor and qualification criteria.</td><td><span class="status-pill">On Track</span></td></tr><tr><td><a class="opportunity-account-link" href="#" title="CRM / SharePoint opportunity link placeholder">Banyan Technology</a></td><td>Kenji Sato</td><td><span class="stage-pill">1 - Active Opportunity</span></td><td>5%</td><td>Sep 21</td><td>$102K</td><td>Confirm sponsor and qualification criteria.</td><td><span class="status-pill">Follow Up</span></td></tr></tbody></table><a class="backtop" data-target="apac-sales-agent-dashboard" href="#view-apac-sales-agent-dashboard">← Back to APAC Dashboard</a></section></section><section class="view" id="view-apac-sales-stage-2"><section class="hero regional-section-hero">
-<div class="eyebrow">Sales Stage Drill-Down</div>
-<h1>APAC - Stage 2: Qualified</h1>
-<p>Review the opportunities represented by Stage 2 in the Opportunities by Sales Stage graph.</p>
-<span class="owner">2 opportunityies in this stage</span>
-</section><section class="content-card">
-<h2>Stage 2 Opportunity Detail</h2>
-<p>This drill-down shows the records behind the chart value. The opportunity names and values are sample mockup data and can be replaced with CRM or SharePoint List data.</p>
-<div class="drill-summary">
-<span class="drill-summary-pill"><b>2</b> Opportunities</span>
-<span class="drill-summary-pill"><b>Stage 2</b> Qualified</span>
-<span class="drill-summary-pill"><b>APAC</b> Region</span>
-</div>
-<table class="dashboard-table"><thead><tr><th>Opportunity</th><th>Owner</th><th>CRM Stage</th><th>Probability</th><th>Close Date</th><th>Value</th><th>Next Step</th><th>Status</th></tr></thead><tbody><tr><td><a class="opportunity-account-link" href="#" title="CRM / SharePoint opportunity link placeholder">Crescent Healthcare</a></td><td>Kenji Sato</td><td><span class="stage-pill">2 - Qualified</span></td><td>10%</td><td>Sep 22</td><td>$110K</td><td>Complete discovery recap and stakeholder map.</td><td><span class="status-pill">On Track</span></td></tr><tr><td><a class="opportunity-account-link" href="#" title="CRM / SharePoint opportunity link placeholder">Dragonfly Logistics</a></td><td>Mei Lin</td><td><span class="stage-pill">2 - Qualified</span></td><td>10%</td><td>Oct 23</td><td>$127K</td><td>Complete discovery recap and stakeholder map.</td><td><span class="status-pill">Follow Up</span></td></tr></tbody></table><a class="backtop" data-target="apac-sales-agent-dashboard" href="#view-apac-sales-agent-dashboard">← Back to APAC Dashboard</a></section></section><section class="view" id="view-apac-sales-stage-3"><section class="hero regional-section-hero">
-<div class="eyebrow">Sales Stage Drill-Down</div>
-<h1>APAC - Stage 3: Solution Development</h1>
-<p>Review the opportunities represented by Stage 3 in the Opportunities by Sales Stage graph.</p>
-<span class="owner">2 opportunityies in this stage</span>
-</section><section class="content-card">
-<h2>Stage 3 Opportunity Detail</h2>
-<p>This drill-down shows the records behind the chart value. The opportunity names and values are sample mockup data and can be replaced with CRM or SharePoint List data.</p>
-<div class="drill-summary">
-<span class="drill-summary-pill"><b>2</b> Opportunities</span>
-<span class="drill-summary-pill"><b>Stage 3</b> Solution Development</span>
-<span class="drill-summary-pill"><b>APAC</b> Region</span>
-</div>
-<table class="dashboard-table"><thead><tr><th>Opportunity</th><th>Owner</th><th>CRM Stage</th><th>Probability</th><th>Close Date</th><th>Value</th><th>Next Step</th><th>Status</th></tr></thead><tbody><tr><td><a class="opportunity-account-link" href="#" title="CRM / SharePoint opportunity link placeholder">Eastern Pacific Group</a></td><td>Mei Lin</td><td><span class="stage-pill">3 - Solution Development</span></td><td>20%</td><td>Oct 24</td><td>$135K</td><td>Validate solution design and SME inputs.</td><td><span class="status-pill">On Track</span></td></tr><tr><td><a class="opportunity-account-link" href="#" title="CRM / SharePoint opportunity link placeholder">Lotus Financial</a></td><td>Arjun Patel</td><td><span class="stage-pill">3 - Solution Development</span></td><td>20%</td><td>Nov 25</td><td>$146K</td><td>Validate solution design and SME inputs.</td><td><span class="status-pill">Follow Up</span></td></tr></tbody></table><a class="backtop" data-target="apac-sales-agent-dashboard" href="#view-apac-sales-agent-dashboard">← Back to APAC Dashboard</a></section></section><section class="view" id="view-apac-sales-stage-4"><section class="hero regional-section-hero">
-<div class="eyebrow">Sales Stage Drill-Down</div>
-<h1>APAC - Stage 4: Proposal / Bid</h1>
-<p>Review the opportunities represented by Stage 4 in the Opportunities by Sales Stage graph.</p>
-<span class="owner">1 opportunityy in this stage</span>
-</section><section class="content-card">
-<h2>Stage 4 Opportunity Detail</h2>
-<p>This drill-down shows the records behind the chart value. The opportunity names and values are sample mockup data and can be replaced with CRM or SharePoint List data.</p>
-<div class="drill-summary">
-<span class="drill-summary-pill"><b>1</b> Opportunities</span>
-<span class="drill-summary-pill"><b>Stage 4</b> Proposal / Bid</span>
-<span class="drill-summary-pill"><b>APAC</b> Region</span>
-</div>
-<table class="dashboard-table"><thead><tr><th>Opportunity</th><th>Owner</th><th>CRM Stage</th><th>Probability</th><th>Close Date</th><th>Value</th><th>Next Step</th><th>Status</th></tr></thead><tbody><tr><td><a class="opportunity-account-link" href="#" title="CRM / SharePoint opportunity link placeholder">Meridian Consumer</a></td><td>Arjun Patel</td><td><span class="stage-pill">4 - Proposal / Bid</span></td><td>30%</td><td>Nov 26</td><td>$154K</td><td>Confirm proposal review and client questions.</td><td><span class="status-pill">On Track</span></td></tr></tbody></table><a class="backtop" data-target="apac-sales-agent-dashboard" href="#view-apac-sales-agent-dashboard">← Back to APAC Dashboard</a></section></section><section class="view" id="view-apac-sales-stage-5"><section class="hero regional-section-hero">
-<div class="eyebrow">Sales Stage Drill-Down</div>
-<h1>APAC - Stage 5: Presentation</h1>
-<p>Review the opportunities represented by Stage 5 in the Opportunities by Sales Stage graph.</p>
-<span class="owner">1 opportunityy in this stage</span>
-</section><section class="content-card">
-<h2>Stage 5 Opportunity Detail</h2>
-<p>This drill-down shows the records behind the chart value. The opportunity names and values are sample mockup data and can be replaced with CRM or SharePoint List data.</p>
-<div class="drill-summary">
-<span class="drill-summary-pill"><b>1</b> Opportunities</span>
-<span class="drill-summary-pill"><b>Stage 5</b> Presentation</span>
-<span class="drill-summary-pill"><b>APAC</b> Region</span>
-</div>
-<table class="dashboard-table"><thead><tr><th>Opportunity</th><th>Owner</th><th>CRM Stage</th><th>Probability</th><th>Close Date</th><th>Value</th><th>Next Step</th><th>Status</th></tr></thead><tbody><tr><td><a class="opportunity-account-link" href="#" title="CRM / SharePoint opportunity link placeholder">Pacific Horizon</a></td><td>Priya Rao</td><td><span class="stage-pill">5 - Presentation</span></td><td>40%</td><td>Jul 28</td><td>$175K</td><td>Prepare presentation follow-up and proof points.</td><td><span class="status-pill">On Track</span></td></tr></tbody></table><a class="backtop" data-target="apac-sales-agent-dashboard" href="#view-apac-sales-agent-dashboard">← Back to APAC Dashboard</a></section></section><section class="view" id="view-apac-sales-stage-6"><section class="hero regional-section-hero">
-<div class="eyebrow">Sales Stage Drill-Down</div>
-<h1>APAC - Stage 6: Shortlisted</h1>
-<p>Review the opportunities represented by Stage 6 in the Opportunities by Sales Stage graph.</p>
-<span class="owner">0 opportunityies in this stage</span>
-</section><section class="content-card">
-<h2>Stage 6 Opportunity Detail</h2>
-<p>This drill-down shows the records behind the chart value. The opportunity names and values are sample mockup data and can be replaced with CRM or SharePoint List data.</p>
-<div class="drill-summary">
-<span class="drill-summary-pill"><b>0</b> Opportunities</span>
-<span class="drill-summary-pill"><b>Stage 6</b> Shortlisted</span>
-<span class="drill-summary-pill"><b>APAC</b> Region</span>
-</div>
-<table class="dashboard-table"><thead><tr><th>Opportunity</th><th>Owner</th><th>CRM Stage</th><th>Probability</th><th>Close Date</th><th>Value</th><th>Next Step</th><th>Status</th></tr></thead><tbody><tr><td colspan="8">No opportunities are currently shown in Stage 6 for APAC.</td></tr></tbody></table><a class="backtop" data-target="apac-sales-agent-dashboard" href="#view-apac-sales-agent-dashboard">← Back to APAC Dashboard</a></section></section><section class="view" id="view-apac-sales-stage-7"><section class="hero regional-section-hero">
-<div class="eyebrow">Sales Stage Drill-Down</div>
-<h1>APAC - Stage 7: Negotiation</h1>
-<p>Review the opportunities represented by Stage 7 in the Opportunities by Sales Stage graph.</p>
-<span class="owner">1 opportunityy in this stage</span>
-</section><section class="content-card">
-<h2>Stage 7 Opportunity Detail</h2>
-<p>This drill-down shows the records behind the chart value. The opportunity names and values are sample mockup data and can be replaced with CRM or SharePoint List data.</p>
-<div class="drill-summary">
-<span class="drill-summary-pill"><b>1</b> Opportunities</span>
-<span class="drill-summary-pill"><b>Stage 7</b> Negotiation</span>
-<span class="drill-summary-pill"><b>APAC</b> Region</span>
-</div>
-<table class="dashboard-table"><thead><tr><th>Opportunity</th><th>Owner</th><th>CRM Stage</th><th>Probability</th><th>Close Date</th><th>Value</th><th>Next Step</th><th>Status</th></tr></thead><tbody><tr><td><a class="opportunity-account-link" href="#" title="CRM / SharePoint opportunity link placeholder">Apex Asia Holdings</a></td><td>Mei Lin</td><td><span class="stage-pill">7 - Negotiation</span></td><td>95%</td><td>Sep 21</td><td>$224K</td><td>Confirm final pricing, redlines, and award timeline.</td><td><span class="status-pill">Priority</span></td></tr></tbody></table><a class="backtop" data-target="apac-sales-agent-dashboard" href="#view-apac-sales-agent-dashboard">← Back to APAC Dashboard</a></section></section><section class="view" id="view-apac-sales-stage-8"><section class="hero regional-section-hero">
-<div class="eyebrow">Sales Stage Drill-Down</div>
-<h1>APAC - Stage 8: Closed</h1>
-<p>Review the opportunities represented by Stage 8 in the Opportunities by Sales Stage graph.</p>
-<span class="owner">1 opportunityy in this stage</span>
-</section><section class="content-card">
-<h2>Stage 8 Opportunity Detail</h2>
-<p>This drill-down shows the records behind the chart value. The opportunity names and values are sample mockup data and can be replaced with CRM or SharePoint List data.</p>
-<div class="drill-summary">
-<span class="drill-summary-pill"><b>1</b> Opportunities</span>
-<span class="drill-summary-pill"><b>Stage 8</b> Closed</span>
-<span class="drill-summary-pill"><b>APAC</b> Region</span>
-</div>
-<table class="dashboard-table"><thead><tr><th>Opportunity</th><th>Owner</th><th>CRM Stage</th><th>Probability</th><th>Close Date</th><th>Value</th><th>Next Step</th><th>Status</th></tr></thead><tbody><tr><td><a class="opportunity-account-link" href="#" title="CRM / SharePoint opportunity link placeholder">Banyan Technology</a></td><td>Arjun Patel</td><td><span class="stage-pill">8 - Closed</span></td><td>100%</td><td>Oct 23</td><td>$56K</td><td>Complete win/loss debrief and capture decision drivers.</td><td><span class="status-pill">Debrief Needed</span></td></tr></tbody></table><a class="backtop" data-target="apac-sales-agent-dashboard" href="#view-apac-sales-agent-dashboard">← Back to APAC Dashboard</a></section></section><section class="view" id="view-apac-open-opportunities"><section class="hero regional-section-hero">
-<div class="eyebrow">Regional Dashboard Drill-Down</div>
-<h1>APAC - Open Opportunities</h1>
-<p>Active opportunities requiring a current stage and next step.</p>
-<span class="owner">8 records in this dashboard view</span>
-</section><section class="content-card">
-<h2>Open Opportunities Detail</h2>
-<p>Click from the APAC Sales Agent Dashboard to review the records behind this metric. The records below are mockup data and can be replaced with CRM or SharePoint List data.</p>
-<div class="drill-summary">
-<span class="drill-summary-pill"><b>8</b> Open Opportunities</span>
-<span class="drill-summary-pill"><b>4</b> Owners</span>
-<span class="drill-summary-pill"><b>APAC</b> Region</span>
-</div>
-<table class="dashboard-table"><thead><tr><th>Opportunity</th><th>Owner</th><th>CRM Stage</th><th>Probability</th><th>Close Date</th><th>Value</th><th>Next Step</th><th>Status</th></tr></thead><tbody><tr><td><a class="opportunity-account-link" href="#" title="CRM / SharePoint opportunity link placeholder">Apex Asia Holdings</a></td><td>Priya Rao</td><td><span class="stage-pill">1 - Active Opportunity</span></td><td>5%</td><td>Jul 18</td><td>$63K</td><td>Confirm sponsor</td><td><span class="status-pill">On Track</span></td></tr><tr><td><a class="opportunity-account-link" href="#" title="CRM / SharePoint opportunity link placeholder">Banyan Technology</a></td><td>Kenji Sato</td><td><span class="stage-pill">2 - Discovery / Qualification</span></td><td>10%</td><td>Aug 19</td><td>$79K</td><td>Complete discovery recap</td><td><span class="status-pill">Follow Up</span></td></tr><tr><td><a class="opportunity-account-link" href="#" title="CRM / SharePoint opportunity link placeholder">Crescent Healthcare</a></td><td>Mei Lin</td><td><span class="stage-pill">3 - Solution Development</span></td><td>20%</td><td>Sep 20</td><td>$98K</td><td>Validate solution</td><td><span class="status-pill">Priority</span></td></tr><tr><td><a class="opportunity-account-link" href="#" title="CRM / SharePoint opportunity link placeholder">Dragonfly Logistics</a></td><td>Arjun Patel</td><td><span class="stage-pill">4 - Proposal Submitted</span></td><td>30%</td><td>Oct 21</td><td>$115K</td><td>Follow up on proposal</td><td><span class="status-pill">Needs Update</span></td></tr><tr><td><a class="opportunity-account-link" href="#" title="CRM / SharePoint opportunity link placeholder">Eastern Pacific Group</a></td><td>Priya Rao</td><td><span class="stage-pill">5 - Presentation</span></td><td>40%</td><td>Nov 22</td><td>$134K</td><td>Prepare presentation</td><td><span class="status-pill">On Track</span></td></tr><tr><td><a class="opportunity-account-link" href="#" title="CRM / SharePoint opportunity link placeholder">Lotus Financial</a></td><td>Kenji Sato</td><td><span class="stage-pill">6 - Short Listed / Negotiations</span></td><td>75%</td><td>Jul 23</td><td>$145K</td><td>Review negotiations</td><td><span class="status-pill">Follow Up</span></td></tr><tr><td><a class="opportunity-account-link" href="#" title="CRM / SharePoint opportunity link placeholder">Meridian Consumer</a></td><td>Mei Lin</td><td><span class="stage-pill">7 - Verbal Award</span></td><td>95%</td><td>Aug 24</td><td>$164K</td><td>Confirm award</td><td><span class="status-pill">Priority</span></td></tr><tr><td><a class="opportunity-account-link" href="#" title="CRM / SharePoint opportunity link placeholder">Pacific Horizon</a></td><td>Arjun Patel</td><td><span class="stage-pill">1 - Active Opportunity</span></td><td>5%</td><td>Sep 25</td><td>$179K</td><td>Confirm sponsor</td><td><span class="status-pill">Needs Update</span></td></tr></tbody></table><a class="backtop" data-target="apac-sales-agent-dashboard" href="#view-apac-sales-agent-dashboard">← Back to APAC Dashboard</a></section></section><section class="view" id="view-apac-late-next-steps"><section class="hero regional-section-hero">
-<div class="eyebrow">Regional Dashboard Drill-Down</div>
-<h1>APAC - Late Next Steps</h1>
-<p>Opportunities with overdue owner follow-up or CRM next-step updates.</p>
-<span class="owner">1 record in this dashboard view</span>
-</section><section class="content-card">
-<h2>Late Next Steps Detail</h2>
-<p>Click from the APAC Sales Agent Dashboard to review the records behind this metric. The records below are mockup data and can be replaced with CRM or SharePoint List data.</p>
-<div class="drill-summary">
-<span class="drill-summary-pill"><b>1</b> Late Next Steps</span>
-<span class="drill-summary-pill"><b>1</b> Owners</span>
-<span class="drill-summary-pill"><b>APAC</b> Region</span>
-</div>
-<table class="dashboard-table"><thead><tr><th>Opportunity</th><th>Owner</th><th>CRM Stage</th><th>Probability</th><th>Close Date</th><th>Value</th><th>Next Step</th><th>Status</th></tr></thead><tbody><tr><td><a class="opportunity-account-link" href="#" title="CRM / SharePoint opportunity link placeholder">Apex Asia Holdings</a></td><td>Priya Rao</td><td><span class="stage-pill">2 - Discovery / Qualification</span></td><td>10%</td><td>Jul 18</td><td>$63K</td><td>Update CRM next step</td><td><span class="status-pill">Late</span></td></tr></tbody></table><a class="backtop" data-target="apac-sales-agent-dashboard" href="#view-apac-sales-agent-dashboard">← Back to APAC Dashboard</a></section></section><section class="view" id="view-apac-stage-6-7"><section class="hero regional-section-hero">
-<div class="eyebrow">Regional Dashboard Drill-Down</div>
-<h1>APAC - Stage 6–7</h1>
-<p>Shortlisted, negotiation, or verbal award opportunities requiring close-stage attention.</p>
-<span class="owner">1 record in this dashboard view</span>
-</section><section class="content-card">
-<h2>Stage 6–7 Detail</h2>
-<p>Click from the APAC Sales Agent Dashboard to review the records behind this metric. The records below are mockup data and can be replaced with CRM or SharePoint List data.</p>
-<div class="drill-summary">
-<span class="drill-summary-pill"><b>1</b> Stage 6–7</span>
-<span class="drill-summary-pill"><b>1</b> Owners</span>
-<span class="drill-summary-pill"><b>APAC</b> Region</span>
-</div>
-<table class="dashboard-table"><thead><tr><th>Opportunity</th><th>Owner</th><th>CRM Stage</th><th>Probability</th><th>Close Date</th><th>Value</th><th>Next Step</th><th>Status</th></tr></thead><tbody><tr><td><a class="opportunity-account-link" href="#" title="CRM / SharePoint opportunity link placeholder">Apex Asia Holdings</a></td><td>Priya Rao</td><td><span class="stage-pill">6 - Short Listed / Negotiations</span></td><td>75%</td><td>Jul 18</td><td>$63K</td><td>Confirm negotiation position</td><td><span class="status-pill">Close Stage</span></td></tr></tbody></table><a class="backtop" data-target="apac-sales-agent-dashboard" href="#view-apac-sales-agent-dashboard">← Back to APAC Dashboard</a></section></section><section class="view" id="view-apac-win-loss-needed"><section class="hero regional-section-hero">
-<div class="eyebrow">Regional Dashboard Drill-Down</div>
-<h1>APAC - Win/Loss Needed</h1>
-<p>Closed opportunities requiring a completed win/loss debrief.</p>
-<span class="owner">1 record in this dashboard view</span>
-</section><section class="content-card">
-<h2>Win/Loss Needed Detail</h2>
-<p>Click from the APAC Sales Agent Dashboard to review the records behind this metric. The records below are mockup data and can be replaced with CRM or SharePoint List data.</p>
-<div class="drill-summary">
-<span class="drill-summary-pill"><b>1</b> Win/Loss Needed</span>
-<span class="drill-summary-pill"><b>1</b> Owners</span>
-<span class="drill-summary-pill"><b>APAC</b> Region</span>
-</div>
-<table class="dashboard-table"><thead><tr><th>Opportunity</th><th>Owner</th><th>CRM Stage</th><th>Probability</th><th>Close Date</th><th>Value</th><th>Next Step</th><th>Status</th></tr></thead><tbody><tr><td><a class="opportunity-account-link" href="#" title="CRM / SharePoint opportunity link placeholder">Apex Asia Holdings</a></td><td>Priya Rao</td><td><span class="stage-pill">8 - Closed</span></td><td>100%</td><td>Jul 18</td><td>$63K</td><td>Complete win/loss debrief</td><td><span class="status-pill">Debrief Needed</span></td></tr></tbody></table><a class="backtop" data-target="apac-sales-agent-dashboard" href="#view-apac-sales-agent-dashboard">← Back to APAC Dashboard</a></section></section><section class="view" id="view-emea">
+</section><section class="view" id="view-emea">
 <section class="hero region-hero">
 <div class="hub-hero-with-search">
 <div class="hub-hero-copy">
@@ -7826,7 +7477,7 @@
 <p>Regional pipeline visibility by account, owner, stage, next step, probability, and risk level.</p>
 <span class="owner">Page owner: EMEA Regional Sales / Sales Enablement</span>
 </section>
-<section class="content-card"><h2>Dashboard Summary</h2><div class="dashboard-kpis"><a class="kpi-card dashboard-drill-link" data-target="emea-open-opportunities" href="#view-emea-open-opportunities"><div class="kpi-label">Open Opportunities</div><div class="kpi-value">24</div><div class="kpi-note">Active regional opportunities requiring current stage and next step.</div></a><a class="kpi-card dashboard-drill-link" data-target="emea-late-next-steps" href="#view-emea-late-next-steps"><div class="kpi-label">Late Next Steps</div><div class="kpi-value">3</div><div class="kpi-note">Opportunities needing owner follow-up or CRM update.</div></a><a class="kpi-card dashboard-drill-link" data-target="emea-stage-6-7" href="#view-emea-stage-6-7"><div class="kpi-label">Stage 6–7</div><div class="kpi-value">5</div><div class="kpi-note">Shortlisted, negotiation, or verbal award opportunities.</div></a><a class="kpi-card dashboard-drill-link" data-target="emea-win-loss-needed" href="#view-emea-win-loss-needed"><div class="kpi-label">Win/Loss Needed</div><div class="kpi-value">2</div><div class="kpi-note">Closed opportunities requiring debrief completion.</div></a></div></section>
+<section class="content-card"><h2>Dashboard Summary</h2><div class="dashboard-kpis"><div class="kpi-card"><div class="kpi-label">Open Opportunities</div><div class="kpi-value">24</div><div class="kpi-note">Active regional opportunities requiring current stage and next step.</div></div><div class="kpi-card"><div class="kpi-label">Late Next Steps</div><div class="kpi-value">3</div><div class="kpi-note">Opportunities needing owner follow-up or CRM update.</div></div><div class="kpi-card"><div class="kpi-label">Stage 6–7</div><div class="kpi-value">5</div><div class="kpi-note">Shortlisted, negotiation, or verbal award opportunities.</div></div><div class="kpi-card"><div class="kpi-label">Win/Loss Needed</div><div class="kpi-value">2</div><div class="kpi-note">Closed opportunities requiring debrief completion.</div></div></div></section>
 <section class="content-card">
 <h2>Pipeline Graph</h2>
 <p>Visual snapshot of sales stage movement and opportunity risk for the EMEA regional Sales Agent Dashboard.</p>
@@ -7835,7 +7486,7 @@
 <h2>Opportunities by Sales Stage</h2>
 <p>Use this graph to quickly see where opportunities are concentrated across the global 8 sales stages.</p>
 <div class="regional-bar-chart">
-<a class="regional-bar-stage-link" data-target="emea-sales-stage-1" href="#view-emea-sales-stage-1"><div class="regional-bar-label">Stage 1 - Active Opportunity</div><div class="regional-bar-track"><div class="regional-bar-fill" style="width:13%"></div></div><div class="regional-bar-value">3</div></a><a class="regional-bar-stage-link" data-target="emea-sales-stage-2" href="#view-emea-sales-stage-2"><div class="regional-bar-label">Stage 2 - Qualified</div><div class="regional-bar-track"><div class="regional-bar-fill" style="width:13%"></div></div><div class="regional-bar-value">3</div></a><a class="regional-bar-stage-link" data-target="emea-sales-stage-3" href="#view-emea-sales-stage-3"><div class="regional-bar-label">Stage 3 - Solution Development</div><div class="regional-bar-track"><div class="regional-bar-fill" style="width:17%"></div></div><div class="regional-bar-value">4</div></a><a class="regional-bar-stage-link" data-target="emea-sales-stage-4" href="#view-emea-sales-stage-4"><div class="regional-bar-label">Stage 4 - Proposal / Bid</div><div class="regional-bar-track"><div class="regional-bar-fill" style="width:21%"></div></div><div class="regional-bar-value">5</div></a><a class="regional-bar-stage-link" data-target="emea-sales-stage-5" href="#view-emea-sales-stage-5"><div class="regional-bar-label">Stage 5 - Presentation</div><div class="regional-bar-track"><div class="regional-bar-fill" style="width:17%"></div></div><div class="regional-bar-value">4</div></a><a class="regional-bar-stage-link" data-target="emea-sales-stage-6" href="#view-emea-sales-stage-6"><div class="regional-bar-label">Stage 6 - Shortlisted</div><div class="regional-bar-track"><div class="regional-bar-fill" style="width:8%"></div></div><div class="regional-bar-value">2</div></a><a class="regional-bar-stage-link" data-target="emea-sales-stage-7" href="#view-emea-sales-stage-7"><div class="regional-bar-label">Stage 7 - Negotiation</div><div class="regional-bar-track"><div class="regional-bar-fill" style="width:13%"></div></div><div class="regional-bar-value">3</div></a><a class="regional-bar-stage-link" data-target="emea-sales-stage-8" href="#view-emea-sales-stage-8"><div class="regional-bar-label">Stage 8 - Closed</div><div class="regional-bar-track"><div class="regional-bar-fill" style="width:8%"></div></div><div class="regional-bar-value">2</div></a>
+<div class="regional-bar-row"><div class="regional-bar-label">Stage 1 - Active Opportunity</div><div class="regional-bar-track"><div class="regional-bar-fill" style="width:13%"></div></div><div class="regional-bar-value">3</div></div><div class="regional-bar-row"><div class="regional-bar-label">Stage 2 - Qualified</div><div class="regional-bar-track"><div class="regional-bar-fill" style="width:13%"></div></div><div class="regional-bar-value">3</div></div><div class="regional-bar-row"><div class="regional-bar-label">Stage 3 - Solution Development</div><div class="regional-bar-track"><div class="regional-bar-fill" style="width:17%"></div></div><div class="regional-bar-value">4</div></div><div class="regional-bar-row"><div class="regional-bar-label">Stage 4 - Proposal / Bid</div><div class="regional-bar-track"><div class="regional-bar-fill" style="width:21%"></div></div><div class="regional-bar-value">5</div></div><div class="regional-bar-row"><div class="regional-bar-label">Stage 5 - Presentation</div><div class="regional-bar-track"><div class="regional-bar-fill" style="width:17%"></div></div><div class="regional-bar-value">4</div></div><div class="regional-bar-row"><div class="regional-bar-label">Stage 6 - Shortlisted</div><div class="regional-bar-track"><div class="regional-bar-fill" style="width:8%"></div></div><div class="regional-bar-value">2</div></div><div class="regional-bar-row"><div class="regional-bar-label">Stage 7 - Negotiation</div><div class="regional-bar-track"><div class="regional-bar-fill" style="width:13%"></div></div><div class="regional-bar-value">3</div></div><div class="regional-bar-row"><div class="regional-bar-label">Stage 8 - Closed</div><div class="regional-bar-track"><div class="regional-bar-fill" style="width:8%"></div></div><div class="regional-bar-value">2</div></div>
 </div>
 </div>
 <div class="regional-chart-card">
@@ -7850,163 +7501,7 @@
 </section>
 <section class="content-card"><h2>Regional Pipeline View</h2><table class="dashboard-table"><thead><tr><th>Account</th><th>Owner</th><th>Stage</th><th>Probability</th><th>Next Step</th><th>Risk</th></tr></thead><tbody><tr><td>Example Global Manufacturing</td><td><span class="owner-tag">Sales Agent</span></td><td><span class="stage-pill">3 - Solution Development</span></td><td>20%</td><td>Confirm stakeholder map and TTV data.</td><td><span class="risk-pill">Medium</span></td></tr><tr><td>Example Healthcare Group</td><td><span class="owner-tag">Sales Agent</span></td><td><span class="stage-pill">5 - Presentation</span></td><td>40%</td><td>Send follow-up responses and case study.</td><td><span class="risk-pill">Low</span></td></tr><tr><td>Example Technology Client</td><td><span class="owner-tag">Sales Agent</span></td><td><span class="stage-pill">8 - Closed</span></td><td>100%</td><td>Complete Win/Loss Debrief and update CRM.</td><td><span class="risk-pill">Action Needed</span></td></tr></tbody></table></section>
 <a class="backtop" data-target="emea" href="#view-emea">Back to EMEA Hub ↑</a>
-</section><section class="view" id="view-emea-sales-stage-1"><section class="hero regional-section-hero">
-<div class="eyebrow">Sales Stage Drill-Down</div>
-<h1>EMEA - Stage 1: Active Opportunity</h1>
-<p>Review the opportunities represented by Stage 1 in the Opportunities by Sales Stage graph.</p>
-<span class="owner">3 opportunityies in this stage</span>
-</section><section class="content-card">
-<h2>Stage 1 Opportunity Detail</h2>
-<p>This drill-down shows the records behind the chart value. The opportunity names and values are sample mockup data and can be replaced with CRM or SharePoint List data.</p>
-<div class="drill-summary">
-<span class="drill-summary-pill"><b>3</b> Opportunities</span>
-<span class="drill-summary-pill"><b>Stage 1</b> Active Opportunity</span>
-<span class="drill-summary-pill"><b>EMEA</b> Region</span>
-</div>
-<table class="dashboard-table"><thead><tr><th>Opportunity</th><th>Owner</th><th>CRM Stage</th><th>Probability</th><th>Close Date</th><th>Value</th><th>Next Step</th><th>Status</th></tr></thead><tbody><tr><td><a class="opportunity-account-link" href="#" title="CRM / SharePoint opportunity link placeholder">Alpine Mobility</a></td><td>Amelia Clarke</td><td><span class="stage-pill">1 - Active Opportunity</span></td><td>5%</td><td>Aug 20</td><td>$83K</td><td>Confirm sponsor and qualification criteria.</td><td><span class="status-pill">On Track</span></td></tr><tr><td><a class="opportunity-account-link" href="#" title="CRM / SharePoint opportunity link placeholder">Baltic Technology</a></td><td>Oliver Martin</td><td><span class="stage-pill">1 - Active Opportunity</span></td><td>5%</td><td>Sep 21</td><td>$102K</td><td>Confirm sponsor and qualification criteria.</td><td><span class="status-pill">Follow Up</span></td></tr><tr><td><a class="opportunity-account-link" href="#" title="CRM / SharePoint opportunity link placeholder">Cedar Pharma</a></td><td>Sofia Rossi</td><td><span class="stage-pill">1 - Active Opportunity</span></td><td>5%</td><td>Oct 22</td><td>$114K</td><td>Confirm sponsor and qualification criteria.</td><td><span class="status-pill">Needs Update</span></td></tr></tbody></table><a class="backtop" data-target="emea-sales-agent-dashboard" href="#view-emea-sales-agent-dashboard">← Back to EMEA Dashboard</a></section></section><section class="view" id="view-emea-sales-stage-2"><section class="hero regional-section-hero">
-<div class="eyebrow">Sales Stage Drill-Down</div>
-<h1>EMEA - Stage 2: Qualified</h1>
-<p>Review the opportunities represented by Stage 2 in the Opportunities by Sales Stage graph.</p>
-<span class="owner">3 opportunityies in this stage</span>
-</section><section class="content-card">
-<h2>Stage 2 Opportunity Detail</h2>
-<p>This drill-down shows the records behind the chart value. The opportunity names and values are sample mockup data and can be replaced with CRM or SharePoint List data.</p>
-<div class="drill-summary">
-<span class="drill-summary-pill"><b>3</b> Opportunities</span>
-<span class="drill-summary-pill"><b>Stage 2</b> Qualified</span>
-<span class="drill-summary-pill"><b>EMEA</b> Region</span>
-</div>
-<table class="dashboard-table"><thead><tr><th>Opportunity</th><th>Owner</th><th>CRM Stage</th><th>Probability</th><th>Close Date</th><th>Value</th><th>Next Step</th><th>Status</th></tr></thead><tbody><tr><td><a class="opportunity-account-link" href="#" title="CRM / SharePoint opportunity link placeholder">Danube Logistics</a></td><td>Oliver Martin</td><td><span class="stage-pill">2 - Qualified</span></td><td>10%</td><td>Sep 22</td><td>$107K</td><td>Complete discovery recap and stakeholder map.</td><td><span class="status-pill">On Track</span></td></tr><tr><td><a class="opportunity-account-link" href="#" title="CRM / SharePoint opportunity link placeholder">Eurostar Services</a></td><td>Sofia Rossi</td><td><span class="stage-pill">2 - Qualified</span></td><td>10%</td><td>Oct 23</td><td>$125K</td><td>Complete discovery recap and stakeholder map.</td><td><span class="status-pill">Follow Up</span></td></tr><tr><td><a class="opportunity-account-link" href="#" title="CRM / SharePoint opportunity link placeholder">Fjord Energy</a></td><td>Lukas Weber</td><td><span class="stage-pill">2 - Qualified</span></td><td>10%</td><td>Nov 24</td><td>$137K</td><td>Complete discovery recap and stakeholder map.</td><td><span class="status-pill">Needs Update</span></td></tr></tbody></table><a class="backtop" data-target="emea-sales-agent-dashboard" href="#view-emea-sales-agent-dashboard">← Back to EMEA Dashboard</a></section></section><section class="view" id="view-emea-sales-stage-3"><section class="hero regional-section-hero">
-<div class="eyebrow">Sales Stage Drill-Down</div>
-<h1>EMEA - Stage 3: Solution Development</h1>
-<p>Review the opportunities represented by Stage 3 in the Opportunities by Sales Stage graph.</p>
-<span class="owner">4 opportunityies in this stage</span>
-</section><section class="content-card">
-<h2>Stage 3 Opportunity Detail</h2>
-<p>This drill-down shows the records behind the chart value. The opportunity names and values are sample mockup data and can be replaced with CRM or SharePoint List data.</p>
-<div class="drill-summary">
-<span class="drill-summary-pill"><b>4</b> Opportunities</span>
-<span class="drill-summary-pill"><b>Stage 3</b> Solution Development</span>
-<span class="drill-summary-pill"><b>EMEA</b> Region</span>
-</div>
-<table class="dashboard-table"><thead><tr><th>Opportunity</th><th>Owner</th><th>CRM Stage</th><th>Probability</th><th>Close Date</th><th>Value</th><th>Next Step</th><th>Status</th></tr></thead><tbody><tr><td><a class="opportunity-account-link" href="#" title="CRM / SharePoint opportunity link placeholder">Geneva Financial</a></td><td>Sofia Rossi</td><td><span class="stage-pill">3 - Solution Development</span></td><td>20%</td><td>Oct 24</td><td>$130K</td><td>Validate solution design and SME inputs.</td><td><span class="status-pill">On Track</span></td></tr><tr><td><a class="opportunity-account-link" href="#" title="CRM / SharePoint opportunity link placeholder">Helios Manufacturing</a></td><td>Lukas Weber</td><td><span class="stage-pill">3 - Solution Development</span></td><td>20%</td><td>Nov 25</td><td>$151K</td><td>Validate solution design and SME inputs.</td><td><span class="status-pill">Follow Up</span></td></tr><tr><td><a class="opportunity-account-link" href="#" title="CRM / SharePoint opportunity link placeholder">Iberia Consumer</a></td><td>Emma Dubois</td><td><span class="stage-pill">3 - Solution Development</span></td><td>20%</td><td>Jul 26</td><td>$163K</td><td>Validate solution design and SME inputs.</td><td><span class="status-pill">Needs Update</span></td></tr><tr><td><a class="opportunity-account-link" href="#" title="CRM / SharePoint opportunity link placeholder">Jade Hospitality</a></td><td>Daniel Green</td><td><span class="stage-pill">3 - Solution Development</span></td><td>20%</td><td>Aug 27</td><td>$181K</td><td>Validate solution design and SME inputs.</td><td><span class="status-pill">On Track</span></td></tr></tbody></table><a class="backtop" data-target="emea-sales-agent-dashboard" href="#view-emea-sales-agent-dashboard">← Back to EMEA Dashboard</a></section></section><section class="view" id="view-emea-sales-stage-4"><section class="hero regional-section-hero">
-<div class="eyebrow">Sales Stage Drill-Down</div>
-<h1>EMEA - Stage 4: Proposal / Bid</h1>
-<p>Review the opportunities represented by Stage 4 in the Opportunities by Sales Stage graph.</p>
-<span class="owner">5 opportunityies in this stage</span>
-</section><section class="content-card">
-<h2>Stage 4 Opportunity Detail</h2>
-<p>This drill-down shows the records behind the chart value. The opportunity names and values are sample mockup data and can be replaced with CRM or SharePoint List data.</p>
-<div class="drill-summary">
-<span class="drill-summary-pill"><b>5</b> Opportunities</span>
-<span class="drill-summary-pill"><b>Stage 4</b> Proposal / Bid</span>
-<span class="drill-summary-pill"><b>EMEA</b> Region</span>
-</div>
-<table class="dashboard-table"><thead><tr><th>Opportunity</th><th>Owner</th><th>CRM Stage</th><th>Probability</th><th>Close Date</th><th>Value</th><th>Next Step</th><th>Status</th></tr></thead><tbody><tr><td><a class="opportunity-account-link" href="#" title="CRM / SharePoint opportunity link placeholder">Kensington Media</a></td><td>Lukas Weber</td><td><span class="stage-pill">4 - Proposal / Bid</span></td><td>30%</td><td>Nov 26</td><td>$153K</td><td>Confirm proposal review and client questions.</td><td><span class="status-pill">On Track</span></td></tr><tr><td><a class="opportunity-account-link" href="#" title="CRM / SharePoint opportunity link placeholder">Lumen Healthcare</a></td><td>Emma Dubois</td><td><span class="stage-pill">4 - Proposal / Bid</span></td><td>30%</td><td>Jul 27</td><td>$170K</td><td>Confirm proposal review and client questions.</td><td><span class="status-pill">Follow Up</span></td></tr><tr><td><a class="opportunity-account-link" href="#" title="CRM / SharePoint opportunity link placeholder">Munich Industrial</a></td><td>Daniel Green</td><td><span class="stage-pill">4 - Proposal / Bid</span></td><td>30%</td><td>Aug 28</td><td>$188K</td><td>Confirm proposal review and client questions.</td><td><span class="status-pill">Needs Update</span></td></tr><tr><td><a class="opportunity-account-link" href="#" title="CRM / SharePoint opportunity link placeholder">Nordic Education</a></td><td>Amelia Clarke</td><td><span class="stage-pill">4 - Proposal / Bid</span></td><td>30%</td><td>Sep 18</td><td>$204K</td><td>Confirm proposal review and client questions.</td><td><span class="status-pill">On Track</span></td></tr><tr><td><a class="opportunity-account-link" href="#" title="CRM / SharePoint opportunity link placeholder">Orion Consulting</a></td><td>Oliver Martin</td><td><span class="stage-pill">4 - Proposal / Bid</span></td><td>30%</td><td>Oct 19</td><td>$221K</td><td>Confirm proposal review and client questions.</td><td><span class="status-pill">Follow Up</span></td></tr></tbody></table><a class="backtop" data-target="emea-sales-agent-dashboard" href="#view-emea-sales-agent-dashboard">← Back to EMEA Dashboard</a></section></section><section class="view" id="view-emea-sales-stage-5"><section class="hero regional-section-hero">
-<div class="eyebrow">Sales Stage Drill-Down</div>
-<h1>EMEA - Stage 5: Presentation</h1>
-<p>Review the opportunities represented by Stage 5 in the Opportunities by Sales Stage graph.</p>
-<span class="owner">4 opportunityies in this stage</span>
-</section><section class="content-card">
-<h2>Stage 5 Opportunity Detail</h2>
-<p>This drill-down shows the records behind the chart value. The opportunity names and values are sample mockup data and can be replaced with CRM or SharePoint List data.</p>
-<div class="drill-summary">
-<span class="drill-summary-pill"><b>4</b> Opportunities</span>
-<span class="drill-summary-pill"><b>Stage 5</b> Presentation</span>
-<span class="drill-summary-pill"><b>EMEA</b> Region</span>
-</div>
-<table class="dashboard-table"><thead><tr><th>Opportunity</th><th>Owner</th><th>CRM Stage</th><th>Probability</th><th>Close Date</th><th>Value</th><th>Next Step</th><th>Status</th></tr></thead><tbody><tr><td><a class="opportunity-account-link" href="#" title="CRM / SharePoint opportunity link placeholder">Prague Aerospace</a></td><td>Emma Dubois</td><td><span class="stage-pill">5 - Presentation</span></td><td>40%</td><td>Jul 28</td><td>$176K</td><td>Prepare presentation follow-up and proof points.</td><td><span class="status-pill">On Track</span></td></tr><tr><td><a class="opportunity-account-link" href="#" title="CRM / SharePoint opportunity link placeholder">Rhine Retail</a></td><td>Daniel Green</td><td><span class="stage-pill">5 - Presentation</span></td><td>40%</td><td>Aug 18</td><td>$189K</td><td>Prepare presentation follow-up and proof points.</td><td><span class="status-pill">Follow Up</span></td></tr><tr><td><a class="opportunity-account-link" href="#" title="CRM / SharePoint opportunity link placeholder">Sahara Services</a></td><td>Amelia Clarke</td><td><span class="stage-pill">5 - Presentation</span></td><td>40%</td><td>Sep 19</td><td>$209K</td><td>Prepare presentation follow-up and proof points.</td><td><span class="status-pill">Needs Update</span></td></tr><tr><td><a class="opportunity-account-link" href="#" title="CRM / SharePoint opportunity link placeholder">Thames Insurance</a></td><td>Oliver Martin</td><td><span class="stage-pill">5 - Presentation</span></td><td>40%</td><td>Oct 20</td><td>$227K</td><td>Prepare presentation follow-up and proof points.</td><td><span class="status-pill">On Track</span></td></tr></tbody></table><a class="backtop" data-target="emea-sales-agent-dashboard" href="#view-emea-sales-agent-dashboard">← Back to EMEA Dashboard</a></section></section><section class="view" id="view-emea-sales-stage-6"><section class="hero regional-section-hero">
-<div class="eyebrow">Sales Stage Drill-Down</div>
-<h1>EMEA - Stage 6: Shortlisted</h1>
-<p>Review the opportunities represented by Stage 6 in the Opportunities by Sales Stage graph.</p>
-<span class="owner">2 opportunityies in this stage</span>
-</section><section class="content-card">
-<h2>Stage 6 Opportunity Detail</h2>
-<p>This drill-down shows the records behind the chart value. The opportunity names and values are sample mockup data and can be replaced with CRM or SharePoint List data.</p>
-<div class="drill-summary">
-<span class="drill-summary-pill"><b>2</b> Opportunities</span>
-<span class="drill-summary-pill"><b>Stage 6</b> Shortlisted</span>
-<span class="drill-summary-pill"><b>EMEA</b> Region</span>
-</div>
-<table class="dashboard-table"><thead><tr><th>Opportunity</th><th>Owner</th><th>CRM Stage</th><th>Probability</th><th>Close Date</th><th>Value</th><th>Next Step</th><th>Status</th></tr></thead><tbody><tr><td><a class="opportunity-account-link" href="#" title="CRM / SharePoint opportunity link placeholder">Umbria Foods</a></td><td>Daniel Green</td><td><span class="stage-pill">6 - Shortlisted</span></td><td>75%</td><td>Aug 19</td><td>$195K</td><td>Review shortlist requirements and negotiation plan.</td><td><span class="status-pill">Priority</span></td></tr><tr><td><a class="opportunity-account-link" href="#" title="CRM / SharePoint opportunity link placeholder">Vienna Data</a></td><td>Amelia Clarke</td><td><span class="stage-pill">6 - Shortlisted</span></td><td>75%</td><td>Sep 20</td><td>$211K</td><td>Review shortlist requirements and negotiation plan.</td><td><span class="status-pill">Priority</span></td></tr></tbody></table><a class="backtop" data-target="emea-sales-agent-dashboard" href="#view-emea-sales-agent-dashboard">← Back to EMEA Dashboard</a></section></section><section class="view" id="view-emea-sales-stage-7"><section class="hero regional-section-hero">
-<div class="eyebrow">Sales Stage Drill-Down</div>
-<h1>EMEA - Stage 7: Negotiation</h1>
-<p>Review the opportunities represented by Stage 7 in the Opportunities by Sales Stage graph.</p>
-<span class="owner">3 opportunityies in this stage</span>
-</section><section class="content-card">
-<h2>Stage 7 Opportunity Detail</h2>
-<p>This drill-down shows the records behind the chart value. The opportunity names and values are sample mockup data and can be replaced with CRM or SharePoint List data.</p>
-<div class="drill-summary">
-<span class="drill-summary-pill"><b>3</b> Opportunities</span>
-<span class="drill-summary-pill"><b>Stage 7</b> Negotiation</span>
-<span class="drill-summary-pill"><b>EMEA</b> Region</span>
-</div>
-<table class="dashboard-table"><thead><tr><th>Opportunity</th><th>Owner</th><th>CRM Stage</th><th>Probability</th><th>Close Date</th><th>Value</th><th>Next Step</th><th>Status</th></tr></thead><tbody><tr><td><a class="opportunity-account-link" href="#" title="CRM / SharePoint opportunity link placeholder">Warsaw Automotive</a></td><td>Amelia Clarke</td><td><span class="stage-pill">7 - Negotiation</span></td><td>95%</td><td>Sep 21</td><td>$223K</td><td>Confirm final pricing, redlines, and award timeline.</td><td><span class="status-pill">Priority</span></td></tr><tr><td><a class="opportunity-account-link" href="#" title="CRM / SharePoint opportunity link placeholder">Yorkshire Health</a></td><td>Oliver Martin</td><td><span class="stage-pill">7 - Negotiation</span></td><td>95%</td><td>Oct 22</td><td>$49K</td><td>Confirm final pricing, redlines, and award timeline.</td><td><span class="status-pill">Priority</span></td></tr><tr><td><a class="opportunity-account-link" href="#" title="CRM / SharePoint opportunity link placeholder">Zurich Global</a></td><td>Sofia Rossi</td><td><span class="stage-pill">7 - Negotiation</span></td><td>95%</td><td>Nov 23</td><td>$63K</td><td>Confirm final pricing, redlines, and award timeline.</td><td><span class="status-pill">Priority</span></td></tr></tbody></table><a class="backtop" data-target="emea-sales-agent-dashboard" href="#view-emea-sales-agent-dashboard">← Back to EMEA Dashboard</a></section></section><section class="view" id="view-emea-sales-stage-8"><section class="hero regional-section-hero">
-<div class="eyebrow">Sales Stage Drill-Down</div>
-<h1>EMEA - Stage 8: Closed</h1>
-<p>Review the opportunities represented by Stage 8 in the Opportunities by Sales Stage graph.</p>
-<span class="owner">2 opportunityies in this stage</span>
-</section><section class="content-card">
-<h2>Stage 8 Opportunity Detail</h2>
-<p>This drill-down shows the records behind the chart value. The opportunity names and values are sample mockup data and can be replaced with CRM or SharePoint List data.</p>
-<div class="drill-summary">
-<span class="drill-summary-pill"><b>2</b> Opportunities</span>
-<span class="drill-summary-pill"><b>Stage 8</b> Closed</span>
-<span class="drill-summary-pill"><b>EMEA</b> Region</span>
-</div>
-<table class="dashboard-table"><thead><tr><th>Opportunity</th><th>Owner</th><th>CRM Stage</th><th>Probability</th><th>Close Date</th><th>Value</th><th>Next Step</th><th>Status</th></tr></thead><tbody><tr><td><a class="opportunity-account-link" href="#" title="CRM / SharePoint opportunity link placeholder">Alpine Mobility</a></td><td>Oliver Martin</td><td><span class="stage-pill">8 - Closed</span></td><td>100%</td><td>Oct 23</td><td>$54K</td><td>Complete win/loss debrief and capture decision drivers.</td><td><span class="status-pill">Debrief Needed</span></td></tr><tr><td><a class="opportunity-account-link" href="#" title="CRM / SharePoint opportunity link placeholder">Baltic Technology</a></td><td>Sofia Rossi</td><td><span class="stage-pill">8 - Closed</span></td><td>100%</td><td>Nov 24</td><td>$73K</td><td>Complete win/loss debrief and capture decision drivers.</td><td><span class="status-pill">Debrief Needed</span></td></tr></tbody></table><a class="backtop" data-target="emea-sales-agent-dashboard" href="#view-emea-sales-agent-dashboard">← Back to EMEA Dashboard</a></section></section><section class="view" id="view-emea-open-opportunities"><section class="hero regional-section-hero">
-<div class="eyebrow">Regional Dashboard Drill-Down</div>
-<h1>EMEA - Open Opportunities</h1>
-<p>Active opportunities requiring a current stage and next step.</p>
-<span class="owner">24 records in this dashboard view</span>
-</section><section class="content-card">
-<h2>Open Opportunities Detail</h2>
-<p>Click from the EMEA Sales Agent Dashboard to review the records behind this metric. The records below are mockup data and can be replaced with CRM or SharePoint List data.</p>
-<div class="drill-summary">
-<span class="drill-summary-pill"><b>24</b> Open Opportunities</span>
-<span class="drill-summary-pill"><b>6</b> Owners</span>
-<span class="drill-summary-pill"><b>EMEA</b> Region</span>
-</div>
-<table class="dashboard-table"><thead><tr><th>Opportunity</th><th>Owner</th><th>CRM Stage</th><th>Probability</th><th>Close Date</th><th>Value</th><th>Next Step</th><th>Status</th></tr></thead><tbody><tr><td><a class="opportunity-account-link" href="#" title="CRM / SharePoint opportunity link placeholder">Alpine Mobility</a></td><td>Amelia Clarke</td><td><span class="stage-pill">1 - Active Opportunity</span></td><td>5%</td><td>Jul 18</td><td>$60K</td><td>Confirm sponsor</td><td><span class="status-pill">On Track</span></td></tr><tr><td><a class="opportunity-account-link" href="#" title="CRM / SharePoint opportunity link placeholder">Baltic Technology</a></td><td>Oliver Martin</td><td><span class="stage-pill">2 - Discovery / Qualification</span></td><td>10%</td><td>Aug 19</td><td>$79K</td><td>Complete discovery recap</td><td><span class="status-pill">Follow Up</span></td></tr><tr><td><a class="opportunity-account-link" href="#" title="CRM / SharePoint opportunity link placeholder">Cedar Pharma</a></td><td>Sofia Rossi</td><td><span class="stage-pill">3 - Solution Development</span></td><td>20%</td><td>Sep 20</td><td>$91K</td><td>Validate solution</td><td><span class="status-pill">Priority</span></td></tr><tr><td><a class="opportunity-account-link" href="#" title="CRM / SharePoint opportunity link placeholder">Danube Logistics</a></td><td>Lukas Weber</td><td><span class="stage-pill">4 - Proposal Submitted</span></td><td>30%</td><td>Oct 21</td><td>$112K</td><td>Follow up on proposal</td><td><span class="status-pill">Needs Update</span></td></tr><tr><td><a class="opportunity-account-link" href="#" title="CRM / SharePoint opportunity link placeholder">Eurostar Services</a></td><td>Emma Dubois</td><td><span class="stage-pill">5 - Presentation</span></td><td>40%</td><td>Nov 22</td><td>$130K</td><td>Prepare presentation</td><td><span class="status-pill">On Track</span></td></tr><tr><td><a class="opportunity-account-link" href="#" title="CRM / SharePoint opportunity link placeholder">Fjord Energy</a></td><td>Daniel Green</td><td><span class="stage-pill">6 - Short Listed / Negotiations</span></td><td>75%</td><td>Jul 23</td><td>$142K</td><td>Review negotiations</td><td><span class="status-pill">Follow Up</span></td></tr><tr><td><a class="opportunity-account-link" href="#" title="CRM / SharePoint opportunity link placeholder">Geneva Financial</a></td><td>Amelia Clarke</td><td><span class="stage-pill">7 - Verbal Award</span></td><td>95%</td><td>Aug 24</td><td>$163K</td><td>Confirm award</td><td><span class="status-pill">Priority</span></td></tr><tr><td><a class="opportunity-account-link" href="#" title="CRM / SharePoint opportunity link placeholder">Helios Manufacturing</a></td><td>Oliver Martin</td><td><span class="stage-pill">1 - Active Opportunity</span></td><td>5%</td><td>Sep 25</td><td>$184K</td><td>Confirm sponsor</td><td><span class="status-pill">Needs Update</span></td></tr><tr><td><a class="opportunity-account-link" href="#" title="CRM / SharePoint opportunity link placeholder">Iberia Consumer</a></td><td>Sofia Rossi</td><td><span class="stage-pill">2 - Discovery / Qualification</span></td><td>10%</td><td>Oct 26</td><td>$196K</td><td>Complete discovery recap</td><td><span class="status-pill">On Track</span></td></tr><tr><td><a class="opportunity-account-link" href="#" title="CRM / SharePoint opportunity link placeholder">Jade Hospitality</a></td><td>Lukas Weber</td><td><span class="stage-pill">3 - Solution Development</span></td><td>20%</td><td>Nov 27</td><td>$214K</td><td>Validate solution</td><td><span class="status-pill">Follow Up</span></td></tr><tr><td><a class="opportunity-account-link" href="#" title="CRM / SharePoint opportunity link placeholder">Kensington Media</a></td><td>Emma Dubois</td><td><span class="stage-pill">4 - Proposal Submitted</span></td><td>30%</td><td>Jul 28</td><td>$231K</td><td>Follow up on proposal</td><td><span class="status-pill">Priority</span></td></tr><tr><td><a class="opportunity-account-link" href="#" title="CRM / SharePoint opportunity link placeholder">Lumen Healthcare</a></td><td>Daniel Green</td><td><span class="stage-pill">5 - Presentation</span></td><td>40%</td><td>Aug 18</td><td>$58K</td><td>Prepare presentation</td><td><span class="status-pill">Needs Update</span></td></tr><tr><td><a class="opportunity-account-link" href="#" title="CRM / SharePoint opportunity link placeholder">Munich Industrial</a></td><td>Amelia Clarke</td><td><span class="stage-pill">6 - Short Listed / Negotiations</span></td><td>75%</td><td>Sep 19</td><td>$76K</td><td>Review negotiations</td><td><span class="status-pill">On Track</span></td></tr><tr><td><a class="opportunity-account-link" href="#" title="CRM / SharePoint opportunity link placeholder">Nordic Education</a></td><td>Oliver Martin</td><td><span class="stage-pill">7 - Verbal Award</span></td><td>95%</td><td>Oct 20</td><td>$92K</td><td>Confirm award</td><td><span class="status-pill">Follow Up</span></td></tr><tr><td><a class="opportunity-account-link" href="#" title="CRM / SharePoint opportunity link placeholder">Orion Consulting</a></td><td>Sofia Rossi</td><td><span class="stage-pill">1 - Active Opportunity</span></td><td>5%</td><td>Nov 21</td><td>$109K</td><td>Confirm sponsor</td><td><span class="status-pill">Priority</span></td></tr><tr><td><a class="opportunity-account-link" href="#" title="CRM / SharePoint opportunity link placeholder">Prague Aerospace</a></td><td>Lukas Weber</td><td><span class="stage-pill">2 - Discovery / Qualification</span></td><td>10%</td><td>Jul 22</td><td>$126K</td><td>Complete discovery recap</td><td><span class="status-pill">Needs Update</span></td></tr><tr><td><a class="opportunity-account-link" href="#" title="CRM / SharePoint opportunity link placeholder">Rhine Retail</a></td><td>Emma Dubois</td><td><span class="stage-pill">3 - Solution Development</span></td><td>20%</td><td>Aug 23</td><td>$139K</td><td>Validate solution</td><td><span class="status-pill">On Track</span></td></tr><tr><td><a class="opportunity-account-link" href="#" title="CRM / SharePoint opportunity link placeholder">Sahara Services</a></td><td>Daniel Green</td><td><span class="stage-pill">4 - Proposal Submitted</span></td><td>30%</td><td>Sep 24</td><td>$159K</td><td>Follow up on proposal</td><td><span class="status-pill">Follow Up</span></td></tr><tr><td><a class="opportunity-account-link" href="#" title="CRM / SharePoint opportunity link placeholder">Thames Insurance</a></td><td>Amelia Clarke</td><td><span class="stage-pill">5 - Presentation</span></td><td>40%</td><td>Oct 25</td><td>$177K</td><td>Prepare presentation</td><td><span class="status-pill">Priority</span></td></tr><tr><td><a class="opportunity-account-link" href="#" title="CRM / SharePoint opportunity link placeholder">Umbria Foods</a></td><td>Oliver Martin</td><td><span class="stage-pill">6 - Short Listed / Negotiations</span></td><td>75%</td><td>Nov 26</td><td>$190K</td><td>Review negotiations</td><td><span class="status-pill">Needs Update</span></td></tr><tr><td><a class="opportunity-account-link" href="#" title="CRM / SharePoint opportunity link placeholder">Vienna Data</a></td><td>Sofia Rossi</td><td><span class="stage-pill">7 - Verbal Award</span></td><td>95%</td><td>Jul 27</td><td>$206K</td><td>Confirm award</td><td><span class="status-pill">On Track</span></td></tr><tr><td><a class="opportunity-account-link" href="#" title="CRM / SharePoint opportunity link placeholder">Warsaw Automotive</a></td><td>Lukas Weber</td><td><span class="stage-pill">1 - Active Opportunity</span></td><td>5%</td><td>Aug 28</td><td>$229K</td><td>Confirm sponsor</td><td><span class="status-pill">Follow Up</span></td></tr><tr><td><a class="opportunity-account-link" href="#" title="CRM / SharePoint opportunity link placeholder">Yorkshire Health</a></td><td>Emma Dubois</td><td><span class="stage-pill">2 - Discovery / Qualification</span></td><td>10%</td><td>Sep 18</td><td>$55K</td><td>Complete discovery recap</td><td><span class="status-pill">Priority</span></td></tr><tr><td><a class="opportunity-account-link" href="#" title="CRM / SharePoint opportunity link placeholder">Zurich Global</a></td><td>Daniel Green</td><td><span class="stage-pill">3 - Solution Development</span></td><td>20%</td><td>Oct 19</td><td>$69K</td><td>Validate solution</td><td><span class="status-pill">Needs Update</span></td></tr></tbody></table><a class="backtop" data-target="emea-sales-agent-dashboard" href="#view-emea-sales-agent-dashboard">← Back to EMEA Dashboard</a></section></section><section class="view" id="view-emea-late-next-steps"><section class="hero regional-section-hero">
-<div class="eyebrow">Regional Dashboard Drill-Down</div>
-<h1>EMEA - Late Next Steps</h1>
-<p>Opportunities with overdue owner follow-up or CRM next-step updates.</p>
-<span class="owner">3 records in this dashboard view</span>
-</section><section class="content-card">
-<h2>Late Next Steps Detail</h2>
-<p>Click from the EMEA Sales Agent Dashboard to review the records behind this metric. The records below are mockup data and can be replaced with CRM or SharePoint List data.</p>
-<div class="drill-summary">
-<span class="drill-summary-pill"><b>3</b> Late Next Steps</span>
-<span class="drill-summary-pill"><b>3</b> Owners</span>
-<span class="drill-summary-pill"><b>EMEA</b> Region</span>
-</div>
-<table class="dashboard-table"><thead><tr><th>Opportunity</th><th>Owner</th><th>CRM Stage</th><th>Probability</th><th>Close Date</th><th>Value</th><th>Next Step</th><th>Status</th></tr></thead><tbody><tr><td><a class="opportunity-account-link" href="#" title="CRM / SharePoint opportunity link placeholder">Alpine Mobility</a></td><td>Amelia Clarke</td><td><span class="stage-pill">2 - Discovery / Qualification</span></td><td>10%</td><td>Jul 18</td><td>$60K</td><td>Update CRM next step</td><td><span class="status-pill">Late</span></td></tr><tr><td><a class="opportunity-account-link" href="#" title="CRM / SharePoint opportunity link placeholder">Baltic Technology</a></td><td>Oliver Martin</td><td><span class="stage-pill">3 - Solution Development</span></td><td>20%</td><td>Aug 19</td><td>$79K</td><td>Confirm client follow-up</td><td><span class="status-pill">Late</span></td></tr><tr><td><a class="opportunity-account-link" href="#" title="CRM / SharePoint opportunity link placeholder">Cedar Pharma</a></td><td>Sofia Rossi</td><td><span class="stage-pill">4 - Proposal Submitted</span></td><td>30%</td><td>Sep 20</td><td>$91K</td><td>Schedule discovery recap</td><td><span class="status-pill">Late</span></td></tr></tbody></table><a class="backtop" data-target="emea-sales-agent-dashboard" href="#view-emea-sales-agent-dashboard">← Back to EMEA Dashboard</a></section></section><section class="view" id="view-emea-stage-6-7"><section class="hero regional-section-hero">
-<div class="eyebrow">Regional Dashboard Drill-Down</div>
-<h1>EMEA - Stage 6–7</h1>
-<p>Shortlisted, negotiation, or verbal award opportunities requiring close-stage attention.</p>
-<span class="owner">5 records in this dashboard view</span>
-</section><section class="content-card">
-<h2>Stage 6–7 Detail</h2>
-<p>Click from the EMEA Sales Agent Dashboard to review the records behind this metric. The records below are mockup data and can be replaced with CRM or SharePoint List data.</p>
-<div class="drill-summary">
-<span class="drill-summary-pill"><b>5</b> Stage 6–7</span>
-<span class="drill-summary-pill"><b>5</b> Owners</span>
-<span class="drill-summary-pill"><b>EMEA</b> Region</span>
-</div>
-<table class="dashboard-table"><thead><tr><th>Opportunity</th><th>Owner</th><th>CRM Stage</th><th>Probability</th><th>Close Date</th><th>Value</th><th>Next Step</th><th>Status</th></tr></thead><tbody><tr><td><a class="opportunity-account-link" href="#" title="CRM / SharePoint opportunity link placeholder">Alpine Mobility</a></td><td>Amelia Clarke</td><td><span class="stage-pill">6 - Short Listed / Negotiations</span></td><td>75%</td><td>Jul 18</td><td>$60K</td><td>Confirm negotiation position</td><td><span class="status-pill">Close Stage</span></td></tr><tr><td><a class="opportunity-account-link" href="#" title="CRM / SharePoint opportunity link placeholder">Baltic Technology</a></td><td>Oliver Martin</td><td><span class="stage-pill">7 - Verbal Award</span></td><td>95%</td><td>Aug 19</td><td>$79K</td><td>Validate pricing and redlines</td><td><span class="status-pill">Close Stage</span></td></tr><tr><td><a class="opportunity-account-link" href="#" title="CRM / SharePoint opportunity link placeholder">Cedar Pharma</a></td><td>Sofia Rossi</td><td><span class="stage-pill">6 - Short Listed / Negotiations</span></td><td>75%</td><td>Sep 20</td><td>$91K</td><td>Secure written award</td><td><span class="status-pill">Close Stage</span></td></tr><tr><td><a class="opportunity-account-link" href="#" title="CRM / SharePoint opportunity link placeholder">Danube Logistics</a></td><td>Lukas Weber</td><td><span class="stage-pill">7 - Verbal Award</span></td><td>95%</td><td>Oct 21</td><td>$112K</td><td>Align implementation handoff</td><td><span class="status-pill">Close Stage</span></td></tr><tr><td><a class="opportunity-account-link" href="#" title="CRM / SharePoint opportunity link placeholder">Eurostar Services</a></td><td>Emma Dubois</td><td><span class="stage-pill">6 - Short Listed / Negotiations</span></td><td>75%</td><td>Nov 22</td><td>$130K</td><td>Confirm negotiation position</td><td><span class="status-pill">Close Stage</span></td></tr></tbody></table><a class="backtop" data-target="emea-sales-agent-dashboard" href="#view-emea-sales-agent-dashboard">← Back to EMEA Dashboard</a></section></section><section class="view" id="view-emea-win-loss-needed"><section class="hero regional-section-hero">
-<div class="eyebrow">Regional Dashboard Drill-Down</div>
-<h1>EMEA - Win/Loss Needed</h1>
-<p>Closed opportunities requiring a completed win/loss debrief.</p>
-<span class="owner">2 records in this dashboard view</span>
-</section><section class="content-card">
-<h2>Win/Loss Needed Detail</h2>
-<p>Click from the EMEA Sales Agent Dashboard to review the records behind this metric. The records below are mockup data and can be replaced with CRM or SharePoint List data.</p>
-<div class="drill-summary">
-<span class="drill-summary-pill"><b>2</b> Win/Loss Needed</span>
-<span class="drill-summary-pill"><b>2</b> Owners</span>
-<span class="drill-summary-pill"><b>EMEA</b> Region</span>
-</div>
-<table class="dashboard-table"><thead><tr><th>Opportunity</th><th>Owner</th><th>CRM Stage</th><th>Probability</th><th>Close Date</th><th>Value</th><th>Next Step</th><th>Status</th></tr></thead><tbody><tr><td><a class="opportunity-account-link" href="#" title="CRM / SharePoint opportunity link placeholder">Alpine Mobility</a></td><td>Amelia Clarke</td><td><span class="stage-pill">8 - Closed</span></td><td>100%</td><td>Jul 18</td><td>$60K</td><td>Complete win/loss debrief</td><td><span class="status-pill">Debrief Needed</span></td></tr><tr><td><a class="opportunity-account-link" href="#" title="CRM / SharePoint opportunity link placeholder">Baltic Technology</a></td><td>Oliver Martin</td><td><span class="stage-pill">8 - Closed</span></td><td>100%</td><td>Aug 19</td><td>$79K</td><td>Document decision drivers</td><td><span class="status-pill">Debrief Needed</span></td></tr></tbody></table><a class="backtop" data-target="emea-sales-agent-dashboard" href="#view-emea-sales-agent-dashboard">← Back to EMEA Dashboard</a></section></section><section class="view" id="view-about-ctm">
+</section><section class="view" id="view-about-ctm">
 <section class="hero">
 <div class="eyebrow">Global Sales</div>
 <h1>About CTM</h1>
@@ -8367,6 +7862,7 @@
 </section>
 <section class="content-card"><a class="backtop" data-target="home" href="#view-home">Back to Home ↑</a></section>
 </section>
+
 <section class="view" id="view-stage-1-active">
 <section class="hero">
 <div class="eyebrow">Sales Stage Workflow</div>
@@ -8613,7 +8109,7 @@
 <a class="home-region-dashboard-button" data-target="regions" href="#view-regions" style="color:#fff!important">Open Regional Hubs</a>
 </div>
 <div class="region-dashboard-overview">
-<a aria-label="Open North America Sales Agent Dashboard" class="region-dashboard-card-mini" data-target="north-america-sales-agent-dashboard" href="#view-north-america-sales-agent-dashboard"><h3>North America</h3><p>High-volume pipeline with current emphasis on proposal follow-up and negotiation readiness.</p><div class="region-dashboard-metric-row"><a class="region-dashboard-metric opportunity-account-link" data-target="north-america-open-opportunities" href="#view-north-america-open-opportunities">22 Open</a><span class="region-dashboard-metric">$1.8M</span><span class="region-dashboard-metric">6 Close Stage</span></div><span class="region-dashboard-link-label">Open North America Dashboard →</span></a>
+<a aria-label="Open North America Sales Agent Dashboard" class="region-dashboard-card-mini" data-target="north-america-sales-agent-dashboard" href="#view-north-america-sales-agent-dashboard"><h3>North America</h3><p>High-volume pipeline with current emphasis on proposal follow-up and negotiation readiness.</p><div class="region-dashboard-metric-row"><span class="region-dashboard-metric">22 Open</span><span class="region-dashboard-metric">$1.8M</span><span class="region-dashboard-metric">6 Close Stage</span></div><span class="region-dashboard-link-label">Open North America Dashboard →</span></a>
 <a aria-label="Open ANZ Sales Agent Dashboard" class="region-dashboard-card-mini" data-target="anz-sales-agent-dashboard" href="#view-anz-sales-agent-dashboard"><h3>ANZ</h3><p>Focused active pipeline with proposal-stage opportunities requiring decision timeline tracking.</p><div class="region-dashboard-metric-row"><span class="region-dashboard-metric">10 Open</span><span class="region-dashboard-metric">$750K</span><span class="region-dashboard-metric">2 Close Stage</span></div><span class="region-dashboard-link-label">Open ANZ Dashboard →</span></a>
 <a aria-label="Open APAC Sales Agent Dashboard" class="region-dashboard-card-mini" data-target="apac-sales-agent-dashboard" href="#view-apac-sales-agent-dashboard"><h3>APAC</h3><p>Growing pipeline with priority on qualification, discovery notes, and solution-fit validation.</p><div class="region-dashboard-metric-row"><span class="region-dashboard-metric">8 Open</span><span class="region-dashboard-metric">$620K</span><span class="region-dashboard-metric">1 Close Stage</span></div><span class="region-dashboard-link-label">Open APAC Dashboard →</span></a>
 <a aria-label="Open EMEA Sales Agent Dashboard" class="region-dashboard-card-mini" data-target="emea-sales-agent-dashboard" href="#view-emea-sales-agent-dashboard"><h3>EMEA</h3><p>Strong regional activity with opportunities moving through executive review and negotiation.</p><div class="region-dashboard-metric-row"><span class="region-dashboard-metric">24 Open</span><span class="region-dashboard-metric">$2.1M</span><span class="region-dashboard-metric">5 Close Stage</span></div><span class="region-dashboard-link-label">Open EMEA Dashboard →</span></a>
@@ -8684,7 +8180,7 @@
 <table class="region-dashboard-table">
 <thead><tr><th>Region</th><th>Open Opportunities</th><th>Weighted Pipeline</th><th>Late Follow-Ups</th><th>Close Stage</th><th>Primary Focus</th></tr></thead>
 <tbody>
-<tr><td><a class="region-dashboard-row-link" data-target="north-america-sales-agent-dashboard" href="#view-north-america-sales-agent-dashboard"><span class="region-pill">North America</span> →</a></td><td><a class="opportunity-account-link" data-target="north-america-open-opportunities" href="#view-north-america-open-opportunities">22 →</a></td><td>$1.8M</td><td><span class="priority-pill">3</span></td><td>6</td><td>Proposal follow-up, negotiation readiness, and executive sponsor alignment.</td></tr>
+<tr><td><a class="region-dashboard-row-link" data-target="north-america-sales-agent-dashboard" href="#view-north-america-sales-agent-dashboard"><span class="region-pill">North America</span> →</a></td><td>22</td><td>$1.8M</td><td><span class="priority-pill">3</span></td><td>6</td><td>Proposal follow-up, negotiation readiness, and executive sponsor alignment.</td></tr>
 <tr><td><a class="region-dashboard-row-link" data-target="anz-sales-agent-dashboard" href="#view-anz-sales-agent-dashboard"><span class="region-pill">ANZ</span> →</a></td><td>10</td><td>$750K</td><td><span class="priority-pill">1</span></td><td>2</td><td>Decision timeline tracking and proposal-stage opportunity progression.</td></tr>
 <tr><td><a class="region-dashboard-row-link" data-target="apac-sales-agent-dashboard" href="#view-apac-sales-agent-dashboard"><span class="region-pill">APAC</span> →</a></td><td>8</td><td>$620K</td><td><span class="priority-pill">1</span></td><td>1</td><td>Qualification notes, regional solution fit, and next-step ownership.</td></tr>
 <tr><td><a class="region-dashboard-row-link" data-target="emea-sales-agent-dashboard" href="#view-emea-sales-agent-dashboard"><span class="region-pill">EMEA</span> →</a></td><td>24</td><td>$2.1M</td><td><span class="priority-pill">3</span></td><td>5</td><td>Negotiation-stage support, close forecast, and executive review cadence.</td></tr>
@@ -8806,6 +8302,79 @@
 <a class="backtop" data-target="home" href="#view-home">Back to Home ↑</a>
 </section>
 </section>
+<section class="view" id="view-crm-tools">
+<section class="hero">
+<div class="eyebrow">Global Tools</div>
+<h1>CRM Tools</h1>
+<p>CRM links, update guidance, opportunity tracking, dashboard access, and pipeline visibility.</p>
+<span class="owner">Page owner: Global Sales / Sales Enablement</span>
+</section>
+<section class="content-card">
+<h2>CRM Tools Setup</h2>
+<div class="tools-detail-grid">
+<div class="tools-detail-box"><b>CRM Links</b>Replace this placeholder with approved crm links links, owners, and resources.</div>
+<div class="tools-detail-box"><b>Opportunity Tracking</b>Replace this placeholder with approved opportunity tracking links, owners, and resources.</div>
+<div class="tools-detail-box"><b>Pipeline Dashboards</b>Replace this placeholder with approved pipeline dashboards links, owners, and resources.</div>
+</div>
+</section>
+<section class="content-card">
+<h2>Recommended SharePoint Setup</h2>
+<p>Recommended web parts: Quick Links, Document Library, Highlighted Content, List, File Viewer, Power BI, and People.</p>
+<p>Recommended metadata: Tool Type, Owner, Audience, Status, Region, Review Date, and Resource Type.</p>
+<a class="backtop" data-target="global-tools" href="#view-global-tools">Back to Global Tools ↑</a>
+</section>
+</section>
+<section class="view" id="view-reporting-dashboards"><section class="content-card"><h2>Reporting Dashboards</h2><p>Use this area for pipeline dashboards, account stage reporting, forecast views, activity reporting, and leadership summary views.</p><a class="backtop" data-target="global-tools" href="#view-global-tools">Back to Global Tools ↑</a></section></section>
+<section class="view" id="view-sales-enablement-tools">
+<section class="hero">
+<div class="eyebrow">Global Tools</div>
+<h1>Sales Enablement</h1>
+<p>Enablement resources, sales process guidance, onboarding support, and readiness materials.</p>
+<span class="owner">Page owner: Global Sales / Sales Enablement</span>
+</section>
+<section class="content-card">
+<h2>Sales Enablement Setup</h2>
+<div class="tools-detail-grid">
+<div class="tools-detail-box"><b>Enablement Resources</b>Replace this placeholder with approved enablement resources links, owners, and resources.</div>
+<div class="tools-detail-box"><b>Training Links</b>Replace this placeholder with approved training links links, owners, and resources.</div>
+<div class="tools-detail-box"><b>Process Guidance</b>Replace this placeholder with approved process guidance links, owners, and resources.</div>
+</div>
+</section>
+<section class="content-card">
+<h2>Recommended SharePoint Setup</h2>
+<p>Recommended web parts: Quick Links, Document Library, Highlighted Content, List, File Viewer, Power BI, and People.</p>
+<p>Recommended metadata: Tool Type, Owner, Audience, Status, Region, Review Date, and Resource Type.</p>
+<a class="backtop" data-target="global-tools" href="#view-global-tools">Back to Global Tools ↑</a>
+</section>
+</section>
+<section class="view" id="view-proposal-tools">
+<section class="hero">
+<div class="eyebrow">Global Tools</div>
+<h1>Proposal Tools</h1>
+<p>Proposal templates, bid-writing resources, executive briefing tools, and response support.</p>
+<span class="owner">Page owner: Global Sales / Sales Enablement</span>
+</section>
+<section class="content-card">
+<h2>Proposal Tools Setup</h2>
+<div class="tools-detail-grid">
+<div class="tools-detail-box"><b>Proposal Templates</b>Replace this placeholder with approved proposal templates links, owners, and resources.</div>
+<div class="tools-detail-box"><b>Bid Writing Resources</b>Replace this placeholder with approved bid writing resources links, owners, and resources.</div>
+<div class="tools-detail-box"><b>Executive Briefing Tools</b>Replace this placeholder with approved executive briefing tools links, owners, and resources.</div>
+</div>
+</section>
+<section class="content-card">
+<h2>Recommended SharePoint Setup</h2>
+<p>Recommended web parts: Quick Links, Document Library, Highlighted Content, List, File Viewer, Power BI, and People.</p>
+<p>Recommended metadata: Tool Type, Owner, Audience, Status, Region, Review Date, and Resource Type.</p>
+<a class="backtop" data-target="global-tools" href="#view-global-tools">Back to Global Tools ↑</a>
+</section>
+</section>
+<section class="view" id="view-technology-sales-tools"><section class="content-card"><h2>Technology Sales Tools</h2><p>Use this area for demo support, technology positioning, product guidance, client-facing technology assets, and solution resources.</p><a class="backtop" data-target="global-tools" href="#view-global-tools">Back to Global Tools ↑</a></section></section>
+<section class="view" id="view-global-resource-library"><section class="content-card"><h2>Global Resource Library</h2><p>Use this area for approved global collateral, regional resources, shared documents, owner guidance, and reviewed evergreen content.</p><a class="backtop" data-target="global-tools" href="#view-global-tools">Back to Global Tools ↑</a></section></section>
+<section class="view" id="view-about"><section class="content-card"><h2>About CTM</h2><p>Company background, global presence, purpose, values, and differentiators.</p><a class="backtop" data-target="global-sales" href="#view-global-sales">Back to Global Sales ↑</a></section></section>
+<section class="view" id="view-value"><section class="content-card"><h2>CTM Value Proposition</h2><p>Service, innovation, return, and customer-centric messaging used across sales content.</p><a class="backtop" data-target="global-sales" href="#view-global-sales">Back to Global Sales ↑</a></section></section>
+<section class="view" id="view-team"><section class="content-card"><h2>Sales Team</h2><p>Leadership, Sales Support, Technology Sales, segment owners, and support crew references.</p><a class="backtop" data-target="global-sales" href="#view-global-sales">Back to Global Sales ↑</a></section></section>
+<section class="view" id="view-goals"><section class="content-card"><h2>Goals &amp; Expectations</h2><p>Annual goals, pipeline targets, activity expectations, and CRM requirements.</p><a class="backtop" data-target="global-sales" href="#view-global-sales">Back to Global Sales ↑</a></section></section>
 <section class="view" id="view-territories">
 <section class="hero">
 <div class="eyebrow">Global Sales</div>
@@ -8828,6 +8397,8 @@
 <a class="backtop" data-target="global-sales" href="#view-global-sales">Back to Global Sales ↑</a>
 </section>
 </section>
+<section class="view" id="view-strategy"><section class="content-card"><h2>Sales Strategy</h2><p>Deal captain expectations, annual planning, win strategy, and account planning guidance.</p><a class="backtop" data-target="global-sales" href="#view-global-sales">Back to Global Sales ↑</a></section></section>
+<section class="view" id="view-cycles"><section class="content-card"><h2>Sales Cycles</h2><p>Opportunity stages from qualified through closed won, including proposal and negotiation.</p><a class="backtop" data-target="global-sales" href="#view-global-sales">Back to Global Sales ↑</a></section></section>
 <section class="view" id="view-retain-grow"><section class="proof-hero-panel"><h2>Retain &amp; Grow</h2><p>Use this section to review relationship health, adoption trends, service performance, and risks before key client conversations.</p><div class="proof-action-strip"><span class="proof-action-pill">Client health</span><span class="proof-action-pill">Risk review</span><span class="proof-action-pill">Retention planning</span></div></section><section class="content-card"><h2>Retain &amp; Grow Focus Areas</h2><div class="proof-detail-grid"><div class="proof-detail-box"><b>Satisfaction</b>Client feedback, meeting outcomes, sentiment, and executive sponsor input.</div><div class="proof-detail-box"><b>Service Performance</b>Support themes, escalation patterns, SLA performance, and traveler experience.</div><div class="proof-detail-box"><b>Adoption</b>Tool usage, policy adoption, program engagement, and traveler behavior trends.</div><div class="proof-detail-box"><b>Risk</b>Open issues, competitive pressure, renewal concerns, or stakeholder changes.</div><div class="proof-detail-box"><b>Value Delivered</b>Savings, compliance, reporting, service outcomes, and implementation wins.</div><div class="proof-detail-box"><b>Next Action</b>Owner, due date, CRM update, and follow-up plan.</div></div><a class="backtop" data-target="customer-proof-hub" href="#view-customer-proof-hub">Back to Customer Proof Hub ↑</a></section></section>
 <section class="view" id="view-crm"><section class="proof-hero-panel"><h2>CRM Documentation</h2><p>Use this section to keep customer proof, feedback, and action items documented consistently so teams can reuse insights across pursuits.</p><div class="proof-action-strip"><span class="proof-action-pill">Outcome tracking</span><span class="proof-action-pill">Owner assignment</span><span class="proof-action-pill">Follow-up visibility</span></div></section><section class="content-card"><h2>CRM Documentation Guidance</h2><div class="proof-detail-grid"><div class="proof-detail-box"><b>Client Feedback</b>Capture feedback from meetings, QBRs, executive briefings, and debriefs.</div><div class="proof-detail-box"><b>Proof Link</b>Attach or link approved case studies, value statements, dashboards, or proposal inserts.</div><div class="proof-detail-box"><b>Risks</b>Document at-risk indicators, competitive threats, stakeholder concerns, and open issues.</div><div class="proof-detail-box"><b>Actions</b>Assign owners, due dates, next steps, and required follow-up.</div><div class="proof-detail-box"><b>Opportunity Notes</b>Connect proof to relevant sales stage, region, customer, or opportunity.</div><div class="proof-detail-box"><b>Governance</b>Confirm approval status, review date, and whether the proof can be reused externally.</div></div><a class="backtop" data-target="customer-proof-hub" href="#view-customer-proof-hub">Back to Customer Proof Hub ↑</a></section></section>
 <section class="view" id="view-growth"><section class="proof-hero-panel"><h2>Growth Opportunities</h2><p>Use this section to identify where existing proof, client feedback, and service outcomes can support account growth or expanded solutions.</p><div class="proof-action-strip"><span class="proof-action-pill">Expansion</span><span class="proof-action-pill">Cross-sell</span><span class="proof-action-pill">Regional needs</span></div></section><section class="content-card"><h2>Growth Opportunity Areas</h2><div class="proof-detail-grid"><div class="proof-detail-box"><b>Expanded Services</b>Identify additional service lines, new markets, or expanded account coverage.</div><div class="proof-detail-box"><b>Product Adoption</b>Look for technology, reporting, payment, mobile, or traveler experience opportunities.</div><div class="proof-detail-box"><b>Regional / Global Needs</b>Capture gaps where regional support or global alignment could add value.</div><div class="proof-detail-box"><b>Stakeholder Signals</b>Track sponsor feedback, decision-maker interest, and upcoming business changes.</div><div class="proof-detail-box"><b>Proof to Reuse</b>Connect relevant case studies, value statements, and proposal inserts.</div><div class="proof-detail-box"><b>Next Step</b>Assign owner, timeline, follow-up action, and CRM update.</div></div><a class="backtop" data-target="customer-proof-hub" href="#view-customer-proof-hub">Back to Customer Proof Hub ↑</a></section></section>
@@ -8892,6 +8463,18 @@
 <section class="content-card">
 <h2>Placeholder Content Area</h2>
 <p>Replace this placeholder content with approved links, owners, templates, examples, and resources for Executive Briefing.</p>
+<a class="backtop" data-target="bid-toolkit" href="#view-bid-toolkit">Back to Bid Toolkit ↑</a>
+</section>
+</section>
+<section class="view" id="view-kickoff">
+<section class="content-card">
+<h2>Kickoff</h2>
+<p><b>Purpose:</b> Align GM, regional leads, Pricing, Sales Support, and SMEs at the start of the pursuit.</p>
+<ul>
+<li>Review high-level points from the Executive Briefing.</li>
+<li>Discuss customer overview, solution needs, risks, pricing strategy, and deadlines.</li>
+<li>Confirm roles, owners, next steps, and key target dates.</li>
+</ul>
 <a class="backtop" data-target="bid-toolkit" href="#view-bid-toolkit">Back to Bid Toolkit ↑</a>
 </section>
 </section>
@@ -9549,6 +9132,20 @@
 <a class="backtop" data-target="training" href="#view-training">Back to Training ↑</a>
 </section>
 </section>
+<section class="view" id="view-sales-enablement">
+<section class="content-card">
+<h2>Sales Enablement</h2>
+<p>Support area for toolkit ownership, training, adoption, enablement resources, process guidance, and sales readiness.</p>
+<a class="backtop" data-target="help-contacts" href="#view-help-contacts">Back to Help &amp; Contacts ↑</a>
+</section>
+</section>
+<section class="view" id="view-sales-support">
+<section class="content-card">
+<h2>Sales Support</h2>
+<p>Support area for bid writing, RFP/RFI/RFQ support, executive summaries, presentation design, sales reporting, and enablement tools.</p>
+<a class="backtop" data-target="help-contacts" href="#view-help-contacts">Back to Help &amp; Contacts ↑</a>
+</section>
+</section>
 <section class="view" id="view-pricing-contact">
 <section class="hero">
 <div class="eyebrow">Help &amp; Contacts</div>
@@ -9797,6 +9394,13 @@
 <a class="backtop" data-target="help-contacts" href="#view-help-contacts">Back to Help &amp; Contacts ↑</a>
 </section>
 </section>
+<section class="view" id="view-sales-toolkit-deck">
+<section class="content-card">
+<h2>Sales Toolkit Deck</h2>
+<p>Main onboarding and enablement deck for sales team members. This should include sales process guidance, team structure, territories, quotas, expectations, bid process, and key resources.</p>
+<a class="backtop" data-target="templates" href="#view-templates">Back to Templates ↑</a>
+</section>
+</section>
 <section class="view" id="view-sales-plan-template">
 <section class="hero">
 <div class="eyebrow">Templates</div>
@@ -9917,6 +9521,45 @@
 <a class="backtop" data-target="templates" href="#view-templates">Back to Templates ↑</a>
 </section>
 </section>
+<section class="view" id="view-crm-update-guide">
+<section class="content-card">
+<h2>CRM Update Guide</h2>
+<p>Guide for keeping CRM current with opportunity details, status notes, client feedback, next steps, risks, follow-up ownership, and customer proof hub outcomes.</p>
+<a class="backtop" data-target="templates" href="#view-templates">Back to Templates ↑</a>
+</section>
+</section>
+<section class="view" id="view-finance-pricing">
+<section class="hero">
+<div class="eyebrow">Bid Toolkit</div>
+<h1>Finance / Pricing</h1>
+<p>Use this section to manage pricing inputs, financial review, commercial assumptions, and required approvals.</p>
+<span class="owner">Page owner: Sales Enablement / Sales Support</span>
+</section>
+<section class="content-card">
+<h2>Finance / Pricing Setup</h2>
+<div class="bid-detail-grid">
+<div class="bid-detail-box"><b>Pricing Inputs</b>Deal size, services, regions, transaction assumptions, staffing model, and implementation needs.</div>
+<div class="bid-detail-box"><b>Financial Review</b>D&amp;B or financial pass/fail, margin review, pricing model, and risk flags.</div>
+<div class="bid-detail-box"><b>Output</b>Approved pricing direction and documented assumptions.</div>
+</div>
+</section>
+<section class="content-card">
+<h2>Finance / Pricing Checklist</h2>
+<div class="bid-checklist">
+<div class="bid-check">Capture all pricing inputs.</div>
+<div class="bid-check">Confirm deal size and commercial assumptions.</div>
+<div class="bid-check">Complete required financial review.</div>
+<div class="bid-check">Document pricing risks and exceptions.</div>
+<div class="bid-check">Confirm approval path.</div>
+<div class="bid-check">Attach approved pricing notes.</div>
+</div>
+</section>
+<section class="content-card">
+<h2>Placeholder Content Area</h2>
+<p>Replace this placeholder content with approved links, owners, templates, examples, and resources for Finance / Pricing.</p>
+<a class="backtop" data-target="bid-toolkit" href="#view-bid-toolkit">Back to Bid Toolkit ↑</a>
+</section>
+</section>
 <section class="view" id="view-rfp-intake">
 <section class="hero">
 <div class="eyebrow">Bid Toolkit</div>
@@ -9946,6 +9589,102 @@
 <section class="content-card">
 <h2>Placeholder Content Area</h2>
 <p>Replace this placeholder content with approved links, owners, templates, examples, and resources for RFP / Tender Intake.</p>
+<a class="backtop" data-target="bid-toolkit" href="#view-bid-toolkit">Back to Bid Toolkit ↑</a>
+</section>
+</section>
+<section class="view" id="view-kickoff-call">
+<section class="hero">
+<div class="eyebrow">Bid Toolkit</div>
+<h1>Kickoff Call</h1>
+<p>Use this section to align all pursuit contributors before content development begins.</p>
+<span class="owner">Page owner: Sales Enablement / Sales Support</span>
+</section>
+<section class="content-card">
+<h2>Kickoff Call Setup</h2>
+<div class="bid-detail-grid">
+<div class="bid-detail-box"><b>Required Attendees</b>GM, regional sales lead, sales support, pricing, subject matter experts, and pursuit owner.</div>
+<div class="bid-detail-box"><b>Agenda</b>Client needs, win strategy, requirements, risks, timeline, content owners, and next steps.</div>
+<div class="bid-detail-box"><b>Output</b>Confirmed plan, response owners, timeline, and follow-up actions.</div>
+</div>
+</section>
+<section class="content-card">
+<h2>Kickoff Call Checklist</h2>
+<div class="bid-checklist">
+<div class="bid-check">Schedule kickoff call.</div>
+<div class="bid-check">Distribute bid documents before the call.</div>
+<div class="bid-check">Review client needs and decision criteria.</div>
+<div class="bid-check">Confirm content owners and deadlines.</div>
+<div class="bid-check">Confirm pricing and SME support needs.</div>
+<div class="bid-check">Document actions and follow-up owners.</div>
+</div>
+</section>
+<section class="content-card">
+<h2>Placeholder Content Area</h2>
+<p>Replace this placeholder content with approved links, owners, templates, examples, and resources for Kickoff Call.</p>
+<a class="backtop" data-target="bid-toolkit" href="#view-bid-toolkit">Back to Bid Toolkit ↑</a>
+</section>
+</section>
+<section class="view" id="view-proposal-development">
+<section class="hero">
+<div class="eyebrow">Bid Toolkit</div>
+<h1>Proposal Development</h1>
+<p>Use this section to manage proposal writing, content assignments, solution narrative, proof points, and review cycles.</p>
+<span class="owner">Page owner: Sales Enablement / Sales Support</span>
+</section>
+<section class="content-card">
+<h2>Proposal Development Setup</h2>
+<div class="bid-detail-grid">
+<div class="bid-detail-box"><b>Content Areas</b>Executive summary, solution, service model, technology, implementation, pricing, proof points, and references.</div>
+<div class="bid-detail-box"><b>Review Needs</b>Sales, sales support, marketing, pricing, legal/security if needed, and executive sponsor review.</div>
+<div class="bid-detail-box"><b>Output</b>Final proposal package ready for submission.</div>
+</div>
+</section>
+<section class="content-card">
+<h2>Proposal Development Checklist</h2>
+<div class="bid-checklist">
+<div class="bid-check">Confirm response outline.</div>
+<div class="bid-check">Assign content owners.</div>
+<div class="bid-check">Add approved proof points and differentiators.</div>
+<div class="bid-check">Complete pricing and solution alignment.</div>
+<div class="bid-check">Run quality review.</div>
+<div class="bid-check">Confirm final approval before submission.</div>
+</div>
+</section>
+<section class="content-card">
+<h2>Placeholder Content Area</h2>
+<p>Replace this placeholder content with approved links, owners, templates, examples, and resources for Proposal Development.</p>
+<a class="backtop" data-target="bid-toolkit" href="#view-bid-toolkit">Back to Bid Toolkit ↑</a>
+</section>
+</section>
+<section class="view" id="view-risk-review">
+<section class="hero">
+<div class="eyebrow">Bid Toolkit</div>
+<h1>Risk / Legal Review</h1>
+<p>Use this section to review legal, security, financial, operational, and contractual risks before final submission or commitment.</p>
+<span class="owner">Page owner: Sales Enablement / Sales Support</span>
+</section>
+<section class="content-card">
+<h2>Risk / Legal Review Setup</h2>
+<div class="bid-detail-grid">
+<div class="bid-detail-box"><b>Risk Areas</b>Terms, data/security, service commitments, implementation complexity, pricing exceptions, and operational feasibility.</div>
+<div class="bid-detail-box"><b>Review Owners</b>Legal, security, pricing, implementation, operations, and executive sponsor as needed.</div>
+<div class="bid-detail-box"><b>Output</b>Documented risks, mitigations, and approval status.</div>
+</div>
+</section>
+<section class="content-card">
+<h2>Risk / Legal Review Checklist</h2>
+<div class="bid-checklist">
+<div class="bid-check">Review contractual terms and exceptions.</div>
+<div class="bid-check">Identify security or data requirements.</div>
+<div class="bid-check">Confirm service model feasibility.</div>
+<div class="bid-check">Review implementation and transition risk.</div>
+<div class="bid-check">Confirm required approvals.</div>
+<div class="bid-check">Document risk decision and mitigation.</div>
+</div>
+</section>
+<section class="content-card">
+<h2>Placeholder Content Area</h2>
+<p>Replace this placeholder content with approved links, owners, templates, examples, and resources for Risk / Legal Review.</p>
 <a class="backtop" data-target="bid-toolkit" href="#view-bid-toolkit">Back to Bid Toolkit ↑</a>
 </section>
 </section>
@@ -10101,7 +9840,8 @@
 </a>
 </div>
 <div class="workflow-note">
-</div>
+            Tip: Use the Win / Loss section after Stage 8 to document decision drivers, competitor feedback, and pursuit lessons learned.
+          </div>
 </section>
 </div>
 <section class="content-card" style="margin-top:20px">
@@ -10223,6 +9963,36 @@
 <a class="backtop" data-target="templates" href="#view-templates">Back to Templates ↑</a>
 </section>
 </section>
+<section class="view" id="view-crm-update-guide-template">
+<section class="hero">
+<div class="eyebrow">Templates</div>
+<h1>CRM Update Guide</h1>
+<p>Guide for keeping CRM current with opportunity details, status notes, client feedback, next steps, risks, follow-up ownership, and customer proof hub outcomes.</p>
+<span class="owner">Page owner: Sales Enablement / Sales Support</span>
+</section>
+<section class="content-card">
+<h2>CRM Update Guide Setup</h2>
+<div class="template-detail-grid">
+<div class="template-detail-box"><b>Purpose</b>Guide for keeping CRM current and useful for sales visibility.</div>
+<div class="template-detail-box"><b>Recommended Content</b>Opportunity details, status notes, client feedback, next steps, risks, follow-up ownership, and customer proof hub outcomes.</div>
+<div class="template-detail-box"><b>Best Used For</b>CRM hygiene, pipeline reviews, opportunity tracking, and account history.</div>
+</div>
+</section>
+<section class="content-card">
+<h2>CRM Update Guide Checklist</h2>
+<div class="template-checklist">
+<div class="template-check">Add approved template file or link.</div>
+<div class="template-check">Assign template owner and backup owner.</div>
+<div class="template-check">Confirm review cadence and approval status.</div>
+<div class="template-check">Tag with template type, audience, region, status, and review date.</div>
+</div>
+</section>
+<section class="content-card">
+<h2>Placeholder Content Area</h2>
+<p>Replace this placeholder area with the approved CRM Update Guide file, instructions, examples, owners, and related resources.</p>
+<a class="backtop" data-target="templates" href="#view-templates">Back to Templates ↑</a>
+</section>
+</section>
 <section class="view" id="view-reporting-insights">
 <section class="hero">
 <div class="eyebrow">Global Tools</div>
@@ -10236,6 +10006,50 @@
 <div class="tools-detail-box"><b>Sales Reporting</b>Replace this placeholder with approved sales reporting links, owners, and resources.</div>
 <div class="tools-detail-box"><b>Pipeline Metrics</b>Replace this placeholder with approved pipeline metrics links, owners, and resources.</div>
 <div class="tools-detail-box"><b>Leadership Views</b>Replace this placeholder with approved leadership views links, owners, and resources.</div>
+</div>
+</section>
+<section class="content-card">
+<h2>Recommended SharePoint Setup</h2>
+<p>Recommended web parts: Quick Links, Document Library, Highlighted Content, List, File Viewer, Power BI, and People.</p>
+<p>Recommended metadata: Tool Type, Owner, Audience, Status, Region, Review Date, and Resource Type.</p>
+<a class="backtop" data-target="global-tools" href="#view-global-tools">Back to Global Tools ↑</a>
+</section>
+</section>
+<section class="view" id="view-resource-library">
+<section class="hero">
+<div class="eyebrow">Global Tools</div>
+<h1>Resource Library</h1>
+<p>Approved documents, playbooks, job aids, templates, decks, and supporting sales materials.</p>
+<span class="owner">Page owner: Global Sales / Sales Enablement</span>
+</section>
+<section class="content-card">
+<h2>Resource Library Setup</h2>
+<div class="tools-detail-grid">
+<div class="tools-detail-box"><b>Approved Documents</b>Replace this placeholder with approved approved documents links, owners, and resources.</div>
+<div class="tools-detail-box"><b>Playbooks</b>Replace this placeholder with approved playbooks links, owners, and resources.</div>
+<div class="tools-detail-box"><b>Job Aids</b>Replace this placeholder with approved job aids links, owners, and resources.</div>
+</div>
+</section>
+<section class="content-card">
+<h2>Recommended SharePoint Setup</h2>
+<p>Recommended web parts: Quick Links, Document Library, Highlighted Content, List, File Viewer, Power BI, and People.</p>
+<p>Recommended metadata: Tool Type, Owner, Audience, Status, Region, Review Date, and Resource Type.</p>
+<a class="backtop" data-target="global-tools" href="#view-global-tools">Back to Global Tools ↑</a>
+</section>
+</section>
+<section class="view" id="view-partner-tools">
+<section class="hero">
+<div class="eyebrow">Global Tools</div>
+<h1>Partner Tools</h1>
+<p>Partner agency guidance, referral resources, shared pursuit materials, and collaboration support.</p>
+<span class="owner">Page owner: Global Sales / Sales Enablement</span>
+</section>
+<section class="content-card">
+<h2>Partner Tools Setup</h2>
+<div class="tools-detail-grid">
+<div class="tools-detail-box"><b>Partner Agency Guidance</b>Replace this placeholder with approved partner agency guidance links, owners, and resources.</div>
+<div class="tools-detail-box"><b>Referral Resources</b>Replace this placeholder with approved referral resources links, owners, and resources.</div>
+<div class="tools-detail-box"><b>Shared Pursuit Materials</b>Replace this placeholder with approved shared pursuit materials links, owners, and resources.</div>
 </div>
 </section>
 <section class="content-card">
@@ -11624,6 +11438,7 @@
   }
 })();
 </script>
+
 <script>
 (function(){
   function initPreviousPageBackButtons(){
