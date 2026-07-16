@@ -4383,13 +4383,175 @@
   @media(max-width:1200px){.help-link-grid,.help-detail-grid{grid-template-columns:repeat(2,1fr)}.help-checklist{grid-template-columns:repeat(2,1fr)}}
   @media(max-width:720px){.help-link-grid,.help-detail-grid,.help-checklist{grid-template-columns:1fr}.help-link-card{min-height:auto}}
 
+
+
+  /* Templates section refresh - modern card layout */
+  #view-templates .template-intro{
+    background:linear-gradient(115deg,#ffffff 0%,#eef8fb 100%);
+    border:1px solid #d7edf2;
+    border-left:8px solid var(--ctm-teal);
+    border-radius:24px;
+    padding:28px 30px;
+    box-shadow:0 8px 24px rgba(15,23,42,.08);
+  }
+  #view-templates .template-intro h2{
+    font-size:28px;
+    margin-bottom:8px;
+  }
+  #view-templates .template-link-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:18px;
+    margin-top:18px;
+  }
+  #view-templates .template-link-card{
+    position:relative;
+    overflow:hidden;
+    border:1px solid #d8e1ea;
+    border-radius:24px;
+    background:#fff;
+    padding:0;
+    box-shadow:0 4px 14px rgba(15,23,42,.07);
+    border-left:0;
+    min-height:190px;
+  }
+  #view-templates .template-link-card:before{
+    content:"";
+    position:absolute;
+    left:0;right:0;top:0;
+    height:7px;
+    background:linear-gradient(90deg,var(--ctm-teal),var(--ctm-green));
+  }
+  #view-templates .template-link-card:nth-child(3n):before{background:linear-gradient(90deg,#f0b429,#007c94)}
+  #view-templates .template-link-card:nth-child(4n):before{background:linear-gradient(90deg,#667085,var(--ctm-teal))}
+  #view-templates .template-link-top{
+    padding:24px;
+    min-height:170px;
+  }
+  #view-templates .template-link-card h3{
+    font-size:22px;
+    margin-bottom:10px;
+  }
+  #view-templates .template-link-card p{
+    font-size:14px;
+    line-height:1.55;
+  }
+  #view-templates .template-arrow{
+    background:var(--ctm-navy);
+    color:#fff;
+    box-shadow:0 4px 10px rgba(0,59,73,.18);
+  }
+  #view-templates .template-link-card:hover{
+    transform:translateY(-4px);
+    box-shadow:0 14px 30px rgba(15,23,42,.14);
+    border-color:#c8d6e2;
+  }
+  #view-templates .template-link-card:after{
+    content:"Open template";
+    position:absolute;
+    left:24px;
+    bottom:18px;
+    color:var(--ctm-teal);
+    font-size:13px;
+    font-weight:800;
+  }
+
+  .template-detail-grid{
+    gap:16px;
+  }
+  .template-detail-box{
+    position:relative;
+    overflow:hidden;
+    background:#fff;
+    border:1px solid #d8e1ea;
+    border-radius:18px;
+    padding:20px 20px 20px 58px;
+    min-height:120px;
+    box-shadow:0 3px 12px rgba(15,23,42,.06);
+  }
+  .template-detail-box:before{
+    content:"✓";
+    position:absolute;
+    left:18px;
+    top:20px;
+    width:28px;
+    height:28px;
+    border-radius:10px;
+    background:#eef8fb;
+    color:var(--ctm-navy);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-weight:900;
+  }
+  .template-detail-box:after{
+    content:"";
+    position:absolute;
+    left:0;
+    top:0;
+    bottom:0;
+    width:6px;
+    background:var(--ctm-teal);
+  }
+  .template-detail-box:nth-child(2):after{background:var(--ctm-green)}
+  .template-detail-box:nth-child(3):after{background:#f0b429}
+  .template-detail-box b{
+    font-size:16px;
+    color:#0b1f35;
+    margin-bottom:8px;
+  }
+
+  .template-checklist{
+    gap:14px;
+  }
+  .template-check{
+    position:relative;
+    background:#fff;
+    border:1px solid #d8e1ea;
+    border-radius:16px;
+    padding:16px 18px 16px 52px;
+    box-shadow:0 3px 12px rgba(15,23,42,.05);
+  }
+  .template-check:before{
+    content:"";
+    position:absolute;
+    left:18px;
+    top:18px;
+    width:18px;
+    height:18px;
+    border:2px solid var(--ctm-teal);
+    border-radius:6px;
+    background:#eef8fb;
+  }
+  #view-sales-plan-template .content-card,
+  #view-executive-briefing-template .content-card,
+  #view-bid-writing-checklist-template .content-card,
+  #view-customer-proof-hub-template .content-card,
+  #view-crm-update-guide-template .content-card,
+  #view-sales-toolkit-deck-template .content-card{
+    border-radius:22px;
+    border:1px solid #d8e1ea;
+    box-shadow:0 4px 16px rgba(15,23,42,.07);
+  }
+  #view-sales-plan-template .content-card h2,
+  #view-executive-briefing-template .content-card h2,
+  #view-bid-writing-checklist-template .content-card h2,
+  #view-customer-proof-hub-template .content-card h2,
+  #view-crm-update-guide-template .content-card h2,
+  #view-sales-toolkit-deck-template .content-card h2{
+    border-bottom:1px solid var(--line);
+    padding-bottom:12px;
+    margin-bottom:18px;
+  }
+  @media(max-width:1100px){#view-templates .template-link-grid{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:720px){#view-templates .template-link-grid{grid-template-columns:1fr}}
+
 </style>
 <!-- Updated: All section cards and navigation items now include real clickable section links with hash URLs. -->
 </head>
 <body>
 <div class="shared-banner">
 <strong>CTM Global Sales Hub Mockup</strong>
-    You’re viewing user-generated content that may be unverified or unsafe. <a href="#">Report</a>
 </div>
 <header class="site-header clean-top-header">
 <div class="brand">
